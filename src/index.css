@@ -11,10 +11,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
-section {
-  min-height: 100vh;
-}
+
 ul li {
   list-style: none;
 }
