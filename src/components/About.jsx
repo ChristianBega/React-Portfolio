@@ -4,6 +4,7 @@ import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 const styles = {
   h1: {
     fontSize: "250%",
+    marginTop: "1rem",
   },
 };
 function About() {
@@ -18,9 +19,9 @@ function About() {
             </span>
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum in iure quae inventore id quod cumque, voluptatibus a praesentium non ex
-            natus animi eaque velit quia vel reiciendis magnam quisquam temporibus at. Culpa voluptate aut dolore quibusdam quisquam consequatur
-            incidunt maiores amet quasi, adipisci quidem, perferendis tenetur iusto, quos consectetur?
+            A dedicated and passionate Jr web developer graduate from the Denver University full stack bootcamp. Pursuing a creative and exciting
+            position that utilizes my current knowledge of web development. Capable of utilizing, integrating, and developing Restful APIs. As well as
+            coordinating and collaborating with different groups of developers to plan, test, and develop MERN full stack applications.
           </p>
         </div>
         <button>Contact Me</button>
