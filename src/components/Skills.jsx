@@ -1,8 +1,5 @@
 import React from "react";
 const styles = {
-  skillsSection: {
-    minHeight: "86vh",
-  },
   skillsContainer: {
     padding: "1rem 0.5rem",
     display: "flex",
@@ -26,7 +23,7 @@ const styles = {
 function Skills() {
   return (
     <>
-      <section className="skillsSection" style={styles.skillsSection}>
+      <section className="skillsSection">
         <h2 style={styles.h2}>Skills</h2>
         <div style={styles.skillsContainer} className="skillsContainer">
           {/* <div style={styles.skillItem}>Html & Css</div>
