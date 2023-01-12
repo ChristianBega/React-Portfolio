@@ -14,13 +14,26 @@ body {
   scroll-behavior: smooth;
 }
 
+h3 {
+  margin: 0;
+}
+
 ul li {
   list-style: none;
 }
 p {
   color: var(--medium-gray);
 }
+a,
+a:-webkit-any-link {
+  color: #fff;
+  text-decoration: none;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+section {
+  min-height: 86vh;
 }

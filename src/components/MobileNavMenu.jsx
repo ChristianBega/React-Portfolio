@@ -41,9 +41,7 @@ function MobileNavMenu({ isHidden }) {
             </li>
           </ul>
         </nav>
-      ) : (
-        ""
-      )}
+      ) : null}
     </>
   );
 }

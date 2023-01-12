@@ -50,12 +50,11 @@ nav a {
   align-items: center;
 }
 .mobileMenu button {
+  padding: 0;
+  margin: 0;
+  padding: 0.2rem 0.4rem;
 }
 .hamburgerMenu {
-  width: 25px;
-  height: 25px;
-  background-color: red;
-  border: none;
   outline: none;
 }
 
