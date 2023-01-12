@@ -2,15 +2,14 @@
   display: none !important;
 }
 
-/* Elements */
 body {
   background: var(--linear-bg);
-  min-height: 110vh;
   color: #fff;
 }
 button {
   cursor: pointer;
 }
+
 /* Header */
 header {
   /* backdrop-filter: blur(5px) saturate(115%); */
@@ -19,7 +18,7 @@ header {
   align-content: center;
   justify-content: space-between;
   padding: 1.5rem 2.5rem;
-  position: sticky;
+  position: sticky !important;
 }
 header h1 {
   margin: 0;
