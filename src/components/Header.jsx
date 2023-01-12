@@ -1,10 +1,14 @@
 import React from "react";
 import Navigation from "./Navigation";
+import { Link } from "react-router-dom";
+
 function Header() {
   //h1 need to be replaced with img/logo
   return (
     <header>
-      <h1>Logo</h1>
+      <Link to="/about">
+        <h1 styles={{ color: "#fff" }}>Logo</h1>
+      </Link>
       <Navigation />
     </header>
   );

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MobileNavMenu from "./MobileNavMenu";
+import { Link } from "react-router-dom";
 
 // How could I use state to check for a change and to render different component?
 
@@ -32,21 +33,20 @@ function Navigation() {
           <nav className="">
             <ul>
               <li>
-                <a className="" href="" target="_blank">
+                <Link to="/" target="_blank">
                   About Me
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="" href="" target="_blank">
+                <Link to="/projects" target="_blank">
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="" href="" target="_blank">
+                <Link to="/skills" target="_blank">
                   Skills
-                </a>
+                </Link>
               </li>
-
               <li>
                 <a className="" href="" target="_blank">
                   Contact
