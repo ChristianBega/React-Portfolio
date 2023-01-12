@@ -1,6 +1,8 @@
-import React, { useState } from "react";
 import MobileNavMenu from "./MobileNavMenu";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { IconContext } from "react-icons";
+import { GrMenu } from "react-icons/gr";
 
 // How could I use state to check for a change and to render different component?
 
@@ -26,34 +28,32 @@ function Navigation() {
       {isDesktop < 600 ? (
         <div className="mobileMenu">
           <MobileNavMenu visibility={isHidden} />
-          <button className="hamburgerMenu" onClick={handleClick}></button>
+          <IconContext.Provider value={{ size: "1.3rem", padding: "0", margin: "0" }}>
+            <button className="hamburgerMenu" onClick={handleClick}>
+              <GrMenu />
+            </button>
+          </IconContext.Provider>
         </div>
       ) : (
         <div className="desktopMenu">
           <nav className="">
             <ul>
               <li>
-                <Link to="/" target="_blank">
-                  About Me
-                </Link>
+                <Link to="/">About Me</Link>
               </li>
               <li>
-                <Link to="/projects" target="_blank">
-                  Projects
-                </Link>
+                <Link to="/projects">Projects</Link>
               </li>
               <li>
-                <Link to="/skills" target="_blank">
-                  Skills
-                </Link>
+                <Link to="/skills">Skills</Link>
               </li>
               <li>
-                <a className="" href="" target="_blank">
+                <a className="" href="">
                   Contact
                 </a>
               </li>
               <li>
-                <a className="" href="" target="_blank">
+                <a className="" href="">
                   Resume
                 </a>
               </li>
