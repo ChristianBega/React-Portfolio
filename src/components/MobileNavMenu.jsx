@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import { handleClick } from "./Navigation";
 
 const styles = {
   nav: {
@@ -17,14 +18,14 @@ const styles = {
     flexDirection: "column",
   },
 };
-function MobileNavMenu({ isHidden }) {
+function MobileNavMenu({ isHidden, handle }) {
   return (
     <>
       {/* hidden = true || !isHidden = hidden = false */}
       {!isHidden ? (
         <nav style={styles.nav} className="mobileNavList hide">
           <ul style={styles.ul}>
-            <li>
+            <li onClick={handle}>
               <Link to="/about">About Me</Link>
             </li>
             <li>
@@ -34,10 +35,10 @@ function MobileNavMenu({ isHidden }) {
               <Link to="/skills">Skills</Link>
             </li>
             <li>
-              <a to="/about">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <a to="/about">Resume</a>
+              <Link to="/resume">Resume</Link>
             </li>
           </ul>
         </nav>
@@ -47,12 +48,3 @@ function MobileNavMenu({ isHidden }) {
 }
 
 export default MobileNavMenu;
-
-// // const mobileMenu = document.querySelector("");
-// const [isVisible, setVisible] = useState(false);
-
-// const handleClick = () => {
-//   if (isVisible) {
-//     //show
-//   }
-// };
