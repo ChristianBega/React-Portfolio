@@ -62,7 +62,8 @@ nav a {
   text-align: center;
 }
 .aboutSection button,
-.contactSection button {
+.contactSection button,
+.resumeSection button {
   font-size: 16px;
   font-weight: bold;
   margin-top: 1rem;
