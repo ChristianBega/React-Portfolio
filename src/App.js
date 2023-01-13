@@ -1,14 +1,12 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-// import { Header, About, Skills, Projects, Footer } from "./components";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
-
 function App() {
   return (
     <>

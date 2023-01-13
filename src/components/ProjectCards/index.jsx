@@ -1,6 +1,6 @@
 import React from "react";
-import cardImg from "../images/news-menu-bg.png";
-import cardImg2 from "../images/StudyBuddyApp.png";
+import cardImg from "../../images/news-menu-bg.png";
+import cardImg2 from "../../images/StudyBuddyApp.png";
 
 const styles = {
   card: {
