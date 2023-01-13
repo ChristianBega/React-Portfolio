@@ -34,10 +34,10 @@ function MobileNavMenu({ isHidden }) {
               <Link to="/skills">Skills</Link>
             </li>
             <li>
-              <a to="/about">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <a to="/about">Resume</a>
+              <Link to="/resume">Resume</Link>
             </li>
           </ul>
         </nav>
