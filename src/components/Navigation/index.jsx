@@ -42,7 +42,7 @@ function Navigation() {
           <nav>
             <ul>
               <li>
-                <Link handle={handleClick} to="/">
+                <Link handle={handleClick} to="/about">
                   About Me
                 </Link>
               </li>
@@ -53,10 +53,10 @@ function Navigation() {
                 <Link to="/skills">Skills</Link>
               </li>
               <li>
-                <a>Contact</a>
+                <Link to="/Contact">Contact</Link>
               </li>
               <li>
-                <a>Resume</a>
+                <Link to="/Resume">Resume</Link>
               </li>
             </ul>
           </nav>

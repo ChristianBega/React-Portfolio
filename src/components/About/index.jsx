@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { IconContext } from "react-icons";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
 const styles = {
   h1: {
     fontSize: "250%",
@@ -8,6 +10,8 @@ const styles = {
   },
 };
 function About() {
+  const navigate = useNavigate();
+  const handleOnClick = useCallback(() => navigate("/contact", { replace: true }), [navigate]);
   return (
     <>
       <section className="aboutSection" id="about">
@@ -24,18 +28,24 @@ function About() {
             coordinating and collaborating with different groups of developers to plan, test, and develop MERN full stack applications.
           </p>
         </div>
-        <button>Contact Me</button>
+        <button onClick={handleOnClick}>Contact Me</button>
         <div className="socialLinksContainer">
           <IconContext.Provider value={{ size: "1.3rem" }}>
             <ul className="ul">
               <li>
-                <FaGithub />
+                <a href="https://github.com/T3mpz" target="_blank">
+                  <FaGithub />
+                </a>
               </li>
               <li>
-                <FaLinkedinIn />
+                <a href="https://www.linkedin.com/in/christian-bega-4b63b3216/" target="_blank">
+                  <FaLinkedinIn />
+                </a>
               </li>
               <li>
-                <FaTwitter />
+                <a href="https://twitter.com/ChristianBega4" target="_blank">
+                  <FaTwitter />
+                </a>
               </li>
             </ul>
           </IconContext.Provider>
