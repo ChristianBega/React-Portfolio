@@ -3,12 +3,17 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
 import { GrMenu } from "react-icons/gr";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 // How could I use state to check for a change and to render different component?
 
 function Navigation() {
-  const [isDesktop, setDesktop] = useState(window.innerWidth);
+  // const [isDesktop, setDesktop] = useState(window.innerWidth);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   const [isHidden, setHidden] = useState(true); // hidden = true
+
   const handleClick = () => {
     if (isHidden) {
       const menuShow = document.querySelector(".mobileNavList").classList.remove("hide");
@@ -21,11 +26,9 @@ function Navigation() {
     }
   };
 
-  // Whenever I try to resize the browser it doesn't hot reload, but renders once refreshed
-  // Am I not telling it to rerender???
   return (
     <>
-      {isDesktop < 600 ? (
+      {isMobile ? (
         <div className="mobileMenu">
           <MobileNavMenu visibility={isHidden} />
           <IconContext.Provider value={{ size: "1.3rem", padding: "0", margin: "0" }}>
@@ -39,7 +42,9 @@ function Navigation() {
           <nav className="">
             <ul>
               <li>
-                <Link to="/">About Me</Link>
+                <Link handle={handleClick} to="/">
+                  About Me
+                </Link>
               </li>
               <li>
                 <Link to="/projects">Projects</Link>
