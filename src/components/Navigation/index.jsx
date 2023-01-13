@@ -1,4 +1,4 @@
-import MobileNavMenu from "./MobileNavMenu";
+import MobileNavMenu from "../MobileNavMenu";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
@@ -39,10 +39,10 @@ function Navigation() {
         </div>
       ) : (
         <div className="desktopMenu">
-          <nav className="">
+          <nav>
             <ul>
               <li>
-                <Link handle={handleClick} to="/">
+                <Link handle={handleClick} to="/about">
                   About Me
                 </Link>
               </li>
@@ -53,14 +53,10 @@ function Navigation() {
                 <Link to="/skills">Skills</Link>
               </li>
               <li>
-                <a className="" href="">
-                  Contact
-                </a>
+                <Link to="/Contact">Contact</Link>
               </li>
               <li>
-                <a className="" href="">
-                  Resume
-                </a>
+                <Link to="/Resume">Resume</Link>
               </li>
             </ul>
           </nav>
