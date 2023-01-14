@@ -6,9 +6,6 @@ body {
   background: var(--linear-bg);
   color: #fff;
 }
-button {
-  cursor: pointer;
-}
 
 /* Header */
 header {
@@ -44,16 +41,20 @@ nav a {
   display: flex;
   flex-direction: column;
 }
-/* Mobile Menu */
+/* Mobile Menu  */
 .mobileMenu {
   display: grid;
   align-items: center;
 }
+/*
 .mobileMenu button {
   padding: 0.2rem 0.4rem;
-}
+}*/
 .hamburgerMenu {
+  padding: 0;
   outline: none;
+  background-color: transparent;
+  border: none;
 }
 
 /* About section*/
