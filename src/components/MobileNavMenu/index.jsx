@@ -18,14 +18,13 @@ const styles = {
     flexDirection: "column",
   },
 };
-function MobileNavMenu({ isHidden, handle }) {
+function MobileNavMenu({ isHidden }) {
   return (
     <>
-      {/* hidden = true || !isHidden = hidden = false */}
       {!isHidden ? (
         <nav style={styles.nav} className="mobileNavList hide">
           <ul style={styles.ul}>
-            <li onClick={handle}>
+            <li>
               <Link to="/about">About Me</Link>
             </li>
             <li>

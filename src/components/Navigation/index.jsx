@@ -1,14 +1,13 @@
-import MobileNavMenu from "../MobileNavMenu";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
-import { GrMenu } from "react-icons/gr";
+import { MdMenu } from "react-icons/md";
 import { useMediaQuery, useTheme } from "@mui/material";
+import MobileNavMenu from "../MobileNavMenu";
+import DesktopNavMenu from "../DesktopNavMenu";
 
 // How could I use state to check for a change and to render different component?
 
 function Navigation() {
-  // const [isDesktop, setDesktop] = useState(window.innerWidth);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -31,35 +30,15 @@ function Navigation() {
       {isMobile ? (
         <div className="mobileMenu">
           <MobileNavMenu visibility={isHidden} />
-          <IconContext.Provider value={{ size: "1.3rem", padding: "0", margin: "0" }}>
+          <IconContext.Provider value={{ size: "1.8rem", padding: "0", margin: "0", color: "white" }}>
             <button className="hamburgerMenu" onClick={handleClick}>
-              <GrMenu />
+              <MdMenu />
             </button>
           </IconContext.Provider>
         </div>
       ) : (
         <div className="desktopMenu">
-          <nav>
-            <ul>
-              <li>
-                <Link handle={handleClick} to="/about">
-                  About Me
-                </Link>
-              </li>
-              <li>
-                <Link to="/projects">Projects</Link>
-              </li>
-              <li>
-                <Link to="/skills">Skills</Link>
-              </li>
-              <li>
-                <Link to="/Contact">Contact</Link>
-              </li>
-              <li>
-                <Link to="/Resume">Resume</Link>
-              </li>
-            </ul>
-          </nav>
+          <DesktopNavMenu visibility={isHidden}></DesktopNavMenu>
         </div>
       )}
     </>
