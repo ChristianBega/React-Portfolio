@@ -8,7 +8,6 @@ import DesktopNavMenu from "../DesktopNavMenu";
 // How could I use state to check for a change and to render different component?
 
 function Navigation() {
-  // const [isDesktop, setDesktop] = useState(window.innerWidth);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -39,7 +38,7 @@ function Navigation() {
         </div>
       ) : (
         <div className="desktopMenu">
-          <DesktopNavMenu></DesktopNavMenu>
+          <DesktopNavMenu visibility={isHidden}></DesktopNavMenu>
         </div>
       )}
     </>

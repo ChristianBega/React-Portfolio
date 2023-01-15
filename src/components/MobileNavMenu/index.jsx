@@ -21,7 +21,6 @@ const styles = {
 function MobileNavMenu({ isHidden }) {
   return (
     <>
-      {/* hidden = true || !isHidden = hidden = false */}
       {!isHidden ? (
         <nav style={styles.nav} className="mobileNavList hide">
           <ul style={styles.ul}>
