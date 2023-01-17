@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { handleClick } from "./Navigation";
 
 const styles = {
   nav: {
@@ -25,7 +24,7 @@ function MobileNavMenu({ isHidden }) {
         <nav style={styles.nav} className="mobileNavList hide">
           <ul style={styles.ul}>
             <li>
-              <Link to="/about">About Me</Link>
+              <Link to="/React-Portfolio">About Me</Link>
             </li>
             <li>
               <Link to="/projects">Projects</Link>

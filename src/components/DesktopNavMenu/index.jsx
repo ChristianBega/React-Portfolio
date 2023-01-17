@@ -6,7 +6,7 @@ function DesktopNavMenu() {
     <nav>
       <ul>
         <li>
-          <Link to="/about">About Me</Link>
+          <Link to="/React-Portfolio">About Me</Link>
         </li>
         <li>
           <Link to="/projects">Projects</Link>
