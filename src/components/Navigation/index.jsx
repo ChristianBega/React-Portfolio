@@ -1,47 +1,104 @@
 import React, { useState } from "react";
+import { AppBar, Toolbar, styled, Typography, Box, MenuItem, Menu } from "@mui/material";
 import { IconContext } from "react-icons";
 import { MdMenu } from "react-icons/md";
-import { useMediaQuery, useTheme } from "@mui/material";
-import MobileNavMenu from "../MobileNavMenu";
-import DesktopNavMenu from "../DesktopNavMenu";
+import { Link } from "react-router-dom";
 
-// How could I use state to check for a change and to render different component?
+const StyledToolbar = styled(Toolbar)({
+  display: "flex",
+  justifyContent: "space-between",
+});
+const StyledMenuItem = styled(MenuItem)({
+  color: "#fff",
+  padding: ".2rem 0",
+});
+
+const MobileMenu = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
+  [theme.breakpoints.up("sm")]: {
+    display: "none",
+  },
+}));
+
+const DesktopMenu = styled(Box)(({ theme }) => ({
+  display: "none",
+  alignItems: "center",
+  gap: "20px",
+  [theme.breakpoints.up("sm")]: {
+    display: "flex",
+  },
+}));
 
 function Navigation() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
-  const [isHidden, setHidden] = useState(true); // hidden = true
-
-  const handleClick = () => {
-    if (isHidden) {
-      const menuShow = document.querySelector(".mobileNavList").classList.remove("hide");
-      setHidden(menuShow);
-      setHidden(false);
-    } else {
-      const menuHide = document.querySelector(".mobileNavList").classList.add("hide");
-      setHidden(menuHide);
-      setHidden(true);
-    }
-  };
-
+  const [open, setOpen] = useState(false);
   return (
-    <>
-      {isMobile ? (
-        <div className="mobileMenu">
-          <MobileNavMenu visibility={isHidden} />
+    <AppBar position="sticky">
+      <StyledToolbar>
+        <Typography variant="h6">
+          <Link to="/">Chris Bega</Link>
+        </Typography>
+        <DesktopMenu>
+          <StyledMenuItem>
+            <Link to="/">About Me</Link>
+          </StyledMenuItem>
+          <StyledMenuItem>
+            <Link to="/projects">Projects</Link>
+          </StyledMenuItem>
+          <StyledMenuItem>
+            <Link to="/skills">Skills</Link>
+          </StyledMenuItem>
+          <StyledMenuItem>
+            <Link to="/contact">Contact</Link>
+          </StyledMenuItem>
+          <StyledMenuItem>
+            <Link to="/resume">Resume</Link>
+          </StyledMenuItem>
+        </DesktopMenu>
+        <MobileMenu onClick={(e) => setOpen(true)}>
           <IconContext.Provider value={{ size: "1.8rem", padding: "0", margin: "0", color: "white" }}>
-            <button className="hamburgerMenu" onClick={handleClick}>
-              <MdMenu />
-            </button>
+            <MdMenu />
           </IconContext.Provider>
-        </div>
-      ) : (
-        <div className="desktopMenu">
-          <DesktopNavMenu visibility={isHidden}></DesktopNavMenu>
-        </div>
-      )}
-    </>
+        </MobileMenu>
+      </StyledToolbar>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        open={open}
+        onClose={(e) => setOpen(false)}
+        anchorOrigin={{
+          vertical: 123,
+          horizontal: "right",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "left",
+        }}
+        PaperProps={{
+          style: {
+            marginTop: "0",
+            backgroundColor: "var(--menu-bg)",
+          },
+        }}
+      >
+        <StyledMenuItem>
+          <Link to="/">About Me</Link>
+        </StyledMenuItem>
+        <StyledMenuItem>
+          <Link to="/projects">Projects</Link>
+        </StyledMenuItem>
+        <StyledMenuItem>
+          <Link to="/skills">Skills</Link>
+        </StyledMenuItem>
+        <StyledMenuItem>
+          <Link to="/contact">Contact</Link>
+        </StyledMenuItem>
+        <StyledMenuItem>
+          <Link to="/resume">Resume</Link>
+        </StyledMenuItem>
+      </Menu>
+    </AppBar>
   );
 }
 
