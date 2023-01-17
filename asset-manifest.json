@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/React-Portfolio/static/css/main.2ddd94cf.css",
-    "main.js": "/React-Portfolio/static/js/main.8059893e.js",
+    "main.css": "/React-Portfolio/static/css/main.31b7c8b4.css",
+    "main.js": "/React-Portfolio/static/js/main.aaab3e1f.js",
     "static/js/787.a2cb61a6.chunk.js": "/React-Portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/news-menu-bg.png": "/React-Portfolio/static/media/news-menu-bg.f75d755985527d879044.png",
     "static/media/StudyBuddyApp.png": "/React-Portfolio/static/media/StudyBuddyApp.2de4bb2172a01873f47a.png",
     "index.html": "/React-Portfolio/index.html",
-    "main.2ddd94cf.css.map": "/React-Portfolio/static/css/main.2ddd94cf.css.map",
-    "main.8059893e.js.map": "/React-Portfolio/static/js/main.8059893e.js.map",
+    "main.31b7c8b4.css.map": "/React-Portfolio/static/css/main.31b7c8b4.css.map",
+    "main.aaab3e1f.js.map": "/React-Portfolio/static/js/main.aaab3e1f.js.map",
     "787.a2cb61a6.chunk.js.map": "/React-Portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ddd94cf.css",
-    "static/js/main.8059893e.js"
+    "static/css/main.31b7c8b4.css",
+    "static/js/main.aaab3e1f.js"
   ]
 }
