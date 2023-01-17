@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import { IconContext } from "react-icons";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const styles = {
   h1: {
@@ -14,6 +15,7 @@ function About() {
   const handleOnClick = useCallback(() => navigate("/contact", { replace: true }), [navigate]);
   return (
     <>
+      <Link to="/"></Link>
       <section className="aboutSection" id="about">
         <div className="aboutIntroText">
           <h1 style={styles.h1}>

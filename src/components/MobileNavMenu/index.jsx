@@ -24,7 +24,7 @@ function MobileNavMenu({ isHidden }) {
         <nav style={styles.nav} className="mobileNavList hide">
           <ul style={styles.ul}>
             <li>
-              <Link to="/React-Portfolio">About Me</Link>
+              <Link to="/">About Me</Link>
             </li>
             <li>
               <Link to="/projects">Projects</Link>
