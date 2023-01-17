@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import { IconContext } from "react-icons";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const styles = {
   h1: {
@@ -15,6 +16,7 @@ function About() {
   return (
     <>
       <section className="aboutSection" id="about">
+        <Link to="/React-Portfolio"></Link>
         <div className="aboutIntroText">
           <h1 style={styles.h1}>
             Hi There!

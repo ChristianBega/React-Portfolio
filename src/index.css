@@ -4,6 +4,9 @@
   --light-gray: rgba(100, 100, 100, 0.5);
   --medium-gray: rgb(174, 174, 174);
   --lighter-medium-gray: rgba(163, 163, 163, 0.7);
+  --menu-bg: rgba(77, 77, 77, 0.9);
+  --backdrop-filter: blur(5px) saturate(115%);
+
 }
 body {
   margin: 0;
