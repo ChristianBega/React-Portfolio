@@ -10,7 +10,7 @@ const StyledToolbar = styled(Toolbar)({
 });
 const StyledMenuItem = styled(MenuItem)({
   color: "#fff",
-  padding: ".2rem 0",
+  padding: "0 .5rem",
 });
 
 const MobileMenu = styled(Box)(({ theme }) => ({
@@ -25,7 +25,7 @@ const MobileMenu = styled(Box)(({ theme }) => ({
 const DesktopMenu = styled(Box)(({ theme }) => ({
   display: "none",
   alignItems: "center",
-  gap: "20px",
+  gap: "10px",
   [theme.breakpoints.up("sm")]: {
     display: "flex",
   },
@@ -37,11 +37,11 @@ function Navigation() {
     <AppBar position="sticky">
       <StyledToolbar>
         <Typography variant="h6">
-          <Link to="/">Chris Bega</Link>
+          <Link to="/React-Portfolio">Chris Bega</Link>
         </Typography>
         <DesktopMenu>
           <StyledMenuItem>
-            <Link to="/">About Me</Link>
+            <Link to="/React-Portfolio">About Me</Link>
           </StyledMenuItem>
           <StyledMenuItem>
             <Link to="/projects">Projects</Link>
@@ -77,13 +77,15 @@ function Navigation() {
         }}
         PaperProps={{
           style: {
-            marginTop: "0",
+            marginTop: "1rem",
             backgroundColor: "var(--menu-bg)",
+            width: "100%",
+            backdropFilter: "var(--backdrop-filter)",
           },
         }}
       >
         <StyledMenuItem>
-          <Link to="/">About Me</Link>
+          <Link to="/React-Portfolio">About Me</Link>
         </StyledMenuItem>
         <StyledMenuItem>
           <Link to="/projects">Projects</Link>

@@ -15,8 +15,8 @@ function About() {
   const handleOnClick = useCallback(() => navigate("/contact", { replace: true }), [navigate]);
   return (
     <>
-      <Link to="/"></Link>
       <section className="aboutSection" id="about">
+        <Link to="/React-Portfolio"></Link>
         <div className="aboutIntroText">
           <h1 style={styles.h1}>
             Hi There!
