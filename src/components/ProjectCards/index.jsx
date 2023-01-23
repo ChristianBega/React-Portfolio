@@ -1,6 +1,6 @@
 import React from "react";
 import cardImg from "../../images/news-menu-bg.png";
-import cardImg2 from "../../images/StudyBuddyApp.png";
+// import cardImg2 from "../../images/StudyBuddyApp.png";
 
 const styles = {
   card: {
@@ -27,30 +27,19 @@ const styles = {
     marginLeft: "1rem",
   },
 };
-function ProjectCards() {
+function ProjectCards({ project }) {
+  const { name, description, link, repo, image } = project;
+
   return (
     <>
       <div style={styles.card} className="card">
-        <img style={styles.projectImg} src={cardImg} alt="" />
+        <img style={styles.projectImg} src={image} alt="" />
         <div style={styles.cardText} className="cardText">
-          <h3>News Home Page</h3>
-          <span>Technologies</span>
+          <h3>{name}</h3>
+          <span>{description}</span>
           <div className="linkWrapper">
-            <a href="https://t3mpz.github.io/news-homepage-main/">Live Demo</a>
-            <a style={styles.marginLeft} href="https://github.com/T3mpz/news-homepage-main">
-              Source Code
-            </a>
-          </div>
-        </div>
-      </div>
-      <div style={styles.card} className="card">
-        <img style={styles.projectImg} src={cardImg2} alt="" />
-        <div style={styles.cardText} className="cardText">
-          <h3>Study Buddies</h3>
-          <span>Technologies</span>
-          <div className="linkWrapper">
-            <a href="https://studybuddiezzz.herokuapp.com/">Live Demo</a>
-            <a style={styles.marginLeft} href="https://github.com/JerimiahK/studyBuddies">
+            <a href={link}>Live Demo</a>
+            <a style={styles.marginLeft} href={repo}>
               Source Code
             </a>
           </div>
