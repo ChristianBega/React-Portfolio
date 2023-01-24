@@ -24,28 +24,28 @@ function About() {
   return (
     <Container sx={{ minHeight: "85vh", mt: 5, textAlign: "center" }}>
       <Link to="/React-Portfolio"></Link>
-      <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 1000 } : {})}>
+      <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 2000 } : {})}>
         <Typography variant="h2" component="h1" mt={5} sx={{ fontSize: "75px" }}>
-          Hi There!
+          Hi there!
           <Box component="span" sx={{ fontSize: "65%", display: "block", marginTop: "1rem" }}>
             I'm Christian
           </Box>
         </Typography>
       </Grow>
-      <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 2000 } : {})}>
+      <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 2500 } : {})}>
         <Typography variant="p" component="p" mt={5}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quia fugit voluptas sit rem quisquam. Magni illo eos, obcaecati quas sapiente
           animi! Odit, rerum ratione!
         </Typography>
       </Grow>
 
-      <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 3000 } : {})}>
+      <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 3500 } : {})}>
         <Box textAlign="center" mt={5}>
           <Button onClick={handleOnClick}>Contact Me</Button>
         </Box>
       </Grow>
       <IconContext.Provider value={{ size: "1.3rem" }}>
-        <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 4000 } : {})}>
+        <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 3500 } : {})}>
           <Stack direction="row" spacing={5} sx={{ justifyContent: "center", mt: 5 }}>
             <Item>
               <a href="https://github.com/T3mpz" target="_blank">

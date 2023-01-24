@@ -33,6 +33,7 @@ const DesktopMenu = styled(Box)(({ theme }) => ({
 
 function Navigation() {
   const [open, setOpen] = useState(false);
+  
   const exitMenu = () => {
     setOpen(false);
   };

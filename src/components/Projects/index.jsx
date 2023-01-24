@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ProjectCard from "../ProjectCards";
 import cardImg from "../../images/news-menu-bg.png";
+import { Container } from "@mui/material";
 
 function Projects() {
   const [projects] = useState([
@@ -35,11 +36,11 @@ function Projects() {
   ]);
   return (
     <>
-      <section className="projectSection">
+      <Container className="projectSection">
         {projects.map((project, i) => (
           <ProjectCard project={project} key={"project" + i} />
         ))}
-      </section>
+      </Container>
     </>
   );
 }
