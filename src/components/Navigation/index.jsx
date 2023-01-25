@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
   justifyContent: "space-between",
+  
 });
 const StyledMenuItem = styled(MenuItem)({
   color: "#fff",
@@ -33,14 +34,14 @@ const DesktopMenu = styled(Box)(({ theme }) => ({
 
 function Navigation() {
   const [open, setOpen] = useState(false);
-  
+
   const exitMenu = () => {
     setOpen(false);
   };
   return (
     <AppBar position="sticky">
       <StyledToolbar>
-        <Typography variant="h6">
+        <Typography variant="h6" component="h1">
           <Link to="/React-Portfolio">Chris Bega</Link>
         </Typography>
         <DesktopMenu>

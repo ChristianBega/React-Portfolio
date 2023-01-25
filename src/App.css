@@ -62,42 +62,15 @@ nav a {
   padding: 1.2rem;
   text-align: center;
 }
-.aboutSection button,
-.contactSection button,
-.resumeSection button {
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 1rem;
-  padding: 1rem 1.8rem;
-  background-color: #fff;
-  color: #000;
-  transition: all 0.4s ease-in-out;
-  border: none;
-  border-radius: 6px;
-}
+
 .aboutSection button:hover {
   color: #fff;
   background-color: var(--light-gray);
   transform: scale(1.08);
-}
-.socialLinksContainer {
-  margin-block: 2rem;
-}
-.socialLinksContainer ul {
-  display: flex;
-  justify-content: center;
-  padding-left: 0;
-}
-.socialLinksContainer ul li {
-  padding: 1rem;
 }
 .icon {
   height: 1.3rem;
   width: 1.3rem;
   padding: 0.8rem;
   border-radius: 50%;
-}
-
-footer {
-  background-color: var(--dark-bg);
 }
