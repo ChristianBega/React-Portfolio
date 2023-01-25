@@ -33,6 +33,10 @@ const DesktopMenu = styled(Box)(({ theme }) => ({
 
 function Navigation() {
   const [open, setOpen] = useState(false);
+  
+  const exitMenu = () => {
+    setOpen(false);
+  };
   return (
     <AppBar position="sticky">
       <StyledToolbar>
@@ -85,19 +89,29 @@ function Navigation() {
         }}
       >
         <StyledMenuItem>
-          <Link to="/React-Portfolio">About Me</Link>
+          <Link onClick={exitMenu} to="/React-Portfolio">
+            About Me
+          </Link>
         </StyledMenuItem>
         <StyledMenuItem>
-          <Link to="/projects">Projects</Link>
+          <Link onClick={exitMenu} to="/projects">
+            Projects
+          </Link>
         </StyledMenuItem>
         <StyledMenuItem>
-          <Link to="/skills">Skills</Link>
+          <Link onClick={exitMenu} to="/skills">
+            Skills
+          </Link>
         </StyledMenuItem>
         <StyledMenuItem>
-          <Link to="/contact">Contact</Link>
+          <Link onClick={exitMenu} to="/contact">
+            Contact
+          </Link>
         </StyledMenuItem>
         <StyledMenuItem>
-          <Link to="/resume">Resume</Link>
+          <Link onClick={exitMenu} to="/resume">
+            Resume
+          </Link>
         </StyledMenuItem>
       </Menu>
     </AppBar>

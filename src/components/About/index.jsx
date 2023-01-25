@@ -1,59 +1,71 @@
+import styled from "@emotion/styled";
+import { Container } from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+// import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import { Stack } from "@mui/system";
 import React, { useCallback } from "react";
 import { IconContext } from "react-icons";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Grow from "@mui/material/Grow";
 
-const styles = {
-  h1: {
-    fontSize: "250%",
-    marginTop: "1rem",
-  },
-};
+const Item = styled(Box)({
+  textAlign: "center",
+});
+
 function About() {
   const navigate = useNavigate();
   const handleOnClick = useCallback(() => navigate("/contact", { replace: true }), [navigate]);
+  const [checked, setChecked] = React.useState(true);
+
   return (
-    <>
-      <section className="aboutSection" id="about">
-        <Link to="/React-Portfolio"></Link>
-        <div className="aboutIntroText">
-          <h1 style={styles.h1}>
-            Hi There!
-            <span>
-              <br /> I'm Christian
-            </span>
-          </h1>
-          <p>
-            A dedicated and passionate Jr web developer graduate from the Denver University full stack bootcamp. Pursuing a creative and exciting
-            position that utilizes my current knowledge of web development. Capable of utilizing, integrating, and developing Restful APIs. As well as
-            coordinating and collaborating with different groups of developers to plan, test, and develop MERN full stack applications.
-          </p>
-        </div>
-        <button onClick={handleOnClick}>Contact Me</button>
-        <div className="socialLinksContainer">
-          <IconContext.Provider value={{ size: "1.3rem" }}>
-            <ul className="ul">
-              <li>
-                <a href="https://github.com/T3mpz" target="_blank">
-                  <FaGithub />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/christian-bega-4b63b3216/" target="_blank">
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/ChristianBega4" target="_blank">
-                  <FaTwitter />
-                </a>
-              </li>
-            </ul>
-          </IconContext.Provider>
-        </div>
-      </section>
-    </>
+    <Container sx={{ minHeight: "85vh", mt: 5, textAlign: "center" }}>
+      <Link to="/React-Portfolio"></Link>
+      <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 2000 } : {})}>
+        <Typography variant="h2" component="h1" mt={5} sx={{ fontSize: "75px" }}>
+          Hi there!
+          <Box component="span" sx={{ fontSize: "65%", display: "block", marginTop: "1rem" }}>
+            I'm Christian
+          </Box>
+        </Typography>
+      </Grow>
+      <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 2500 } : {})}>
+        <Typography variant="p" component="p" mt={5}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quia fugit voluptas sit rem quisquam. Magni illo eos, obcaecati quas sapiente
+          animi! Odit, rerum ratione!
+        </Typography>
+      </Grow>
+
+      <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 3500 } : {})}>
+        <Box textAlign="center" mt={5}>
+          <Button onClick={handleOnClick}>Contact Me</Button>
+        </Box>
+      </Grow>
+      <IconContext.Provider value={{ size: "1.3rem" }}>
+        <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 3500 } : {})}>
+          <Stack direction="row" spacing={5} sx={{ justifyContent: "center", mt: 5 }}>
+            <Item>
+              <a href="https://github.com/T3mpz" target="_blank">
+                <FaGithub />
+              </a>
+            </Item>
+            <Item>
+              <a href="https://www.linkedin.com/in/christian-bega-4b63b3216/" target="_blank">
+                <FaLinkedinIn />
+              </a>
+            </Item>
+            <Item>
+              <a href="https://twitter.com/ChristianBega4" target="_blank">
+                <FaTwitter />
+              </a>
+            </Item>
+          </Stack>
+        </Grow>
+      </IconContext.Provider>
+    </Container>
   );
 }
 

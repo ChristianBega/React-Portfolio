@@ -1,62 +1,57 @@
-import React from "react";
-import cardImg from "../../images/news-menu-bg.png";
-import cardImg2 from "../../images/StudyBuddyApp.png";
+import styled from "@emotion/styled";
+import { Card, Typography, Link, CardContent, CardMedia, Paper, Grow } from "@mui/material";
+import { Stack } from "@mui/system";
+import React, { useState } from "react";
 
-const styles = {
-  card: {
-    minHeight: "25rem",
-    width: "clamp(15vw, 21em, 100vw)",
-    margin: "1.5rem auto",
-  },
-  projectImg: {
-    width: "100%",
-    height: "100%",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    borderTopLeftRadius: "0.3rem",
-    borderTopRightRadius: "0.3rem",
-  },
-  cardText: {
-    display: "flex",
-    gap: ".8rem",
-    flexDirection: "column",
-    backgroundColor: "var(--dark-bg)",
-    padding: "1.5rem .8rem",
-  },
-  marginLeft: {
-    marginLeft: "1rem",
-  },
-};
-function ProjectCards() {
+const StyledProjectCard = styled(Card)({
+  backgroundColor: "var(--another-gray)",
+  minWidth: "21rem",
+  maxWidth: "25rem",
+  margin: "1.6rem",
+  flex: "1",
+});
+//1. On hover I want to add transitions to
+//  a. Card img shrinking
+//  b. Card text displaying
+function ProjectCards({ project }) {
+  const [isHovered, setHovered] = useState(false);
+  const [checked, setChecked] = React.useState(true);
+
+  const { name, description, link, repo, image } = project;
+
   return (
-    <>
-      <div style={styles.card} className="card">
-        <img style={styles.projectImg} src={cardImg} alt="" />
-        <div style={styles.cardText} className="cardText">
-          <h3>News Home Page</h3>
-          <span>Technologies</span>
-          <div className="linkWrapper">
-            <a href="https://t3mpz.github.io/news-homepage-main/">Live Demo</a>
-            <a style={styles.marginLeft} href="https://github.com/T3mpz/news-homepage-main">
-              Source Code
-            </a>
-          </div>
-        </div>
-      </div>
-      <div style={styles.card} className="card">
-        <img style={styles.projectImg} src={cardImg2} alt="" />
-        <div style={styles.cardText} className="cardText">
-          <h3>Study Buddies</h3>
-          <span>Technologies</span>
-          <div className="linkWrapper">
-            <a href="https://studybuddiezzz.herokuapp.com/">Live Demo</a>
-            <a style={styles.marginLeft} href="https://github.com/JerimiahK/studyBuddies">
-              Source Code
-            </a>
-          </div>
-        </div>
-      </div>
-    </>
+    <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 2000 } : {})}>
+      <StyledProjectCard
+        onMouseEnter={() => {
+          setHovered(true);
+        }}
+        onMouseLeave={() => setHovered(false)}
+      >
+        {!isHovered ? (
+          <CardMedia sx={{ height: 350 }} image={image} title="Project image" />
+        ) : (
+          <>
+            <CardMedia sx={{ height: 240 }} image={image} title="Project image" />
+            <CardContent>
+              <Typography component="h2" variant="h5" sx={{ color: "#fff" }}>
+                {name}
+              </Typography>
+              <Typography component="p" mt={2}>
+                {description}
+              </Typography>
+              <Stack direction="row" spacing={3} mt={2}>
+                <a href={link} target="_blank">
+                  Live Demo
+                </a>
+                <a href={repo} target="_blank">
+                  Source Code
+                </a>
+              </Stack>
+            </CardContent>
+          </>
+        )}
+      </StyledProjectCard>
+    </Grow>
   );
 }
 
