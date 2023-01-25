@@ -14,7 +14,7 @@ export default function Socials({ checked }) {
     <>
       <IconContext.Provider value={{ size: "1.3rem" }}>
         <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 3500 } : {})}>
-          <Stack direction="row" spacing={5} sx={{ justifyContent: "center", mt: 5 }}>
+          <Stack direction="row" spacing={5} sx={{ justifyContent: "center" }}>
             <Item>
               <a href="https://github.com/T3mpz" target="_blank">
                 <FaGithub />

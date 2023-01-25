@@ -33,7 +33,7 @@ function About() {
         </Typography>
       </Grow>
       <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 3500 } : {})}>
-        <Box textAlign="center" mt={5}>
+        <Box textAlign="center" marginY={5}>
           <Button onClick={handleOnClick}>Contact Me</Button>
         </Box>
       </Grow>
