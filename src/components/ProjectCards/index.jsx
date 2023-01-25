@@ -15,11 +15,13 @@ function ProjectCards({ project }) {
   const { name, description, link, repo, image } = project;
 
   return (
-    // On card hover event
     <StyledProjectCard>
       {!isHovered ? (
+        //onMouseEnter THEN display the card text below && display icon links to source code and live demo
         <CardMedia onMouseEnter={() => setHovered(true)} sx={{ height: 350 }} image={image} title="Project image" />
       ) : (
+        //settime that runs after the mouseLeave to allow user time to click the links
+        //
         <>
           <CardMedia onMouseLeave={() => setHovered(false)} sx={{ height: 240 }} image={image} title="Project image" />
           <CardContent>
