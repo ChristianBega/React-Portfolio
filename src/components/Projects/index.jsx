@@ -1,58 +1,58 @@
 import React, { useState } from "react";
 import ProjectCard from "../ProjectCards";
-import cardImg from "../../images/news-menu-bg.png";
-import { Box, Container } from "@mui/material";
+import NewHomePageImg from "../ProjectCards/images/news-menu-bg.png";
+import FinancialTrackerImg from "../ProjectCards/images/FinaicalTracker.png";
+import StudyAppImg from "../ProjectCards/images/StudyBuddyApp.png";
+
+import { Container } from "@mui/material";
 import styled from "@emotion/styled";
 
-// const StyledBox = styled(Box)({
-//   display: "flex !important",
-//   flexWrap: "wrap !important",
-//   flexDirection: "row !important",
-// });
+const StyledContainer = styled(Container)({
+  display: "flex",
+  flexWrap: "wrap",
+  justifyContent: "center",
+});
 
 function Projects() {
   const [projects] = useState([
     {
-      name: "News Home Page",
+      name: "Financial Tracker",
       description: "LoremLoremLorem",
-      image: cardImg,
-      link: "https://t3mpz.github.io/news-homepage-main/",
-      repo: "https://github.com/T3mpz/news-homepage-main",
+      image: FinancialTrackerImg,
+      link: "https://golden-goose-finance.herokuapp.com/",
+      repo: "https://github.com/edyta0106/Financial_Tracker",
+    },
+    {
+      name: "Study Buddies",
+      description: "LoremLoremLorem",
+      image: StudyAppImg,
+      link: "https://studybuddiezzz.herokuapp.com/",
+      repo: "https://github.com/JerimiahK/studyBuddies",
     },
     {
       name: "News Home Page",
       description: "LoremLoremLorem",
-      image: cardImg,
+      image: NewHomePageImg,
       link: "https://t3mpz.github.io/news-homepage-main/",
       repo: "https://github.com/T3mpz/news-homepage-main",
     },
-    {
-      name: "News Home Page",
-      description: "LoremLoremLorem",
-      image: cardImg,
-      link: "https://t3mpz.github.io/news-homepage-main/",
-      repo: "https://github.com/T3mpz/news-homepage-main",
-    },
-    {
-      name: "News Home Page",  
-      description: "LoremLoremLorem",
-      image: cardImg,
-      link: "https://t3mpz.github.io/news-homepage-main/",
-      repo: "https://github.com/T3mpz/news-homepage-main",
-    },
+    // {
+    //   name: "News Home Page",
+    //   description: "LoremLoremLorem",
+    //   image: cardImg,
+    //   link: "https://t3mpz.github.io/news-homepage-main/",
+    //   repo: "https://github.com/T3mpz/news-homepage-main",
+    // },
   ]);
   return (
     <>
-      <Container className="projectSection">
-        <Box>
-          {projects.map((project, i) => (
-            <ProjectCard project={project} key={"project" + i} />
-          ))}
-        </Box>
-      </Container>
+      <StyledContainer>
+        {projects.map((project, i) => (
+          <ProjectCard project={project} key={"project" + i} />
+        ))}
+      </StyledContainer>
     </>
   );
 }
 
 export default Projects;
-// sx={{ display: "flex" }}
