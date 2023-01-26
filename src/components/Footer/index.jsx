@@ -4,18 +4,19 @@ import BottomNavigation from "@mui/material/BottomNavigation";
 import { Typography } from "@mui/material";
 import React from "react";
 import Socials from "../Socials";
+
 const StyledBottomNavigation = styled(BottomNavigation)({
   backgroundColor: "var(--another-gray)",
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  paddingInline: "2rem",
+  padding: ".5rem 2rem",
 });
 function Footer({ checked }) {
   return (
     <>
       <StyledBottomNavigation>
-        <Typography variant="h6" component="h1" sx={{ color: "red" }}>
+        <Typography variant="h6" component="h1">
           <Link to="/React-Portfolio">Chris Bega</Link>
         </Typography>
         <Socials checked={true} />

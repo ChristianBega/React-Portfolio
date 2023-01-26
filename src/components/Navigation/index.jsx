@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
   justifyContent: "space-between",
-  
 });
 const StyledMenuItem = styled(MenuItem)({
   color: "#fff",
@@ -39,7 +38,7 @@ function Navigation() {
     setOpen(false);
   };
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" sx={{ padding: "1rem" }}>
       <StyledToolbar>
         <Typography variant="h6" component="h1">
           <Link to="/React-Portfolio">Chris Bega</Link>
