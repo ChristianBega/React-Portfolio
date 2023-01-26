@@ -15,6 +15,7 @@ const StyledBottomNavigation = styled(BottomNavigation)({
 function Footer({ checked }) {
   return (
     <>
+      {/* Wrap within AppBar or toolbar to add paper elevation */}
       <StyledBottomNavigation>
         <Typography variant="h6" component="h1">
           <Link to="/React-Portfolio">Chris Bega</Link>
