@@ -1,6 +1,27 @@
 import React, { useState } from "react";
-import { Box, Button, TextField } from "@mui/material/";
+import { Box, Button, MenuItem, TextField, Typography } from "@mui/material/";
 import { validateEmail } from "../../utils/helpers";
+import styled from "@emotion/styled";
+
+const choices = [
+  {
+    label: "Regarding an open position",
+  },
+  {
+    label: "Regarding collaborating on a project",
+  },
+  {
+    label: "Curious about a project",
+  },
+  {
+    label: "other (specify in details)",
+  },
+];
+
+// const StyledTextField = styled(TextField)({
+//   border: "1px solid red",
+//   "&:active": { border: "1px solid orange" },
+// });
 
 function Contact() {
   const [formState, setFormState] = useState({
@@ -11,7 +32,7 @@ function Contact() {
 
   const [errorMessage, setErrorMessage] = useState("");
 
-  const { name, email, message } = formState;
+  // const { name, email, message } = formState;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,59 +61,81 @@ function Contact() {
       console.log("Handled form", formState);
     }
   };
+  //name
+  //email
+  //company
+  //reason - , , ,
+  // message
 
   return (
     <section className="contactSection" style={{ paddingInline: "2rem" }}>
-      <h2 style={{ textAlign: "center", margin: "3rem" }}>
-        Let's Chat! <span>Contact me below.</span>
-      </h2>
-      <Box
-        onSubmit={handleSubmit}
-        component="form"
-        sx={{
-          "& .MuiTextField-root": { m: 2, minWidth: "18rem", display: "flex", flexDirection: "column", alignContent: "center" },
-        }}
-        noValidate
-        autoComplete="off"
-      >
-        <div>
-          <TextField
-            style={{ marginTop: "3rem" }}
-            sx={{
-              label: { color: "white" },
-              input: { color: "var(--lighter-medium-gray)" },
-            }}
-            id="name"
-            label="Name"
-            placeholder={name}
-            onBlur={handleChange}
-            variant="standard"
-          />
-          <TextField
-            style={{ marginTop: "3rem" }}
-            sx={{ label: { color: "white" }, input: { color: "var(--lighter-medium-gray)" } }}
-            id="email"
-            label="Email"
-            placeholder={email}
-            onBlur={handleChange}
-            variant="standard"
-          />
-          <TextField
-            style={{ marginTop: "3rem" }}
-            sx={{ label: { color: "white" }, input: { color: "var(--lighter-medium-gray)" } }}
-            id="contactMessage"
-            label="Leave a message here"
-            placeholder={message}
-            onBlur={handleChange}
-            variant="standard"
-          />
-        </div>
-        {errorMessage && (
-          <div>
-            <p>{errorMessage}</p>
-          </div>
-        )}
+      <h2 style={{ textAlign: "center", margin: "3rem" }}></h2>
+      <Typography component="h2" variant="h2" textAlign="center">
+        Let's Chat!{" "}
+        <Typography component="p" variant="h4" sx={{ fontSize: "2rem" }}>
+          Contact me below.
+        </Typography>
+      </Typography>
+      <Box component="form">
+        <TextField
+          required
+          // style={{ marginTop: "3rem" }}
+          sx={{
+            label: { color: "white" },
+            input: { color: "var(--lighter-medium-gray)" },
+          }}
+          id="name"
+          label="Name "
+          variant="filled"
+          onBlur={handleChange}
+        />
+        <TextField
+          required
+          // style={{ marginTop: "3rem" }}
+          sx={{
+            label: { color: "white" },
+            input: { color: "var(--lighter-medium-gray)" },
+          }}
+          id="email"
+          label="Email "
+          variant="filled"
+          onBlur={handleChange}
+        />
+        <TextField
+          required
+          // style={{ marginTop: "3rem" }}
+          sx={{
+            label: { color: "white" },
+            input: { color: "var(--lighter-medium-gray)" },
+          }}
+          id="company"
+          label="Company "
+          variant="filled"
+          onBlur={handleChange}
+        />
+        <TextField
+          required
+          // style={{ marginTop: "3rem" }}
+          sx={{
+            label: { color: "white" },
+            input: { color: "var(--lighter-medium-gray)" },
+          }}
+          id="company"
+          label="Company "
+          variant="filled"
+          onBlur={handleChange}
+        />
+
+        <TextField select id="Reason" helperText="Please select an option">
+          {choices.map((option, index) => (
+            <MenuItem key={index} value={option}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+        <StyledTextField></StyledTextField>
       </Box>
+
       <Box textAlign="center">
         <Button variant="contained">Submit</Button>
       </Box>
@@ -101,3 +144,49 @@ function Contact() {
 }
 
 export default Contact;
+//  <Box
+//    onSubmit={handleSubmit}
+//    component="form"
+//    sx={{
+//      "& .MuiTextField-root": { m: 2, minWidth: "18rem", display: "flex", flexDirection: "column", alignContent: "center" },
+//    }}
+//    noValidate
+//    autoComplete="off"
+//  >
+//    <TextField
+//      style={{ marginTop: "3rem" }}
+//      sx={{
+//        label: { color: "white" },
+//        input: { color: "var(--lighter-medium-gray)" },
+//      }}
+//      id="name"
+//      label="Name"
+//      placeholder={name}
+//      onBlur={handleChange}
+//      variant="standard"
+//    />
+//    <TextField
+//      style={{ marginTop: "3rem" }}
+//      sx={{ label: { color: "white" }, input: { color: "var(--lighter-medium-gray)" } }}
+//      id="email"
+//      label="Email"
+//      placeholder={email}
+//      onBlur={handleChange}
+//      variant="standard"
+//    />
+//    <TextField
+//      style={{ marginTop: "3rem" }}
+//      sx={{ label: { color: "white" }, input: { color: "var(--lighter-medium-gray)" } }}
+//      id="contactMessage"
+//      label="Leave a message here"
+//      placeholder={message}
+//      onBlur={handleChange}
+//      variant="standard"
+//    />
+
+//    {errorMessage && (
+//      <div>
+//        <p>{errorMessage}</p>
+//      </div>
+//    )}
+//  </Box>;
