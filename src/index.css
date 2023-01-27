@@ -42,3 +42,8 @@ section {
 button {
   cursor: pointer;
 }
+
+/*! Fix later - changes text color in form drop down */
+#Reason {
+  color: #fff;
+}
