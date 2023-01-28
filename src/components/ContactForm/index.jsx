@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import { Box, Container, TextField, Button, Typography, MenuItem, Select, InputLabel, FormControl, OutlinedInput, FilledInput } from "@mui/material";
+import { Box, Container, TextField, Button, Typography, MenuItem, Select, InputLabel, FormControl } from "@mui/material";
 import React from "react";
 import { useForm } from "react-hook-form";
-
+// 1. Finish validation for email - pattern
 const StyledTextField = styled(TextField)({
   // border: "1px solid red",
   // "&:hover": { border: "1px solid orange" },
@@ -40,7 +40,7 @@ function ContactForm() {
 
   console.log(errors);
   return (
-    <Container sx={{ minHeight: "85vh", mt: 5, textAlign: "center" }}>
+    <Container>
       <Box
         component="form"
         onSubmit={handleSubmit((data) => {
@@ -65,11 +65,7 @@ function ContactForm() {
         </Typography>
         <StyledFormControl variant="filled">
           <InputLabel id="selectMenu">Reason for message</InputLabel>
-          <Select
-            id="selectMenu"
-            // input={<StyledFilledInput variant="filled" placeholder="testing" />}
-            {...register("reason", { required: "This is required" })}
-          >
+          <Select id="selectMenu" {...register("reason", { required: "This is required" })}>
             {choices.map((option, index) => (
               <MenuItem key={index} value={option}>
                 {option.label}
