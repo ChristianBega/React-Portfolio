@@ -28,8 +28,7 @@ function About() {
       </Grow>
       <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 2500 } : {})}>
         <Typography variant="p" component="p" mt={5}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quia fugit voluptas sit rem quisquam. Magni illo eos, obcaecati quas sapiente
-          animi! Odit, rerum ratione!
+          A creative, detail-oriented Web Developer with a versatile background and immersive hands on experience with developing fully responsive, polished UI, and user-friendly web applications.
         </Typography>
       </Grow>
       <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 3500 } : {})}>
