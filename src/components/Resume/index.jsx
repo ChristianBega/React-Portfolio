@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Button, Typography, List, ListItem } from "@mui/material/";
+import { Container } from "@mui/system";
 
 const styles = {
   resumeSection: {
@@ -12,12 +13,15 @@ const styles = {
 };
 function Resume() {
   return (
-    <section className="resumeSection" style={{ paddingInline: "1.3rem" }}>
+    <Container sx={{ minHeight: "85vh", mt: 5 }}>
       <Box textAlign="center" marginTop="2rem">
-        <Button variant="contained" style={{ zIndex: "-1000" }}>
-          Download Resume
+        <Button variant="contained">
+          <a className="resumeButton" href="https://drive.google.com/file/d/1EWKWdADy6-VGt00r396ispcyx2H2ElWB/view" target="_blank" rel="noreferrer">
+            Download Resume
+          </a>
         </Button>
       </Box>
+
       <Box marginTop="2rem">
         <Typography variant="h4" component="h1" marginBottom="1rem">
           Experience
@@ -72,7 +76,7 @@ function Resume() {
           August 2019 - March 2022, Colorado
         </Typography>
       </Box>
-    </section>
+    </Container>
   );
 }
 
