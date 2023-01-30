@@ -17,21 +17,21 @@ function Projects() {
   const [projects] = useState([
     {
       name: "Financial Tracker",
-      description: "LoremLoremLorem",
+      description: "A MERN full stack application that allows users track bills, savings, and expenses.",
       image: FinancialTrackerImg,
       link: "https://golden-goose-finance.herokuapp.com/",
       repo: "https://github.com/edyta0106/Financial_Tracker",
     },
     {
       name: "Study Buddies",
-      description: "LoremLoremLorem",
+      description: "A full stack application that serves as a study productivity aid.",
       image: StudyAppImg,
       link: "https://studybuddiezzz.herokuapp.com/",
       repo: "https://github.com/JerimiahK/studyBuddies",
     },
     {
       name: "News Home Page",
-      description: "LoremLoremLorem",
+      description: "HTML and CSS New Landing Page.",
       image: NewHomePageImg,
       link: "https://t3mpz.github.io/news-homepage-main/",
       repo: "https://github.com/T3mpz/news-homepage-main",
