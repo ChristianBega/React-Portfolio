@@ -33,7 +33,7 @@ function ProjectCards({ project }) {
           <>
             <CardMedia sx={{ height: 240 }} image={image} title="Project image" />
             <CardContent>
-              <Typography component="h2" variant="h5" sx={{ color: "#fff" }}>
+              <Typography component="h2" variant="h5" sx={{ fontWeight: "600" }}>
                 {name}
               </Typography>
               <Typography component="p" mt={2}>
