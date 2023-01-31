@@ -19,7 +19,7 @@ function About() {
     <Container sx={{ minHeight: "85vh", mt: 5, textAlign: "center" }}>
       <Link to="/React-Portfolio"></Link>
       <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 2000 } : {})}>
-        <Typography variant="h2" component="h1" mt={5} sx={{ fontSize: "75px" }}>
+        <Typography component="h2" mt={5} sx={{ fontSize: "75px", fontWeight: "700" }}>
           Hi there!
           <Box component="span" sx={{ fontSize: "65%", display: "block", marginTop: "1rem" }}>
             I'm Christian
@@ -28,7 +28,8 @@ function About() {
       </Grow>
       <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 2500 } : {})}>
         <Typography variant="p" component="p" mt={5}>
-          A creative, detail-oriented Web Developer with a versatile background and immersive hands on experience with developing fully responsive, polished UI, and user-friendly web applications.
+          A creative, detail-oriented Web Developer with a versatile background and immersive hands on experience with developing fully responsive,
+          polished UI, and user-friendly web applications.
         </Typography>
       </Grow>
       <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 3500 } : {})}>

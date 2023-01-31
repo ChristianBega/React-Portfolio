@@ -6,12 +6,12 @@ import { useForm } from "react-hook-form";
 const StyledTextField = styled(TextField)({
   // border: "1px solid red",
   // "&:hover": { border: "1px solid orange" },
-  backgroundColor: "var(--light-gray)",
+  backgroundColor: "var(--light-form-bg)",
   width: "100%",
   marginTop: "1rem",
 });
 const StyledFormControl = styled(FormControl)({
-  backgroundColor: "var(--light-gray)",
+  backgroundColor: "var(--light-form-bg)",
   width: "100%",
   marginTop: "1rem",
 });

@@ -15,7 +15,7 @@ function Resume() {
       </Box>
       {/* Summary section */}
       <Box marginTop="2rem">
-        <Typography variant="h4" component="h1" marginBottom="1rem">
+        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700" }}>
           Summary
         </Typography>
         <Typography variant="p" component="p">
@@ -25,7 +25,7 @@ function Resume() {
       </Box>
       {/* Skills section */}
       {/* <Box marginTop="2rem">
-        <Typography variant="h4" component="h1" marginBottom="1rem">
+        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{fontWeight : "700"}}>
           Skills
         </Typography>
         <Typography variant="p" component="p">
@@ -33,11 +33,11 @@ function Resume() {
       </Box> */}
 
       <Box marginTop="2rem">
-        <Typography variant="h4" component="h1" marginBottom="1rem">
+        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700" }}>
           Experience
         </Typography>
         <Box>
-          <Typography variant="h6" component="p" style={{ color: "#fff" }}>
+          <Typography variant="h6" component="h3">
             Study Buddies |
             <span>
               <a href="https://studybuddiezzz.herokuapp.com/" target="_blank" rel="noreferrer">
@@ -59,7 +59,7 @@ function Resume() {
           </List>
         </Box>
         <Box>
-          <Typography variant="h6" component="p" style={{ color: "#fff" }}>
+          <Typography variant="h6" component="h3">
             Financial Tracker |
             <span>
               <a href="https://golden-goose-finance.herokuapp.com/" target="_blank" rel="noreferrer">
@@ -84,7 +84,7 @@ function Resume() {
           </List>
         </Box>
         <Box>
-          <Typography variant="h6" component="p" style={{ color: "#fff" }}>
+          <Typography variant="h6" component="h3">
             Hangry |
             <span>
               <a href="https://mandiebot.github.io/Hangry/" target="_blank" rel="noreferrer">
@@ -109,7 +109,7 @@ function Resume() {
         </Box>
       </Box>
       <Box marginTop="2rem">
-        <Typography variant="h4" component="h1" marginBottom="1rem">
+        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700" }}>
           Eduction
         </Typography>
         <Box>

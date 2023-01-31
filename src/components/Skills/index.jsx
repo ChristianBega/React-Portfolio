@@ -18,7 +18,6 @@ import MaterialUISvg from "./images/MaterialUI.svg";
 import CssSvg from "./images/Css.svg";
 import BootstrapSvg from "./images/BootStrap.svg";
 const StyledSkillItem = styled(ImageListItem)({
-  // backgroundColor: "var(--another-gray)",
   minWidth: "7rem",
   maxWidth: "8rem",
   maxHeight: "8rem",

@@ -1,76 +1,13 @@
-.hide {
-  display: none !important;
-}
-
 body {
   background: var(--linear-bg);
-  color: #fff;
 }
-
 /* Header */
 header {
-  backdrop-filter: var(--backdrop-filter);
-  background-color: var(--dark-bg) !important;
-  /* display: flex;
-  align-content: center;
-  justify-content: space-between; */
+  backdrop-filter: var(--header-blur-filter);
+  background-color: var(--dark-header-bg) !important;
   padding: 1.5rem 1rem;
-  /* position: sticky !important; */
 }
-header h1 {
-  margin: 0;
-}
-nav {
-  display: flex;
-  align-content: center;
-}
-nav ul {
-  padding-top: 1rem;
-  display: flex;
-}
-
-nav a {
-  text-decoration: none;
+/*! Fix later - changes text color in form drop down */
+#Reason {
   color: #fff;
-  padding: 0 0.5rem;
-  cursor: pointer;
-}
-
-/* Desktop Menu */
-.desktopMenu {
-  display: flex;
-  flex-direction: column;
-}
-/* Mobile Menu  */
-.mobileMenu {
-  display: grid;
-  align-items: center;
-}
-/*
-.mobileMenu button {
-  padding: 0.2rem 0.4rem;
-}*/
-.hamburgerMenu {
-  padding: 0;
-  outline: none;
-  background-color: transparent;
-  border: none;
-}
-
-/* About section*/
-.aboutSection {
-  padding: 1.2rem;
-  text-align: center;
-}
-
-.aboutSection button:hover {
-  color: #fff;
-  background-color: var(--light-gray);
-  transform: scale(1.08);
-}
-.icon {
-  height: 1.3rem;
-  width: 1.3rem;
-  padding: 0.8rem;
-  border-radius: 50%;
 }
