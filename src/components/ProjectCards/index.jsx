@@ -4,7 +4,7 @@ import { Stack } from "@mui/system";
 import React, { useState } from "react";
 
 const StyledProjectCard = styled(Card)({
-  backgroundColor: "var(--another-gray)",
+  backgroundColor: "var(--dark-header-bg)",
   minWidth: "21rem",
   maxWidth: "25rem",
   margin: "1.6rem",

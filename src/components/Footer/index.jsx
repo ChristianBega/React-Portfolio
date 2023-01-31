@@ -6,7 +6,7 @@ import React from "react";
 import Socials from "../Socials";
 
 const StyledBottomNavigation = styled(BottomNavigation)({
-  backgroundColor: "var(--another-gray)",
+  backgroundColor: "var(--dark-header-bg)",
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",

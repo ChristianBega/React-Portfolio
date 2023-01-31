@@ -81,10 +81,10 @@ function Navigation() {
         }}
         PaperProps={{
           style: {
-            marginTop: "1rem",
-            backgroundColor: "var(--menu-bg)",
+            marginTop: "0rem",
+            backgroundColor: "var(--drop-down-menu-bg)",
             width: "100%",
-            backdropFilter: "var(--backdrop-filter)",
+            backdropFilter: "var(--header-blur-filter)",
           },
         }}
       >
