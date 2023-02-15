@@ -78,7 +78,6 @@ function Navigation() {
         open={open}
         onClose={(e) => setOpen(false)}
         anchorOrigin={{
-          // vertical: 123,
           vertical: 95,
           horizontal: "right",
         }}
