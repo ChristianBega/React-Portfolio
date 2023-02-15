@@ -1,7 +1,8 @@
-import { Container } from "@mui/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 // import Paper from "@mui/material/Paper";
+import { AiOutlineArrowRight } from "react-icons/ai";
+
 import Typography from "@mui/material/Typography";
 import React, { useCallback } from "react";
 
@@ -12,11 +13,11 @@ import Socials from "../Socials";
 
 function About() {
   const navigate = useNavigate();
-  const handleOnClick = useCallback(() => navigate("/contact", { replace: true }), [navigate]);
+  const handleOnClick = useCallback(() => navigate("/about-me-page ", { replace: true }), [navigate]);
   const [checked, setChecked] = React.useState(true);
 
   return (
-    <Container sx={{ minHeight: "85vh", mt: 5, textAlign: "center" }}>
+    <>
       <Link to="/React-Portfolio"></Link>
       <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 2000 } : {})}>
         <Typography component="h2" mt={5} sx={{ fontSize: "75px", fontWeight: "700" }}>
@@ -34,11 +35,13 @@ function About() {
       </Grow>
       <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 3500 } : {})}>
         <Box textAlign="center" marginY={5}>
-          <Button onClick={handleOnClick}>Contact Me</Button>
+          <Button onClick={handleOnClick}>
+            See more about me <AiOutlineArrowRight />
+          </Button>
         </Box>
       </Grow>
       <Socials checked={checked} />
-    </Container>
+    </>
   );
 }
 
