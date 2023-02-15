@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import AboutMePage from "./pages/AboutMePage";
 import ProjectCardsPage from "./pages/ProjectCardsPage";
+import ResumePage from "./pages/ResumePage";
 // import Skills from "./components/Skills";
 // import Projects from "./components/Projects";
 // import Contact from "./components/Contact";
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/about-me" element={<AboutMePage />}></Route>
           <Route path="/project-cards" element={<ProjectCardsPage />}></Route>
+          <Route path="/resume" element={<ResumePage />}></Route>
 
           {/* <Route path="/React-Portfolio" element={<About />}></Route>
           <Route path="/skills" element={<Skills />}></Route>
