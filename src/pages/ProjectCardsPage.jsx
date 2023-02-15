@@ -1,5 +1,5 @@
 import { Box, Button, Container } from "@mui/material";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import NewHomePageImg from "../Assets/images/news-menu-bg.png";
 import FinancialTrackerImg from "../Assets/images/FinaicalTracker.png";
 import StudyAppImg from "../Assets/images/StudyBuddyApp.png";
@@ -34,6 +34,9 @@ export default function ProjectCardsPage() {
       repo: "https://github.com/T3mpz/news-homepage-main",
     },
   ]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Container sx={{ minHeight: "85vh", mt: 5, display: "grid", gap: "2rem" }}>
       {/* <Projects /> */}

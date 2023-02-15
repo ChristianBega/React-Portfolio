@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import AboutMe from "../components/AboutMe";
@@ -10,6 +10,9 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 export default function AboutMePage() {
   const navigate = useNavigate();
   const handleOnClick = useCallback(() => navigate("/project-cards", { replace: true }), [navigate]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Container sx={{ minHeight: "85vh", my: 5 }}>
       <AboutMe />
