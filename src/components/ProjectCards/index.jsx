@@ -5,15 +5,15 @@ import React, { useState } from "react";
 
 const StyledProjectCard = styled(Card)({
   backgroundColor: "var(--dark-header-bg)",
-  minWidth: "21rem",
-  maxWidth: "25rem",
-  margin: "1.6rem",
+  minWidth: "20rem",
+  // maxWidth: "25rem",
+  // margin: "1.6rem",
   flex: "1",
 });
 //1. On hover I want to add transitions to
 //  a. Card img shrinking
 //  b. Card text displaying
-function ProjectCards({ project }) {
+export default function ProjectCards({ project }) {
   const [isHovered, setHovered] = useState(false);
   const [checked, setChecked] = React.useState(true);
 
@@ -54,5 +54,3 @@ function ProjectCards({ project }) {
     </Grow>
   );
 }
-
-export default ProjectCards;

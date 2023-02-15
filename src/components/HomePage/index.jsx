@@ -1,19 +1,12 @@
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-// import Paper from "@mui/material/Paper";
-import { AiOutlineArrowRight } from "react-icons/ai";
-
 import Typography from "@mui/material/Typography";
-import React, { useCallback } from "react";
+import React from "react";
 
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Grow from "@mui/material/Grow";
 import Socials from "../Socials";
 
 function About() {
-  const navigate = useNavigate();
-  const handleOnClick = useCallback(() => navigate("/about-me-page ", { replace: true }), [navigate]);
   const [checked, setChecked] = React.useState(true);
 
   return (
@@ -33,13 +26,7 @@ function About() {
           polished UI, and user-friendly web applications.
         </Typography>
       </Grow>
-      <Grow in={checked} style={{ transformOrigin: "0 0 0" }} {...(checked ? { timeout: 3500 } : {})}>
-        <Box textAlign="center" marginY={5}>
-          <Button onClick={handleOnClick}>
-            See more about me <AiOutlineArrowRight />
-          </Button>
-        </Box>
-      </Grow>
+
       <Socials checked={checked} />
     </>
   );

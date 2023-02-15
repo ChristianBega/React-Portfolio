@@ -1,9 +1,7 @@
-import React, { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import styled from "@emotion/styled";
-import { Button, Paper, Typography } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import { AiOutlineArrowRight } from "react-icons/ai";
 
 const mockData = [
   {
@@ -42,8 +40,6 @@ const StyledContainer = styled(Box)({
 });
 
 export default function AboutMe() {
-  const navigate = useNavigate();
-  const handleOnClick = useCallback(() => navigate("/", { replace: true }), [navigate]);
   return (
     <StyledContainer>
       {mockData.map((e) => (
@@ -54,11 +50,6 @@ export default function AboutMe() {
           <p>{e.description}</p>
         </StyledCard>
       ))}
-      <Box textAlign="center" marginTop={3}>
-        <Button onClick={handleOnClick}>
-          Continue to my projects <AiOutlineArrowRight />
-        </Button>
-      </Box>
     </StyledContainer>
   );
 }
