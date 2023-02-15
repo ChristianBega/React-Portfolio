@@ -41,7 +41,7 @@ function Navigation() {
     <AppBar position="sticky" sx={{ padding: "1rem" }}>
       <StyledToolbar>
         <Typography variant="h6" component="h1">
-          <Link to="/React-Portfolio">Chris Bega</Link>
+          <Link to="/">Chris Bega</Link>
         </Typography>
         <DesktopMenu>
           <StyledMenuItem>

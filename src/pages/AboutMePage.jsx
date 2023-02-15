@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import AboutMe from "../components/AboutMe";
 import { Container, Button } from "@mui/material";
@@ -13,8 +13,10 @@ export default function AboutMePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <Container sx={{ minHeight: "85vh", my: 5 }}>
+      <Link to="/"></Link>
       <AboutMe />
       <Box textAlign="center" marginTop={3}>
         <Button onClick={handleOnClick}>
