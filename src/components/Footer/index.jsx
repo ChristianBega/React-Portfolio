@@ -1,7 +1,7 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import { Grid, Typography } from "@mui/material";
-import React from "react";
 import Socials from "../Socials";
 
 const StyledGrid = styled(Grid)({

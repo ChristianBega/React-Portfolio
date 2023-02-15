@@ -1,5 +1,5 @@
+import { Box, TextField, Button, Typography, MenuItem, Select, InputLabel, FormControl } from "@mui/material";
 import styled from "@emotion/styled";
-import { Box, Container, TextField, Button, Typography, MenuItem, Select, InputLabel, FormControl } from "@mui/material";
 import React from "react";
 import { useForm } from "react-hook-form";
 // 1. Finish validation for email - pattern
@@ -52,7 +52,7 @@ export default function ContactForm() {
         {...register(
           "email",
           { required: "This is required", minLength: { value: 4, message: "Minimum length is 4 characters" } },
-          { pattern: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ }
+          { pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i }
         )}
       />
       <Typography variant="small" component="p">
