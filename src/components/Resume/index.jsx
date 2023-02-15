@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Typography, List, ListItem } from "@mui/material/";
+import { Box, Button, Typography, List } from "@mui/material/";
 import { Container } from "@mui/system";
 
 function Resume() {
@@ -24,13 +24,6 @@ function Resume() {
         </Typography>
       </Box>
       {/* Skills section */}
-      {/* <Box marginTop="2rem">
-        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{fontWeight : "700"}}>
-          Skills
-        </Typography>
-        <Typography variant="p" component="p">
-        </Typography>
-      </Box> */}
 
       <Box marginTop="2rem">
         <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700" }}>

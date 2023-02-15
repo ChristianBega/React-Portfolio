@@ -26,13 +26,6 @@ const StyledCard = styled(Paper)({
   minHeight: "160px",
   borderRadius: ".6rem",
   padding: "1.2rem 1rem",
-  // display: "grid",
-  // justifyContent: "center",
-  // alignContent: "center",
-  // "&:hover": {
-  //   transform: "scale(110%)",
-  //   transition: "ease-in-out",
-  // },
 });
 const StyledContainer = styled(Box)({
   display: "grid",

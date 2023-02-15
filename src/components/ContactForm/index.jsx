@@ -4,8 +4,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 // 1. Finish validation for email - pattern
 const StyledTextField = styled(TextField)({
-  // border: "1px solid red",
-  // "&:hover": { border: "1px solid orange" },
   backgroundColor: "var(--light-form-bg)",
   width: "100%",
   marginTop: "1rem",
