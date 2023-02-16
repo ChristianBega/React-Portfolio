@@ -1,8 +1,10 @@
 import { Box, Button, Container } from "@mui/material";
 import React, { useCallback, useState, useEffect } from "react";
-import NewHomePageImg from "../Assets/images/news-menu-bg.png";
-import FinancialTrackerImg from "../Assets/images/FinaicalTracker.png";
+import FinancialTrackerVideo from "../Assets/videos/FinicalAppDemo.mp4";
 import StudyAppImg from "../Assets/images/StudyBuddyApp.png";
+import WeatherDashboardVideo from "../Assets/videos/WeatherDashboardDemo-Mobile.mp4";
+import HangryVideo from "../Assets/videos/HangryDemo.mp4";
+
 import ProjectCard from "../components/ProjectCards";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router";
@@ -13,12 +15,20 @@ export default function ProjectCardsPage() {
 
   const [projects] = useState([
     {
+      name: "React Weather Dashboard",
+      description: "A weather dashboard utilizing Open weather api to display daily weather forecast.",
+      image: WeatherDashboardVideo,
+      link: "https://reactweatherdashboard.netlify.app/",
+      repo: "https://github.com/ChristianBega/Weather-Dashboard",
+    },
+    {
       name: "Financial Tracker",
       description: "A MERN full stack application that allows users track bills, savings, and expenses.",
-      image: FinancialTrackerImg,
+      image: FinancialTrackerVideo,
       link: "https://golden-goose-finance.herokuapp.com/",
-      repo: "https://github.com/edyta0106/Financial_Tracker",
+      repo: "https://github.com/ChristianBega/Golden-Goose-Finance",
     },
+
     {
       name: "Study Buddies",
       description: "A full stack application that serves as a study productivity aid.",
@@ -27,18 +37,18 @@ export default function ProjectCardsPage() {
       repo: "https://github.com/JerimiahK/studyBuddies",
     },
     {
-      name: "News Home Page",
-      description: "HTML and CSS New Landing Page.",
-      image: NewHomePageImg,
-      link: "https://t3mpz.github.io/news-homepage-main/",
-      repo: "https://github.com/T3mpz/news-homepage-main",
+      name: "Hangry",
+      description: "A food recipe application that provides users with recipes personalized by their dietary and nutritional search filters. ",
+      image: HangryVideo,
+      link: "https://mandiebot.github.io/Hangry/",
+      repo: "https://github.com/ChristianBega/Hangry",
     },
   ]);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Container sx={{ minHeight: "85vh", mt: 5, display: "grid", gap: "2rem" }}>
+    <Container sx={{ minHeight: "85vh", mt: 5, display: "grid", gap: "2rem", justifyContent: "center" }}>
       {/* <Projects /> */}
       {/* map over all project and create cards */}
       {projects.map((project, i) => (

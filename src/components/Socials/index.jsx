@@ -14,7 +14,7 @@ export default function Socials() {
       <IconContext.Provider value={{ size: "1.3rem" }}>
         <Stack direction="row" spacing={5} sx={{ justifyContent: "center" }}>
           <Item>
-            <a href="https://github.com/T3mpz" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/ChristianBega" target="_blank" rel="noopener noreferrer">
               <FaGithub />
             </a>
           </Item>
