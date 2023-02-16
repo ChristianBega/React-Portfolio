@@ -2,7 +2,7 @@ import { Box, Button, Container } from "@mui/material";
 import React, { useCallback, useState, useEffect } from "react";
 import FinancialTrackerImg from "../Assets/images/FinaicalTracker.png";
 import StudyAppImg from "../Assets/images/StudyBuddyApp.png";
-import WeatherDashboardImg from "../Assets/images/WeatherDashboard.PNG";
+import WeatherDashboardVideo from "../Assets/videos/WeatherDashboardDemo-Mobile.mp4";
 import HangryImg from "../Assets/images/Hangry.PNG";
 
 import ProjectCard from "../components/ProjectCards";
@@ -15,19 +15,20 @@ export default function ProjectCardsPage() {
 
   const [projects] = useState([
     {
+      name: "React Weather Dashboard",
+      description: "A weather dashboard utilizing Open weather api to display daily weather forecast.",
+      image: WeatherDashboardVideo,
+      link: "https://reactweatherdashboard.netlify.app/",
+      repo: "https://github.com/ChristianBega/Weather-Dashboard",
+    },
+    {
       name: "Financial Tracker",
       description: "A MERN full stack application that allows users track bills, savings, and expenses.",
       image: FinancialTrackerImg,
       link: "https://golden-goose-finance.herokuapp.com/",
       repo: "https://github.com/ChristianBega/Golden-Goose-Finance",
     },
-    {
-      name: "React Weather Dashboard",
-      description: "A weather dashboard utilizing Open weather api to display daily weather forecast.",
-      image: WeatherDashboardImg,
-      link: "https://reactweatherdashboard.netlify.app/",
-      repo: "https://github.com/ChristianBega/Weather-Dashboard",
-    },
+
     {
       name: "Study Buddies",
       description: "A full stack application that serves as a study productivity aid.",
@@ -47,7 +48,7 @@ export default function ProjectCardsPage() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Container sx={{ minHeight: "85vh", mt: 5, display: "grid", gap: "2rem" }}>
+    <Container sx={{ minHeight: "85vh", mt: 5, display: "grid", gap: "2rem", justifyContent: "center" }}>
       {/* <Projects /> */}
       {/* map over all project and create cards */}
       {projects.map((project, i) => (
