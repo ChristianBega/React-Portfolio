@@ -1,9 +1,9 @@
 import { Box, Button, Container } from "@mui/material";
 import React, { useCallback, useState, useEffect } from "react";
-import FinancialTrackerImg from "../Assets/images/FinaicalTracker.png";
+import FinancialTrackerVideo from "../Assets/videos/FinicalAppDemo.mp4";
 import StudyAppImg from "../Assets/images/StudyBuddyApp.png";
 import WeatherDashboardVideo from "../Assets/videos/WeatherDashboardDemo-Mobile.mp4";
-import HangryImg from "../Assets/images/Hangry.PNG";
+import HangryVideo from "../Assets/videos/HangryDemo.mp4";
 
 import ProjectCard from "../components/ProjectCards";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -24,7 +24,7 @@ export default function ProjectCardsPage() {
     {
       name: "Financial Tracker",
       description: "A MERN full stack application that allows users track bills, savings, and expenses.",
-      image: FinancialTrackerImg,
+      image: FinancialTrackerVideo,
       link: "https://golden-goose-finance.herokuapp.com/",
       repo: "https://github.com/ChristianBega/Golden-Goose-Finance",
     },
@@ -39,7 +39,7 @@ export default function ProjectCardsPage() {
     {
       name: "Hangry",
       description: "A food recipe application that provides users with recipes personalized by their dietary and nutritional search filters. ",
-      image: HangryImg,
+      image: HangryVideo,
       link: "https://mandiebot.github.io/Hangry/",
       repo: "https://github.com/ChristianBega/Hangry",
     },

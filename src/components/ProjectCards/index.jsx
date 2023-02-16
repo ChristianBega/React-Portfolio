@@ -15,7 +15,7 @@ const StyledProjectCard = styled(Card)({
   flex: "1",
   // webkitBoxShadow: "6px 4px 15px 4px rgba(81, 81, 81, .5)",
   // mozBoxShadow: " 6px 4px 15px 4px rgba(81, 81, 81, .5)",
-  // boxShadow: "0px 0px 20px 4px rgba(39, 44, 47, 0.7)",
+  // boxShadow: "0px 0px 20px 4px rgba(50, 50, 52, 0.7)",
 });
 //1. On hover I want to add transitions to
 //  a. Card img shrinking
