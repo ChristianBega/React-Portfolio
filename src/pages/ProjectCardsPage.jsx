@@ -1,8 +1,10 @@
 import { Box, Button, Container } from "@mui/material";
 import React, { useCallback, useState, useEffect } from "react";
-import NewHomePageImg from "../Assets/images/news-menu-bg.png";
 import FinancialTrackerImg from "../Assets/images/FinaicalTracker.png";
 import StudyAppImg from "../Assets/images/StudyBuddyApp.png";
+import WeatherDashboardImg from "../Assets/images/WeatherDashboard.PNG";
+import HangryImg from "../Assets/images/Hangry.PNG";
+
 import ProjectCard from "../components/ProjectCards";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router";
@@ -17,7 +19,14 @@ export default function ProjectCardsPage() {
       description: "A MERN full stack application that allows users track bills, savings, and expenses.",
       image: FinancialTrackerImg,
       link: "https://golden-goose-finance.herokuapp.com/",
-      repo: "https://github.com/edyta0106/Financial_Tracker",
+      repo: "https://github.com/ChristianBega/Golden-Goose-Finance",
+    },
+    {
+      name: "React Weather Dashboard",
+      description: "A weather dashboard utilizing Open weather api to display daily weather forecast.",
+      image: WeatherDashboardImg,
+      link: "https://reactweatherdashboard.netlify.app/",
+      repo: "https://github.com/ChristianBega/Weather-Dashboard",
     },
     {
       name: "Study Buddies",
@@ -27,11 +36,11 @@ export default function ProjectCardsPage() {
       repo: "https://github.com/JerimiahK/studyBuddies",
     },
     {
-      name: "News Home Page",
-      description: "HTML and CSS New Landing Page.",
-      image: NewHomePageImg,
-      link: "https://t3mpz.github.io/news-homepage-main/",
-      repo: "https://github.com/T3mpz/news-homepage-main",
+      name: "Hangry",
+      description: "A food recipe application that provides users with recipes personalized by their dietary and nutritional search filters. ",
+      image: HangryImg,
+      link: "https://mandiebot.github.io/Hangry/",
+      repo: "https://github.com/ChristianBega/Hangry",
     },
   ]);
   useEffect(() => {
