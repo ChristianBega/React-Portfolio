@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Card, Typography, CardContent, CardMedia } from "@mui/material";
 import { Stack } from "@mui/system";
-import React, { useState } from "react";
+import React from "react";
 
 const StyledProjectCard = styled(Card)({
   position: "relative",
@@ -21,7 +21,6 @@ const StyledProjectCard = styled(Card)({
 //  a. Card img shrinking
 //  b. Card text displaying
 export default function ProjectCards({ project }) {
-  const [isHovered, setHovered] = useState(false);
   const { name, description, link, repo, image } = project;
 
   return (
