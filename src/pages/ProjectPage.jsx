@@ -55,12 +55,12 @@ export default function ProjectPage() {
         <FaGlobeAmericas style={{ marginRight: ".8rem" }} />
         Website
       </Typography>
-      <Link>{currentProject.link}</Link>
+      <Link href={currentProject.link}>{currentProject.link}</Link>
       <Typography mt={4} component="h3" variant="h6">
         <FaGithub style={{ marginRight: ".8rem" }} />
         Github
       </Typography>
-      <Link>{currentProject.repo}</Link>
+      <Link href={currentProject.repo}>{currentProject.repo}</Link>
     </Container>
   );
 }
