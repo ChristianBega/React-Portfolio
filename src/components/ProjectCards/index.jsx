@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Card, Typography, CardContent, CardMedia } from "@mui/material";
 import { Stack } from "@mui/system";
 import React from "react";
+// import { Link } from "react-router-dom";
 
 const StyledProjectCard = styled(Card)({
   position: "relative",
@@ -12,7 +13,7 @@ const StyledProjectCard = styled(Card)({
   // maxWidth: "25rem",
   minHeight: "20em",
   // maxHeight: "25rem",
-  flex: "1",
+  display: "flex",
   // webkitBoxShadow: "6px 4px 15px 4px rgba(81, 81, 81, .5)",
   // mozBoxShadow: " 6px 4px 15px 4px rgba(81, 81, 81, .5)",
   // boxShadow: "0px 0px 20px 4px rgba(50, 50, 52, 0.7)",
@@ -21,21 +22,19 @@ const StyledProjectCard = styled(Card)({
 //  a. Card img shrinking
 //  b. Card text displaying
 export default function ProjectCards({ project }) {
-  const { name, description, link, repo, image } = project;
+  const { name, description, link, repo, videoDemo } = project;
 
   return (
     <StyledProjectCard>
-      {/* <CardMedia sx={{ width: "100%", top: 0, bottom: 0, position: "absolute", zIndex: "-100" }} image={image} title="Project image" /> */}
-      {/* src={videoBg} autoPlay loop muted */}
       <CardMedia
         component="video"
         autoPlay
         loop
         muted
         sx={{ objectFit: "cover", width: "100%", height: "100%", top: 0, bottom: 0, position: "absolute", zIndex: "-100" }}
-        src={image}
+        src={videoDemo}
       />
-      <CardContent sx={{ height: "90%", display: "flex", flexDirection: "column", justifyContent: "end" }}>
+      <CardContent sx={{ display: "flex", flexDirection: "column", justifyContent: "end" }}>
         <Typography component="h2" variant="h6" sx={{ fontWeight: "600" }}>
           {name}
         </Typography>

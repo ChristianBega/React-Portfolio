@@ -12,7 +12,7 @@ export default function ResumePage() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Container sx={{ minHeight: "85vh", my: 5 }}>
+    <Container sx={{ minHeight: "100vh", my: 5 }}>
       <Resume />
       <Box textAlign="center" marginTop={3}>
         <Button onClick={handleOnClick}>

@@ -15,10 +15,10 @@ export default function AboutMePage() {
   }, []);
 
   return (
-    <Container sx={{ minHeight: "85vh", my: 5 }}>
+    <Container sx={{ minHeight: "100vh", my: 5 }}>
       <Link to="/"></Link>
       <AboutMe />
-      <Box textAlign="center" marginTop={3}>
+      <Box textAlign="center" marginY={5}>
         <Button onClick={handleOnClick}>
           Continue to my projects <AiOutlineArrowRight />
         </Button>
