@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import Socials from "../Socials";
 
 const StyledGrid = styled(Grid)({
@@ -14,17 +13,7 @@ const StyledGrid = styled(Grid)({
 function Footer() {
   return (
     <StyledGrid container spacing={2}>
-      <Grid xs={12} md={4}>
-        <Typography variant="h6" component="h1" textAlign="center">
-          <Link to="/">Chris Bega</Link>
-        </Typography>
-      </Grid>
-      <Grid xs={6} md={4}>
-        <Typography variant="h6" component="h1" textAlign="center">
-          <Link to="/contact">Contact me</Link>
-        </Typography>
-      </Grid>
-      <Grid xs={6} md={4}>
+      <Grid xs={12}>
         <Socials checked={true} />
       </Grid>
     </StyledGrid>

@@ -59,20 +59,21 @@ export default function ProjectCardsPage() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Container sx={{ minHeight: "85vh", mt: 5, display: "grid", gap: "2rem", justifyContent: "center" }}>
-      {/* <Projects /> */}
-      {/* map over all project and create cards */}
-      {projects.map((project, i) => (
-        <Link id={project.name} to="/project-page" state={{ project: project }}>
-          <ProjectCard project={project} key={"project" + i} />
-        </Link>
-      ))}
-      <Box textAlign="center" marginY={0}>
+    <>
+      <Container sx={{ minHeight: "100vh", mt: 5, display: "grid", gap: "2rem", justifyContent: "center" }}>
+        {/* <Projects /> */}
+        {/* map over all project and create cards */}
+        {projects.map((project, i) => (
+          <Link id={project.name} to="/project-page" state={{ project: project }}>
+            <ProjectCard project={project} key={"project" + i} />
+          </Link>
+        ))}
+      </Container>
+      <Box textAlign="center" marginY={5}>
         <Button onClick={handleOnClick}>
           View my resume <AiOutlineArrowRight />
         </Button>
       </Box>
-      ;
-    </Container>
+    </>
   );
 }

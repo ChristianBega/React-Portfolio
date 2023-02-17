@@ -1,13 +1,12 @@
 import styled from "@emotion/styled";
 import { CardMedia, Container, Paper, Typography, Link } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { FaGithub, FaGlobeAmericas } from "react-icons/fa";
 
 const StyledStackItem = styled(Paper)({
   margin: 0,
-  // backgroundColor: "Red",
   display: "inline",
   padding: ".5rem 1rem",
 });
@@ -17,6 +16,9 @@ export default function ProjectPage() {
   const location = useLocation();
   const currentProject = location.state?.project;
   console.log(currentProject);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Container sx={{ minHeight: "100vh", my: 5, justifyContent: "center" }}>
       <Typography component="h2" variant="h5">
