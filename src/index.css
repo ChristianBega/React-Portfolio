@@ -42,10 +42,15 @@ h3 {
   font-family: var(--header-font);
   margin: 0;
 }
-ul li {
+li {
   list-style: none;
   font-family: var(--text-font);
+  background-color: transparent;
 }
+/* li:hover {
+  color: #284a7e;
+  background-color: transparent;
+} */
 p,
 small,
 span {
@@ -57,10 +62,9 @@ a:-webkit-any-link {
   color: #fff;
   font-family: var(--text-font);
   text-decoration: none;
+  background-color: transparent;
 }
-a:hover {
-  color: #284a7e;
-}
+
 button {
   cursor: pointer;
   font-family: var(--text-font) !important;

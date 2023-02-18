@@ -18,6 +18,13 @@ const StyledMenuItem = styled(MenuItem)(({ theme }) => ({
   [theme.breakpoints.up("sm")]: {
     fontSize: "100%",
   },
+  "&:hover": {
+    backgroundColor: "transparent",
+    textDecorationLine: "underline",
+    textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
+    transform: "scale(1.1)",
+    transition: ".2s",
+  },
 }));
 const DesktopMenu = styled(Box)(({ theme }) => ({
   display: "none",
