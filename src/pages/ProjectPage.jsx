@@ -12,6 +12,7 @@ const StyledStackItem = styled(Paper)({
   padding: ".5rem 1rem",
 });
 
+
 export default function ProjectPage() {
   // Access props passed from link state
   const location = useLocation();

@@ -10,6 +10,22 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
+import styled from "@emotion/styled";
+const StyledButton = styled(Button)({
+  // backgroundColor: "rgba(165, 165, 165, .3)",
+  // minHeight: "160px",
+  // borderRadius: ".6rem",
+  // padding: "1.2rem 1rem",
+  "&:hover": {
+    color: "#fff",
+    backgroundColor: "transparent",
+    textDecorationLine: "underline",
+    textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
+    transform: "scale(1.1)",
+    transition: ".2s",
+  },
+});
+
 export default function ProjectCardsPage() {
   const navigate = useNavigate();
   const handleOnClick = useCallback(() => navigate("/resume", { replace: true }), [navigate]);
@@ -70,9 +86,9 @@ export default function ProjectCardsPage() {
         ))}
       </Container>
       <Box textAlign="center" marginY={5}>
-        <Button onClick={handleOnClick}>
+        <StyledButton onClick={handleOnClick}>
           View my resume <AiOutlineArrowRight />
-        </Button>
+        </StyledButton>
       </Box>
     </>
   );

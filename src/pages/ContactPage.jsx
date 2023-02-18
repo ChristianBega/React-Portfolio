@@ -3,9 +3,23 @@ import { Box, Container } from "@mui/system";
 import React, { useCallback, useEffect } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router";
-
+import styled from "@emotion/styled";
 import Contact from "../components/ContactForm";
 import Footer from "../components/Footer";
+const StyledButton = styled(Button)({
+  // backgroundColor: "rgba(165, 165, 165, .3)",
+  // minHeight: "160px",
+  // borderRadius: ".6rem",
+  // padding: "1.2rem 1rem",
+  "&:hover": {
+    color: "#fff",
+    backgroundColor: "transparent",
+    textDecorationLine: "underline",
+    textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
+    transform: "scale(1.1)",
+    transition: ".2s",
+  },
+});
 export default function ContactPage() {
   const navigate = useNavigate();
   const handleOnClick = useCallback(() => navigate("/", { replace: true }), [navigate]);
@@ -23,10 +37,10 @@ export default function ContactPage() {
         </Typography>
         <Contact />
         <Box textAlign="center" marginY={5}>
-          <Button onClick={handleOnClick}>
+          <StyledButton onClick={handleOnClick}>
             Back to Home
             <AiOutlineArrowRight />
-          </Button>
+          </StyledButton>
         </Box>
       </Container>
       <Footer />
