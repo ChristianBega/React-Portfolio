@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Card, Typography, CardContent, CardMedia } from "@mui/material";
+import { Card, Typography, CardContent, CardMedia, Link } from "@mui/material";
 import { Stack } from "@mui/system";
 import React from "react";
 // import { Link } from "react-router-dom";
@@ -14,16 +14,21 @@ const StyledProjectCard = styled(Card)({
   minHeight: "20em",
   // maxHeight: "25rem",
   display: "flex",
-  // webkitBoxShadow: "6px 4px 15px 4px rgba(81, 81, 81, .5)",
-  // mozBoxShadow: " 6px 4px 15px 4px rgba(81, 81, 81, .5)",
   "&:hover": {
     boxShadow: "0px 0px 20px 4px rgba(67, 67, 71, 0.6)",
     border: "2px solid rgba(255, 255, 255, 0.209)",
   },
 });
-//1. On hover I want to add transitions to
-//  a. Card img shrinking
-//  b. Card text displaying
+const StyledLink = styled(Link)({
+  "&:hover": {
+    color: "#fff",
+    backgroundColor: "transparent",
+    textDecorationLine: "underline",
+    textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
+    transform: "scale(1.1)",
+    transition: ".2s",
+  },
+});
 export default function ProjectCards({ project }) {
   const { name, description, link, repo, videoDemo } = project;
 
@@ -45,12 +50,12 @@ export default function ProjectCards({ project }) {
           {description}
         </Typography>
         <Stack direction="row" spacing={3} mt={2}>
-          <a href={link} target="_blank" rel="noopener noreferrer">
+          <StyledLink href={link} target="_blank" rel="noopener noreferrer">
             Live Demo
-          </a>
-          <a href={repo} target="_blank" rel="noopener noreferrer">
+          </StyledLink>
+          <StyledLink href={repo} target="_blank" rel="noopener noreferrer">
             Source Code
-          </a>
+          </StyledLink>
         </Stack>
       </CardContent>
     </StyledProjectCard>
