@@ -14,6 +14,19 @@ const StyledFormControl = styled(FormControl)({
   marginTop: "1rem",
 });
 
+const StyledButton = styled(Button)({
+  backgroundColor: "var(--light-blue) !important",
+  "&:hover": {
+    color: "#fff !important",
+    backgroundColor: "transparent",
+    textDecorationLine: "underline",
+    textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
+    boxShadow: "0px 0px 20px 4px rgba(67, 67, 71, 0.6)",
+    transform: "scale(1.1)",
+    transition: ".2s",
+  },
+});
+
 const choices = [
   {
     label: "Regarding an open position",
@@ -91,9 +104,9 @@ export default function ContactForm() {
       </Typography>
 
       <Box textAlign="center" mt={5}>
-        <Button type="submit" variant="contained">
+        <StyledButton type="submit" variant="contained">
           Submit
-        </Button>
+        </StyledButton>
       </Box>
     </Box>
   );

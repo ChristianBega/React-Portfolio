@@ -11,6 +11,7 @@ import ReactImg from "../../Assets/images/skills/React.svg";
 import NodeJsImg from "../../Assets/images/skills/NodeJs.svg";
 import MongoDBImg from "../../Assets/images/skills/MongoDB.svg";
 import MySQLImg from "../../Assets/images/skills/mySQL.svg";
+import styled from "@emotion/styled";
 
 const experienceData = [
   {
@@ -85,16 +86,29 @@ const skillsData = [
   },
 ];
 
+const StyledButton = styled(Button)({
+  backgroundColor: "var(--light-blue) !important",
+  "&:hover": {
+    color: "#fff !important",
+    backgroundColor: "transparent",
+    textDecorationLine: "underline",
+    textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
+    boxShadow: "0px 0px 20px 4px rgba(67, 67, 71, 0.6)",
+    transform: "scale(1.1)",
+    transition: ".2s",
+  },
+});
+
 export default function Resume() {
   return (
     <>
       {/* Resume button */}
       <Box textAlign="center" marginTop="2rem">
-        <Button variant="contained">
+        <StyledButton variant="contained">
           <a className="resumeButton" href="https://drive.google.com/file/d/1EWKWdADy6-VGt00r396ispcyx2H2ElWB/view" target="_blank" rel="noreferrer">
             Download Resume
           </a>
-        </Button>
+        </StyledButton>
       </Box>
       {/* Summary section */}
       <Box marginTop="3rem" textAlign="center">

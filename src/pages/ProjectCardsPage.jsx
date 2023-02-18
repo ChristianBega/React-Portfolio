@@ -16,8 +16,10 @@ const StyledButton = styled(Button)({
   // minHeight: "160px",
   // borderRadius: ".6rem",
   // padding: "1.2rem 1rem",
+  color: "var(--light-blue) !important",
+
   "&:hover": {
-    color: "#fff",
+    color: "#fff !important",
     backgroundColor: "transparent",
     textDecorationLine: "underline",
     textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
@@ -80,7 +82,7 @@ export default function ProjectCardsPage() {
         {/* <Projects /> */}
         {/* map over all project and create cards */}
         {projects.map((project, i) => (
-          <Link id={project.name} to="/project-page" state={{ project: project }}>
+          <Link sx={{ height: "80%" }} id={project.name} to="/project-page" state={{ project: project }}>
             <ProjectCard project={project} key={"project" + i} />
           </Link>
         ))}

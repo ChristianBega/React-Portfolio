@@ -10,8 +10,9 @@ const StyledButton = styled(Button)({
   // minHeight: "160px",
   // borderRadius: ".6rem",
   // padding: "1.2rem 1rem",
+  color: "var(--light-blue) !important",
   "&:hover": {
-    color: "#fff",
+    color: "#fff !important",
     backgroundColor: "transparent",
     textDecorationLine: "underline",
     textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
