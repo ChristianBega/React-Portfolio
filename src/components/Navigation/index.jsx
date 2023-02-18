@@ -67,10 +67,10 @@ function Navigation() {
             <Link to="/project-cards">Projects</Link>
           </StyledMenuItem>
           <StyledMenuItem>
-            <Link to="/contact">Resume</Link>
+            <Link to="/resume">Resume</Link>
           </StyledMenuItem>
           <StyledMenuItem>
-            <Link to="/resume">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </StyledMenuItem>
         </DesktopMenu>
         <MobileMenu onClick={(e) => setOpen(true)}>
