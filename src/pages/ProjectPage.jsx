@@ -4,6 +4,7 @@ import { Box } from "@mui/system";
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { FaGithub, FaGlobeAmericas } from "react-icons/fa";
+import Footer from "../components/Footer";
 
 const StyledStackItem = styled(Paper)({
   margin: 0,
@@ -20,47 +21,52 @@ export default function ProjectPage() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Container sx={{ minHeight: "100vh", my: 5, justifyContent: "center" }}>
-      <Typography component="h2" variant="h5">
-        {currentProject.name}
-      </Typography>
-      <Typography component="p" mt={1}>
-        {currentProject.description}
-      </Typography>
-      <CardMedia
-        component="video"
-        autoPlay
-        loop
-        muted
-        sx={{ borderRadius: "12px", overflow: "hidden", marginBlock: "2rem", objectFit: "cover", width: "100%", height: "100%" }}
-        src={currentProject.videoDemo}
-      />
-      <Typography mt={4} component="h3" variant="h6">
-        About
-      </Typography>
-      <Typography mb={4} component="p">
-        {currentProject.longDescription}
-      </Typography>
-      <Typography component="h3" variant="h6">
-        Technologies
-      </Typography>
-      <Box sx={{ my: "1rem", display: "flex", flexWrap: "wrap", flexDirection: "row", gap: "1rem" }}>
-        {currentProject.technology.map((currentTech) => (
-          <StyledStackItem component="p" key={currentTech}>
-            {currentTech}
-          </StyledStackItem>
-        ))}
-      </Box>
-      <Typography mt={4} component="h3" variant="h6">
-        <FaGlobeAmericas style={{ marginRight: ".8rem" }} />
-        Website
-      </Typography>
-      <Link href={currentProject.link}>{currentProject.link}</Link>
-      <Typography mt={4} component="h3" variant="h6">
-        <FaGithub style={{ marginRight: ".8rem" }} />
-        Github
-      </Typography>
-      <Link href={currentProject.repo}>{currentProject.repo}</Link>
-    </Container>
+    <>
+      <Container sx={{ my: 5, justifyContent: "center" }}>
+        <Typography component="h2" variant="h5">
+          {currentProject.name}
+        </Typography>
+        <Typography component="p" mt={1}>
+          {currentProject.description}
+        </Typography>
+        <CardMedia
+          component="video"
+          autoPlay
+          loop
+          muted
+          sx={{ borderRadius: "12px", overflow: "hidden", marginBlock: "2rem", objectFit: "cover", width: "100%", height: "100%" }}
+          src={currentProject.videoDemo}
+        />
+        <Typography mt={4} component="h3" variant="h6">
+          About
+        </Typography>
+        <Typography mb={4} component="p">
+          {currentProject.longDescription}
+        </Typography>
+        <Typography component="h3" variant="h6">
+          Technologies
+        </Typography>
+        <Box sx={{ my: "1rem", display: "flex", flexWrap: "wrap", flexDirection: "row", gap: "1rem" }}>
+          {currentProject.technology.map((currentTech) => (
+            <StyledStackItem component="p" key={currentTech}>
+              {currentTech}
+            </StyledStackItem>
+          ))}
+        </Box>
+        <Typography mt={3} mb={1} component="h3" variant="h6">
+          <FaGlobeAmericas style={{ marginRight: ".8rem" }} />
+          Website
+        </Typography>
+        <Link href={currentProject.link}>{currentProject.link}</Link>
+        <Typography mt={3} mb={1} component="h3" variant="h6">
+          <FaGithub style={{ marginRight: ".8rem" }} />
+          Github
+        </Typography>
+        <Link mb={5} href={currentProject.repo}>
+          {currentProject.repo}
+        </Link>
+      </Container>
+      <Footer />
+    </>
   );
 }
