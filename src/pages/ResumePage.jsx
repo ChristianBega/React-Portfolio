@@ -11,7 +11,6 @@ const StyledButton = styled(Button)({
   // borderRadius: ".6rem",
   // padding: "1.2rem 1rem",
   color: "var(--light-blue) !important",
-
   "&:hover": {
     color: "#fff !important",
     backgroundColor: "transparent",

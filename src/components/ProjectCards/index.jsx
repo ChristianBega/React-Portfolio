@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { Card, Typography, CardContent, CardMedia, Link } from "@mui/material";
 import { Stack } from "@mui/system";
 import React from "react";
-// import { Link } from "react-router-dom";
 
 const StyledProjectCard = styled(Card)({
   position: "relative",
@@ -20,6 +19,7 @@ const StyledProjectCard = styled(Card)({
   },
 });
 const StyledLink = styled(Link)({
+  zIndex: "1000",
   "&:hover": {
     color: "#fff",
     backgroundColor: "transparent",
@@ -29,8 +29,14 @@ const StyledLink = styled(Link)({
     transition: ".2s",
   },
 });
+
 export default function ProjectCards({ project }) {
   const { name, description, link, repo, videoDemo } = project;
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    window.open(e.currentTarget.href);
+  };
 
   return (
     <StyledProjectCard>
@@ -50,10 +56,10 @@ export default function ProjectCards({ project }) {
           {description}
         </Typography>
         <Stack direction="row" spacing={3} mt={2}>
-          <StyledLink href={link} target="_blank" rel="noopener noreferrer">
+          <StyledLink onClick={handleClick} href={link} target="_blank" rel="noopener noreferrer">
             Live Demo
           </StyledLink>
-          <StyledLink href={repo} target="_blank" rel="noopener noreferrer">
+          <StyledLink onClick={handleClick} href={repo} target="_blank" rel="noopener noreferrer">
             Source Code
           </StyledLink>
         </Stack>

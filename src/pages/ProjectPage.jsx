@@ -12,7 +12,9 @@ const StyledStackItem = styled(Paper)({
   padding: ".5rem 1rem",
 });
 const StyledLink = styled(Link)({
+  color: "var(--medium-gray) !important",
   "&:hover": {
+    color: "#fff !important",
     backgroundColor: "transparent",
     textDecorationLine: "underline",
     textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
@@ -25,7 +27,6 @@ export default function ProjectPage() {
   // Access props passed from link state
   const location = useLocation();
   const currentProject = location.state?.project;
-  console.log(currentProject);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

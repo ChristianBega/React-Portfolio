@@ -82,7 +82,7 @@ export default function ProjectCardsPage() {
         {/* <Projects /> */}
         {/* map over all project and create cards */}
         {projects.map((project, i) => (
-          <Link id={project.name} to="/project-page" state={{ project: project }}>
+          <Link sx={{ height: "80%" }} id={project.name} to="/project-page" state={{ project: project }}>
             <ProjectCard project={project} key={"project" + i} />
           </Link>
         ))}
