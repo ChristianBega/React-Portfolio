@@ -11,7 +11,15 @@ const StyledStackItem = styled(Paper)({
   display: "inline",
   padding: ".5rem 1rem",
 });
-
+const StyledLink = styled(Link)({
+  "&:hover": {
+    backgroundColor: "transparent",
+    textDecorationLine: "underline",
+    textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
+    transform: "scale(1.1)",
+    transition: ".2s",
+  },
+});
 
 export default function ProjectPage() {
   // Access props passed from link state
@@ -58,14 +66,16 @@ export default function ProjectPage() {
           <FaGlobeAmericas style={{ marginRight: ".8rem" }} />
           Website
         </Typography>
-        <Link href={currentProject.link}>{currentProject.link}</Link>
+        <StyledLink href={currentProject.link} target="_blank" rel="noopener noreferrer">
+          {currentProject.link}
+        </StyledLink>
         <Typography mt={3} mb={1} component="h3" variant="h6">
           <FaGithub style={{ marginRight: ".8rem" }} />
           Github
         </Typography>
-        <Link mb={5} href={currentProject.repo}>
+        <StyledLink href={currentProject.repo} target="_blank" rel="noopener noreferrer">
           {currentProject.repo}
-        </Link>
+        </StyledLink>
       </Container>
       <Footer />
     </>

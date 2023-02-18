@@ -12,6 +12,7 @@ const StyledButton = styled(Button)({
   // minHeight: "160px",
   // borderRadius: ".6rem",
   // padding: "1.2rem 1rem",
+  color: "var(--light-blue) !important",
   "&:hover": {
     color: "#fff",
     backgroundColor: "transparent",
