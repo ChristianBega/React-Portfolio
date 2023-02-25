@@ -35,8 +35,9 @@ export default function ProjectCardsPage() {
   const [projects] = useState([
     {
       name: "React Weather Dashboard",
-      description: "A weather dashboard utilizing Open weather api to display daily weather forecast.",
-      longDescription: "A long description explaining the process etc...",
+      description: "A weather dashboard web application that retrieves and displays daily weather forecast.",
+      longDescription:
+        "The weather dashboard is a single-page react application that uses two 3rd party APIs. The first, Open Weather API, allows users to search for a city and retrieve weather forecast data. The second, Google Maps API, provides users with a google map of the city they searched...",
       videoDemo: WeatherDashboardVideo,
       link: "https://reactweatherdashboard.netlify.app/",
       repo: "https://github.com/ChristianBega/Weather-Dashboard",
@@ -45,9 +46,10 @@ export default function ProjectCardsPage() {
       // more about the project - wire frames, figma designs, etc.
     },
     {
-      name: "Financial Tracker",
-      description: "A MERN full stack application that allows users track bills, savings, and expenses.",
-      longDescription: "A long description explaining the process etc...",
+      name: "Golden Goose Finance",
+      description: "A MERN full stack finance tracking web application that allows users monitor their bills, savings, and expenses.",
+      longDescription:
+        "Golden Goose Finance is MERN full stack single-page react application that offers users a simple user-friendly solution for tracking their finances. The backend built with express, node and mongo DB allows users to perform CRUD operations on their financial data. ",
       videoDemo: FinancialTrackerVideo,
       link: "https://golden-goose-finance.herokuapp.com/",
       repo: "https://github.com/ChristianBega/Golden-Goose-Finance",
