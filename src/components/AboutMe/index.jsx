@@ -6,7 +6,7 @@ import { Box } from "@mui/system";
 const mockData = [
   {
     topic: "Programming",
-    description: "Something about my coding journey...",
+    description: "Coming soon...",
   },
   {
     topic: "Skills",
