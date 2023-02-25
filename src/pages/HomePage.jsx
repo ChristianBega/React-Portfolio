@@ -32,7 +32,7 @@ export default function HomePage() {
       <HomeAbout />
       <Box textAlign="center" marginY={5}>
         <StyledButton onClick={handleOnClick}>
-          See more about me <AiOutlineArrowRight />
+          Learn more about me <AiOutlineArrowRight />
         </StyledButton>
       </Box>
       <Socials />
