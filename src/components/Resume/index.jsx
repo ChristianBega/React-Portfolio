@@ -18,20 +18,30 @@ const experienceData = [
     projectName: "Study Buddies",
     demoLink: "https://studybuddiezzz.herokuapp.com/",
     accomplishments: [
-      "Applied MVC software architecture patterns to construct an API that served as the backend to a productivity study web application.",
-      "Developed MySQL database to store user data, skillfully utilizing Sequelize ORM to build out models, views, and controllers.",
+      "Developed a full stack study productivity web application that allows users to easily organize and access their coding resources.",
+      "Applied the MVC software architecture pattern to develop and construct a REST API which uses a mySQL relational database paired with Sequelize ORM.",
     ],
-    technology: ["JavaScript", "JQuery", "Handlebars", "Express", "Node", "mySQL"],
+    technology: ["JavaScript", "JQuery", "Handlebars", "Express", "Node", "mySQL", "Sequelize ORM"],
   },
   {
     projectName: "Financial Tracker",
     demoLink: "https://golden-goose-finance.herokuapp.com/",
     accomplishments: [
-      "Utilized React and Material UI to develop and deploy a finance tracker web application linked to a MongoDB database.",
-      "Contributed to front end UI/UX wireframing & design, as well as employing queries & mutations to regulate data.",
-      "Provided additional assistance to the back end by debugging, troubleshooting, and testing.",
+      "Created a MERN full stack finance tracker that provides users the ability to monitor their spending habits.",
+      "Provided assistance to back-end development by designing models, resolvers, and typeDefs for REST API.",
+      "Additionally, led the integration of a REST API to React front end, utilizing GraphQL queries and mutations. ",
     ],
     technology: ["React", "MongoDB", "Node", "Express", "Graph Ql", "Material UI"],
+  },
+  {
+    projectName: "Weather Dashboard",
+    demoLink: "https://reactweatherdashboard.netlify.app/",
+    accomplishments: [
+      "Constructed a single page application which uses Open Weather Api to retrieve and display weather forecasts.",
+      "Built a weather dashboard and recently refactored with React and Tailwind.",
+      "Included progressive web app services workers to offer offline and downloadable features.",
+    ],
+    technology: ["JavaScript", "JQuery", "3rd party APIs", "Bootstrap"],
   },
   {
     projectName: "Hangry",
@@ -116,10 +126,10 @@ export default function Resume() {
           Summary
         </Typography>
         <Typography variant="p" component="p" sx={{ lineHeight: "1.2rem" }}>
-          {/* I’m a MERN full-stack web developer graduate from Denver University. While at Denver University, I had the opportunity to collaborate with different teams of developers to plan, build, and deploy applications using agile methodology's to solve real-world problems. */}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rem molestiae tempora quo nobis quod modi nemo non tempore. Voluptatem in
-          quod, iste perspiciatis quo doloribus facere odit quibusdam quas id enim dolores nemo itaque. Vero, consequuntur! Eius voluptatum repellat,
-          labore est ducimus a nostrum ab consequuntur porro accusantium quisquam?
+          A dynamic, detail-oriented Web Developer with a year of experience developing fully responsive, user-friendly, single-page applications.
+          Capable of applying agile methodologies to design, develop, and implement features and improvements that support user interface concepts.
+          Adept ability to communicate and collaborate with different teams of developers to produce a minimum viable product and fulfill project
+          deadlines.
         </Typography>
       </Box>
       {/* Skills section */}
