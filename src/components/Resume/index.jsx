@@ -115,7 +115,12 @@ export default function Resume() {
       {/* Resume button */}
       <Box textAlign="center" marginTop="2rem">
         <StyledButton variant="contained">
-          <a className="resumeButton" href="https://drive.google.com/file/d/1EWKWdADy6-VGt00r396ispcyx2H2ElWB/view" target="_blank" rel="noreferrer">
+          <a
+            className="resumeButton"
+            href="https://drive.google.com/file/d/1-WQoVHOrq66Bvrxsng9jAARhzWwAEK19/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
             Download Resume
           </a>
         </StyledButton>
