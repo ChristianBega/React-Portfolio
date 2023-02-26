@@ -12,7 +12,7 @@ export default function Socials() {
   return (
     <>
       <IconContext.Provider value={{ size: "1.3rem" }}>
-        <Stack direction="row" spacing={5} sx={{ justifyContent: "center" }}>
+        <Stack direction="row" spacing={5} sx={{ justifyContent: "center " }}>
           <Item>
             <a href="https://github.com/ChristianBega" target="_blank" rel="noopener noreferrer">
               <FaGithub />
