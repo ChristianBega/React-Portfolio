@@ -6,6 +6,10 @@ import Box from "@mui/material/Box";
 import { Stack } from "@mui/system";
 const Item = styled(Box)({
   textAlign: "center",
+  "&:hover": {
+    transform: "scale(1.2)",
+    transition: ".2s ease-in-out",
+  },
 });
 
 export default function Socials() {
