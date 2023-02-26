@@ -37,11 +37,11 @@ export default function ProjectCardsPage() {
       name: "React Weather Dashboard",
       description: "A weather dashboard web application that retrieves and displays daily weather forecast.",
       longDescription:
-        "The weather dashboard is a single-page react application that uses two 3rd party APIs. The first, Open Weather API, allows users to search for a city and retrieve weather forecast data. The second, Google Maps API, provides users with a google map of the city they searched...",
+        "This weather dashboard is a React single-page application that utilizes 3rd Party APIs to fetch and retrieve weather forecast data. The Open Weather API allows users to search for a city and retrieve weather forecast data. The Google Maps API then takes the city's coordinates and displays a map of that city. The overall goal of this project was to create a simple and user-friendly application that allowed users to quickly and easily search for a city and view its current weather conditions.",
       videoDemo: WeatherDashboardVideo,
       link: "https://reactweatherdashboard.netlify.app/",
       repo: "https://github.com/ChristianBega/Weather-Dashboard",
-      technology: ["React", "Javascript", "3rd Party API", "Tailwind"],
+      technology: ["React", "Javascript", "3rd Party API", "Tailwind", "Local Storage"],
       // versionHistory : [{}] - pull in github api data to show commit history to show recent improvements.
       // more about the project - wire frames, figma designs, etc.
     },
@@ -49,26 +49,29 @@ export default function ProjectCardsPage() {
       name: "Golden Goose Finance",
       description: "A MERN full stack finance tracking web application that allows users monitor their bills, savings, and expenses.",
       longDescription:
-        "Golden Goose Finance is MERN full stack single-page react application that offers users a simple user-friendly solution for tracking their finances. The backend built with express, node and mongo DB allows users to perform CRUD operations on their financial data. ",
+        "Golden Goose Finance is a full-stack MERN web application that provides users with an intuitive and user-friendly solution for tracking their finances. The application is built with MongoDB, Express, Node.js, React, and Material UI, allowing users to track their expenses, savings, and bills in an organized manner. Additionally, users can view their financial data through charts and graphs to gain insight into their financial habits.",
       videoDemo: FinancialTrackerVideo,
       link: "https://golden-goose-finance.herokuapp.com/",
       repo: "https://github.com/ChristianBega/Golden-Goose-Finance",
-      technology: ["React", "Javascript", "MongoDB", "Express", "Node"],
+      technology: ["React", "Javascript", "MongoDB", "Express", "Node", "Material UI", "Mongoose ODM", "JSON web tokens"],
     },
 
     {
       name: "Study Buddies",
-      description: "A full stack application that serves as a study productivity aid.",
-      longDescription: "A long description explaining the process etc...",
+      description: "A full stack application that serves as a study productivity aid to help manage and access coding resources.",
+      longDescription:
+        "Study Buddies is a full stack web application that gives users an efficient and convenient way to manage and access their coding resources. The backend API, built with a MySQL relational database, allows users to perform Create, Read, Update, and Delete (CRUD) operations on their resources. Our goal with Study Buddies is to help users maximize their study productivity by creating a single reference for all their coding resources.",
       // videoDemo: StudyAppImg,
       link: "https://studybuddiezzz.herokuapp.com/",
       repo: "https://github.com/JerimiahK/studyBuddies",
-      technology: ["React", "Javascript", "SQL", "Express", "Node", "SCSS", "Material UI"],
+      technology: ["Handle Bars", "Javascript", "mySQL", "Express", "Node", "Boot Strap"],
     },
     {
       name: "Hangry",
       description: "A food recipe application that provides users with recipes personalized by their dietary and nutritional search filters. ",
-      longDescription: "A long description explaining the process etc...",
+      // React- based,
+      longDescription:
+        "Hangry is a mobile-first web application that uses the Edamam Food Search Recipe 3rd party API to give users tailored recipe recommendations based on their dietary and nutritional preferences. Every recipe comes with comprehensive nutritional data, allowing users to make informed food choices.",
       videoDemo: HangryVideo,
       link: "https://mandiebot.github.io/Hangry/",
       repo: "https://github.com/ChristianBega/Hangry",

@@ -95,7 +95,7 @@ function Navigation() {
         PaperProps={{
           style: {
             marginBlock: "1rem",
-            backgroundColor: "var(--drop-down-menu-bg)",
+            background: "var(--drop-down-menu-bg)",
             width: "100%",
             minHeight: "80vh",
             backdropFilter: "var(--header-blur-filter)",

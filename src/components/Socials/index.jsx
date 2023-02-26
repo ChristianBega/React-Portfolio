@@ -6,13 +6,17 @@ import Box from "@mui/material/Box";
 import { Stack } from "@mui/system";
 const Item = styled(Box)({
   textAlign: "center",
+  "&:hover": {
+    transform: "scale(1.2)",
+    transition: ".2s ease-in-out",
+  },
 });
 
 export default function Socials() {
   return (
     <>
       <IconContext.Provider value={{ size: "1.3rem" }}>
-        <Stack direction="row" spacing={5} sx={{ justifyContent: "center" }}>
+        <Stack direction="row" spacing={5} sx={{ justifyContent: "center " }}>
           <Item>
             <a href="https://github.com/ChristianBega" target="_blank" rel="noopener noreferrer">
               <FaGithub />
