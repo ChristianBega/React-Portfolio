@@ -28,7 +28,17 @@ export default function HomePage() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Container sx={{ minHeight: "85vh", mt: 5, textAlign: "center" }}>
+    <Container
+      sx={{
+        minHeight: "75vh",
+        my: 5,
+        textAlign: "center",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignContent: "center",
+      }}
+    >
       <HomeAbout />
       <Box textAlign="center" marginY={5}>
         <StyledButton onClick={handleOnClick}>
