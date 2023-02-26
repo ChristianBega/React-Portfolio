@@ -8,10 +8,10 @@ const StyledProjectCard = styled(Card)({
   background: "var(--dark-card-bg)",
   border: "2px solid rgba(81, 81, 81, .5)",
 
-  minWidth: "20rem",
-  // maxWidth: "25rem",
-  minHeight: "20em",
-  // maxHeight: "25rem",
+  // minWidth: "22rem",
+  // width: "100%",
+  minHeight: "22rem",
+  height: "100%",
   display: "flex",
   "&:hover": {
     boxShadow: "0px 0px 20px 4px rgba(67, 67, 71, 0.6)",
@@ -45,7 +45,8 @@ export default function ProjectCards({ project }) {
         autoPlay
         loop
         muted
-        sx={{ objectFit: "cover", width: "100%", height: "100%", top: 0, bottom: 0, position: "absolute", zIndex: "-100" }}
+        height="100%"
+        sx={{ objectFit: "fill", position: "absolute", top: "0", right: "0", zIndex: "-100" }}
         src={videoDemo}
       />
       <CardContent sx={{ display: "flex", flexDirection: "column", justifyContent: "end" }}>
