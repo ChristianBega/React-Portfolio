@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, ImageList, ImageListItem, Typography } from "@mui/material/";
+import { Box, Button, Container, ImageList, ImageListItem, Typography } from "@mui/material/";
 import CssImg from "../../Assets/images/skills/Css.svg";
 import HtmlImg from "../../Assets/images/skills/Html.svg";
 
@@ -111,7 +111,7 @@ const StyledButton = styled(Button)({
 
 export default function Resume() {
   return (
-    <>
+    <Container maxWidth="lg">
       {/* Resume button */}
       <Box textAlign="center" marginTop="2rem">
         <StyledButton variant="contained">
@@ -126,11 +126,11 @@ export default function Resume() {
         </StyledButton>
       </Box>
       {/* Summary section */}
-      <Box marginTop="3rem" textAlign="center">
+      <Box marginTop="3rem" textAlign="center" sx={{ maxWidth: "650px", marginX: "auto" }}>
         <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem" }}>
           Summary
         </Typography>
-        <Typography variant="p" component="p" sx={{ lineHeight: "1.2rem" }}>
+        <Typography variant="p" component="p" sx={{ lineHeight: "1.2rem", fontSize: { md: "18px" } }}>
           A dynamic, detail-oriented Web Developer with a year of experience developing fully responsive, user-friendly, single-page applications.
           Capable of applying agile methodologies to design, develop, and implement features and improvements that support user interface concepts.
           Adept ability to communicate and collaborate with different teams of developers to produce a minimum viable product and fulfill project
@@ -143,7 +143,7 @@ export default function Resume() {
           Skills
         </Typography>
         <ImageList
-          sx={{ minWidth: "375px", minHeight: "128px", display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}
+          sx={{ minWidth: "340px", minHeight: "128px", display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}
           cols={3}
           rowHeight={64}
         >
@@ -158,8 +158,7 @@ export default function Resume() {
           ))}
         </ImageList>
       </Box>
-      {/* Experience Section */}
-      <Box marginTop="2rem">
+      {/* <Box marginTop="2rem">
         <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem", textAlign: "center" }}>
           Experience
         </Typography>
@@ -204,35 +203,35 @@ export default function Resume() {
             </Box>
           ))}
         </Box>
-      </Box>
+      </Box> */}
       {/* Eduction Section */}
-      <Box marginTop="2rem">
+      <Box marginTop="2rem" sx={{ maxWidth: "650px", marginX: "auto" }}>
         <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem", textAlign: "center" }}>
           Eduction
         </Typography>
         <Box>
-          <Typography display="flex" justifyContent="space-between" variant="p" component="p" mb={1} color="#fff">
+          <Typography display="flex" justifyContent="space-between" variant="p" component="p" mb={1} color="#fff" sx={{ fontSize: { md: "18px" } }}>
             Denver University
-            <Typography variant="" component="small">
+            <Typography variant="" component="small" sx={{ md: "110%" }}>
               January 2023
             </Typography>
           </Typography>
-          <Typography variant="" component="small">
+          <Typography variant="" component="small" sx={{ md: "110%" }}>
             Full Stack Web Development Boot Camp
           </Typography>
         </Box>
         <Box mt="1rem">
-          <Typography display="flex" justifyContent="space-between" variant="p" component="p" mb={1} color="#fff">
+          <Typography display="flex" justifyContent="space-between" variant="p" component="p" mb={1} color="#fff" sx={{ fontSize: { md: "18px" } }}>
             Community College of Aurora
-            <Typography variant="" component="small">
+            <Typography variant="" component="small" sx={{ md: "110%" }}>
               March 2022
             </Typography>
           </Typography>
-          <Typography variant="" component="small">
+          <Typography variant="" component="small" sx={{ md: "110%" }}>
             Associates of General Studies
           </Typography>
         </Box>
       </Box>
-    </>
+    </Container>
   );
 }

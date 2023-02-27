@@ -35,7 +35,7 @@ export default function AboutMePage() {
       <AboutMe />
       <Box textAlign="center" marginY={5}>
         <StyledButton onClick={handleOnClick}>
-          Continue to my projects <AiOutlineArrowRight />
+          View my work <AiOutlineArrowRight />
         </StyledButton>
       </Box>
     </Container>

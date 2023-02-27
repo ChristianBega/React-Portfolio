@@ -5,21 +5,21 @@ import { Box } from "@mui/system";
 
 const mockData = [
   {
-    topic: "Programming",
-    description: "Coming soon...",
+    topic: "My programming journey",
+    description: "",
   },
   {
-    topic: "Skills",
+    topic: "Front end skills",
     description: "Elaborate on my skills...",
   },
   {
-    topic: "Hobbies",
+    topic: "Back end skills",
     description: "What do I enjoy doing on my free time?",
   },
-  {
-    topic: "Algos",
-    description: "Elaborate on hacker rank",
-  },
+  // {
+  //   topic: "Algos",
+  //   description: "Elaborate on hacker rank",
+  // },
 ];
 const StyledCard = styled(Paper)({
   backgroundColor: "rgba(165, 165, 165, .3)",

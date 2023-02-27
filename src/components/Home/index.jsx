@@ -22,7 +22,7 @@ const StyledButton = styled(Button)({
 
 export default function HomeAbout() {
   const navigate = useNavigate();
-  const handleOnClick = useCallback(() => navigate("/about-me", { replace: true }), [navigate]);
+  const handleOnClick = useCallback(() => navigate("/project-cards", { replace: true }), [navigate]);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -53,9 +53,14 @@ export default function HomeAbout() {
           journey to become a web developer. I have since graduated from Denver University's full-stack boot camp. Where I learned the skills to
           design, develop, and deliver elegant user friendly web applications.
         </Typography>
-        <Box textAlign="center" marginY={5}>
+        {/* <Box textAlign="center" marginY={5}>
           <StyledButton onClick={handleOnClick}>
             Learn more about me <AiOutlineArrowRight />
+          </StyledButton>
+        </Box> */}
+        <Box textAlign="center" marginY={5}>
+          <StyledButton onClick={handleOnClick}>
+            View my work <AiOutlineArrowRight />
           </StyledButton>
         </Box>
         <Socials />

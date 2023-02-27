@@ -27,9 +27,9 @@ export default function ResumePage() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Container sx={{ minHeight: "100vh", my: 5 }}>
+    <Container sx={{ my: 5, p: 0 }}>
       <Resume />
-      <Box textAlign="center" marginTop={3}>
+      <Box textAlign="center" marginTop={5}>
         <StyledButton onClick={handleOnClick}>
           Contact me
           <AiOutlineArrowRight />

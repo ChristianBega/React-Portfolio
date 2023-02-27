@@ -78,7 +78,7 @@ export default function ProjectCardsPage() {
   }, []);
   return (
     <>
-      <Grid container maxWidth="lg" marginX={{ lg: "auto" }} spacing={{ xs: 2, md: 3 }} sx={{ minHeight: "100vh", padding: 5 }}>
+      <Grid container maxWidth="lg" marginX={{ lg: "auto" }} spacing={{ xs: 2, md: 3 }} sx={{ minHeight: "100vh", padding: 2 }}>
         {/* <Projects /> */}
         {/* map over all project and create cards */}
         {projects.map((project, i) => (
