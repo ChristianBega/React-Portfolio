@@ -1,12 +1,11 @@
-import { Button, Typography } from "@mui/material";
+import { Button, Typography, styled } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React, { useCallback, useEffect } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router";
-import styled from "@emotion/styled";
 import Contact from "../components/ContactForm";
 import Footer from "../components/Footer";
-const StyledButton = styled(Button)({
+const StyledButton = styled(Button)(({ theme }) => ({
   // backgroundColor: "rgba(165, 165, 165, .3)",
   // minHeight: "160px",
   // borderRadius: ".6rem",
@@ -22,7 +21,11 @@ const StyledButton = styled(Button)({
     transform: "scale(1.1)",
     transition: ".2s",
   },
-});
+  fontSize: "16px",
+  [theme.breakpoints.up("md")]: {
+    fontSize: "115%",
+  },
+}));
 export default function ContactPage() {
   const navigate = useNavigate();
   const handleOnClick = useCallback(() => navigate("/", { replace: true }), [navigate]);

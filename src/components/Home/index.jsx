@@ -1,14 +1,12 @@
 import React, { useCallback, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, styled, Box } from "@mui/material";
 import PortfolioImage from "../../Assets/images/ImagePlaceHolder.png";
 
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Socials from "../Socials";
-import styled from "@emotion/styled";
-const StyledButton = styled(Button)({
+const StyledButton = styled(Button)(({ theme }) => ({
   color: "var(--light-blue) !important",
   "&:hover": {
     color: "#fff !important",
@@ -18,7 +16,11 @@ const StyledButton = styled(Button)({
     transform: "scale(1.1)",
     transition: ".2s",
   },
-});
+  fontSize: "16px",
+  [theme.breakpoints.up("md")]: {
+    fontSize: "115%",
+  },
+}));
 
 export default function HomeAbout() {
   const navigate = useNavigate();

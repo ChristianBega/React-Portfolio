@@ -1,4 +1,4 @@
-import { Box, Button, Grid } from "@mui/material";
+import { Box, Button, Grid, styled } from "@mui/material";
 import React, { useCallback, useState, useEffect } from "react";
 import FinancialTrackerVideo from "../Assets/videos/FinicalAppDemo.mp4";
 // import StudyAppImg from "../Assets/videos/StudyBuddyApp.png";
@@ -10,8 +10,8 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
-import styled from "@emotion/styled";
-const StyledButton = styled(Button)({
+// import styled from "@emotion/styled";
+const StyledButton = styled(Button)(({ theme }) => ({
   color: "var(--light-blue) !important",
   "&:hover": {
     color: "#fff !important",
@@ -21,7 +21,11 @@ const StyledButton = styled(Button)({
     transform: "scale(1.1)",
     transition: ".2s",
   },
-});
+  fontSize: "16px",
+  [theme.breakpoints.up("md")]: {
+    fontSize: "115%",
+  },
+}));
 
 export default function ProjectCardsPage() {
   const navigate = useNavigate();
