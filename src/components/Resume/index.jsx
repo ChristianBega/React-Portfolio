@@ -139,8 +139,10 @@ export default function Resume() {
       >
         Experience
       </Typography>
+
       {/* Experience Grid */}
       <Grid container maxWidth="lg" marginX={{ lg: "auto" }} spacing={{ xs: 2, md: 3 }}>
+        {/* Mapping over experienceData to create experience grid items with information. */}
         {experienceData.map((experience, index) => (
           <Grid item xs={12} md={6} key={index}>
             <Box padding={{ sm: 2, md: 3, lg: 4 }}>
@@ -160,18 +162,18 @@ export default function Resume() {
                   {experience.accomplishments[0]}
                 </Typography>
                 <Typography variant="p" component="p" marginBottom="1rem" fontSize={{ md: "18px" }}>
-                  <Typography component="label" variant="label" sx={{ color: "#fff", mb: ".5rem" }}>
+                  <Typography component="label" variant="label" sx={{ color: "#fff", mb: ".5rem", display: "block" }}>
                     Role:
                   </Typography>
                   {experience.accomplishments[1]}
                 </Typography>
                 {experience.accomplishments[2] && (
-                  <Typography variant="label" component="label" marginBottom="1rem" fontSize={{ md: "18px" }}>
+                  <Typography variant="p" component="p" marginBottom="1rem" fontSize={{ md: "18px" }}>
                     {experience.accomplishments[2]}
                   </Typography>
                 )}
                 <Typography variant="p" component="p" marginBottom="1rem" fontSize={{ md: "18px" }}>
-                  <Typography component="label" variant="label" sx={{ color: "#fff", mb: ".5rem" }}>
+                  <Typography component="label" variant="label" sx={{ color: "#fff", mb: ".5rem", display: "block" }}>
                     Technology:
                   </Typography>
                   {experience.technology.map((test, index) => (
@@ -183,6 +185,7 @@ export default function Resume() {
           </Grid>
         ))}
       </Grid>
+
       {/* Eduction Section */}
       <Box maxWidth="lg" sx={{ paddingX: { sm: "1rem", md: "1.5rem", lg: "3.5rem" } }}>
         <Typography
