@@ -18,6 +18,9 @@ const StyledMenuItem = styled(MenuItem)(({ theme }) => ({
   [theme.breakpoints.up("sm")]: {
     fontSize: "100%",
   },
+  [theme.breakpoints.up("md")]: {
+    fontSize: "115%",
+  },
   "&:hover": {
     backgroundColor: "transparent",
     textDecorationLine: "underline",
