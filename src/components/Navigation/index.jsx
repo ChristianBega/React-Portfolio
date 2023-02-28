@@ -15,9 +15,9 @@ const StyledMenuItem = styled(MenuItem)(({ theme }) => ({
   fontSize: "175%",
   textAlign: "center",
   position: "relative",
-  [theme.breakpoints.up("sm")]: {
-    fontSize: "100%",
-  },
+  // [theme.breakpoints.up("sm")]: {
+  //   fontSize: "100%",
+  // },
   [theme.breakpoints.up("md")]: {
     fontSize: "115%",
   },

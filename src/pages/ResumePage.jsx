@@ -1,11 +1,10 @@
-import styled from "@emotion/styled";
-import { Button } from "@mui/material";
+import { Button, styled } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React, { useCallback, useEffect } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router";
 import Resume from "../components/Resume";
-const StyledButton = styled(Button)({
+const StyledButton = styled(Button)(({ theme }) => ({
   color: "var(--light-blue) !important",
   "&:hover": {
     color: "#fff !important",
@@ -15,7 +14,11 @@ const StyledButton = styled(Button)({
     transform: "scale(1.1)",
     transition: ".2s",
   },
-});
+  fontSize: "16px",
+  [theme.breakpoints.up("md")]: {
+    fontSize: "115%",
+  },
+}));
 const ResumeButton = styled(Button)({
   backgroundColor: "var(--light-blue) !important",
   "&:hover": {
