@@ -89,7 +89,7 @@ export default function ProjectCardsPage() {
           </Grid>
         ))}
       </Grid>
-      <Box textAlign="center" marginBottom={5}>
+      <Box textAlign="center" marginY={5}>
         <StyledButton onClick={handleOnClick}>
           View my resume <AiOutlineArrowRight />
         </StyledButton>

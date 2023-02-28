@@ -29,7 +29,7 @@ export default function ResumePage() {
   return (
     <Container sx={{ my: 5, p: 0 }}>
       <Resume />
-      <Box textAlign="center" marginTop={5}>
+      <Box textAlign="center" marginY={5}>
         <StyledButton onClick={handleOnClick}>
           Contact me
           <AiOutlineArrowRight />
