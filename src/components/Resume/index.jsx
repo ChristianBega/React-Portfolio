@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Container, ImageList, ImageListItem, Typography } from "@mui/material/";
+import { Box, Button, Container, Grid, ImageList, ImageListItem, Typography } from "@mui/material/";
 import CssImg from "../../Assets/images/skills/Css.svg";
 import HtmlImg from "../../Assets/images/skills/Html.svg";
 
@@ -117,9 +117,10 @@ export default function Resume() {
         <StyledButton variant="contained">
           <a
             className="resumeButton"
-            href="https://drive.google.com/file/d/1-WQoVHOrq66Bvrxsng9jAARhzWwAEK19/view?usp=sharing"
-            target="_blank"
-            rel="noreferrer"
+            href="https://drive.google.com/file/d/1AahWQemCf08v3p-LxRQmev1MWMNkNDOI/view?usp=sharing"
+            // target="_blank"
+            // rel="noreferrer"
+            download
           >
             Download Resume
           </a>
@@ -158,14 +159,14 @@ export default function Resume() {
           ))}
         </ImageList>
       </Box>
-      {/* <Box marginTop="2rem">
-        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem", textAlign: "center" }}>
-          Experience
-        </Typography>
-        <Box>
-          {experienceData.map((experience, index) => (
-            <Box key={index}>
-              <Typography variant="h6" component="h3" mb={2}>
+      <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem", textAlign: "center" }}>
+        Experience
+      </Typography>
+      <Grid container maxWidth="lg" marginX={{ lg: "auto" }} spacing={{ xs: 2, md: 3 }}>
+        {experienceData.map((experience, index) => (
+          <Grid item sx={12} md={6}>
+            <Box key={index} padding={{ sm: 2, md: 3, lg: 4 }}>
+              <Typography variant="h6" component="h3" mb={2} textAlign={{ md: "center" }} fontSize={{ md: "24px" }}>
                 {experience.projectName} |
                 <span>
                   <a href={experience.demoLink} target="_blank" rel="noreferrer">
@@ -174,24 +175,24 @@ export default function Resume() {
                 </span>
               </Typography>
               <Box style={{ color: "var(--medium-gray)" }}>
-                <Typography variant="p" component="p" marginBottom="1rem">
+                <Typography variant="p" component="p" marginBottom="1rem" fontSize={{ md: "18px" }}>
                   <Typography component="p" variant="p" sx={{ color: "#fff", mb: ".5rem" }}>
                     Summary:
                   </Typography>
                   {experience.accomplishments[0]}
                 </Typography>
-                <Typography variant="p" component="p" marginBottom="1rem">
+                <Typography variant="p" component="p" marginBottom="1rem" fontSize={{ md: "18px" }}>
                   <Typography component="p" variant="p" sx={{ color: "#fff", mb: ".5rem" }}>
                     Role:
                   </Typography>
                   {experience.accomplishments[1]}
                 </Typography>
                 {experience.accomplishments[2] && (
-                  <Typography variant="p" component="p" marginBottom="1rem">
+                  <Typography variant="p" component="p" marginBottom="1rem" fontSize={{ md: "18px" }}>
                     {experience.accomplishments[2]}
                   </Typography>
                 )}
-                <Typography variant="p" component="p" marginBottom="1rem">
+                <Typography variant="p" component="p" marginBottom="1rem" fontSize={{ md: "18px" }}>
                   <Typography component="p" variant="p" sx={{ color: "#fff", mb: ".5rem" }}>
                     Technology:
                   </Typography>
@@ -201,11 +202,11 @@ export default function Resume() {
                 </Typography>
               </Box>
             </Box>
-          ))}
-        </Box>
-      </Box> */}
+          </Grid>
+        ))}
+      </Grid>
       {/* Eduction Section */}
-      <Box marginTop="2rem" sx={{ maxWidth: "650px", marginX: "auto" }}>
+      <Box maxWidth="lg" sx={{ paddingX: { sm: "1rem", md: "1.5rem", lg: "3.5rem" } }}>
         <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem", textAlign: "center" }}>
           Eduction
         </Typography>

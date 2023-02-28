@@ -82,7 +82,7 @@ export default function ProjectCardsPage() {
         {/* <Projects /> */}
         {/* map over all project and create cards */}
         {projects.map((project, i) => (
-          <Grid item xs={12} sm={6} lg={6}>
+          <Grid item xs={12} sm={6} md={6}>
             <Link id={project.name} to="/project-page" state={{ project: project }}>
               <ProjectCard project={project} key={"project" + i} />
             </Link>

@@ -36,7 +36,7 @@ export default function ProjectPage() {
   }, []);
   return (
     <>
-      <Container maxWidth="md" sx={{ my: 5, justifyContent: "center", position: "relative" }}>
+      <Container maxWidth="lg" sx={{ my: 5, justifyContent: "center", position: "relative" }}>
         <Box sx={{ ":hover": { cursor: "pointer" } }}>
           <IconContext.Provider value={{ size: "1.7rem", color: "#fff" }}>
             <AiOutlineArrowLeft onClick={handleNavigateBack} />
