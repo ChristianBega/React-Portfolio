@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Container, Grid, ImageList, ImageListItem, Typography } from "@mui/material/";
+import { Box, Container, Grid, ImageList, ImageListItem, Typography } from "@mui/material/";
 import CssImg from "../../Assets/images/skills/Css.svg";
 import HtmlImg from "../../Assets/images/skills/Html.svg";
 
@@ -11,7 +11,6 @@ import ReactImg from "../../Assets/images/skills/React.svg";
 import NodeJsImg from "../../Assets/images/skills/NodeJs.svg";
 import MongoDBImg from "../../Assets/images/skills/MongoDB.svg";
 import MySQLImg from "../../Assets/images/skills/mySQL.svg";
-import styled from "@emotion/styled";
 
 const experienceData = [
   {
@@ -96,39 +95,12 @@ const skillsData = [
   },
 ];
 
-const StyledButton = styled(Button)({
-  backgroundColor: "var(--light-blue) !important",
-  "&:hover": {
-    color: "#fff !important",
-    backgroundColor: "transparent",
-    textDecorationLine: "underline",
-    textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
-    boxShadow: "0px 0px 20px 4px rgba(67, 67, 71, 0.6)",
-    transform: "scale(1.1)",
-    transition: ".2s",
-  },
-});
-
 export default function Resume() {
   return (
     <Container maxWidth="lg">
-      {/* Resume button */}
-      <Box textAlign="center" marginTop="2rem">
-        <StyledButton variant="contained">
-          <a
-            className="resumeButton"
-            href="https://drive.google.com/file/d/1AahWQemCf08v3p-LxRQmev1MWMNkNDOI/view?usp=sharing"
-            // target="_blank"
-            // rel="noreferrer"
-            download
-          >
-            Download Resume
-          </a>
-        </StyledButton>
-      </Box>
-      {/* Summary section */}
-      <Box marginTop="3rem" textAlign="center" sx={{ maxWidth: "650px", marginX: "auto" }}>
-        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem" }}>
+      {/* Summary Section */}
+      <Box maxWidth="md" marginX="auto" marginTop="3rem" textAlign="center">
+        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem", fontSize: { md: "40px" } }}>
           Summary
         </Typography>
         <Typography variant="p" component="p" sx={{ lineHeight: "1.2rem", fontSize: { md: "18px" } }}>
@@ -138,9 +110,9 @@ export default function Resume() {
           deadlines.
         </Typography>
       </Box>
-      {/* Skills section */}
+      {/* Skills Section */}
       <Box marginY="3rem" textAlign="center">
-        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem" }}>
+        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem", fontSize: { md: "40px" } }}>
           Skills
         </Typography>
         <ImageList
@@ -159,13 +131,19 @@ export default function Resume() {
           ))}
         </ImageList>
       </Box>
-      <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem", textAlign: "center" }}>
+      <Typography
+        variant="h4"
+        component="h2"
+        marginBottom="1rem"
+        sx={{ fontWeight: "700", letterSpacing: ".1rem", textAlign: "center", fontSize: { md: "40px" } }}
+      >
         Experience
       </Typography>
+      {/* Experience Grid */}
       <Grid container maxWidth="lg" marginX={{ lg: "auto" }} spacing={{ xs: 2, md: 3 }}>
         {experienceData.map((experience, index) => (
-          <Grid item sx={12} md={6}>
-            <Box key={index} padding={{ sm: 2, md: 3, lg: 4 }}>
+          <Grid item xs={12} md={6} key={index}>
+            <Box padding={{ sm: 2, md: 3, lg: 4 }}>
               <Typography variant="h6" component="h3" mb={2} textAlign={{ md: "center" }} fontSize={{ md: "24px" }}>
                 {experience.projectName} |
                 <span>
@@ -176,24 +154,24 @@ export default function Resume() {
               </Typography>
               <Box style={{ color: "var(--medium-gray)" }}>
                 <Typography variant="p" component="p" marginBottom="1rem" fontSize={{ md: "18px" }}>
-                  <Typography component="p" variant="p" sx={{ color: "#fff", mb: ".5rem" }}>
+                  <Typography component="label" variant="label" sx={{ color: "#fff", mb: ".5rem", display: "block" }}>
                     Summary:
                   </Typography>
                   {experience.accomplishments[0]}
                 </Typography>
                 <Typography variant="p" component="p" marginBottom="1rem" fontSize={{ md: "18px" }}>
-                  <Typography component="p" variant="p" sx={{ color: "#fff", mb: ".5rem" }}>
+                  <Typography component="label" variant="label" sx={{ color: "#fff", mb: ".5rem" }}>
                     Role:
                   </Typography>
                   {experience.accomplishments[1]}
                 </Typography>
                 {experience.accomplishments[2] && (
-                  <Typography variant="p" component="p" marginBottom="1rem" fontSize={{ md: "18px" }}>
+                  <Typography variant="label" component="label" marginBottom="1rem" fontSize={{ md: "18px" }}>
                     {experience.accomplishments[2]}
                   </Typography>
                 )}
                 <Typography variant="p" component="p" marginBottom="1rem" fontSize={{ md: "18px" }}>
-                  <Typography component="p" variant="p" sx={{ color: "#fff", mb: ".5rem" }}>
+                  <Typography component="label" variant="label" sx={{ color: "#fff", mb: ".5rem" }}>
                     Technology:
                   </Typography>
                   {experience.technology.map((test, index) => (
@@ -207,7 +185,12 @@ export default function Resume() {
       </Grid>
       {/* Eduction Section */}
       <Box maxWidth="lg" sx={{ paddingX: { sm: "1rem", md: "1.5rem", lg: "3.5rem" } }}>
-        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem", textAlign: "center" }}>
+        <Typography
+          variant="h4"
+          component="h2"
+          marginBottom="1rem"
+          sx={{ fontWeight: "700", letterSpacing: ".1rem", textAlign: "center", fontSize: { md: "40px" } }}
+        >
           Eduction
         </Typography>
         <Box>
