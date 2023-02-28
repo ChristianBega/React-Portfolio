@@ -6,16 +6,24 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router";
 import Resume from "../components/Resume";
 const StyledButton = styled(Button)({
-  // backgroundColor: "rgba(165, 165, 165, .3)",
-  // minHeight: "160px",
-  // borderRadius: ".6rem",
-  // padding: "1.2rem 1rem",
   color: "var(--light-blue) !important",
   "&:hover": {
     color: "#fff !important",
     backgroundColor: "transparent",
     textDecorationLine: "underline",
     textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
+    transform: "scale(1.1)",
+    transition: ".2s",
+  },
+});
+const ResumeButton = styled(Button)({
+  backgroundColor: "var(--light-blue) !important",
+  "&:hover": {
+    color: "#fff !important",
+    backgroundColor: "transparent",
+    textDecorationLine: "underline",
+    textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
+    boxShadow: "0px 0px 20px 4px rgba(67, 67, 71, 0.6)",
     transform: "scale(1.1)",
     transition: ".2s",
   },
@@ -27,9 +35,22 @@ export default function ResumePage() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Container sx={{ minHeight: "100vh", my: 5 }}>
+    <Container sx={{ my: 5, p: 0 }}>
       <Resume />
-      <Box textAlign="center" marginTop={3}>
+      {/* Resume button */}
+      <Box textAlign="center" marginTop="2rem">
+        <ResumeButton variant="contained">
+          <a
+            className="resumeButton"
+            href="https://drive.google.com/file/d/1AahWQemCf08v3p-LxRQmev1MWMNkNDOI/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Download Resume
+          </a>
+        </ResumeButton>
+      </Box>
+      <Box textAlign="center" marginY={5}>
         <StyledButton onClick={handleOnClick}>
           Contact me
           <AiOutlineArrowRight />

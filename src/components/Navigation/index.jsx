@@ -18,6 +18,9 @@ const StyledMenuItem = styled(MenuItem)(({ theme }) => ({
   [theme.breakpoints.up("sm")]: {
     fontSize: "100%",
   },
+  [theme.breakpoints.up("md")]: {
+    fontSize: "115%",
+  },
   "&:hover": {
     backgroundColor: "transparent",
     textDecorationLine: "underline",
@@ -60,9 +63,9 @@ function Navigation() {
           <Link to="/">Chris Bega</Link>
         </Typography>
         <DesktopMenu>
-          <StyledMenuItem>
+          {/* <StyledMenuItem>
             <Link to="/about-me">About Me</Link>
-          </StyledMenuItem>
+          </StyledMenuItem> */}
           <StyledMenuItem>
             <Link to="/project-cards">Projects</Link>
           </StyledMenuItem>
@@ -112,9 +115,9 @@ function Navigation() {
             </IconContext.Provider>
           </StyledMenuItem>
         </Link>
-        <Link onClick={exitMenu} to="/">
+        {/* <Link onClick={exitMenu} to="/">
           <StyledMenuItem>About Me</StyledMenuItem>
-        </Link>
+        </Link> */}
         <Link onClick={exitMenu} to="/project-cards">
           <StyledMenuItem>Projects</StyledMenuItem>
         </Link>

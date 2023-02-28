@@ -52,7 +52,7 @@ export default function ContactForm() {
 
   console.log(errors);
   return (
-    <Box component="form" onSubmit={handleSubmit(() => reset())}>
+    <Box maxWidth="sm" marginX="auto" component="form" onSubmit={handleSubmit(() => reset())}>
       <StyledTextField variant="filled" label="Name " {...register("name", { required: "This is required" })} />
       <Typography variant="small" component="p">
         {errors.name?.message}

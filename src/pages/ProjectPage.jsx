@@ -36,17 +36,17 @@ export default function ProjectPage() {
   }, []);
   return (
     <>
-      <Container maxWidth="md" sx={{ my: 5, justifyContent: "center", position: "relative" }}>
+      <Container maxWidth="lg" sx={{ my: 5, justifyContent: "center", position: "relative" }}>
         <Box sx={{ ":hover": { cursor: "pointer" } }}>
           <IconContext.Provider value={{ size: "1.7rem", color: "#fff" }}>
             <AiOutlineArrowLeft onClick={handleNavigateBack} />
           </IconContext.Provider>
         </Box>
 
-        <Typography component="h2" variant="h5" mt={3}>
+        <Typography component="h2" variant="h5" mt={3} fontSize={{ lg: "28px" }}>
           {currentProject.name}
         </Typography>
-        <Typography component="p" mt={1}>
+        <Typography component="p" mt={1} fontSize={{ lg: "18px" }}>
           {currentProject.description}
         </Typography>
         <CardMedia
@@ -60,41 +60,41 @@ export default function ProjectPage() {
             borderRadius: "12px",
             overflow: "hidden",
             objectFit: "cover",
-            width: { xs: "100%", sm: "90%", md: "80%" },
-            height: { xs: "100%", sm: "90%", md: "80%" },
+            width: { xs: "100%", sm: "90%", md: "80%", lg: "75%" },
+            height: { xs: "100%", sm: "90%", md: "80%", lg: "75%" },
             opacity: ".9",
             background: "var(--dark-card-bg)",
           }}
           src={currentProject.videoDemo}
         />
-        <Typography mt={4} component="h3" variant="h6">
+        <Typography mt={4} component="h3" variant="h6" fontSize={{ lg: "24px" }}>
           About
         </Typography>
-        <Typography mt={1} mb={4} component="p">
+        <Typography mt={1} mb={4} component="p" fontSize={{ lg: "18px" }}>
           {currentProject.longDescription}
         </Typography>
-        <Typography component="h3" variant="h6">
+        <Typography component="h3" variant="h6" fontSize={{ lg: "24px" }}>
           Technologies
         </Typography>
-        <Box sx={{ mt: "1rem", mb: 4, display: "flex", flexWrap: "wrap", flexDirection: "row", gap: "1rem" }}>
+        <Box sx={{ mt: "1rem", mb: 4, display: "flex", flexWrap: "wrap", flexDirection: "row", gap: "1rem" }} fontSize={{ lg: "18px" }}>
           {currentProject.technology.map((currentTech) => (
             <StyledStackItem component="p" key={currentTech}>
               {currentTech}
             </StyledStackItem>
           ))}
         </Box>
-        <Typography mt={3} mb={1} component="h3" variant="h6">
+        <Typography mt={3} mb={1} component="h3" variant="h6" fontSize={{ lg: "24px" }}>
           <FaGlobeAmericas style={{ marginRight: ".8rem" }} />
           Website
         </Typography>
-        <StyledLink href={currentProject.link} target="_blank" rel="noopener noreferrer">
+        <StyledLink href={currentProject.link} target="_blank" rel="noopener noreferrer" fontSize={{ lg: "18px" }}>
           {currentProject.link}
         </StyledLink>
-        <Typography mt={3} mb={1} component="h3" variant="h6">
+        <Typography mt={3} mb={1} component="h3" variant="h6" fontSize={{ lg: "24px" }}>
           <FaGithub style={{ marginRight: ".8rem" }} />
           Github
         </Typography>
-        <StyledLink href={currentProject.repo} target="_blank" rel="noopener noreferrer">
+        <StyledLink href={currentProject.repo} target="_blank" rel="noopener noreferrer" fontSize={{ lg: "18px" }}>
           {currentProject.repo}
         </StyledLink>
       </Container>

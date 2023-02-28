@@ -31,7 +31,7 @@ export default function ContactPage() {
   }, []);
   return (
     <>
-      <Container sx={{ minHeight: "100vh", my: 5 }}>
+      <Container sx={{ minHeight: "85vh", my: 5 }}>
         <Typography component="h2" variant="h2" textAlign="center" mt={4} sx={{ fontWeight: "700" }}>
           Let's Chat!
           <Typography component="p" variant="h4" sx={{ fontSize: "2rem" }}>

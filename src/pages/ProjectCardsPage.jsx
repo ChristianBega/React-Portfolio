@@ -1,4 +1,4 @@
-import { Box, Button, Container } from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
 import React, { useCallback, useState, useEffect } from "react";
 import FinancialTrackerVideo from "../Assets/videos/FinicalAppDemo.mp4";
 // import StudyAppImg from "../Assets/videos/StudyBuddyApp.png";
@@ -12,12 +12,7 @@ import { Link } from "react-router-dom";
 
 import styled from "@emotion/styled";
 const StyledButton = styled(Button)({
-  // backgroundColor: "rgba(165, 165, 165, .3)",
-  // minHeight: "160px",
-  // borderRadius: ".6rem",
-  // padding: "1.2rem 1rem",
   color: "var(--light-blue) !important",
-
   "&:hover": {
     color: "#fff !important",
     backgroundColor: "transparent",
@@ -83,15 +78,17 @@ export default function ProjectCardsPage() {
   }, []);
   return (
     <>
-      <Container sx={{ minHeight: "100vh", mt: 5, display: "grid", gap: "2rem", justifyContent: "center" }}>
+      <Grid container maxWidth="lg" marginX={{ lg: "auto" }} spacing={{ xs: 2, md: 3 }} sx={{ minHeight: "100vh", padding: 2 }}>
         {/* <Projects /> */}
         {/* map over all project and create cards */}
         {projects.map((project, i) => (
-          <Link sx={{ height: "80%" }} id={project.name} to="/project-page" state={{ project: project }}>
-            <ProjectCard project={project} key={"project" + i} />
-          </Link>
+          <Grid item xs={12} sm={6} md={6}>
+            <Link id={project.name} to="/project-page" state={{ project: project }}>
+              <ProjectCard project={project} key={"project" + i} />
+            </Link>
+          </Grid>
         ))}
-      </Container>
+      </Grid>
       <Box textAlign="center" marginY={5}>
         <StyledButton onClick={handleOnClick}>
           View my resume <AiOutlineArrowRight />

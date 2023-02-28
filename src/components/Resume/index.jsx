@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, ImageList, ImageListItem, Typography } from "@mui/material/";
+import { Box, Container, Grid, ImageList, ImageListItem, Typography } from "@mui/material/";
 import CssImg from "../../Assets/images/skills/Css.svg";
 import HtmlImg from "../../Assets/images/skills/Html.svg";
 
@@ -11,7 +11,6 @@ import ReactImg from "../../Assets/images/skills/React.svg";
 import NodeJsImg from "../../Assets/images/skills/NodeJs.svg";
 import MongoDBImg from "../../Assets/images/skills/MongoDB.svg";
 import MySQLImg from "../../Assets/images/skills/mySQL.svg";
-import styled from "@emotion/styled";
 
 const experienceData = [
   {
@@ -96,54 +95,28 @@ const skillsData = [
   },
 ];
 
-const StyledButton = styled(Button)({
-  backgroundColor: "var(--light-blue) !important",
-  "&:hover": {
-    color: "#fff !important",
-    backgroundColor: "transparent",
-    textDecorationLine: "underline",
-    textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
-    boxShadow: "0px 0px 20px 4px rgba(67, 67, 71, 0.6)",
-    transform: "scale(1.1)",
-    transition: ".2s",
-  },
-});
-
 export default function Resume() {
   return (
-    <>
-      {/* Resume button */}
-      <Box textAlign="center" marginTop="2rem">
-        <StyledButton variant="contained">
-          <a
-            className="resumeButton"
-            href="https://drive.google.com/file/d/1-WQoVHOrq66Bvrxsng9jAARhzWwAEK19/view?usp=sharing"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Download Resume
-          </a>
-        </StyledButton>
-      </Box>
-      {/* Summary section */}
-      <Box marginTop="3rem" textAlign="center">
-        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem" }}>
+    <Container maxWidth="lg">
+      {/* Summary Section */}
+      <Box maxWidth="md" marginX="auto" marginTop="3rem" textAlign="center">
+        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem", fontSize: { md: "40px" } }}>
           Summary
         </Typography>
-        <Typography variant="p" component="p" sx={{ lineHeight: "1.2rem" }}>
+        <Typography variant="p" component="p" sx={{ lineHeight: "1.2rem", fontSize: { md: "18px" } }}>
           A dynamic, detail-oriented Web Developer with a year of experience developing fully responsive, user-friendly, single-page applications.
           Capable of applying agile methodologies to design, develop, and implement features and improvements that support user interface concepts.
           Adept ability to communicate and collaborate with different teams of developers to produce a minimum viable product and fulfill project
           deadlines.
         </Typography>
       </Box>
-      {/* Skills section */}
+      {/* Skills Section */}
       <Box marginY="3rem" textAlign="center">
-        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem" }}>
+        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem", fontSize: { md: "40px" } }}>
           Skills
         </Typography>
         <ImageList
-          sx={{ minWidth: "375px", minHeight: "128px", display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}
+          sx={{ minWidth: "340px", minHeight: "128px", display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}
           cols={3}
           rowHeight={64}
         >
@@ -158,15 +131,20 @@ export default function Resume() {
           ))}
         </ImageList>
       </Box>
-      {/* Experience Section */}
-      <Box marginTop="2rem">
-        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem", textAlign: "center" }}>
-          Experience
-        </Typography>
-        <Box>
-          {experienceData.map((experience, index) => (
-            <Box key={index}>
-              <Typography variant="h6" component="h3" mb={2}>
+      <Typography
+        variant="h4"
+        component="h2"
+        marginBottom="1rem"
+        sx={{ fontWeight: "700", letterSpacing: ".1rem", textAlign: "center", fontSize: { md: "40px" } }}
+      >
+        Experience
+      </Typography>
+      {/* Experience Grid */}
+      <Grid container maxWidth="lg" marginX={{ lg: "auto" }} spacing={{ xs: 2, md: 3 }}>
+        {experienceData.map((experience, index) => (
+          <Grid item xs={12} md={6} key={index}>
+            <Box padding={{ sm: 2, md: 3, lg: 4 }}>
+              <Typography variant="h6" component="h3" mb={2} textAlign={{ md: "center" }} fontSize={{ md: "24px" }}>
                 {experience.projectName} |
                 <span>
                   <a href={experience.demoLink} target="_blank" rel="noreferrer">
@@ -175,25 +153,25 @@ export default function Resume() {
                 </span>
               </Typography>
               <Box style={{ color: "var(--medium-gray)" }}>
-                <Typography variant="p" component="p" marginBottom="1rem">
-                  <Typography component="p" variant="p" sx={{ color: "#fff", mb: ".5rem" }}>
+                <Typography variant="p" component="p" marginBottom="1rem" fontSize={{ md: "18px" }}>
+                  <Typography component="label" variant="label" sx={{ color: "#fff", mb: ".5rem", display: "block" }}>
                     Summary:
                   </Typography>
                   {experience.accomplishments[0]}
                 </Typography>
-                <Typography variant="p" component="p" marginBottom="1rem">
-                  <Typography component="p" variant="p" sx={{ color: "#fff", mb: ".5rem" }}>
+                <Typography variant="p" component="p" marginBottom="1rem" fontSize={{ md: "18px" }}>
+                  <Typography component="label" variant="label" sx={{ color: "#fff", mb: ".5rem" }}>
                     Role:
                   </Typography>
                   {experience.accomplishments[1]}
                 </Typography>
                 {experience.accomplishments[2] && (
-                  <Typography variant="p" component="p" marginBottom="1rem">
+                  <Typography variant="label" component="label" marginBottom="1rem" fontSize={{ md: "18px" }}>
                     {experience.accomplishments[2]}
                   </Typography>
                 )}
-                <Typography variant="p" component="p" marginBottom="1rem">
-                  <Typography component="p" variant="p" sx={{ color: "#fff", mb: ".5rem" }}>
+                <Typography variant="p" component="p" marginBottom="1rem" fontSize={{ md: "18px" }}>
+                  <Typography component="label" variant="label" sx={{ color: "#fff", mb: ".5rem" }}>
                     Technology:
                   </Typography>
                   {experience.technology.map((test, index) => (
@@ -202,37 +180,42 @@ export default function Resume() {
                 </Typography>
               </Box>
             </Box>
-          ))}
-        </Box>
-      </Box>
+          </Grid>
+        ))}
+      </Grid>
       {/* Eduction Section */}
-      <Box marginTop="2rem">
-        <Typography variant="h4" component="h2" marginBottom="1rem" sx={{ fontWeight: "700", letterSpacing: ".1rem", textAlign: "center" }}>
+      <Box maxWidth="lg" sx={{ paddingX: { sm: "1rem", md: "1.5rem", lg: "3.5rem" } }}>
+        <Typography
+          variant="h4"
+          component="h2"
+          marginBottom="1rem"
+          sx={{ fontWeight: "700", letterSpacing: ".1rem", textAlign: "center", fontSize: { md: "40px" } }}
+        >
           Eduction
         </Typography>
         <Box>
-          <Typography display="flex" justifyContent="space-between" variant="p" component="p" mb={1} color="#fff">
+          <Typography display="flex" justifyContent="space-between" variant="p" component="p" mb={1} color="#fff" sx={{ fontSize: { md: "18px" } }}>
             Denver University
-            <Typography variant="" component="small">
+            <Typography variant="" component="small" sx={{ md: "110%" }}>
               January 2023
             </Typography>
           </Typography>
-          <Typography variant="" component="small">
+          <Typography variant="" component="small" sx={{ md: "110%" }}>
             Full Stack Web Development Boot Camp
           </Typography>
         </Box>
         <Box mt="1rem">
-          <Typography display="flex" justifyContent="space-between" variant="p" component="p" mb={1} color="#fff">
+          <Typography display="flex" justifyContent="space-between" variant="p" component="p" mb={1} color="#fff" sx={{ fontSize: { md: "18px" } }}>
             Community College of Aurora
-            <Typography variant="" component="small">
+            <Typography variant="" component="small" sx={{ md: "110%" }}>
               March 2022
             </Typography>
           </Typography>
-          <Typography variant="" component="small">
+          <Typography variant="" component="small" sx={{ md: "110%" }}>
             Associates of General Studies
           </Typography>
         </Box>
       </Box>
-    </>
+    </Container>
   );
 }
