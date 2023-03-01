@@ -2,6 +2,9 @@ import { Box, TextField, Button, Typography, MenuItem, Select, InputLabel, FormC
 import styled from "@emotion/styled";
 import React from "react";
 import { useForm } from "react-hook-form";
+// import emailjs from "@emailjs/browser";
+import EmailService from "../../Services/EmailService";
+
 // 1. Finish validation for email - pattern
 const StyledTextField = styled(TextField)({
   backgroundColor: "var(--light-form-bg)",
@@ -50,10 +53,16 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm();
 
-  console.log(errors);
+  const onSubmit = (data) => {
+    // console.log("test");
+    // console.log(data);
+
+    EmailService.sendEmail(data);
+  };
+
   return (
-    <Box maxWidth="sm" marginX="auto" component="form" onSubmit={handleSubmit(() => reset())}>
-      <StyledTextField variant="filled" label="Name " {...register("name", { required: "Name is required *" })} />
+    <Box maxWidth="sm" marginX="auto" component="form" onSubmit={handleSubmit(onSubmit)}>
+      <StyledTextField variant="filled" label="Name " {...register("from_name", { required: "Name is required *" })} />
       <Typography variant="small" component="p">
         {errors.name?.message}
       </Typography>
@@ -78,8 +87,8 @@ export default function ContactForm() {
         <InputLabel id="selectMenu">Reason for message</InputLabel>
         <Select id="selectMenu" {...register("reason", { required: "Reason is required" })}>
           {choices.map((option, index) => (
-            <MenuItem key={index} value={option || ""}>
-              {option.label}
+            <MenuItem key={index} value={option}>
+              {option.label || ""}
             </MenuItem>
           ))}
         </Select>
@@ -105,7 +114,7 @@ export default function ContactForm() {
       </Typography>
 
       <Box textAlign="center" mt={5}>
-        <StyledButton type="submit" variant="contained">
+        <StyledButton onSubmit={onSubmit} type="submit" variant="contained">
           Submit
         </StyledButton>
       </Box>
