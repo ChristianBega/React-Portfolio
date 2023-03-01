@@ -49,7 +49,6 @@ export default function ContactForm() {
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm();
 
@@ -71,7 +70,7 @@ export default function ContactForm() {
         label="Email "
         {...register(
           "email",
-          { pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(.\w{2,3})+$/ },
+          { pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: "invalid email address" } },
           { required: "Email is required", minLength: { value: 4, message: "Minimum length is 4 characters" } }
         )}
       />
