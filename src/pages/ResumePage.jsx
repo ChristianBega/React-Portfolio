@@ -3,6 +3,7 @@ import { Box, Container } from "@mui/system";
 import React, { useCallback, useEffect } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router";
+import Resume_2_28_23 from "../Assets/Christian_Bega.pdf";
 import Resume from "../components/Resume";
 const StyledButton = styled(Button)(({ theme }) => ({
   color: "var(--light-blue) !important",
@@ -43,12 +44,7 @@ export default function ResumePage() {
       {/* Resume button */}
       <Box textAlign="center" marginTop="2rem">
         <ResumeButton variant="contained">
-          <a
-            className="resumeButton"
-            href="https://drive.google.com/file/d/1AahWQemCf08v3p-LxRQmev1MWMNkNDOI/view?usp=sharing"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className="resumeButton" href={Resume_2_28_23} download={Resume_2_28_23}>
             Download Resume
           </a>
         </ResumeButton>
