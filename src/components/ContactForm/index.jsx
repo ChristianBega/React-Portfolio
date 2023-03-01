@@ -2,6 +2,9 @@ import { Box, TextField, Button, Typography, MenuItem, Select, InputLabel, FormC
 import styled from "@emotion/styled";
 import React from "react";
 import { useForm } from "react-hook-form";
+// import emailjs from "@emailjs/browser";
+import EmailService from "../../Services/EmailService";
+
 // 1. Finish validation for email - pattern
 const StyledTextField = styled(TextField)({
   backgroundColor: "var(--light-form-bg)",
@@ -50,10 +53,16 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm();
 
-  console.log(errors);
+  const onSubmit = (data) => {
+    // console.log("test");
+    // console.log(data);
+
+    EmailService.sendEmail(data);
+  };
+
   return (
-    <Box maxWidth="sm" marginX="auto" component="form" onSubmit={handleSubmit(() => reset())}>
-      <StyledTextField variant="filled" label="Name " {...register("name", { required: "This is required" })} />
+    <Box maxWidth="sm" marginX="auto" component="form" onSubmit={handleSubmit(onSubmit)}>
+      <StyledTextField variant="filled" label="Name " {...register("from_name", { required: "Name is required *" })} />
       <Typography variant="small" component="p">
         {errors.name?.message}
       </Typography>
@@ -62,30 +71,31 @@ export default function ContactForm() {
         label="Email "
         {...register(
           "email",
-          { required: "This is required", minLength: { value: 4, message: "Minimum length is 4 characters" } },
-          { pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i }
+          { pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(.\w{2,3})+$/ },
+          { required: "Email is required", minLength: { value: 4, message: "Minimum length is 4 characters" } }
         )}
       />
       <Typography variant="small" component="p">
         {errors.email?.message}
       </Typography>
-      <StyledTextField variant="filled" label="Company " {...register("company", { required: "This is required" })} />
+      <StyledTextField variant="filled" label="Company " {...register("company", { required: "Company is required *" })} />
       <Typography variant="small" component="p">
         {errors.company?.message}
       </Typography>
+
       <StyledFormControl variant="filled">
         <InputLabel id="selectMenu">Reason for message</InputLabel>
-        <Select id="selectMenu" {...register("reason", { required: "This is required" })}>
+        <Select id="selectMenu" {...register("reason", { required: "Reason is required" })}>
           {choices.map((option, index) => (
             <MenuItem key={index} value={option}>
-              {option.label?.message}
+              {option.label || ""}
             </MenuItem>
           ))}
         </Select>
-        <Typography variant="small" component="p">
-          {errors.reason?.message}
-        </Typography>
       </StyledFormControl>
+      <Typography variant="small" component="p">
+        {errors.reason?.message}
+      </Typography>
 
       <StyledTextField
         multiline
@@ -94,8 +104,8 @@ export default function ContactForm() {
         variant="filled"
         label="Message "
         {...register("message", {
-          required: "This is required",
-          minLength: { value: 25, message: "Minimum length is 25 characters" },
+          required: "Message is required",
+          minLength: { value: 50, message: "Minimum length is 50 characters" },
           maxLength: { value: 275, message: "Maximum length is 275 characters" },
         })}
       />
@@ -104,7 +114,7 @@ export default function ContactForm() {
       </Typography>
 
       <Box textAlign="center" mt={5}>
-        <StyledButton type="submit" variant="contained">
+        <StyledButton onSubmit={onSubmit} type="submit" variant="contained">
           Submit
         </StyledButton>
       </Box>
