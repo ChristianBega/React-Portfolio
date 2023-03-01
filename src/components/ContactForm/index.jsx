@@ -53,7 +53,7 @@ export default function ContactForm() {
   console.log(errors);
   return (
     <Box maxWidth="sm" marginX="auto" component="form" onSubmit={handleSubmit(() => reset())}>
-      <StyledTextField variant="filled" label="Name " {...register("name", { required: "This is required" })} />
+      <StyledTextField variant="filled" label="Name " {...register("name", { required: "Name is required *" })} />
       <Typography variant="small" component="p">
         {errors.name?.message}
       </Typography>
@@ -62,30 +62,31 @@ export default function ContactForm() {
         label="Email "
         {...register(
           "email",
-          { required: "This is required", minLength: { value: 4, message: "Minimum length is 4 characters" } },
-          { pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i }
+          { pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(.\w{2,3})+$/ },
+          { required: "Email is required", minLength: { value: 4, message: "Minimum length is 4 characters" } }
         )}
       />
       <Typography variant="small" component="p">
         {errors.email?.message}
       </Typography>
-      <StyledTextField variant="filled" label="Company " {...register("company", { required: "This is required" })} />
+      <StyledTextField variant="filled" label="Company " {...register("company", { required: "Company is required *" })} />
       <Typography variant="small" component="p">
         {errors.company?.message}
       </Typography>
+
       <StyledFormControl variant="filled">
         <InputLabel id="selectMenu">Reason for message</InputLabel>
-        <Select id="selectMenu" {...register("reason", { required: "This is required" })}>
+        <Select id="selectMenu" {...register("reason", { required: "Reason is required" })}>
           {choices.map((option, index) => (
-            <MenuItem key={index} value={option}>
-              {option.label?.message}
+            <MenuItem key={index} value={option || ""}>
+              {option.label}
             </MenuItem>
           ))}
         </Select>
-        <Typography variant="small" component="p">
-          {errors.reason?.message}
-        </Typography>
       </StyledFormControl>
+      <Typography variant="small" component="p">
+        {errors.reason?.message}
+      </Typography>
 
       <StyledTextField
         multiline
@@ -94,8 +95,8 @@ export default function ContactForm() {
         variant="filled"
         label="Message "
         {...register("message", {
-          required: "This is required",
-          minLength: { value: 25, message: "Minimum length is 25 characters" },
+          required: "Message is required",
+          minLength: { value: 50, message: "Minimum length is 50 characters" },
           maxLength: { value: 275, message: "Maximum length is 275 characters" },
         })}
       />
