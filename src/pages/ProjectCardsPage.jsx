@@ -1,7 +1,7 @@
 import { Box, Button, Grid, styled } from "@mui/material";
 import React, { useCallback, useState, useEffect } from "react";
-import FinancialTrackerVideo from "../Assets/videos/FinicalAppDemo.mp4";
-// import StudyAppImg from "../Assets/videos/StudyBuddyApp.png";
+import FinancialTrackerVideo from "../Assets/videos/GoldenGooseFianceDemo.mp4";
+import StudyAppImg from "../Assets/videos/StudyBuddiesDemo.mp4";
 import WeatherDashboardVideo from "../Assets/videos/WeatherDashboardDemo-Mobile.mp4";
 import HangryVideo from "../Assets/videos/HangryDemo.mp4";
 
@@ -60,7 +60,7 @@ export default function ProjectCardsPage() {
       description: "A full stack application that serves as a study productivity aid to help manage and access coding resources.",
       longDescription:
         "Study Buddies is a full stack web application that gives users an efficient and convenient way to manage and access their coding resources. The backend API, built with a MySQL relational database, allows users to perform Create, Read, Update, and Delete (CRUD) operations on their resources. Our goal with Study Buddies is to help users maximize their study productivity by creating a single reference for all their coding resources.",
-      // videoDemo: StudyAppImg,
+      videoDemo: StudyAppImg,
       link: "https://studybuddiezzz.herokuapp.com/",
       repo: "https://github.com/JerimiahK/studyBuddies",
       technology: ["Handle Bars", "Javascript", "mySQL", "Express", "Node", "Boot Strap"],
