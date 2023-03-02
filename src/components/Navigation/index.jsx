@@ -15,12 +15,22 @@ const StyledMenuItem = styled(MenuItem)(({ theme }) => ({
   fontSize: "175%",
   textAlign: "center",
   position: "relative",
-  // [theme.breakpoints.up("sm")]: {
-  //   fontSize: "100%",
-  // },
-  [theme.breakpoints.up("md")]: {
-    fontSize: "115%",
+
+  "&:hover": {
+    backgroundColor: "transparent",
+    textDecorationLine: "underline",
+    textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
+    transform: "scale(1.1)",
+    transition: ".2s",
   },
+}));
+const StyledDesktopMenuItem = styled(MenuItem)(({ theme }) => ({
+  color: "#fff",
+  minHeight: "65px",
+  fontSize: "125%",
+  textAlign: "center",
+  position: "relative",
+
   "&:hover": {
     backgroundColor: "transparent",
     textDecorationLine: "underline",
@@ -60,21 +70,21 @@ function Navigation() {
     <AppBar position="sticky" sx={{ padding: "1rem" }}>
       <StyledToolbar>
         <Typography variant="h6" component="h1">
-          <Link to="/">Chris Bega</Link>
+          <Link to="/">Christian Bega</Link>
         </Typography>
         <DesktopMenu>
           {/* <StyledMenuItem>
             <Link to="/about-me">About Me</Link>
           </StyledMenuItem> */}
-          <StyledMenuItem>
+          <StyledDesktopMenuItem>
             <Link to="/project-cards">Projects</Link>
-          </StyledMenuItem>
-          <StyledMenuItem>
+          </StyledDesktopMenuItem>
+          <StyledDesktopMenuItem>
             <Link to="/resume">Resume</Link>
-          </StyledMenuItem>
-          <StyledMenuItem>
+          </StyledDesktopMenuItem>
+          <StyledDesktopMenuItem>
             <Link to="/contact">Contact</Link>
-          </StyledMenuItem>
+          </StyledDesktopMenuItem>
         </DesktopMenu>
         <MobileMenu onClick={(e) => setOpen(true)}>
           <IconContext.Provider value={{ size: "1.8rem", padding: "0", margin: "0", color: "white" }}>
