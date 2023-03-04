@@ -49,14 +49,12 @@ export default function ContactForm() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
-
   const onSubmit = (data) => {
-    // console.log("test");
-    // console.log(data);
-
     EmailService.sendEmail(data);
+    reset();
   };
 
   return (
@@ -87,7 +85,7 @@ export default function ContactForm() {
         <Select id="selectMenu" {...register("reason", { required: "Reason is required" })}>
           {choices.map((option, index) => (
             <MenuItem key={index} value={option}>
-              {option.label || ""}
+              {option.label}
             </MenuItem>
           ))}
         </Select>
