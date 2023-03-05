@@ -7,11 +7,6 @@ import HomeAbout from "../components/Home";
 export default function HomePage() {
   return (
     <Container
-      component={motion.div}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={transition1}
       sx={{
         minHeight: "75vh",
         my: 3,

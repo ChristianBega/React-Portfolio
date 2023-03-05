@@ -9,9 +9,8 @@ import ProjectCard from "../components/ProjectCards";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
-import { transition1 } from "../transitions";
+import { cardsVariants } from "../transitions";
 import { motion } from "framer-motion";
-// import styled from "@emotion/styled";
 const StyledButton = styled(Button)(({ theme }) => ({
   color: "var(--light-blue) !important",
   "&:hover": {
@@ -83,27 +82,22 @@ export default function ProjectCardsPage() {
   }, []);
   return (
     <>
-      <Grid
-        component={motion.div}
-        initial={{ opacity: 0, y: "80%" }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: "80%" }}
-        transition={transition1}
-        container
-        maxWidth="lg"
-        marginX={{ lg: "auto" }}
-        spacing={{ xs: 2, md: 3 }}
-        sx={{ minHeight: "100vh", padding: 2 }}
-      >
+      <Grid container maxWidth="lg" marginX={{ lg: "auto" }} spacing={{ xs: 2, md: 3 }} sx={{ minHeight: "100vh", padding: 2 }}>
         {/* <Projects /> */}
         {/* map over all project and create cards */}
         {projects.map((project, i) => (
           <Grid
             component={motion.div}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={transition1}
+            initial={{
+              opacity: 0,
+              scale: 0.5,
+              translateX: i % 2 === 0 ? -50 : 50,
+              translateY: -50,
+            }}
+            animate={{ opacity: 1, scale: 1, translateX: 0, translateY: 0 }}
+            transition={{ easeIn: [0.43, 0.13, 0.23, 0.96], duration: 0.4, scale: 0, delay: i * 0.3 }}
+            // exit={{ opacity: 0, scale: 0, translateX: i % 2 === 0 ? -50 : 50, translateY: -50 }}
+            exit={cardsVariants.exit}
             item
             xs={12}
             sm={6}
