@@ -7,7 +7,8 @@ import { FaGithub, FaGlobeAmericas } from "react-icons/fa";
 import Footer from "../components/Footer";
 import { IconContext } from "react-icons";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-
+import { transition1 } from "../transitions";
+import { motion } from "framer-motion";
 const StyledStackItem = styled(Paper)({
   margin: 0,
   display: "inline",
@@ -36,7 +37,15 @@ export default function ProjectPage() {
   }, []);
   return (
     <>
-      <Container maxWidth="lg" sx={{ my: 5, justifyContent: "center", position: "relative" }}>
+      <Container
+        component={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={transition1}
+        maxWidth="lg"
+        sx={{ my: 5, justifyContent: "center", position: "relative" }}
+      >
         <Box sx={{ ":hover": { cursor: "pointer" } }}>
           <IconContext.Provider value={{ size: "1.7rem", color: "#fff" }}>
             <AiOutlineArrowLeft onClick={handleNavigateBack} />

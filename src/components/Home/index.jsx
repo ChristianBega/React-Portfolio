@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import { Button, Grid, styled, Box } from "@mui/material";
 import PortfolioImage from "../../Assets/images/ImagePlaceHolder.png";
-import { transition1 } from "../../transitions";
+import { childrenVariants, childrenVariantsTwo } from "../../transitions";
 import { motion } from "framer-motion";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Socials from "../Socials";
@@ -34,21 +34,16 @@ export default function HomeAbout() {
       <Link to="/"></Link>
       <Grid
         component={motion.div}
-        initial={{ opacity: 0, y: "-50%" }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: "-50%" }}
-        transition={transition1}
+        initial={childrenVariants.hidden}
+        animate={childrenVariants.visible}
+        exit={childrenVariants.exit}
+        transition={childrenVariants.transition}
         item
         sx={12}
         md={6}
       >
         <Box
-          component={motion.img}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          exit={{ scale: 0 }}
-          transition={transition1}
-          // component="img"
+          component="img"
           sx={{
             width: { xs: "250px", md: "350px", lg: "425px" },
             height: { xs: "250px", md: "350px", lg: "425px" },
@@ -60,10 +55,10 @@ export default function HomeAbout() {
       </Grid>
       <Grid
         component={motion.div}
-        initial={{ opacity: 0, y: "-50%" }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: "-50%" }}
-        transition={transition1}
+        initial={childrenVariantsTwo.hidden}
+        animate={childrenVariantsTwo.visible}
+        exit={childrenVariantsTwo.exit}
+        transition={childrenVariantsTwo.transition}
         item
         xs={12}
         md={6}
@@ -80,11 +75,6 @@ export default function HomeAbout() {
           journey to become a web developer. I have since graduated from Denver University's full-stack boot camp. Where I learned the skills to
           design, develop, and deliver elegant user friendly web applications.
         </Typography>
-        {/* <Box textAlign="center" marginY={5}>
-          <StyledButton onClick={handleOnClick}>
-            Learn more about me <AiOutlineArrowRight />
-          </StyledButton>
-        </Box> */}
         <Box textAlign="center" marginY={5}>
           <StyledButton onClick={handleOnClick}>
             View my work <AiOutlineArrowRight />
