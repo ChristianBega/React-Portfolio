@@ -5,4 +5,5 @@ export const transition1 = {
 };
 export const transition2 = {
   duration: 1.8,
+  easeInOut: [0.43, 0.13, 0.23, 0.96],
 };

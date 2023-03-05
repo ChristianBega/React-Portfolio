@@ -1,4 +1,4 @@
-import { transition2 } from "../transitions";
+import { transition1 } from "../transitions";
 import { motion } from "framer-motion";
 import { Container } from "@mui/material";
 import React from "react";
@@ -11,7 +11,7 @@ export default function HomePage() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={transition2}
+      transition={transition1}
       sx={{
         minHeight: "75vh",
         my: 3,

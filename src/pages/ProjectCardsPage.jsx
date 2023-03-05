@@ -9,7 +9,8 @@ import ProjectCard from "../components/ProjectCards";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
-
+import { transition2, transition1 } from "../transitions";
+import { motion } from "framer-motion";
 // import styled from "@emotion/styled";
 const StyledButton = styled(Button)(({ theme }) => ({
   color: "var(--light-blue) !important",
@@ -82,11 +83,32 @@ export default function ProjectCardsPage() {
   }, []);
   return (
     <>
-      <Grid container maxWidth="lg" marginX={{ lg: "auto" }} spacing={{ xs: 2, md: 3 }} sx={{ minHeight: "100vh", padding: 2 }}>
+      <Grid
+        component={motion.div}
+        initial={{ opacity: 0, y: "80%" }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0 }}
+        transition={transition1}
+        container
+        maxWidth="lg"
+        marginX={{ lg: "auto" }}
+        spacing={{ xs: 2, md: 3 }}
+        sx={{ minHeight: "100vh", padding: 2 }}
+      >
         {/* <Projects /> */}
         {/* map over all project and create cards */}
         {projects.map((project, i) => (
-          <Grid item xs={12} sm={6} md={6}>
+          <Grid
+            component={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={transition2}
+            item
+            xs={12}
+            sm={6}
+            md={6}
+          >
             <Link id={project.name} to="/project-page" state={{ project: project }}>
               <ProjectCard project={project} key={"project" + i} />
             </Link>
