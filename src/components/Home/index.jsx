@@ -3,7 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import { Button, Grid, styled, Box } from "@mui/material";
 import PortfolioImage from "../../Assets/images/ImagePlaceHolder.png";
-
+import { transition1 } from "../../transitions";
+import { motion } from "framer-motion";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Socials from "../Socials";
 const StyledButton = styled(Button)(({ theme }) => ({
@@ -31,9 +32,23 @@ export default function HomeAbout() {
   return (
     <Grid container justifyContent="center" alignContent="center" spacing={{ sm: 0 }}>
       <Link to="/"></Link>
-      <Grid item sx={12} md={6}>
+      <Grid
+        component={motion.div}
+        initial={{ opacity: 0, y: "-50%" }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: "-50%" }}
+        transition={transition1}
+        item
+        sx={12}
+        md={6}
+      >
         <Box
-          component="img"
+          component={motion.img}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
+          transition={transition1}
+          // component="img"
           sx={{
             width: { xs: "250px", md: "350px", lg: "425px" },
             height: { xs: "250px", md: "350px", lg: "425px" },
@@ -43,7 +58,17 @@ export default function HomeAbout() {
           alt="Christian Bega's Portfolio Image."
         ></Box>
       </Grid>
-      <Grid item xs={12} md={6} mt={3}>
+      <Grid
+        component={motion.div}
+        initial={{ opacity: 0, y: "-50%" }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: "-50%" }}
+        transition={transition1}
+        item
+        xs={12}
+        md={6}
+        mt={3}
+      >
         <Typography component="h2" sx={{ fontSize: { xs: "65px", md: "75px", lg: "80px", lineHeight: "120%" }, fontWeight: "700" }}>
           Hello,
         </Typography>

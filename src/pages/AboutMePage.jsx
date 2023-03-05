@@ -5,8 +5,7 @@ import { Box } from "@mui/system";
 
 import { AiOutlineArrowRight } from "react-icons/ai";
 import AboutMe from "../components/AboutMe";
-import { transition1 } from "../transitions";
-import { motion } from "framer-motion";
+
 import styled from "@emotion/styled";
 const StyledButton = styled(Button)({
   // backgroundColor: "rgba(165, 165, 165, .3)",
@@ -31,14 +30,7 @@ export default function AboutMePage() {
   }, []);
 
   return (
-    <Container
-      component={motion.div}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={transition1}
-      sx={{ minHeight: "100vh", my: 5 }}
-    >
+    <Container sx={{ minHeight: "100vh", my: 5 }}>
       <Link to="/"></Link>
       <AboutMe />
       <Box textAlign="center" marginY={5}>
