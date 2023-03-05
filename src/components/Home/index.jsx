@@ -3,7 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import { Button, Grid, styled, Box } from "@mui/material";
 import PortfolioImage from "../../Assets/images/ImagePlaceHolder.png";
-
+import { childrenVariants, childrenVariantsTwo } from "../../transitions";
+import { motion } from "framer-motion";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Socials from "../Socials";
 const StyledButton = styled(Button)(({ theme }) => ({
@@ -31,7 +32,16 @@ export default function HomeAbout() {
   return (
     <Grid container justifyContent="center" alignContent="center" spacing={{ sm: 0 }}>
       <Link to="/"></Link>
-      <Grid item sx={12} md={6}>
+      <Grid
+        component={motion.div}
+        initial={childrenVariants.hidden}
+        animate={childrenVariants.visible}
+        exit={childrenVariants.exit}
+        transition={childrenVariants.transition}
+        item
+        sx={12}
+        md={6}
+      >
         <Box
           component="img"
           sx={{
@@ -43,7 +53,17 @@ export default function HomeAbout() {
           alt="Christian Bega's Portfolio Image."
         ></Box>
       </Grid>
-      <Grid item xs={12} md={6} mt={3}>
+      <Grid
+        component={motion.div}
+        initial={childrenVariantsTwo.hidden}
+        animate={childrenVariantsTwo.visible}
+        exit={childrenVariantsTwo.exit}
+        transition={childrenVariantsTwo.transition}
+        item
+        xs={12}
+        md={6}
+        mt={3}
+      >
         <Typography component="h2" sx={{ fontSize: { xs: "65px", md: "75px", lg: "80px", lineHeight: "120%" }, fontWeight: "700" }}>
           Hello,
         </Typography>
@@ -55,11 +75,6 @@ export default function HomeAbout() {
           journey to become a web developer. I have since graduated from Denver University's full-stack boot camp. Where I learned the skills to
           design, develop, and deliver elegant user friendly web applications.
         </Typography>
-        {/* <Box textAlign="center" marginY={5}>
-          <StyledButton onClick={handleOnClick}>
-            Learn more about me <AiOutlineArrowRight />
-          </StyledButton>
-        </Box> */}
         <Box textAlign="center" marginY={5}>
           <StyledButton onClick={handleOnClick}>
             View my work <AiOutlineArrowRight />
