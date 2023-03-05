@@ -95,7 +95,15 @@ export default function ProjectCardsPage() {
               translateY: -50,
             }}
             animate={{ opacity: 1, scale: 1, translateX: 0, translateY: 0 }}
-            transition={{ easeIn: [0.43, 0.13, 0.23, 0.96], duration: 0.4, scale: 0, delay: i * 0.3 }}
+            transition={{
+              easeIn: [0.43, 0.13, 0.23, 0.96],
+              scale: 0,
+              delay: i * 0.4,
+              mass: 1.2,
+              damping: 15,
+              type: "spring",
+              stiffness: 100,
+            }}
             // exit={{ opacity: 0, scale: 0, translateX: i % 2 === 0 ? -50 : 50, translateY: -50 }}
             exit={cardsVariants.exit}
             item

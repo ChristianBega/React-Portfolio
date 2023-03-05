@@ -8,6 +8,8 @@ import Footer from "../components/Footer";
 import { IconContext } from "react-icons";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { motion } from "framer-motion";
+import { containerVariants } from "../transitions";
+
 const StyledStackItem = styled(Paper)({
   margin: 0,
   display: "inline",
@@ -36,7 +38,15 @@ export default function ProjectPage() {
   }, []);
   return (
     <>
-      <Container maxWidth="lg" sx={{ my: 5, justifyContent: "center", position: "relative" }}>
+      <Container
+        component={motion.container}
+        initial={containerVariants.hidden}
+        animate={containerVariants.visible}
+        exit={containerVariants.exit}
+        transition={containerVariants.transition}
+        maxWidth="lg"
+        sx={{ my: 5, justifyContent: "center", position: "relative" }}
+      >
         <Box sx={{ ":hover": { cursor: "pointer" } }}>
           <IconContext.Provider value={{ size: "1.7rem", color: "#fff" }}>
             <AiOutlineArrowLeft onClick={handleNavigateBack} />
