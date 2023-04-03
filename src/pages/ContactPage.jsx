@@ -5,6 +5,8 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router";
 import Contact from "../components/ContactForm";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
+import { containerVariants } from "../transitions";
 const StyledButton = styled(Button)(({ theme }) => ({
   // backgroundColor: "rgba(165, 165, 165, .3)",
   // minHeight: "160px",
@@ -34,7 +36,14 @@ export default function ContactPage() {
   }, []);
   return (
     <>
-      <Container sx={{ minHeight: "85vh", my: 5 }}>
+      <Container
+        component={motion.div}
+        initial={containerVariants.hidden}
+        animate={containerVariants.visible}
+        exit={containerVariants.exit}
+        transition={containerVariants.transition}
+        sx={{ minHeight: "85vh", my: 5 }}
+      >
         <Typography component="h2" variant="h2" textAlign="center" mt={4} sx={{ fontWeight: "700" }}>
           Let's Chat!
           <Typography component="p" variant="h4" sx={{ fontSize: "2rem" }}>
