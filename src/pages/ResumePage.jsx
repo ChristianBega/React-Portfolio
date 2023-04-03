@@ -5,6 +5,9 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router";
 import Resume_2_28_23 from "../Assets/Christian_Bega.pdf";
 import Resume from "../components/Resume";
+import { motion } from "framer-motion";
+import { containerVariants } from "../transitions";
+
 const StyledButton = styled(Button)(({ theme }) => ({
   color: "var(--light-blue) !important",
   "&:hover": {
@@ -39,7 +42,14 @@ export default function ResumePage() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Container sx={{ my: 5, p: 0 }}>
+    <Container
+      component={motion.div}
+      initial={containerVariants.hidden}
+      animate={containerVariants.visible}
+      exit={containerVariants.exit}
+      transition={containerVariants.transition}
+      sx={{ my: 5, p: 0 }}
+    >
       <Resume />
       {/* Resume button */}
       <Box textAlign="center" marginTop="2rem">
