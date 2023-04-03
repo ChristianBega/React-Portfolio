@@ -2,7 +2,7 @@ import React, { useCallback, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import { Button, Grid, styled, Box } from "@mui/material";
-import PortfolioImage from "../../Assets/images/ImagePlaceHolder.png";
+import PortfolioImage from "../../Assets/images/profileIMG.jpeg";
 import { childrenVariants, childrenVariantsTwo } from "../../transitions";
 import { motion } from "framer-motion";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -33,21 +33,25 @@ export default function HomeAbout() {
     <Grid container justifyContent="center" alignContent="center" spacing={{ sm: 0 }}>
       <Link to="/"></Link>
       <Grid
+        item
         component={motion.div}
         initial={childrenVariants.hidden}
         animate={childrenVariants.visible}
         exit={childrenVariants.exit}
         transition={childrenVariants.transition}
-        item
-        sx={12}
+        xs={12}
         md={6}
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
       >
         <Box
           component="img"
           sx={{
-            width: { xs: "250px", md: "350px", lg: "425px" },
-            height: { xs: "250px", md: "350px", lg: "425px" },
-            borderRadius: "50%",
+            width: { xs: "340px", lg: "70%" },
+            height: { xs: "340px", lg: "70%" },
+            // borderRadius: "50%",
+            // width: { xs: "250px", md: "350px", lg: "425px" },
+            // height: { xs: "250px", md: "350px", lg: "425px" },
+            // borderRadius: { xs: "50%", lg: "0" },
           }}
           src={PortfolioImage}
           alt="Christian Bega's Portfolio Image."
