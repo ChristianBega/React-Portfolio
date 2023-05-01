@@ -23,7 +23,6 @@ export default function HomePage() {
           position: "relative",
         }}
       >
-        {/* <HomeAbout /> */}
         <AboutMe />
         <ProjectCards />
       </Container>

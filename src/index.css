@@ -64,11 +64,9 @@ li {
   background-color: transparent;
 }
 
-p,
-small,
-span {
+p {
   color: var(--medium-gray);
-  font-family: var(--text-font);
+  /* font-family: var(--text-font); */
 }
 a,
 a:-webkit-any-link {

@@ -33,11 +33,11 @@ export default function AboutMePage() {
     <Container sx={{ minHeight: "100vh", my: 5 }}>
       <Link to="/"></Link>
       <AboutMe />
-      <Box textAlign="center" marginY={5}>
+      {/* <Box textAlign="center" marginY={5}>
         <StyledButton onClick={handleOnClick}>
           View my work <AiOutlineArrowRight />
         </StyledButton>
-      </Box>
+      </Box> */}
     </Container>
   );
 }

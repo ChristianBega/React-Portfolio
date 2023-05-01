@@ -51,7 +51,9 @@ export default function Hero() {
   }, []);
   return (
     <StyledGridContainer>
+      {/* Navigation component */}
       <Navigation />
+      {/* Hero grid item */}
       <Grid
         sx={{ textAlign: "left", mt: { xs: "5rem", lg: "10rem" }, padding: "2rem" }}
         // component={motion.div}
@@ -84,7 +86,6 @@ export default function Hero() {
         >
           I'm Christian.
         </Typography>
-
         <Typography
           component="p"
           sx={{ fontFamily: "Unbounded", mt: 2, fontSize: { xs: "22px", sm: "24px", md: "26px", lg: "28px", lineHeight: "100%" }, fontWeight: "200" }}
@@ -99,7 +100,6 @@ export default function Hero() {
         <Box marginY={5}>
           <StyledButton onClick={handleOnClick}>Contact Me</StyledButton>
         </Box>
-
         {/* <Socials /> */}
       </Grid>
     </StyledGridContainer>

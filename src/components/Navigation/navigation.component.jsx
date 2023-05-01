@@ -10,7 +10,6 @@ import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
 // Custom styled nav component
-
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   background: "var(--header-blur-filter)",
   display: "flex",
@@ -19,6 +18,7 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   flexDirection: "row",
   padding: "1rem 2rem",
 }));
+
 // Hide on scroll function to hide app bar when user scrolls
 function HideOnScroll(props) {
   const { children, window } = props;
