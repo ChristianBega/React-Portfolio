@@ -33,6 +33,12 @@ const StyledButton = styled(Button)(({ theme }) => ({
   },
 }));
 
+const StyledGridContainer = styled(Grid)(({ theme }) => ({
+  background: "var(--radial-gradient)",
+  minHeight: "100vh",
+  padding: "2rem",
+}));
+
 export default function Hero() {
   const navigate = useNavigate();
   const handleOnClick = useCallback(() => navigate("/contact", { replace: true }), [navigate]);
@@ -40,7 +46,7 @@ export default function Hero() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Grid container sx={{ minHeight: "80vh" }}>
+    <StyledGridContainer>
       <Grid
         sx={{ textAlign: "left", mt: "5rem" }}
         // component={motion.div}
@@ -89,8 +95,9 @@ export default function Hero() {
             Contact Me <AiOutlineArrowRight />
           </StyledButton>
         </Box>
+
         {/* <Socials /> */}
       </Grid>
-    </Grid>
+    </StyledGridContainer>
   );
 }

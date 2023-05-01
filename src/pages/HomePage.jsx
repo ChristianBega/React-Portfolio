@@ -9,22 +9,24 @@ import ProjectCards from "../components/ProjectCards/projectCards.component";
 
 export default function HomePage() {
   return (
-    <Container
-      sx={{
-        minHeight: "75vh",
-        my: 3,
-        textAlign: "center",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignContent: "center",
-        position: "relative",
-      }}
-    >
-      {/* <HomeAbout /> */}
+    <>
       <Hero />
-      <AboutMe />
-      <ProjectCards />
-    </Container>
+      <Container
+        sx={{
+          minHeight: "75vh",
+          my: 3,
+          textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignContent: "center",
+          position: "relative",
+        }}
+      >
+        {/* <HomeAbout /> */}
+        <AboutMe />
+        <ProjectCards />
+      </Container>
+    </>
   );
 }

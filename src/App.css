@@ -1,5 +1,6 @@
 body {
   background: var(--linear-bg);
+  /* background-color: red; */
 }
 /* Header */
 header {
