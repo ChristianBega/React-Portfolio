@@ -2,6 +2,11 @@ import { Container } from "@mui/material";
 import React from "react";
 import HomeAbout from "../components/Home";
 
+// Components
+import Hero from "../components/Home/hero.component";
+import AboutMe from "../components/AboutMe/aboutMe.component";
+import ProjectCards from "../components/ProjectCards/projectCards.component";
+
 export default function HomePage() {
   return (
     <Container
@@ -16,7 +21,10 @@ export default function HomePage() {
         position: "relative",
       }}
     >
-      <HomeAbout />
+      {/* <HomeAbout /> */}
+      <Hero />
+      <AboutMe />
+      <ProjectCards />
     </Container>
   );
 }

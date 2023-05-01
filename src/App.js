@@ -1,8 +1,11 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import "./index.css";
-import Navigation from "./components/Navigation";
+// Framer motion animation routes
 import AnimationRoutes from "./components/AnimationRoutes/AnimationRoutes";
+// Components
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -10,9 +13,9 @@ function App() {
       <Router>
         <Navigation />
         <AnimationRoutes />
+        <Footer />
       </Router>
     </>
   );
 }
 export default App;
-
