@@ -4,14 +4,14 @@ import "./index.css";
 // Framer motion animation routes
 import AnimationRoutes from "./components/AnimationRoutes/AnimationRoutes";
 // Components
-import Navigation from "./components/Navigation";
+// import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <Router>
-        <Navigation />
+        {/* <Navigation /> */}
         <AnimationRoutes />
         <Footer />
       </Router>

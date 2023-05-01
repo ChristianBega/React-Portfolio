@@ -10,8 +10,8 @@
   --radial-gradient: radial-gradient(circle at 88.05% 85.17%, rgba(3, 155, 229, 0.6), transparent 17%),
     radial-gradient(circle at 18.33% 22.35%, rgba(3, 155, 229, 0.4), transparent 23%), radial-gradient(circle at 50% 50%, #00021f, #00021f 100%);
   /* Header */
-  --dark-header-bg: rgba(97, 97, 97, 0.4);
-  --header-blur-filter: blur(15px) saturate(115%);
+  /* --dark-header-bg: rgba(97, 97, 97, 0.4); */
+  --header-blur-filter: blur(15px);
 
   --drop-down-menu-bg: linear-gradient(
     180deg,

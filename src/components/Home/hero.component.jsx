@@ -13,6 +13,10 @@ import Socials from "../Socials";
 
 // MUI components
 import { Box, Grid, Typography, styled, Button } from "@mui/material";
+// Custom components
+// import Navigation from "../Navigation/navigation.component";
+
+import Navigation from "../Navigation/navigation.component";
 
 // Styled MUI components
 const StyledButton = styled(Button)(({ theme }) => ({
@@ -36,7 +40,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
   background: "var(--radial-gradient)",
   minHeight: "100vh",
-  padding: "2rem",
+  // padding: "2rem",
 }));
 
 export default function Hero() {
@@ -47,8 +51,9 @@ export default function Hero() {
   }, []);
   return (
     <StyledGridContainer>
+      <Navigation />
       <Grid
-        sx={{ textAlign: "left", mt: "5rem" }}
+        sx={{ textAlign: "left", mt: { xs: "5rem", lg: "10rem" }, padding: "2rem" }}
         // component={motion.div}
         // initial={childrenVariantsTwo.hidden}
         // animate={childrenVariantsTwo.visible}
@@ -65,13 +70,14 @@ export default function Hero() {
         >
           Hi there,
         </Typography>
-
         <Typography
           component="h1"
           sx={{
             fontFamily: "Unbounded",
-            fontSize: { xs: "50px", sm: "55px", md: "65px", lg: "70px" },
-            lineHeight: "120%",
+            fontSize: { xs: "40px", sm: "55px", md: "65px", lg: "70px" },
+            mt: { xs: 2 },
+
+            lineHeight: "140%",
             fontWeight: "300",
             display: "block",
           }}
@@ -91,9 +97,7 @@ export default function Hero() {
           design, develop, and deliver elegant user friendly web applications.
         </Typography> */}
         <Box marginY={5}>
-          <StyledButton onClick={handleOnClick}>
-            Contact Me <AiOutlineArrowRight />
-          </StyledButton>
+          <StyledButton onClick={handleOnClick}>Contact Me</StyledButton>
         </Box>
 
         {/* <Socials /> */}
