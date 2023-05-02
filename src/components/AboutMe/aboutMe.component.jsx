@@ -12,7 +12,7 @@ export default function AboutMe() {
   const navigate = useNavigate();
   const handleOnClick = useCallback(() => navigate("/about-me", { replace: true }), [navigate]);
   return (
-    <Grid container justifyContent="center" sx={{ minHeight: "100vh" }}>
+    <Grid id="about-section" container justifyContent="center" sx={{ minHeight: "100vh" }}>
       {/* Grid item - header */}
       <Grid item xs={12}>
         <Stack direction="row" spacing={2} alignItems="center" my={4}>

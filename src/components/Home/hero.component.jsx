@@ -17,8 +17,7 @@ import { Box, Grid, Typography, styled, Button } from "@mui/material";
 // import Navigation from "../Navigation/navigation.component";
 
 import Navigation from "../Navigation/navigation.component";
-
-
+import ScrollDownArrows from "./scrollDown/scrollDownArrows.component";
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
   background: "var(--radial-gradient)",
@@ -29,6 +28,7 @@ const StyledGridContainer = styled(Grid)(({ theme }) => ({
 export default function Hero() {
   const navigate = useNavigate();
   const handleOnClick = useCallback(() => navigate("/contact", { replace: true }), [navigate]);
+  const test = useCallback(() => navigate("#", { replace: true }), [navigate]);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -38,7 +38,7 @@ export default function Hero() {
       <Navigation />
       {/* Hero grid item */}
       <Grid
-        sx={{ textAlign: "left", mt: { xs: "5rem", lg: "10rem" }, padding: "2rem" }}
+        sx={{ textAlign: "left", mt: { xs: "5rem" }, padding: "2rem" }}
         // component={motion.div}
         // initial={childrenVariantsTwo.hidden}
         // animate={childrenVariantsTwo.visible}
@@ -76,17 +76,13 @@ export default function Hero() {
         >
           Full Stack Developer
         </Typography>
-        {/* <Typography variant="p" component="p" mt={3} maxWidth={500} mx="auto" sx={{ fontSize: { md: "18px" } }}>
-          A MERN full stack web developer from Denver, Colorado. My passion for web development originated a few years back during my self-taught
-          journey to become a web developer. I have since graduated from Denver University's full-stack boot camp. Where I learned the skills to
-          design, develop, and deliver elegant user friendly web applications.
-        </Typography> */}
         <Box marginY={5}>
           <Button size="small" onClick={handleOnClick}>
             Contact Me
           </Button>
         </Box>
         {/* <Socials /> */}
+        <ScrollDownArrows />
       </Grid>
     </StyledGridContainer>
   );
