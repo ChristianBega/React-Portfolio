@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import { useTheme } from "@emotion/react";
 
 // Mui components
-import { List, ListItem, Typography, useMediaQuery } from "@mui/material";
-// import styled from "@emotion/styled";
-import { styled } from "@mui/material/styles";
+import { List, ListItem, Typography, useMediaQuery, styled } from "@mui/material";
 
 // Styled Components
 const StyledList = styled(List)(({ theme }) => ({

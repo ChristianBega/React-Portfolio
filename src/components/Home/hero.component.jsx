@@ -19,23 +19,23 @@ import { Box, Grid, Typography, styled, Button } from "@mui/material";
 import Navigation from "../Navigation/navigation.component";
 
 // Styled MUI components
-const StyledButton = styled(Button)(({ theme }) => ({
-  color: "var(--light-blue) !important",
-  fontSize: "16px",
-  border: "1px solid #fff",
-  paddingInline: "1.5rem",
-  "&:hover": {
-    color: "#fff !important",
-    backgroundColor: "transparent",
-    textDecorationLine: "underline",
-    textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
-    transform: "scale(1.1)",
-    transition: ".2s",
-  },
-  [theme.breakpoints.up("md")]: {
-    fontSize: "115%",
-  },
-}));
+// const StyledButton = styled(Button)(({ theme }) => ({
+//   color: "var(--light-blue) !important",
+//   fontSize: "16px",
+//   border: "1px solid #fff",
+//   paddingInline: "1.5rem",
+//   "&:hover": {
+//     color: "#fff !important",
+//     backgroundColor: "transparent",
+//     textDecorationLine: "underline",
+//     textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
+//     transform: "scale(1.1)",
+//     transition: ".2s",
+//   },
+//   [theme.breakpoints.up("md")]: {
+//     fontSize: "115%",
+//   },
+// }));
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
   background: "var(--radial-gradient)",
@@ -74,8 +74,9 @@ export default function Hero() {
         </Typography>
         <Typography
           component="h1"
+          typography="h1"
           sx={{
-            fontFamily: "Unbounded",
+            // fontFamily: "Unbounded",
             fontSize: { xs: "40px", sm: "55px", md: "65px", lg: "70px" },
             mt: { xs: 2 },
 
@@ -98,7 +99,9 @@ export default function Hero() {
           design, develop, and deliver elegant user friendly web applications.
         </Typography> */}
         <Box marginY={5}>
-          <StyledButton onClick={handleOnClick}>Contact Me</StyledButton>
+          <Button size="small" onClick={handleOnClick}>
+            Contact Me
+          </Button>
         </Box>
         {/* <Socials /> */}
       </Grid>

@@ -15,21 +15,6 @@ const MobileMenu = styled(Box)(({ theme }) => ({
   },
 }));
 
-// const StyledMenuItem = styled(MenuItem)(({ theme }) => ({
-//   color: "#fff",
-//   minHeight: "65px",
-//   fontSize: "175%",
-//   textAlign: "center",
-//   position: "relative",
-
-//   "&:hover": {
-//     backgroundColor: "transparent",
-//     textDecorationLine: "underline",
-//     textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
-//     transform: "scale(1.1)",
-//     transition: ".2s",
-//   },
-// }));
 export default function MobileNavigation() {
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -52,7 +37,7 @@ export default function MobileNavigation() {
         open={openMenu}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: 95,
+          vertical: 45,
           horizontal: "right",
         }}
         transformOrigin={{
