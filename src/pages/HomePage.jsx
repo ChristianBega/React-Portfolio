@@ -5,7 +5,7 @@ import HomeAbout from "../components/Home";
 // Components
 import Hero from "../components/Home/hero.component";
 import AboutMe from "../components/AboutMe/aboutMe.component";
-import ProjectCards from "../components/ProjectCards/projectCards.component";
+import FeaturedProjectCards from "../components/ProjectCards/featuredProjectCards.component";
 
 export default function HomePage() {
   return (
@@ -14,7 +14,6 @@ export default function HomePage() {
       <Container
         sx={{
           minHeight: "75vh",
-          my: 3,
           textAlign: "center",
           display: "flex",
           flexDirection: "column",
@@ -24,7 +23,7 @@ export default function HomePage() {
         }}
       >
         <AboutMe />
-        <ProjectCards />
+        <FeaturedProjectCards />
       </Container>
     </>
   );

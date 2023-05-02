@@ -58,6 +58,8 @@ export const mainTheme = createTheme({
       fontSize: "36px !important",
       lineHeight: "52px !important",
       fontWeight: "700 !important",
+      // marginInline: "2rem",
+      margin: "100px",
     },
     // h3: {
     //   fontFamily: "Unbounded",
