@@ -1,7 +1,7 @@
 import React from "react";
 
 // Mui components
-import { AppBar, useScrollTrigger, Slide, Typography } from "@mui/material";
+import { AppBar, useScrollTrigger, Slide, Typography, Grid } from "@mui/material";
 
 // Components
 import MobileNavigation from "./mobileNavigation.component";
@@ -17,7 +17,8 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   alignItems: "center",
   justifyContent: "space-between",
   flexDirection: "row",
-  padding: "1rem 2rem",
+  padding: "2rem",
+  maxHeight: "85px",
 }));
 // Hide on scroll function to hide app bar when user scrolls
 function HideOnScroll(props) {
@@ -35,14 +36,16 @@ function HideOnScroll(props) {
 
 export default function Navigation() {
   return (
-    <HideOnScroll>
-      <StyledAppBar elevation={0} id="navigation" position="sticky" component="nav">
-        <Typography variant="h6" component="h1">
-          <Link to="/">Christian Bega</Link>
-        </Typography>
-        <MobileNavigation />
-        <DesktopNavigation />
-      </StyledAppBar>
-    </HideOnScroll>
+    <Grid item xs={12} sx={{ maxHeight: "85px" }}>
+      <HideOnScroll>
+        <StyledAppBar elevation={0} id="navigation" position="sticky" component="nav">
+          <Typography variant="h6" component="h1">
+            <Link to="/">Christian Bega</Link>
+          </Typography>
+          <MobileNavigation />
+          <DesktopNavigation />
+        </StyledAppBar>
+      </HideOnScroll>
+    </Grid>
   );
 }

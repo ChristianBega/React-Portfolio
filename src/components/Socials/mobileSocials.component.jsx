@@ -1,9 +1,11 @@
 import React from "react";
+// Mui Components
+import { Box, Stack, styled } from "@mui/material";
+// Icons
 import { IconContext } from "react-icons";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import styled from "@emotion/styled";
-import Box from "@mui/material/Box";
-import { Stack } from "@mui/system";
+
+
 const Item = styled(Box)({
   textAlign: "center",
   "&:hover": {
@@ -12,7 +14,7 @@ const Item = styled(Box)({
   },
 });
 
-export default function Socials() {
+export default function MobileSocials() {
   return (
     <>
       <IconContext.Provider value={{ size: "1.3rem" }}>

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Grid } from "@mui/material";
-import Socials from "../Socials";
+// import Socials from "../Socials";
 
 const StyledGrid = styled(Grid)({
   backgroundColor: "var(--dark-header-bg)",
@@ -14,7 +14,7 @@ function Footer() {
   return (
     <StyledGrid container spacing={2}>
       <Grid xs={12}>
-        <Socials checked={true} />
+        {/* <Socials checked={true} /> */}
       </Grid>
     </StyledGrid>
   );

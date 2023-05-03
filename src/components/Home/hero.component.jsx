@@ -8,46 +8,63 @@ import { childrenVariants, childrenVariantsTwo } from "../../transitions";
 import { Link, useNavigate } from "react-router-dom";
 
 // Icons
-import { AiOutlineArrowRight } from "react-icons/ai";
-import Socials from "../Socials";
+import Socials from "../Socials/mobileSocials.component";
 
 // MUI components
-import { Box, Grid, Typography, styled, Button } from "@mui/material";
+import { Box, Grid, Typography, styled, Button, useMediaQuery } from "@mui/material";
 // Custom components
 // import Navigation from "../Navigation/navigation.component";
 
 import Navigation from "../Navigation/navigation.component";
 import ScrollDownArrows from "./scrollDown/scrollDownArrows.component";
+import { useTheme } from "@emotion/react";
+import MobileSocials from "../Socials/mobileSocials.component";
+import NonMobileSocials from "../Socials/nonMobileSocials.component";
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
   background: "var(--radial-gradient)",
-  minHeight: "100vh",
-  // padding: "2rem",
+  minHeight: "700px",
+  [theme.breakpoints.between("xs", "md")]: {
+    // minHeight: "10vh",
+    minHeight: "650px",
+  },
+
+  textAlign: "left",
 }));
 
+const renderSocials = (isMobile) => {
+  return (
+    <>
+      {/* {isMobile && <MobileSocials />} */}
+      {!isMobile && <NonMobileSocials />}
+    </>
+  );
+};
+
 export default function Hero() {
+  const theme = useTheme();
+  let isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const navigate = useNavigate();
   const handleOnClick = useCallback(() => navigate("/contact", { replace: true }), [navigate]);
-  const test = useCallback(() => navigate("#", { replace: true }), [navigate]);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <StyledGridContainer>
+    <StyledGridContainer container>
       {/* Navigation component */}
       <Navigation />
       {/* Hero grid item */}
       <Grid
-        sx={{ textAlign: "left", mt: { xs: "5rem" }, padding: "2rem" }}
+        item
         // component={motion.div}
         // initial={childrenVariantsTwo.hidden}
         // animate={childrenVariantsTwo.visible}
         // exit={childrenVariantsTwo.exit}
         // transition={childrenVariantsTwo.transition}
-        item
-        xs={12}
-        md={6}
-        mt={3}
+        xs={isMobile ? 12 : 11}
+        // md={6}
+        pl={3}
+        mt={{ xs: 5, sm: 0 }}
       >
         <Typography
           component="p"
@@ -60,7 +77,7 @@ export default function Hero() {
           typography="h1"
           sx={{
             // fontFamily: "Unbounded",
-            fontSize: { xs: "40px", sm: "55px", md: "65px", lg: "70px" },
+            fontSize: { xs: "45px", sm: "55px", md: "65px", lg: "70px" },
             mt: { xs: 2 },
 
             lineHeight: "140%",
@@ -81,9 +98,11 @@ export default function Hero() {
             Contact Me
           </Button>
         </Box>
-        {/* <Socials /> */}
-        <ScrollDownArrows />
       </Grid>
+      <Grid item xs={isMobile ? 12 : 1}>
+        {renderSocials(isMobile)}
+      </Grid>
+      <ScrollDownArrows />
     </StyledGridContainer>
   );
 }

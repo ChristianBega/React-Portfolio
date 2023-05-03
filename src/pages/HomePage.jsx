@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 import React from "react";
-import HomeAbout from "../components/Home";
+// import HomeAbout from "../components/Home";
 
 // Components
 import Hero from "../components/Home/hero.component";
