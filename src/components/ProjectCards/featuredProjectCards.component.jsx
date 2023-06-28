@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Mui Hooks
 import { useTheme } from "@emotion/react";
 // Mui components
-import { Box, Button, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
+import { Button, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
 // Custom components
 import MobileProjectCard from "./mobileProjectCard.component";
 import NonMobileProjectCard from "./nonMobileProjectCard.component";

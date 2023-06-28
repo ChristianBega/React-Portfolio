@@ -11,6 +11,7 @@ import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import { cardsVariants } from "../transitions";
 import { motion } from "framer-motion";
+import BackHome from "../components/buttons/backHome.component";
 const StyledButton = styled(Button)(({ theme }) => ({
   color: "var(--light-blue) !important",
   "&:hover": {
@@ -29,7 +30,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
 
 export default function ProjectCardsPage() {
   const navigate = useNavigate();
-  const handleOnClick = useCallback(() => navigate("/resume", { replace: true }), [navigate]);
+  // const handleOnClick = useCallback(() => navigate("/resume", { replace: true }), [navigate]);
 
   const [projects] = useState([
     {
@@ -83,6 +84,7 @@ export default function ProjectCardsPage() {
   return (
     <>
       <Grid container maxWidth="lg" marginX={{ lg: "auto" }} spacing={{ xs: 2, md: 3 }} sx={{ minHeight: "100vh", padding: 2 }}>
+        <BackHome />
         {/* <Projects /> */}
         {/* map over all project and create cards */}
         {projects.map((project, i) => (
@@ -117,11 +119,11 @@ export default function ProjectCardsPage() {
           </Grid>
         ))}
       </Grid>
-      <Box textAlign="center" marginY={5}>
+      {/* <Box textAlign="center" marginY={5}>
         <StyledButton onClick={handleOnClick}>
           View my resume <AiOutlineArrowRight />
         </StyledButton>
-      </Box>
+      </Box> */}
     </>
   );
 }

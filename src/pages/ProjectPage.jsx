@@ -1,14 +1,13 @@
 import styled from "@emotion/styled";
 import { CardMedia, Container, Paper, Typography, Link } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useEffect, useCallback } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { FaGithub, FaGlobeAmericas } from "react-icons/fa";
 import Footer from "../components/Footer";
-import { IconContext } from "react-icons";
-import { AiOutlineArrowLeft } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { containerVariants } from "../transitions";
+import BackHome from "../components/buttons/backHome.component";
 
 const StyledStackItem = styled(Paper)({
   margin: 0,
@@ -30,9 +29,7 @@ const StyledLink = styled(Link)({
 export default function ProjectPage() {
   // Access props passed from link state
   const location = useLocation();
-  const navigate = useNavigate();
   const currentProject = location.state?.project;
-  const handleNavigateBack = useCallback(() => navigate("/project-cards", { replace: true }), [navigate]);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -47,11 +44,7 @@ export default function ProjectPage() {
         maxWidth="lg"
         sx={{ my: 5, justifyContent: "center", position: "relative" }}
       >
-        <Box sx={{ ":hover": { cursor: "pointer" } }}>
-          <IconContext.Provider value={{ size: "1.7rem", color: "#fff" }}>
-            <AiOutlineArrowLeft onClick={handleNavigateBack} />
-          </IconContext.Provider>
-        </Box>
+        <BackHome />
 
         <Typography component="h2" variant="h5" mt={3} fontSize={{ lg: "28px" }}>
           {currentProject.name}

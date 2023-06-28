@@ -18,16 +18,12 @@ import { Box, Grid, Typography, styled, Button, useMediaQuery } from "@mui/mater
 import Navigation from "../Navigation/navigation.component";
 import ScrollDownArrows from "./scrollDown/scrollDownArrows.component";
 import { useTheme } from "@emotion/react";
-import MobileSocials from "../Socials/mobileSocials.component";
 import NonMobileSocials from "../Socials/nonMobileSocials.component";
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
   background: "var(--radial-gradient)",
-  minHeight: "700px",
-  [theme.breakpoints.between("xs", "md")]: {
-    // minHeight: "10vh",
-    minHeight: "650px",
-  },
+  minHeight: "100vh",
+  [theme.breakpoints.between("xs", "md")]: {},
 
   textAlign: "left",
 }));
