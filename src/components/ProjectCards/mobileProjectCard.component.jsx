@@ -2,6 +2,9 @@ import React from "react";
 // Mui components
 import { Card, CardContent, CardMedia, Stack, Typography, Link, styled } from "@mui/material";
 
+// Assets
+// import IphoneFrame from "../../Assets/images/iPhoneFrame.png";
+
 // Custom components
 const StyledProjectCard = styled(Card)({
   position: "relative",
@@ -9,8 +12,8 @@ const StyledProjectCard = styled(Card)({
   border: "2px solid rgba(81, 81, 81, .5)",
   minHeight: "22rem",
   height: "100%",
-  display: "flex",
   flexDirection: "column",
+  display: "flex",
   // justifyContent: "space-around",
   alignItems: "start",
   justifyContent: "flex-end",
@@ -40,32 +43,35 @@ export default function MobileProjectCard({ project }) {
   };
 
   return (
-    <StyledProjectCard>
-      <CardMedia
-        component="video"
-        autoPlay
-        loop
-        muted
-        height="100%"
-        sx={{ objectFit: "fill", position: "absolute", top: "0", right: "0", zIndex: "-100" }}
-        src={videoDemo}
-      />
-      <CardContent sx={{ width: "100%", display: "flex", flexDirection: "column", justifyContent: "end" }}>
-        <Typography component="h2" variant="h6" sx={{ fontWeight: "600", textAlign: "left" }}>
-          {name}
-        </Typography>
-        <Typography component="p" mt={2} sx={{ textAlign: "left" }}>
-          {description}
-        </Typography>
-        <Stack direction="row" spacing={3} mt={2}>
-          <StyledLink onClick={handleClick} href={link} target="_blank" rel="noopener noreferrer">
-            Live Demo
-          </StyledLink>
-          <StyledLink onClick={handleClick} href={repo} target="_blank" rel="noopener noreferrer">
-            Source Code
-          </StyledLink>
-        </Stack>
-      </CardContent>
-    </StyledProjectCard>
+    <>
+      <StyledProjectCard>
+        {/* <Box component="img" src={IphoneFrame} sx={{ position: "absolute" }}></Box> */}
+        <CardMedia
+          component="video"
+          autoPlay
+          loop
+          muted
+          height="100%"
+          sx={{ objectFit: "fill", position: "absolute", top: "0", right: "0", zIndex: "-100" }}
+          src={videoDemo}
+        />
+        <CardContent sx={{ width: "100%", display: "flex", flexDirection: "column", justifyContent: "end" }}>
+          <Typography component="h2" variant="h6" sx={{ fontWeight: "600", textAlign: "left" }}>
+            {name}
+          </Typography>
+          <Typography component="p" mt={2} sx={{ textAlign: "left" }}>
+            {description}
+          </Typography>
+          <Stack direction="row" spacing={3} mt={2}>
+            <StyledLink onClick={handleClick} href={link} target="_blank" rel="noopener noreferrer">
+              Live Demo
+            </StyledLink>
+            <StyledLink onClick={handleClick} href={repo} target="_blank" rel="noopener noreferrer">
+              Source Code
+            </StyledLink>
+          </Stack>
+        </CardContent>
+      </StyledProjectCard>
+    </>
   );
 }
