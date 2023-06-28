@@ -43,7 +43,7 @@ export default function HomeAbout() {
         md={6}
         sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
       >
-        <Box
+        {/* <Box
           component="img"
           sx={{
             width: { xs: "340px", lg: "70%" },
@@ -55,7 +55,7 @@ export default function HomeAbout() {
           }}
           src={PortfolioImage}
           alt="Christian Bega's Portfolio Image."
-        ></Box>
+        ></Box> */}
       </Grid>
       <Grid
         component={motion.div}

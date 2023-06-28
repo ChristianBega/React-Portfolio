@@ -4,9 +4,14 @@
   --header-font: "Montserrat", sans-serif;
   --text-font: "Lato", sans-serif;
 
+  /* --radial-gradient: radial-gradient(circle at 88.05% 85.17%, #039be5, transparent 17%),
+    radial-gradient(circle at 21.33% 20.35%, #039be5, transparent 23%), radial-gradient(circle at 50% 50%, #00021f, #00021f 100%); */
+
+  --radial-gradient: radial-gradient(circle at 88.05% 85.17%, rgba(3, 155, 229, 0.6), transparent 17%),
+    radial-gradient(circle at 18.33% 22.35%, rgba(3, 155, 229, 0.4), transparent 23%), radial-gradient(circle at 50% 50%, #00021f, #00021f 100%);
   /* Header */
   --dark-header-bg: rgba(97, 97, 97, 0.4);
-  --header-blur-filter: blur(15px) saturate(115%);
+  --header-blur-filter: blur(10px);
 
   --drop-down-menu-bg: linear-gradient(
     180deg,
@@ -59,11 +64,9 @@ li {
   background-color: transparent;
 }
 
-p,
-small,
-span {
+p {
   color: var(--medium-gray);
-  font-family: var(--text-font);
+  /* font-family: var(--text-font); */
 }
 a,
 a:-webkit-any-link {
@@ -77,4 +80,3 @@ button {
   cursor: pointer;
   font-family: var(--text-font) !important;
 }
-

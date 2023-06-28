@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { AppBar, Toolbar, styled, Typography, Box, MenuItem, Menu } from "@mui/material";
+import { AppBar, Toolbar, styled, Typography, Box, MenuItem, Menu, useScrollTrigger, Slide } from "@mui/material";
 import { IconContext } from "react-icons";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { MdMenu } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-const StyledToolbar = styled(Toolbar)({
-  display: "flex",
-  justifyContent: "space-between",
-});
+// const StyledToolbar = styled(Toolbar)({
+//   display: "flex",
+//   justifyContent: "space-between",
+//   elevation: 0,
+// });
 const StyledMenuItem = styled(MenuItem)(({ theme }) => ({
   color: "#fff",
   minHeight: "65px",
@@ -56,7 +57,7 @@ const MobileMenu = styled(Box)(({ theme }) => ({
   },
 }));
 
-function Navigation() {
+function OldNavigation() {
   const [open, setOpen] = useState(false);
 
   const exitMenu = () => {
@@ -67,31 +68,29 @@ function Navigation() {
     window.scrollTo(0, 0);
   }, [open]);
   return (
-    <AppBar position="sticky" sx={{ padding: "1rem" }}>
-      <StyledToolbar>
-        <Typography variant="h6" component="h1">
-          <Link to="/">Christian Bega</Link>
-        </Typography>
-        <DesktopMenu>
-          {/* <StyledMenuItem>
+    <AppBar position="sticky" elevation={0} sx={{ padding: "1rem" }}>
+      <Typography variant="h6" component="h1">
+        <Link to="/">Christian Bega</Link>
+      </Typography>
+      <DesktopMenu>
+        {/* <StyledMenuItem>
             <Link to="/about-me">About Me</Link>
           </StyledMenuItem> */}
-          <StyledDesktopMenuItem>
-            <Link to="/project-cards">Projects</Link>
-          </StyledDesktopMenuItem>
-          <StyledDesktopMenuItem>
-            <Link to="/resume">Resume</Link>
-          </StyledDesktopMenuItem>
-          <StyledDesktopMenuItem>
-            <Link to="/contact">Contact</Link>
-          </StyledDesktopMenuItem>
-        </DesktopMenu>
-        <MobileMenu onClick={(e) => setOpen(true)}>
-          <IconContext.Provider value={{ size: "1.8rem", padding: "0", margin: "0", color: "white" }}>
-            <MdMenu />
-          </IconContext.Provider>
-        </MobileMenu>
-      </StyledToolbar>
+        <StyledDesktopMenuItem>
+          <Link to="/project-cards">Projects</Link>
+        </StyledDesktopMenuItem>
+        <StyledDesktopMenuItem>
+          <Link to="/resume">Resume</Link>
+        </StyledDesktopMenuItem>
+        <StyledDesktopMenuItem>
+          <Link to="/contact">Contact</Link>
+        </StyledDesktopMenuItem>
+      </DesktopMenu>
+      <MobileMenu onClick={(e) => setOpen(true)}>
+        <IconContext.Provider value={{ size: "1.8rem", padding: "0", margin: "0", color: "white" }}>
+          <MdMenu />
+        </IconContext.Provider>
+      </MobileMenu>
       <Menu
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
@@ -142,4 +141,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default OldNavigation;
