@@ -14,7 +14,7 @@ import { BsXDiamondFill } from "react-icons/bs";
 import { useNavigate } from "react-router";
 
 // Site data
-import { featuredProjectsData } from "../../siteData/featuredProjects.data";
+import { featuredProjectsData } from "../../siteData/projectData";
 
 export default function ProjectCards() {
   const theme = useTheme();
