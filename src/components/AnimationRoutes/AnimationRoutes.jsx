@@ -10,6 +10,7 @@ import AboutMePage from "../../pages/AboutMePage";
 
 export default function AnimationRoutes() {
   const location = useLocation();
+  // console.log(location);
   return (
     <AnimatePresence initial={true} mode="wait">
       <Routes key={location.pathname} location={location}>
