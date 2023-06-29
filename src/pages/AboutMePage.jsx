@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { Container } from "@mui/material";
-import {} from "@mui/system";
 
 import AboutMe from "../components/AboutMe";
 import BackHome from "../components/buttons/backHome.component";

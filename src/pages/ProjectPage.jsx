@@ -39,12 +39,11 @@ export default function ProjectPage() {
         component={motion.container}
         initial={containerVariants.hidden}
         animate={containerVariants.visible}
-        exit={containerVariants.exit}
         transition={containerVariants.transition}
         maxWidth="lg"
         sx={{ my: 5, justifyContent: "center", position: "relative" }}
       >
-        <BackHome />
+        <BackHome buttonType="projectPage" />
         <Typography component="h2" variant="h5" mt={3} fontSize={{ lg: "28px" }}>
           {currentProject.name}
         </Typography>

@@ -1,8 +1,6 @@
-import { Button, Typography, styled } from "@mui/material";
-import { Box, Container } from "@mui/system";
-import React, { useCallback, useEffect } from "react";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import { useNavigate } from "react-router";
+import { Typography } from "@mui/material";
+import { Container } from "@mui/system";
+import React, { useEffect } from "react";
 import Contact from "../components/ContactForm";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";

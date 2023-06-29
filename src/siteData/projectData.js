@@ -41,7 +41,6 @@ export const featuredProjectsData = [
 ];
 
 export const allProjectData = [
-  ...featuredProjectsData,
   // Weather dashboard
   {
     name: "React Weather Dashboard",
@@ -76,4 +75,5 @@ export const allProjectData = [
     repo: "https://github.com/ChristianBega/Hangry",
     technology: ["Javascript", "3rd Party API", "Boot Strap"],
   },
+  ...featuredProjectsData,
 ];
