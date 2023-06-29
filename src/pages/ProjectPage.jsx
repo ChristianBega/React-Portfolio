@@ -45,7 +45,6 @@ export default function ProjectPage() {
         sx={{ my: 5, justifyContent: "center", position: "relative" }}
       >
         <BackHome />
-
         <Typography component="h2" variant="h5" mt={3} fontSize={{ lg: "28px" }}>
           {currentProject.name}
         </Typography>

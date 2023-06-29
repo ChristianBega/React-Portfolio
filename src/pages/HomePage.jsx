@@ -12,6 +12,7 @@ export default function HomePage() {
     <>
       <Hero />
       <Container
+        id="main-content-section"
         sx={{
           minHeight: "75vh",
           textAlign: "center",

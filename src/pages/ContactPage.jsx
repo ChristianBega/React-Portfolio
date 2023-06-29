@@ -15,7 +15,7 @@ export default function ContactPage() {
   }, []);
   return (
     <>
-      <BackHome />
+      <BackHome buttonType="contact" />
       <Container
         component={motion.div}
         initial={containerVariants.hidden}

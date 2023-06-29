@@ -1,16 +1,14 @@
-import React, { useCallback } from "react";
-import { useNavigate } from "react-router";
+import React from "react";
 // Mui Components
-import { Box, Button, Grid, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 
 // Assets
 import ProfileImage from "../../Assets/images/profileIMG.jpeg";
 
 // Icons
 import { BsXDiamondFill } from "react-icons/bs";
+import ViewMore from "../buttons/viewMore.component";
 export default function AboutMe() {
-  const navigate = useNavigate();
-  const handleOnClick = useCallback(() => navigate("/about-me", { replace: true }), [navigate]);
   return (
     <Grid id="about-section" container justifyContent="center" sx={{ minHeight: "100vh" }}>
       {/* Grid item - header */}
@@ -33,9 +31,7 @@ export default function AboutMe() {
           journey to become a web developer. I have since graduated from Denver University's full-stack boot camp. Where I learned the skills to
           design, develop, and deliver elegant user friendly web applications.
         </Typography>
-        <Button onClick={handleOnClick} size="medium" sx={{ marginY: 5 }}>
-          Learn more about me
-        </Button>
+        <ViewMore buttonType="about-me" />
       </Grid>
     </Grid>
   );

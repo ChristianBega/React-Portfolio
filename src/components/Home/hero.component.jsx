@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 import { childrenVariants, childrenVariantsTwo } from "../../transitions";
 
 // React router dom
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Icons
 import Socials from "../Socials/mobileSocials.component";
 
 // MUI components
-import { Box, Grid, Typography, styled, Button, useMediaQuery } from "@mui/material";
+import { Grid, Typography, styled, useMediaQuery } from "@mui/material";
 // Custom components
 // import Navigation from "../Navigation/navigation.component";
 
@@ -19,6 +19,7 @@ import Navigation from "../Navigation/navigation.component";
 import ScrollDownArrows from "./scrollDown/scrollDownArrows.component";
 import { useTheme } from "@emotion/react";
 import NonMobileSocials from "../Socials/nonMobileSocials.component";
+import ViewMore from "../buttons/viewMore.component";
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
   background: "var(--radial-gradient)",
@@ -40,13 +41,11 @@ const renderSocials = (isMobile) => {
 export default function Hero() {
   const theme = useTheme();
   let isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const navigate = useNavigate();
-  const handleOnClick = useCallback(() => navigate("/contact", { replace: true }), [navigate]);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <StyledGridContainer container>
+    <StyledGridContainer id="hero-container" container>
       {/* Navigation component */}
       <Navigation />
       {/* Hero grid item */}
@@ -89,11 +88,7 @@ export default function Hero() {
         >
           Full Stack Developer
         </Typography>
-        <Box marginY={5}>
-          <Button size="small" onClick={handleOnClick}>
-            Contact Me
-          </Button>
-        </Box>
+        <ViewMore buttonType="contact" />
       </Grid>
       <Grid item xs={isMobile ? 12 : 1}>
         {renderSocials(isMobile)}

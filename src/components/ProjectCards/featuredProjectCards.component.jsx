@@ -1,17 +1,17 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 // Mui Hooks
 import { useTheme } from "@emotion/react";
 // Mui components
-import { Button, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
+import { Grid, Stack, Typography, useMediaQuery } from "@mui/material";
 // Custom components
 import MobileProjectCard from "./mobileProjectCard.component";
 import NonMobileProjectCard from "./nonMobileProjectCard.component";
+import ViewMore from "../buttons/viewMore.component";
 
 // Icons
 import { BsXDiamondFill } from "react-icons/bs";
-import { useNavigate } from "react-router";
 
 // Site data
 import { featuredProjectsData } from "../../siteData/projectData";
@@ -19,8 +19,6 @@ import { featuredProjectsData } from "../../siteData/projectData";
 export default function ProjectCards() {
   const theme = useTheme();
   let isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  const navigate = useNavigate();
-  const handleOnClick = useCallback(() => navigate("/project-cards", { replace: true }), [navigate]);
 
   // State
   const [featuredProjects, setFeaturedProjects] = useState([
@@ -45,7 +43,7 @@ export default function ProjectCards() {
   };
 
   return (
-    <Grid container sx={{ justifyContent: "center", mb: 3 }}>
+    <Grid id="featured-projects-section" container sx={{ justifyContent: "center", mb: 3 }}>
       {/* Grid item - header */}
       <Grid item xs={12}>
         <Stack direction="row" spacing={2} alignItems="center" my={4}>
@@ -64,9 +62,7 @@ export default function ProjectCards() {
 
       {/* Grid item - view more button*/}
       <Grid item sx={12}>
-        <Button onClick={handleOnClick} size="medium" sx={{ marginY: 5 }}>
-          View all projects
-        </Button>
+        <ViewMore buttonType="project-cards" />
       </Grid>
     </Grid>
   );

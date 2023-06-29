@@ -14,9 +14,9 @@ export default function ProjectCardsPage() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <>
+    <div id="project-cards-section">
+      <BackHome buttonType="projectCards" />
       <Grid container maxWidth="lg" marginX={{ lg: "auto" }} spacing={{ xs: 2, md: 3 }} sx={{ minHeight: "100vh", padding: 2 }}>
-        <BackHome />
         {/* <Projects /> */}
         {allProjectData.map((project, i) => (
           <Grid
@@ -50,6 +50,6 @@ export default function ProjectCardsPage() {
           </Grid>
         ))}
       </Grid>
-    </>
+    </div>
   );
 }

@@ -13,8 +13,7 @@ export default function AboutMePage() {
 
   return (
     <Container sx={{ minHeight: "100vh", my: 5 }}>
-      <Link to="/"></Link>
-      <BackHome />
+      <BackHome buttonType="aboutMe" />
       <AboutMe />
     </Container>
   );
