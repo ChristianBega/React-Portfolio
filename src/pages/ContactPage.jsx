@@ -15,6 +15,7 @@ export default function ContactPage() {
     <>
       <BackHome buttonType="contact" />
       <Container
+        id="contact-form-section"
         component={motion.div}
         initial={containerVariants.hidden}
         animate={containerVariants.visible}

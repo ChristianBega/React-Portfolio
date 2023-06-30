@@ -45,7 +45,6 @@ export default function MobileProjectCard({ project }) {
   return (
     <>
       <StyledProjectCard>
-        {/* <Box component="img" src={IphoneFrame} sx={{ position: "absolute" }}></Box> */}
         <CardMedia
           component="video"
           autoPlay

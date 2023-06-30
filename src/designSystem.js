@@ -61,12 +61,12 @@ export const mainTheme = createTheme({
       // marginInline: "2rem",
       margin: "100px",
     },
-    // h3: {
-    //   fontFamily: "Unbounded",
-    //   fontSize: "38px",
-    //   lineHeight: "42px",
-    //   fontWeight: "700",
-    // },
+    h3: {
+      fontFamily: "Unbounded",
+      fontSize: "38px",
+      // lineHeight: "42px",
+      fontWeight: "400",
+    },
     // h4: {
     //   fontFamily: "Unbounded",
     //   fontSize: "28px",

@@ -4,6 +4,7 @@ import FinancialTrackerVideo from "../Assets/videos/GoldenGooseFianceDemo.mp4";
 import HangryVideo from "../Assets/videos/HangryDemo.mp4";
 import StudyAppImg from "../Assets/videos/StudyBuddiesDemo.mp4";
 import WeatherDashboardVideo from "../Assets/videos/WeatherDashboardDemo-Mobile.mp4";
+import OverlandBaseball from "../Assets/videos/overlandBaseball.mp4";
 
 export const featuredProjectsData = [
   // Overland baseball
@@ -11,7 +12,7 @@ export const featuredProjectsData = [
     name: "Overland Baseball",
     description: "A front-end single page application that allows players a coaches a convenient platform to access and browse team information.",
     longDescription: "long desc",
-    // videoDemo: HangryVideo,
+    videoDemo: OverlandBaseball,
     link: "https://overlandbaseball.com/",
     repo: "https://github.com/ChristianBega/Overland-Baseball-Website",
     technology: ["React", "Material UI"],
