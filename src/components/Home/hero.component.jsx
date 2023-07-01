@@ -24,6 +24,8 @@ import ViewMore from "../buttons/viewMore.component";
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
   background: "var(--radial-gradient)",
   minHeight: "100vh",
+  // maxWidth: "1200px",
+
   // [theme.breakpoints.between("xs", "md")]: {},
   // [theme.breakpoints.only("lg")]: {
   //   minHeight: "110vh",

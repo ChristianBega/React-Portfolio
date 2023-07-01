@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material";
 
 export const mainTheme = createTheme({
-  // spacing: (factor) => `${0.25 * factor}rem`,
+  spacing: (factor) => `${0.25 * factor}rem`,
 
   // Break points
   breakpoints: {
