@@ -9,59 +9,23 @@ import ProfileImage from "../../Assets/images/profileIMG.jpeg";
 import { BsXDiamondFill } from "react-icons/bs";
 import ViewMore from "../buttons/viewMore.component";
 
-const skillsData = [
-  {
-    skill: "Html",
-    image: "",
-  },
-  {
-    skill: "Css",
-    image: "",
-  },
-  {
-    skill: "React Js",
-    image: "",
-  },
-  {
-    skill: "Node Js",
-    image: "",
-  },
-  {
-    skill: "Express",
-    image: "",
-  },
-  {
-    skill: "Material UI",
-    image: "",
-  },
-  {
-    skill: "Node Js",
-    image: "",
-  },
-  {
-    skill: "MongoDb",
-    image: "",
-  },
-  {
-    skill: "mySQL",
-    image: "",
-  },
-];
+// Site data
+import { aboutTextData, skillsData } from "../../siteData/aboutMeData";
 
 export default function AboutMe() {
   return (
     <Grid id="about-section" container justifyContent="center" minHeight={{ xs: "600px" }}>
       {/* Grid item - header */}
-      <Grid item xs={12} sx={{ my: { xs: 0, md: 10 } }}>
-        <Stack direction="row" spacing={2} alignItems="center" my={4}>
+      <Grid textAlign="left" item xs={12} sx={{ my: { xs: 0, md: 10 } }}>
+        <Typography typography="h2" component="h2" variant="h2">
+          About Me
+        </Typography>
+        {/* <Stack direction="row" spacing={2} alignItems="center" my={4}>
           <BsXDiamondFill size="2rem" color="#fff" />
-          <Typography typography="h2" component="h2" variant="h2">
-            About Me
-          </Typography>
-        </Stack>
+        </Stack> */}
       </Grid>
       {/* Grid item - skills */}
-      <Grid item xs={6} sx={{ textAlign: "left", order: { xs: "4", md: "0" } }}>
+      <Grid item xs={12} md={6} sx={{ textAlign: "left", order: { xs: "4", md: "0" } }}>
         <Box>
           <Typography typography="h3" component="h3">
             Technology I use
@@ -84,17 +48,12 @@ export default function AboutMe() {
         </Box>
       </Grid>
       {/* Grid item - bio */}
-      <Grid item xs={12} md={6}>
-        <Typography typography={{ xs: "bodyTextSm", md: "bodyTextLg" }}>
-          I'm a MERN full stack web developer from Denver, Colorado. My passion for web development originated a few years back during my self-taught
-          journey to become a web developer. I have since graduated from Denver University's full-stack boot camp. Where I learned the skills to
-          design, develop, and deliver elegant user friendly web applications.
-        </Typography>
-        <Typography typography={{ xs: "bodyTextSm", md: "bodyTextLg" }} my={8}>
-          I'm a MERN full stack web developer from Denver, Colorado. My passion for web development originated a few years back during my self-taught
-          journey to become a web developer. I have since graduated from Denver University's full-stack boot camp. Where I learned the skills to
-          design, develop, and deliver elegant user friendly web applications.
-        </Typography>
+      <Grid item xs={12} md={6} textAlign="left">
+        {aboutTextData.map((text) => (
+          <Typography typography={{ xs: "bodyTextSm", md: "bodyTextLg" }} mb={5}>
+            {text.text}
+          </Typography>
+        ))}
         <ViewMore buttonType="about-me" />
       </Grid>
     </Grid>
