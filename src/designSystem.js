@@ -12,24 +12,51 @@ export const mainTheme = createTheme({
       lg: 1200,
     },
   },
-  // Buttons
+  // Color Palette
+  palette: {
+    // primary: {
+    //   main: "",
+    //   light: "",
+    //   dark: "",
+    //   contrastText: "",
+    // },
+    // secondary: {
+    //   main: "",
+    //   light: "",
+    //   dark: "",
+    //   contrastText: "",
+    // },
+    // accent: {
+    //   accentOne: "",
+    //   accentTwo: "",
+    // },
+    // text: {
+    //   primary: "#FFFAFA",
+    // },
+    // borders: {
+    //   primary: "",
+    // },
+    onHover: {
+      primary: "red",
+    },
+  },
+  //Components (Buttons)
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          // minWidth: "200px",
-          maxWidth: "250px",
           color: "#FAF9F6",
           transition: "all .3s ease-In-Out",
           border: "1px solid #fff",
           ":hover": {
-            background: "rgba(3, 155, 229, 0.6)",
+            // background: "rgba(3, 155, 229, 0.6)",
             cursor: "pointer",
             transform: "scale(1.1)",
           },
         },
         // Small buttons
         sizeSmall: {
+          color: "Red",
           lineHeight: "22px",
           fontSize: "18px",
           padding: "10px 12px",
@@ -44,66 +71,59 @@ export const mainTheme = createTheme({
         },
       },
     },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          // backgroundColor: "red",
+          background: " rgba( 255, 255, 255, .6 )",
+          boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.3 )",
+          backdropFilter: "blur( 12px )",
+          webkitBackdropFilter: "blur( 12px )",
+          // borderRadius: "10px",
+          // border: "1px solid rgba( 255, 255, 255, 0.18 )",
+        },
+      },
+    },
   },
+  // Typography
   typography: {
-    // fontFamily: "Unbounded Sans",
+    allVariants: {
+      color: "#FFFAFA",
+    },
+    fontFamily: "Work Sans",
     h1: {
       fontFamily: "Unbounded",
-      fontSize: "85px",
+      fontSize: "87px",
       lineHeight: "62px",
       fontWeight: "700",
     },
     h2: {
       fontFamily: "Bowlby One SC, cursive ",
-      fontSize: "52px !important",
-      lineHeight: "52px !important",
+      fontSize: "56px !important",
+      // lineHeight: "52px !important",
       letterSpacing: ".2rem",
-      opacity: ".3",
-      // fontWeight: "700 !important",
-      // marginInline: "2rem",
     },
     h3: {
-      fontFamily: "Unbounded",
+      // fontFamily: "Unbounded",
       fontSize: "30px",
-      // lineHeight: "42px",
-      fontWeight: "400",
+      fontWeight: "500",
     },
-    // h4: {
-    //   fontFamily: "Unbounded",
-    //   fontSize: "28px",
-    //   lineHeight: "32px",
-    //   fontWeight: "600",
-    // },
-    bodyTextLg: {
-      fontFamily: "Work Sans",
-      fontSize: "18px",
-      lineHeight: "22px",
-    },
-    bodyTextSm: {
-      fontFamily: "Work Sans",
-      fontSize: "16px",
-      lineHeight: "18px",
-    },
-    linkTextDesktop: {
-      color: "#21c067",
-      fontFamily: "Work Sans",
-      lineHeight: "18px",
-      fontSize: "20px",
-      width: "100%",
-    },
-    linkTextMobile: {
-      color: "#283F76",
-      fontFamily: "Work Sans",
-      lineHeight: "22px",
+    h4: {
+      fontFamily: "Unbounded",
       fontSize: "28px",
-      width: "100%",
+      lineHeight: "32px",
+      fontWeight: "600",
     },
-    // MuiTypography: {
-    //     styleOverrides: {
-    //         root: {
-    //             fontWeight: "800",
-    //         },
-    //     },
-    // },
   },
+
+  // bodyTextLg: {
+  //   fontFamily: "Work Sans",
+  //   fontSize: "18px",
+  //   lineHeight: "22px",
+  // },
+  // bodyTextSm: {
+  //   fontFamily: "Work Sans",
+  //   fontSize: "16px",
+  //   lineHeight: "18px",
+  // },
 });

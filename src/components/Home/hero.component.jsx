@@ -22,9 +22,12 @@ import NonMobileSocials from "../Socials/nonMobileSocials.component";
 import ViewMore from "../buttons/viewMore.component";
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
-  background: "var(--radial-gradient)",
+  // background: "var(--radial-gradient)",
   minHeight: "100vh",
-  // maxWidth: "1200px",
+  display: "flex",
+  alignContent: "space-evenly",
+  marginInline: "auto",
+  maxWidth: "1200px",
 
   // [theme.breakpoints.between("xs", "md")]: {},
   // [theme.breakpoints.only("lg")]: {
@@ -52,7 +55,7 @@ export default function Hero() {
   return (
     <StyledGridContainer id="hero-container" container>
       {/* Navigation component */}
-      <Navigation />
+      {/* <Navigation /> */}
       {/* Hero grid item */}
       <Grid
         item
@@ -76,10 +79,9 @@ export default function Hero() {
           component="h1"
           typography="h1"
           sx={{
-            // fontFamily: "Unbounded",
-            fontSize: { xs: "45px", sm: "55px", md: "65px", lg: "70px" },
+            fontFamily: "Unbounded",
+            fontSize: { xs: "45px", sm: "55px", md: "65px", lg: "87px" },
             mt: { xs: 2 },
-
             lineHeight: "140%",
             fontWeight: "300",
             display: "block",
@@ -89,7 +91,13 @@ export default function Hero() {
         </Typography>
         <Typography
           component="p"
-          sx={{ fontFamily: "Unbounded", mt: 2, fontSize: { xs: "22px", sm: "24px", md: "26px", lg: "28px", lineHeight: "100%" }, fontWeight: "200" }}
+          sx={{
+            fontFamily: "Unbounded",
+            mt: 2,
+            mb: 5,
+            fontSize: { xs: "22px", sm: "24px", md: "26px", lg: "28px", lineHeight: "100%" },
+            fontWeight: "200",
+          }}
         >
           Full Stack Developer
         </Typography>

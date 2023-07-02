@@ -11,14 +11,19 @@ import { Link } from "react-router-dom";
 
 // Custom styled nav component
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
-  background: "var(--header-blur-filter)",
-  backdropFilter: "var(--header-blur-filter)",
+  // background: "var(--drop-down-menu-bg)",
+  // backdropFilter: "blur(10px)",
+  // opacity: "0",
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
   flexDirection: "row",
-  padding: "2rem",
+  padding: "1.5rem",
+  [theme.breakpoints.up("md")]: {
+    padding: "3rem",
+  },
   maxHeight: "85px",
+  // zIndex: "1",
 }));
 // Hide on scroll function to hide app bar when user scrolls
 function HideOnScroll(props) {

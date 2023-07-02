@@ -1,12 +1,7 @@
 import React from "react";
 // Mui Components
-import { Box, Grid, Stack, Typography } from "@mui/material";
-
-// Assets
-import ProfileImage from "../../Assets/images/profileIMG.jpeg";
-
-// Icons
-import { BsXDiamondFill } from "react-icons/bs";
+import { Box, Grid, Typography } from "@mui/material";
+// Custom components
 import ViewMore from "../buttons/viewMore.component";
 
 // Site data
@@ -14,19 +9,16 @@ import { aboutTextData, skillsData } from "../../siteData/aboutMeData";
 
 export default function AboutMe() {
   return (
-    <Grid id="about-section" container justifyContent="center" minHeight={{ xs: "600px" }}>
+    <Grid id="about-section" container sx={{ justifyContent: "center", mb: { xs: 3, md: 25 }, mt: { xs: 15, md: 25 } }}>
       {/* Grid item - header */}
-      <Grid textAlign="left" item xs={12} sx={{ my: { xs: 0, md: 10 } }}>
+      <Grid textAlign="left" item xs={12} sx={{ my: { xs: 5, md: 10 } }}>
         <Typography typography="h2" component="h2" variant="h2">
           About Me
         </Typography>
-        {/* <Stack direction="row" spacing={2} alignItems="center" my={4}>
-          <BsXDiamondFill size="2rem" color="#fff" />
-        </Stack> */}
       </Grid>
       {/* Grid item - skills */}
       <Grid item xs={12} md={6} sx={{ textAlign: "left", order: { xs: "4", md: "0" } }}>
-        <Box>
+        <Box sx={{ mt: { xs: 10, sm: 0 } }}>
           <Typography typography="h3" component="h3">
             Technology I use
           </Typography>
@@ -34,7 +26,7 @@ export default function AboutMe() {
             <p>Skill Carousel Component</p>
           </Box>
         </Box>
-        <Box>
+        <Box sx={{ mt: { xs: 4, sm: 0 } }}>
           <Typography typography="h3" component="h3">
             Skills
           </Typography>

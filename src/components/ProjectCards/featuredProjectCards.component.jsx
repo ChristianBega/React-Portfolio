@@ -45,13 +45,10 @@ export default function ProjectCards() {
   return (
     <Grid id="featured-projects-section" container sx={{ justifyContent: "center", mb: 3, mt: 15 }}>
       {/* Grid item - header */}
-      <Grid textAlign="left" item xs={12} sx={{ my: { xs: 0, md: 10 } }}>
+      <Grid textAlign="left" item xs={12} sx={{ my: { xs: 5, md: 10 } }}>
         <Typography typography="h2" component="h2" variant="h2">
           Projects
         </Typography>
-        {/* <Stack direction="row" spacing={2} alignItems="center" my={4}>
-          <BsXDiamondFill size="2rem" color="#fff" />
-        </Stack> */}
       </Grid>
       {/* Grid item - featured projects */}
       <Grid item xs={12}>
