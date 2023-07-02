@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 // Mui Hooks
 import { useTheme } from "@emotion/react";
 // Mui components
-import { Grid, Stack, Typography, useMediaQuery } from "@mui/material";
+import { Grid, Typography, useMediaQuery } from "@mui/material";
 // Custom components
 import MobileProjectCard from "./mobileProjectCard.component";
-import NonMobileProjectCard from "./nonMobileProjectCard.component";
+import NonMobileProjectCard from "./desktopProjectCard.component";
 import ViewMore from "../buttons/viewMore.component";
-
-// Icons
-import { BsXDiamondFill } from "react-icons/bs";
 
 // Site data
 import { featuredProjectsData } from "../../siteData/projectData";
@@ -34,10 +30,8 @@ export default function ProjectCards() {
   const renderProjectCards = () => {
     return featuredProjects.map((project, index) => (
       <Grid item xs={12} sm={isMobile ? 6 : 12}>
-        <Link id={project.name} to="/project-page" state={{ project: project }}>
-          {isMobile && <MobileProjectCard project={project} key={"project" + index} />}
-          {!isMobile && <NonMobileProjectCard project={project} key={"project" + index} />}
-        </Link>
+        {isMobile && <MobileProjectCard project={project} index={index} key={"project" + index} />}
+        {!isMobile && <NonMobileProjectCard project={project} index={index} key={"project" + index} />}
       </Grid>
     ));
   };

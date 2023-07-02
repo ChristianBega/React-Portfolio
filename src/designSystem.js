@@ -84,13 +84,31 @@ export const mainTheme = createTheme({
         },
       },
     },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          zIndex: "1000",
+          fontFamily: "Work Sans !important",
+          padding: 6,
+          "&:hover": {
+            color: "#fff",
+            backgroundColor: "transparent",
+            textDecorationLine: "underline",
+            textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
+            transform: "scale(1.1)",
+            transition: ".2s ease-in-out",
+            fontWeight: "600",
+          },
+        },
+      },
+    },
   },
   // Typography
   typography: {
+    fontFamily: "Work Sans",
     allVariants: {
       color: "#FFFAFA",
     },
-    fontFamily: "Work Sans",
     h1: {
       fontFamily: "Unbounded",
       fontSize: "87px",
@@ -113,6 +131,12 @@ export const mainTheme = createTheme({
       fontSize: "28px",
       lineHeight: "32px",
       fontWeight: "600",
+    },
+    cardHeader: {
+      fontFamily: "Work Sans",
+      fontSize: "56px !important",
+      letterSpacing: ".2rem",
+      fontWeight: "800",
     },
   },
 

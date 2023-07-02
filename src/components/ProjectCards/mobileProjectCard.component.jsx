@@ -1,6 +1,7 @@
 import React from "react";
 // Mui components
 import { Card, CardContent, CardMedia, Stack, Typography, Link, styled } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 // Assets
 // import IphoneFrame from "../../Assets/images/iPhoneFrame.png";
@@ -8,7 +9,7 @@ import { Card, CardContent, CardMedia, Stack, Typography, Link, styled } from "@
 // Custom components
 const StyledProjectCard = styled(Card)({
   position: "relative",
-  background: "var(--dark-card-bg)",
+  background: "var(--light-card-bg)",
   border: "2px solid rgba(81, 81, 81, .5)",
   minHeight: "22rem",
   height: "100%",
@@ -45,15 +46,17 @@ export default function MobileProjectCard({ project }) {
   return (
     <>
       <StyledProjectCard>
-        <CardMedia
-          component="video"
-          autoPlay
-          loop
-          muted
-          height="100%"
-          sx={{ objectFit: "fill", position: "absolute", top: "0", right: "0", zIndex: "-100" }}
-          src={videoDemo}
-        />
+        <NavLink id={name} to="/project-page" state={{ project: project }}>
+          <CardMedia
+            component="video"
+            autoPlay
+            loop
+            muted
+            height="100%"
+            sx={{ objectFit: "fill", position: "absolute", top: "0", right: "0", zIndex: "-100" }}
+            src={videoDemo}
+          />
+        </NavLink>
         <CardContent sx={{ width: "100%", display: "flex", flexDirection: "column", justifyContent: "end" }}>
           <Typography component="h2" variant="h6" sx={{ fontWeight: "600", textAlign: "left" }}>
             {name}

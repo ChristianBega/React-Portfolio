@@ -1,0 +1,55 @@
+import styled from "@emotion/styled";
+import { Box, Paper, Typography } from "@mui/material";
+import React from "react";
+// Icons
+import { BsEyeFill } from "react-icons/bs";
+
+import { Link } from "react-router-dom";
+const StyledImage = styled(Box)(({ theme }) => ({
+  zIndex: " 100",
+  boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset",
+  width: "375px",
+  height: "350px",
+  [theme.breakpoints.only("lg")]: {
+    width: "409px",
+    height: "350px",
+  },
+  objectFit: "fill",
+  zIndex: "-100",
+  "&:hover": {
+    border: "2px solid rgba(255, 255, 255, 0.209)",
+  },
+}));
+
+const StyledOverlay = styled(Paper)({
+  position: "absolute",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  top: 0,
+  bottom: 0,
+  width: "100%",
+  opacity: "0",
+  transition: ".4s ease-in-out",
+  "&:hover": {
+    background: "linear-gradient(0deg, rgba(37, 37, 37, 0.8) 30%, rgba(78, 78, 78, 0.4) 100%)",
+    boxShadow: "0px 0px 16px 6px rgba(86, 79, 224, 0.6)",
+    opacity: "1",
+  },
+});
+export default function CardImage({ project }) {
+  const { name, videoDemo } = project;
+
+  return (
+    <Box sx={{ position: "relative" }}>
+      <Link id={name} to="/project-page" state={{ project: project }}>
+        <StyledImage component="video" autoPlay loop muted src={videoDemo}></StyledImage>
+        <StyledOverlay>
+          <BsEyeFill size="50px" color="#fff" />
+          <Typography component="p">View more</Typography>
+        </StyledOverlay>
+      </Link>
+    </Box>
+  );
+}
