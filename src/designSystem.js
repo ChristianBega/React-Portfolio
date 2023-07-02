@@ -74,22 +74,17 @@ export const mainTheme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          // backgroundColor: "red",
           background: " rgba( 255, 255, 255, .6 )",
           boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.3 )",
           backdropFilter: "blur( 12px )",
           webkitBackdropFilter: "blur( 12px )",
-          // borderRadius: "10px",
-          // border: "1px solid rgba( 255, 255, 255, 0.18 )",
         },
       },
     },
     MuiLink: {
       styleOverrides: {
         root: {
-          zIndex: "1000",
           fontFamily: "Work Sans !important",
-          padding: 6,
           "&:hover": {
             color: "#fff",
             backgroundColor: "transparent",
@@ -137,6 +132,9 @@ export const mainTheme = createTheme({
       fontSize: "56px !important",
       letterSpacing: ".2rem",
       fontWeight: "800",
+    },
+    cardHeaderSm: {
+      fontSize: "32px !important",
     },
   },
 

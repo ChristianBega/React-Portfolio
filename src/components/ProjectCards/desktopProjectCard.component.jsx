@@ -5,7 +5,7 @@ import CardText from "./cardText.component";
 import CardImage from "./cardImage.component";
 
 // Custom Components
-const StyledProjectContainer = styled(Container)({
+const StyledProjectContainer = styled(Container)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
@@ -14,17 +14,14 @@ const StyledProjectContainer = styled(Container)({
   marginBlock: "2rem",
   borderRadius: "1.5rem",
   boxShadow: 15,
-});
+  [theme.breakpoints.down("md")]: {
+    background: "var(--light-card-bg)",
+  },
+}));
 const StyledBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
-  justifyContent: "space-between",
-  // width: "300px",
-  // height: "300px",
-  [theme.breakpoints.only("lg")]: {
-    // width: "409px",
-    // height: "309px",
-  },
+  justifyContent: "space-evenly",
 }));
 
 export default function NonMobileProjectCard({ project, index }) {
