@@ -12,10 +12,8 @@ const StyledGrid = styled(Grid)({
 
 function Footer() {
   return (
-    <StyledGrid container spacing={2}>
-      <Grid xs={12}>
-        {/* <Socials checked={true} /> */}
-      </Grid>
+    <StyledGrid id="footer" container spacing={2}>
+      <Grid xs={12}>{/* <Socials checked={true} /> */}</Grid>
     </StyledGrid>
   );
 }

@@ -10,12 +10,12 @@ import AboutMePage from "../../pages/AboutMePage";
 
 export default function AnimationRoutes() {
   const location = useLocation();
+  // console.log(location);
   return (
     <AnimatePresence initial={true} mode="wait">
       <Routes key={location.pathname} location={location}>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/about-me" element={<AboutMePage />}></Route>
-
         <Route path="/project-cards" element={<ProjectCardsPage />}></Route>
         <Route path="/project-page" element={<ProjectPage />}></Route>
         <Route path="/resume" element={<ResumePage />}></Route>

@@ -1,13 +1,7 @@
 body {
   background: var(--linear-bg);
-  /* background-color: red; */
 }
-/* Header */
-header {
-  backdrop-filter: var(--header-blur-filter);
-  background-color: var(--dark-header-bg) !important;
-  padding: 1.5rem 1rem;
-}
+
 /*! Fix later - changes text color in form drop down */
 #Reason {
   color: #fff;

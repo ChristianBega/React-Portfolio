@@ -46,11 +46,12 @@ export default function MobileNavigation() {
         }}
         PaperProps={{
           style: {
-            marginBlock: "1rem",
-            background: "var(--drop-down-menu-bg)",
+            marginBlock: "2.5rem",
+            background:
+              "linear-gradient(180deg,rgba(56, 40, 69, 0.655) 4%,rgba(37, 26, 54, 0.555) 20%, rgba(25, 28, 56, 0.555) 56%, rgba(8, 21, 43, 0.655) 100%",
             width: "100%",
             minHeight: "80vh",
-            backdropFilter: "var(--header-blur-filter)",
+            backdropFilter: "blur(12px)",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

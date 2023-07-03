@@ -1,42 +1,21 @@
-import { Button, Typography, styled } from "@mui/material";
-import { Box, Container } from "@mui/system";
-import React, { useCallback, useEffect } from "react";
-import { AiOutlineArrowRight } from "react-icons/ai";
-import { useNavigate } from "react-router";
+import { Typography } from "@mui/material";
+import { Container } from "@mui/system";
+import React, { useEffect } from "react";
 import Contact from "../components/ContactForm";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import { containerVariants } from "../transitions";
-const StyledButton = styled(Button)(({ theme }) => ({
-  // backgroundColor: "rgba(165, 165, 165, .3)",
-  // minHeight: "160px",
-  // borderRadius: ".6rem",
-  // padding: "1.2rem 1rem",
-  color: "var(--light-blue) !important",
+import BackHome from "../components/buttons/backHome.component";
 
-  "&:hover": {
-    color: "#fff !important",
-
-    backgroundColor: "transparent",
-    textDecorationLine: "underline",
-    textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
-    transform: "scale(1.1)",
-    transition: ".2s",
-  },
-  fontSize: "16px",
-  [theme.breakpoints.up("md")]: {
-    fontSize: "115%",
-  },
-}));
 export default function ContactPage() {
-  const navigate = useNavigate();
-  const handleOnClick = useCallback(() => navigate("/", { replace: true }), [navigate]);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
+      <BackHome buttonType="contact" />
       <Container
+        id="contact-form-section"
         component={motion.div}
         initial={containerVariants.hidden}
         animate={containerVariants.visible}
@@ -51,12 +30,6 @@ export default function ContactPage() {
           </Typography>
         </Typography>
         <Contact />
-        <Box textAlign="center" marginY={5}>
-          <StyledButton onClick={handleOnClick}>
-            Back to Home
-            <AiOutlineArrowRight />
-          </StyledButton>
-        </Box>
       </Container>
       <Footer />
     </>

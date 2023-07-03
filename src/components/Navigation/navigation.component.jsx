@@ -1,7 +1,7 @@
 import React from "react";
 
 // Mui components
-import { AppBar, useScrollTrigger, Slide, Typography, Grid } from "@mui/material";
+import { AppBar, useScrollTrigger, Slide, Typography } from "@mui/material";
 
 // Components
 import MobileNavigation from "./mobileNavigation.component";
@@ -11,14 +11,9 @@ import { Link } from "react-router-dom";
 
 // Custom styled nav component
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
-  background: "var(--header-blur-filter)",
-  backdropFilter: "var(--header-blur-filter)",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  flexDirection: "row",
-  padding: "2rem",
-  maxHeight: "85px",
+  [theme.breakpoints.up("md")]: {
+    padding: "3rem",
+  },
 }));
 // Hide on scroll function to hide app bar when user scrolls
 function HideOnScroll(props) {
@@ -34,18 +29,16 @@ function HideOnScroll(props) {
   );
 }
 
-export default function Navigation() {
+export default function Navigation(props) {
   return (
-    <Grid item xs={12} sx={{ maxHeight: "85px" }}>
-      <HideOnScroll>
-        <StyledAppBar elevation={0} id="navigation" position="sticky" component="nav">
-          <Typography variant="h6" component="h1">
-            <Link to="/">Christian Bega</Link>
-          </Typography>
-          <MobileNavigation />
-          <DesktopNavigation />
-        </StyledAppBar>
-      </HideOnScroll>
-    </Grid>
+    <HideOnScroll {...props}>
+      <StyledAppBar elevation={0} id="navigation" position="sticky" component="nav">
+        <Typography variant="h6" component="h1">
+          <Link to="/">Christian Bega</Link>
+        </Typography>
+        <MobileNavigation />
+        <DesktopNavigation />
+      </StyledAppBar>
+    </HideOnScroll>
   );
 }

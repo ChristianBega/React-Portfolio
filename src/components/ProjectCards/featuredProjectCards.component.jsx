@@ -1,26 +1,20 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 
 // Mui Hooks
 import { useTheme } from "@emotion/react";
 // Mui components
-import { Box, Button, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
+import { Grid, Typography, useMediaQuery } from "@mui/material";
 // Custom components
 import MobileProjectCard from "./mobileProjectCard.component";
-import NonMobileProjectCard from "./nonMobileProjectCard.component";
-
-// Icons
-import { BsXDiamondFill } from "react-icons/bs";
-import { useNavigate } from "react-router";
+import NonMobileProjectCard from "./desktopProjectCard.component";
+import ViewMore from "../buttons/viewMore.component";
 
 // Site data
-import { featuredProjectsData } from "../../siteData/featuredProjects.data";
+import { featuredProjectsData } from "../../siteData/projectData";
 
 export default function ProjectCards() {
   const theme = useTheme();
   let isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  const navigate = useNavigate();
-  const handleOnClick = useCallback(() => navigate("/project-cards", { replace: true }), [navigate]);
 
   // State
   const [featuredProjects, setFeaturedProjects] = useState([
@@ -36,24 +30,19 @@ export default function ProjectCards() {
   const renderProjectCards = () => {
     return featuredProjects.map((project, index) => (
       <Grid item xs={12} sm={isMobile ? 6 : 12}>
-        <Link id={project.name} to="/project-page" state={{ project: project }}>
-          {isMobile && <MobileProjectCard project={project} key={"project" + index} />}
-          {!isMobile && <NonMobileProjectCard project={project} key={"project" + index} />}
-        </Link>
+        {isMobile && <MobileProjectCard project={project} index={index} key={"project" + index} />}
+        {!isMobile && <NonMobileProjectCard project={project} index={index} key={"project" + index} />}
       </Grid>
     ));
   };
 
   return (
-    <Grid container sx={{ justifyContent: "center", mb: 3 }}>
+    <Grid id="featured-projects-section" container sx={{ justifyContent: "center", mt: 15 }}>
       {/* Grid item - header */}
-      <Grid item xs={12}>
-        <Stack direction="row" spacing={2} alignItems="center" my={4}>
-          <BsXDiamondFill size="2rem" color="#fff" />
-          <Typography typography="h2" component="h2" variant="h2">
-            Projects
-          </Typography>
-        </Stack>
+      <Grid textAlign="left" item xs={12} sx={{ my: { xs: 10, md: 15 } }}>
+        <Typography typography="h2" component="h2" variant="h2">
+          Projects
+        </Typography>
       </Grid>
       {/* Grid item - featured projects */}
       <Grid item xs={12}>
@@ -63,10 +52,8 @@ export default function ProjectCards() {
       </Grid>
 
       {/* Grid item - view more button*/}
-      <Grid item sx={12}>
-        <Button onClick={handleOnClick} size="medium" sx={{ marginY: 5 }}>
-          View all projects
-        </Button>
+      <Grid item sx={12} mt={{ xs: 4 }}>
+        <ViewMore buttonType="project-cards" />
       </Grid>
     </Grid>
   );

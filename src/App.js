@@ -7,14 +7,14 @@ import { mainTheme } from "./designSystem";
 // Framer motion animation routes
 import AnimationRoutes from "./components/AnimationRoutes/AnimationRoutes";
 // Components
-// import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import Navigation from "./components/Navigation/navigation.component";
 
 function App() {
   return (
     <ThemeProvider theme={mainTheme}>
       <Router>
-        {/* <Navigation /> */}
+        <Navigation />
         <AnimationRoutes />
         <Footer />
       </Router>

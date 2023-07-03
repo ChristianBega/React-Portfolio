@@ -24,6 +24,7 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
     textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
     transform: "scale(1.1)",
     transition: ".2s",
+    color: "Red",
   },
 }));
 

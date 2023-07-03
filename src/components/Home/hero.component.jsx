@@ -1,34 +1,24 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useEffect } from "react";
 
 // Framer motion
-import { motion } from "framer-motion";
-import { childrenVariants, childrenVariantsTwo } from "../../transitions";
-
-// React router dom
-import { Link, useNavigate } from "react-router-dom";
-
-// Icons
-import Socials from "../Socials/mobileSocials.component";
+// import { motion } from "framer-motion";
+// import { childrenVariants, childrenVariantsTwo } from "../../transitions";
 
 // MUI components
-import { Box, Grid, Typography, styled, Button, useMediaQuery } from "@mui/material";
-// Custom components
-// import Navigation from "../Navigation/navigation.component";
+import { Grid, Typography, styled, useMediaQuery } from "@mui/material";
 
-import Navigation from "../Navigation/navigation.component";
 import ScrollDownArrows from "./scrollDown/scrollDownArrows.component";
 import { useTheme } from "@emotion/react";
-import MobileSocials from "../Socials/mobileSocials.component";
 import NonMobileSocials from "../Socials/nonMobileSocials.component";
+import ViewMore from "../buttons/viewMore.component";
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
-  background: "var(--radial-gradient)",
-  minHeight: "700px",
-  [theme.breakpoints.between("xs", "md")]: {
-    // minHeight: "10vh",
-    minHeight: "650px",
-  },
-
+  display: "flex",
+  alignContent: "space-evenly",
+  alignItems: "center",
+  marginInline: "auto",
+  maxWidth: "1200px",
+  height: "100vh",
   textAlign: "left",
 }));
 
@@ -44,15 +34,11 @@ const renderSocials = (isMobile) => {
 export default function Hero() {
   const theme = useTheme();
   let isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const navigate = useNavigate();
-  const handleOnClick = useCallback(() => navigate("/contact", { replace: true }), [navigate]);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <StyledGridContainer container>
-      {/* Navigation component */}
-      <Navigation />
+    <StyledGridContainer id="hero-container" container>
       {/* Hero grid item */}
       <Grid
         item
@@ -64,11 +50,11 @@ export default function Hero() {
         xs={isMobile ? 12 : 11}
         // md={6}
         pl={3}
-        mt={{ xs: 5, sm: 0 }}
+        mt={{ xs: 4, sm: 0, md: 10 }}
       >
         <Typography
           component="p"
-          sx={{ fontFamily: "Unbounded", fontSize: { xs: "30px", sm: "35px", md: "45px", lg: "55px" }, lineHeight: "100%", fontWeight: "200" }}
+          sx={{ fontFamily: "Work Sans", fontSize: { xs: "30px", sm: "35px", md: "45px", lg: "55px" }, lineHeight: "100%", fontWeight: "200" }}
         >
           Hi there,
         </Typography>
@@ -76,10 +62,8 @@ export default function Hero() {
           component="h1"
           typography="h1"
           sx={{
-            // fontFamily: "Unbounded",
-            fontSize: { xs: "45px", sm: "55px", md: "65px", lg: "70px" },
-            mt: { xs: 2 },
-
+            fontFamily: "Unbounded",
+            fontSize: { xs: "45px", sm: "55px", md: "65px", lg: "87px" },
             lineHeight: "140%",
             fontWeight: "300",
             display: "block",
@@ -89,15 +73,17 @@ export default function Hero() {
         </Typography>
         <Typography
           component="p"
-          sx={{ fontFamily: "Unbounded", mt: 2, fontSize: { xs: "22px", sm: "24px", md: "26px", lg: "28px", lineHeight: "100%" }, fontWeight: "200" }}
+          sx={{
+            fontFamily: "Work Sans",
+            mt: 2,
+            mb: 4,
+            fontSize: { xs: "22px", sm: "24px", md: "26px", lg: "28px", lineHeight: "100%" },
+            fontWeight: "200",
+          }}
         >
           Full Stack Developer
         </Typography>
-        <Box marginY={5}>
-          <Button size="small" onClick={handleOnClick}>
-            Contact Me
-          </Button>
-        </Box>
+        <ViewMore buttonType="contact" />
       </Grid>
       <Grid item xs={isMobile ? 12 : 1}>
         {renderSocials(isMobile)}
