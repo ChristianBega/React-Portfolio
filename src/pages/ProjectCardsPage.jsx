@@ -3,11 +3,10 @@ import React, { useEffect } from "react";
 
 import { allProjectData } from "../siteData/projectData";
 
-import ProjectCard from "../components/ProjectCards";
+import StaticProjectCard from "../components/ProjectCards/staticProjectCard.component";
 import { motion } from "framer-motion";
 import BackHome from "../components/buttons/backHome.component";
 import { Link } from "react-router-dom";
-import MobileProjectCard from "../components/ProjectCards/mobileProjectCard.component";
 
 export default function ProjectCardsPage() {
   useEffect(() => {
@@ -44,7 +43,7 @@ export default function ProjectCardsPage() {
             md={6}
           >
             <Link id={project.name} to="/project-page" state={{ project: project }}>
-              <MobileProjectCard project={project} key={"project" + i} />
+              <StaticProjectCard project={project} key={"project" + i} />
             </Link>
           </Grid>
         ))}

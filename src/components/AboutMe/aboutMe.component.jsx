@@ -9,7 +9,7 @@ import { aboutTextData, skillsData } from "../../siteData/aboutMeData";
 
 export default function AboutMe() {
   return (
-    <Grid id="about-section" container sx={{ justifyContent: "center", mb: { xs: 3, md: 25 }, mt: { xs: 15, md: 25 } }}>
+    <Grid id="about-section" container sx={{ justifyContent: "center", alignItems: "center", mb: { xs: 3, md: 25 } }}>
       {/* Grid item - header */}
       <Grid textAlign="left" item xs={12} sx={{ my: { xs: 5, md: 10 } }}>
         <Typography typography="h2" component="h2" variant="h2">

@@ -12,8 +12,8 @@ const StyledImage = styled(Box)(({ theme }) => ({
   objectFit: "fill",
   zIndex: "-100",
   [theme.breakpoints.up("md")]: {
-    width: "409px",
-    height: "350px",
+    minWidth: "500px",
+    height: "375px",
   },
   [theme.breakpoints.down("md")]: {
     objectFit: "fill",

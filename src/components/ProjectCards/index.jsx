@@ -40,7 +40,6 @@ export default function ProjectCards({ project }) {
 
   return (
     <StyledProjectCard>
-      "test"
       <CardMedia
         component="video"
         autoPlay

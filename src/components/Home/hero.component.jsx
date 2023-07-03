@@ -4,36 +4,20 @@ import React, { useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import { childrenVariants, childrenVariantsTwo } from "../../transitions";
 
-// React router dom
-import { Link } from "react-router-dom";
-
-// Icons
-import Socials from "../Socials/mobileSocials.component";
-
 // MUI components
 import { Grid, Typography, styled, useMediaQuery } from "@mui/material";
-// Custom components
-// import Navigation from "../Navigation/navigation.component";
 
-import Navigation from "../Navigation/navigation.component";
 import ScrollDownArrows from "./scrollDown/scrollDownArrows.component";
 import { useTheme } from "@emotion/react";
 import NonMobileSocials from "../Socials/nonMobileSocials.component";
 import ViewMore from "../buttons/viewMore.component";
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
-  // background: "var(--radial-gradient)",
-  minHeight: "100vh",
   display: "flex",
   alignContent: "space-evenly",
   marginInline: "auto",
   maxWidth: "1200px",
-
-  // [theme.breakpoints.between("xs", "md")]: {},
-  // [theme.breakpoints.only("lg")]: {
-  //   minHeight: "110vh",
-  // },
-
+  height: "100vh",
   textAlign: "left",
 }));
 
@@ -54,8 +38,6 @@ export default function Hero() {
   }, []);
   return (
     <StyledGridContainer id="hero-container" container>
-      {/* Navigation component */}
-      {/* <Navigation /> */}
       {/* Hero grid item */}
       <Grid
         item
@@ -67,7 +49,7 @@ export default function Hero() {
         xs={isMobile ? 12 : 11}
         // md={6}
         pl={3}
-        mt={{ xs: 5, sm: 0 }}
+        mt={{ xs: 5, sm: 0, md: 10 }}
       >
         <Typography
           component="p"
