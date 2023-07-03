@@ -37,22 +37,22 @@ export default function ProjectCards() {
   };
 
   return (
-    <Grid id="featured-projects-section" container sx={{ justifyContent: "center", mb: 3, mt: 15 }}>
+    <Grid id="featured-projects-section" container sx={{ justifyContent: "center", mt: 15 }}>
       {/* Grid item - header */}
-      <Grid textAlign="left" item xs={12} sx={{ my: { xs: 5, md: 10 } }}>
+      <Grid textAlign="left" item xs={12} sx={{ my: { xs: 10, md: 15 } }}>
         <Typography typography="h2" component="h2" variant="h2">
           Projects
         </Typography>
       </Grid>
       {/* Grid item - featured projects */}
-      <Grid item xs={12} mb={5}>
+      <Grid item xs={12}>
         <Grid container spacing={4}>
           {renderProjectCards(isMobile)}
         </Grid>
       </Grid>
 
       {/* Grid item - view more button*/}
-      <Grid item sx={12}>
+      <Grid item sx={12} mt={{ xs: 4 }}>
         <ViewMore buttonType="project-cards" />
       </Grid>
     </Grid>

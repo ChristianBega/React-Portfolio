@@ -72,7 +72,7 @@ export default function StaticProjectCard({ project }) {
       </Box>
       <StyledBox>
         <Box id="test" sx={{ padding: 4, ml: { md: 4 } }}>
-          <Typography component="h3" variant="h2" typography={{ xs: "cardHeaderSm" }}>
+          <Typography component="h3" variant="h3" typography={{ xs: "cardHeaderSm" }}>
             {name}
           </Typography>
           <Typography fontSize={{ xs: "16px", md: "18px" }} component="p" my={4}>

@@ -1,8 +1,8 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useEffect } from "react";
 
 // Framer motion
-import { motion } from "framer-motion";
-import { childrenVariants, childrenVariantsTwo } from "../../transitions";
+// import { motion } from "framer-motion";
+// import { childrenVariants, childrenVariantsTwo } from "../../transitions";
 
 // MUI components
 import { Grid, Typography, styled, useMediaQuery } from "@mui/material";
@@ -15,6 +15,7 @@ import ViewMore from "../buttons/viewMore.component";
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
   display: "flex",
   alignContent: "space-evenly",
+  alignItems: "center",
   marginInline: "auto",
   maxWidth: "1200px",
   height: "100vh",
@@ -49,11 +50,11 @@ export default function Hero() {
         xs={isMobile ? 12 : 11}
         // md={6}
         pl={3}
-        mt={{ xs: 5, sm: 0, md: 10 }}
+        mt={{ xs: 4, sm: 0, md: 10 }}
       >
         <Typography
           component="p"
-          sx={{ fontFamily: "Unbounded", fontSize: { xs: "30px", sm: "35px", md: "45px", lg: "55px" }, lineHeight: "100%", fontWeight: "200" }}
+          sx={{ fontFamily: "Work Sans", fontSize: { xs: "30px", sm: "35px", md: "45px", lg: "55px" }, lineHeight: "100%", fontWeight: "200" }}
         >
           Hi there,
         </Typography>
@@ -63,7 +64,6 @@ export default function Hero() {
           sx={{
             fontFamily: "Unbounded",
             fontSize: { xs: "45px", sm: "55px", md: "65px", lg: "87px" },
-            mt: { xs: 2 },
             lineHeight: "140%",
             fontWeight: "300",
             display: "block",
@@ -74,9 +74,9 @@ export default function Hero() {
         <Typography
           component="p"
           sx={{
-            fontFamily: "Unbounded",
+            fontFamily: "Work Sans",
             mt: 2,
-            mb: 5,
+            mb: 4,
             fontSize: { xs: "22px", sm: "24px", md: "26px", lg: "28px", lineHeight: "100%" },
             fontWeight: "200",
           }}

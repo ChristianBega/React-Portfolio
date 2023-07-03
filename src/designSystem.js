@@ -1,4 +1,4 @@
-import { createTheme, keyframes } from "@mui/material";
+import { createTheme } from "@mui/material";
 
 export const mainTheme = createTheme({
   spacing: (factor) => `${0.25 * factor}rem`,
@@ -105,12 +105,19 @@ export const mainTheme = createTheme({
         },
       },
     },
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          padding: "1rem",
+        },
+      },
+    },
   },
   // Typography
   typography: {
     fontFamily: "Work Sans",
     allVariants: {
-      color: "#FFFAFA",
+      color: "#edebeb",
     },
     h1: {
       fontFamily: "Unbounded",
@@ -119,30 +126,36 @@ export const mainTheme = createTheme({
       fontWeight: "700",
     },
     h2: {
-      fontFamily: "Bowlby One SC, cursive ",
-      fontSize: "56px !important",
-      // lineHeight: "52px !important",
-      letterSpacing: ".2rem",
-    },
-    h3: {
-      // fontFamily: "Unbounded",
-      fontSize: "30px",
-      fontWeight: "500",
-    },
-    h4: {
+      // fontFamily: "Bowlby One SC, cursive ",
       fontFamily: "Unbounded",
-      fontSize: "28px",
-      lineHeight: "32px",
-      fontWeight: "600",
-    },
-    cardHeader: {
-      fontFamily: "Work Sans",
       fontSize: "56px !important",
       letterSpacing: ".2rem",
       fontWeight: "800",
     },
+    h3: {
+      // fontFamily: "Work Sans",
+      fontFamily: "Unbounded",
+
+      fontSize: "24px",
+      fontWeight: "300",
+    },
+    // h4: {
+    //   fontFamily: "Unbounded",
+    //   fontSize: "28px",
+    //   lineHeight: "32px",
+    //   fontWeight: "600",
+    // },
+    cardHeader: {
+      fontFamily: "Work Sans",
+      fontSize: "56px !important",
+      letterSpacing: ".2rem",
+      fontWeight: "500",
+    },
     cardHeaderSm: {
-      fontSize: "32px !important",
+      fontSize: "28px !important",
+      letterSpacing: ".1rem",
+      fontWeight: "500",
+      // opacity: ".8",
     },
   },
 

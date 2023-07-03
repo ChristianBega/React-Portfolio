@@ -11,11 +11,14 @@ const StyledProjectContainer = styled(Container)(({ theme }) => ({
   justifyContent: "space-between",
   alignItems: "center",
   padding: "1.2rem",
-  marginBlock: "2rem",
   borderRadius: "1.5rem",
   boxShadow: 15,
+  marginBlock: theme.spacing(4),
   [theme.breakpoints.down("md")]: {
     background: "var(--light-card-bg)",
+  },
+  [theme.breakpoints.up("lg")]: {
+    marginBlock: theme.spacing(8),
   },
 }));
 const StyledBox = styled(Box)(({ theme }) => ({

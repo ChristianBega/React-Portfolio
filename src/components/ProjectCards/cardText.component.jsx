@@ -28,7 +28,7 @@ export default function CardText({ project }) {
   return (
     <StyledBox>
       <Box id="test" sx={{ padding: { xs: 4, md: 0 }, ml: { md: 4 } }}>
-        <Typography component="h3" variant="h2" typography={{ xs: "cardHeaderSm", md: "cardHeader" }}>
+        <Typography component="h3" variant="h3" typography={{ xs: "cardHeaderSm", md: "cardHeader" }}>
           {name}
         </Typography>
         <Typography fontSize={{ xs: "16px", md: "18px" }} component="p" my={4}>
