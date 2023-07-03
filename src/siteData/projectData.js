@@ -11,11 +11,12 @@ export const featuredProjectsData = [
   {
     name: "Overland Baseball",
     description: "A front-end single page application that allows players a coaches a convenient platform to access and browse team information.",
-    longDescription: "long desc",
+    longDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     videoDemo: OverlandBaseball,
     link: "https://overlandbaseball.com/",
     repo: "https://github.com/ChristianBega/Overland-Baseball-Website",
-    technology: ["React", "Material UI"],
+    technology: ["React", "Material UI", "Framer motion", "Firebase"],
   },
   // Blog site
   {
