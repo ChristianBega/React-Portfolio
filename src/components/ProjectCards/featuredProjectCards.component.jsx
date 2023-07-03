@@ -45,7 +45,7 @@ export default function ProjectCards() {
         </Typography>
       </Grid>
       {/* Grid item - featured projects */}
-      <Grid item xs={12}>
+      <Grid item xs={12} mb={5}>
         <Grid container spacing={4}>
           {renderProjectCards(isMobile)}
         </Grid>

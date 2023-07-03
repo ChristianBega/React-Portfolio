@@ -4,7 +4,7 @@ import React from "react";
 // Icons
 import { BsEyeFill } from "react-icons/bs";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const StyledImage = styled(Box)(({ theme }) => ({
   // boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(142, 49, 49, 0.05) 0px 0px 0px 1px inset",
   width: "375px",
@@ -53,10 +53,11 @@ const StyledOverlay = styled(Paper)(({ theme }) => ({
 }));
 export default function CardImage({ project }) {
   const { name, videoDemo } = project;
+  const location = useLocation();
 
   return (
     <Box sx={{ position: "relative" }}>
-      <Link id={name} to="/project-page" state={{ project: project }}>
+      <Link id={name} to="/project-page" state={{ project: project, prevPath: location.pathname }}>
         <StyledImage component="video" autoPlay loop muted src={videoDemo}></StyledImage>
         <StyledOverlay>
           <BsEyeFill size="50px" color="#fff" />

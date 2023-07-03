@@ -56,11 +56,12 @@ export const mainTheme = createTheme({
         },
         // Small buttons
         sizeSmall: {
-          color: "Red",
+          // color: "Red",
+          margin: "1rem",
           lineHeight: "22px",
           fontSize: "18px",
           padding: "10px 12px",
-          width: "220px",
+          // width: "220px",
         },
         // Medium buttons
         sizeMedium: {

@@ -27,23 +27,25 @@ const StyledLink = styled(Link)({
 });
 
 export default function ProjectPage() {
-  // Access props passed from link state
+  // Accessing props passed from link state
   const location = useLocation();
   const currentProject = location.state?.project;
+  const previousPath = location.state?.prevPath;
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
       <Container
-        component={motion.container}
-        initial={containerVariants.hidden}
-        animate={containerVariants.visible}
-        transition={containerVariants.transition}
+        // component={motion.container}
+        // initial={containerVariants.hidden}
+        // animate={containerVariants.visible}
+        // transition={containerVariants.transition}
         maxWidth="lg"
-        sx={{ my: 5, justifyContent: "center", position: "relative" }}
+        sx={{ my: 5, position: "relative" }}
       >
-        <BackHome buttonType="projectPage" />
+        {previousPath === "/" ? <BackHome buttonType="back" /> : <BackHome buttonType="projectPage" />}
         <Typography component="h2" variant="h5" mt={3} fontSize={{ lg: "28px" }}>
           {currentProject.name}
         </Typography>

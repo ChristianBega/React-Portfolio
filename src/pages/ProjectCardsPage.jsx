@@ -13,6 +13,7 @@ export default function ProjectCardsPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  // location.pathname === "project-page"
   return (
     <>
       <BackHome buttonType="projectCards" />
