@@ -47,7 +47,7 @@ export const mainTheme = createTheme({
         root: {
           color: "#FAF9F6",
           transition: "all .3s ease-In-Out",
-          border: "1px solid #fff",
+          border: "2px solid #fff",
           ":hover": {
             // background: "rgba(3, 155, 229, 0.6)",
             cursor: "pointer",
@@ -56,12 +56,14 @@ export const mainTheme = createTheme({
         },
         // Small buttons
         sizeSmall: {
-          // color: "Red",
-          margin: "1rem",
-          lineHeight: "22px",
-          fontSize: "18px",
-          padding: "10px 12px",
-          // width: "220px",
+          // marginLeft: ".5rem",
+          marginBlock: "2rem",
+          minWidth: "25px",
+          width: "45px",
+          height: "45px",
+          display: "flex",
+          justifyContent: "center",
+          borderRadius: "50%",
         },
         // Medium buttons
         sizeMedium: {
@@ -135,7 +137,6 @@ export const mainTheme = createTheme({
     h3: {
       // fontFamily: "Work Sans",
       fontFamily: "Unbounded",
-
       fontSize: "24px",
       fontWeight: "300",
     },

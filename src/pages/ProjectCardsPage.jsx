@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import React, { useEffect } from "react";
 
 import { allProjectData } from "../siteData/projectData";
@@ -14,9 +14,9 @@ export default function ProjectCardsPage() {
   }, []);
   // location.pathname === "project-page"
   return (
-    <>
+    <Container sx={{ minHeight: "100vh", my: 5 }}>
       <BackHome buttonType="projectCards" />
-      <Grid container maxWidth="lg" marginX={{ lg: "auto" }} spacing={{ xs: 2, md: 3 }} sx={{ minHeight: "100vh", padding: 2 }}>
+      <Grid container maxWidth="lg" spacing={4} marginX={{ lg: "auto" }} sx={{ minHeight: "100vh" }}>
         {/* <Projects /> */}
         {allProjectData.map((project, i) => (
           <Grid
@@ -48,6 +48,6 @@ export default function ProjectCardsPage() {
           </Grid>
         ))}
       </Grid>
-    </>
+    </Container>
   );
 }

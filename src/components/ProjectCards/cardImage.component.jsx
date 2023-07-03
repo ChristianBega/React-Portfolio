@@ -56,7 +56,11 @@ export default function CardImage({ project }) {
   const location = useLocation();
 
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box
+      sx={{
+        position: "relative",
+      }}
+    >
       <Link id={name} to="/project-page" state={{ project: project, prevPath: location.pathname }}>
         <StyledImage component="video" autoPlay loop muted src={videoDemo}></StyledImage>
         <StyledOverlay>

@@ -22,8 +22,10 @@ export default function BackHome({ buttonType }) {
   };
 
   return (
-    <Button size="small" href={buttonType !== "projectPage" && `#${BUTTON_TYPES_URL[buttonType]}`} onClick={handleOnClick}>
-      <AiOutlineArrowLeft />
-    </Button>
+    <a href={buttonType !== "projectPage" && `#${BUTTON_TYPES_URL[buttonType]}`}>
+      <Button sx={{ ml: { sx: 4, md: 0 } }} size="small" onClick={handleOnClick}>
+        <AiOutlineArrowLeft fontSize="24px" />
+      </Button>
+    </a>
   );
 }
