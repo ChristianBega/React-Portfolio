@@ -11,7 +11,7 @@ import Navigation from "../components/Navigation/navigation.component";
 export default function HomePage() {
   return (
     <>
-      <Navigation />
+      {/* <Navigation /> */}
       <Hero />
       <Container
         id="main-content-section"

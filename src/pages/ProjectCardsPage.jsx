@@ -7,6 +7,7 @@ import ProjectCard from "../components/ProjectCards";
 import { motion } from "framer-motion";
 import BackHome from "../components/buttons/backHome.component";
 import { Link } from "react-router-dom";
+import MobileProjectCard from "../components/ProjectCards/mobileProjectCard.component";
 
 export default function ProjectCardsPage() {
   useEffect(() => {
@@ -42,7 +43,7 @@ export default function ProjectCardsPage() {
             md={6}
           >
             <Link id={project.name} to="/project-page" state={{ project: project }}>
-              <ProjectCard project={project} key={"project" + i} />
+              <MobileProjectCard project={project} key={"project" + i} />
             </Link>
           </Grid>
         ))}

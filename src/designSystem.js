@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material";
+import { createTheme, keyframes } from "@mui/material";
 
 export const mainTheme = createTheme({
   spacing: (factor) => `${0.25 * factor}rem`,
@@ -74,13 +74,20 @@ export const mainTheme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          background: " rgba( 255, 255, 255, .6 )",
-          boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.3 )",
-          backdropFilter: "blur( 12px )",
-          webkitBackdropFilter: "blur( 12px )",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          flexDirection: "row",
+          maxHeight: "85px",
+          padding: "1.5rem",
+          background: " rgba( 255, 255, 255, .1 )",
+          boxShadow: "0 8px 16px 0 rgba( 31, 38, 135, 0.4 )",
+          backdropFilter: "blur( 8px )",
+          webkitBackdropFilter: "blur( 8px )",
         },
       },
     },
+
     MuiLink: {
       styleOverrides: {
         root: {
