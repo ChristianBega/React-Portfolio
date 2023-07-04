@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
-
+import OrbMain from "../BackgroundOrb/orbHeroMain.component";
+import OrbSecondary from "../BackgroundOrb/orbHeroSecondarySmall.component";
+import MobileSocials from "../Socials/mobileSocials.component";
 // Framer motion
 // import { motion } from "framer-motion";
 // import { childrenVariants, childrenVariantsTwo } from "../../transitions";
@@ -51,7 +53,9 @@ export default function Hero() {
         // md={6}
         pl={3}
         mt={{ xs: 4, sm: 0, md: 10 }}
+        position="relative"
       >
+        <OrbMain />
         <Typography
           component="p"
           sx={{ fontFamily: "Work Sans", fontSize: { xs: "30px", sm: "35px", md: "45px", lg: "55px" }, lineHeight: "100%", fontWeight: "200" }}

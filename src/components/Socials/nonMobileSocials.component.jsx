@@ -4,6 +4,7 @@ import { Box, Stack, styled } from "@mui/material";
 // Icons
 import { IconContext } from "react-icons";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import OrbSecondaryLarge from "../BackgroundOrb/orbHeroSecondaryLarge.component";
 
 const Item = styled(Box)({
   textAlign: "center",
@@ -18,7 +19,7 @@ const Item = styled(Box)({
 export default function NonMobileSocials() {
   return (
     <IconContext.Provider value={{ size: "2rem" }}>
-      <Stack direction="column" spacing="2rem" sx={{ justifyContent: "space-around", height: "50%", mt: 5, pr: 4 }}>
+      <Stack direction="column" spacing="2rem" sx={{ position: "relative", justifyContent: "space-around", height: "50%", mt: 5, pr: 4 }}>
         <Item>
           <a href="https://github.com/ChristianBega" target="_blank" rel="noopener noreferrer">
             <FaGithub />
@@ -34,6 +35,7 @@ export default function NonMobileSocials() {
             <FaTwitter />
           </a>
         </Item>
+        <OrbSecondaryLarge />
       </Stack>
     </IconContext.Provider>
   );
