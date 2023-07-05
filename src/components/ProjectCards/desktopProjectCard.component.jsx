@@ -12,6 +12,7 @@ const StyledProjectContainer = styled(Container)(({ theme }) => ({
   alignItems: "center",
   padding: "1.2rem",
   borderRadius: "1.5rem",
+  gap: "2rem",
   boxShadow: 15,
   marginBlock: theme.spacing(4),
   [theme.breakpoints.down("md")]: {
@@ -24,7 +25,7 @@ const StyledProjectContainer = styled(Container)(({ theme }) => ({
 const StyledBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
-  justifyContent: "space-evenly",
+  gap: "3rem",
 }));
 
 export default function NonMobileProjectCard({ project, index }) {

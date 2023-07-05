@@ -16,7 +16,7 @@ const Item = styled(Box)({
 
 export default function MobileSocials() {
   return (
-    <>
+    <div style={{ position: "relative", overflow: "hidden" }}>
       <IconContext.Provider value={{ size: "1.3rem" }}>
         <Stack direction="row" spacing={5} sx={{ justifyContent: "center " }}>
           <Item>
@@ -35,8 +35,8 @@ export default function MobileSocials() {
             </a>
           </Item>
         </Stack>
+        {/* <OrbSecondary /> */}
       </IconContext.Provider>
-      <OrbSecondary />
-    </>
+    </div>
   );
 }

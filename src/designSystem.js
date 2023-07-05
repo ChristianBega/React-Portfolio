@@ -96,13 +96,7 @@ export const mainTheme = createTheme({
         root: {
           fontFamily: "Work Sans !important",
           "&:hover": {
-            color: "#fff",
-            backgroundColor: "transparent",
-            textDecorationLine: "underline",
             textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
-            // transform: "scale(1.1)",
-            transition: ".2s ease-in-out",
-            fontWeight: "600",
           },
         },
       },

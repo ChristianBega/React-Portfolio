@@ -5,6 +5,7 @@ import HangryVideo from "../Assets/videos/HangryDemo.mp4";
 import StudyAppImg from "../Assets/videos/StudyBuddiesDemo.mp4";
 import WeatherDashboardVideo from "../Assets/videos/WeatherDashboardDemo-Mobile.mp4";
 import OverlandBaseball from "../Assets/videos/overlandBaseball.mp4";
+import BlogSite from "../Assets/videos/blogSite.mp4";
 
 export const featuredProjectsData = [
   // Overland baseball
@@ -24,7 +25,7 @@ export const featuredProjectsData = [
     description:
       "A MERN full stack blog site web application which allows users a way to create a blog post, leave comments, and update their profile.",
     longDescription: "Coming soon....",
-    // videoDemo: HangryVideo,
+    videoDemo: BlogSite,
     link: "deployed",
     repo: "https://github.com/ChristianBega/Blog-Site",
     technology: ["React", "MongoDB", "Tailwind"],

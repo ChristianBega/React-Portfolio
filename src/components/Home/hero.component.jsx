@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import OrbMain from "../BackgroundOrb/orbHeroMain.component";
-import OrbSecondary from "../BackgroundOrb/orbHeroSecondarySmall.component";
-import MobileSocials from "../Socials/mobileSocials.component";
 // Framer motion
 // import { motion } from "framer-motion";
 // import { childrenVariants, childrenVariantsTwo } from "../../transitions";
@@ -13,6 +11,8 @@ import ScrollDownArrows from "./scrollDown/scrollDownArrows.component";
 import { useTheme } from "@emotion/react";
 import NonMobileSocials from "../Socials/nonMobileSocials.component";
 import ViewMore from "../buttons/viewMore.component";
+import OrbHeroSecondaryLarge from "../BackgroundOrb/orbHeroSecondaryLarge.component";
+import MobileSocials from "../Socials/mobileSocials.component";
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
   display: "flex",
@@ -55,7 +55,7 @@ export default function Hero() {
         mt={{ xs: 4, sm: 0, md: 10 }}
         position="relative"
       >
-        <OrbMain />
+        {/* <OrbMain /> */}
         <Typography
           component="p"
           sx={{ fontFamily: "Work Sans", fontSize: { xs: "30px", sm: "35px", md: "45px", lg: "55px" }, lineHeight: "100%", fontWeight: "200" }}
@@ -89,8 +89,9 @@ export default function Hero() {
         </Typography>
         <ViewMore buttonType="contact" />
       </Grid>
-      <Grid item xs={isMobile ? 12 : 1}>
+      <Grid sx={{ position: "relative" }} item xs={isMobile ? 12 : 1}>
         {renderSocials(isMobile)}
+        {/* <OrbHeroSecondaryLarge /> */}
       </Grid>
       <ScrollDownArrows />
     </StyledGridContainer>

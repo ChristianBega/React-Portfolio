@@ -10,6 +10,7 @@ const StyledProjectContainer = styled(Container)({
   flexDirection: "column",
   minHeight: "22rem",
   border: "2px solid rgba(81, 81, 81, .5)",
+  borderRadius: "12px",
   "&:hover": {
     border: "2px solid rgba(255, 255, 255, 0.209)",
   },
@@ -22,6 +23,7 @@ const StyledImage = styled(Box)(({ theme }) => ({
   left: "0",
   width: "100%",
   height: "22rem",
+  borderRadius: "12px",
   "&:hover": {
     border: "2px solid rgba(255, 255, 255, 0.209)",
   },
@@ -49,6 +51,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   textAlign: "left",
   justifyContent: "flex-end",
+  borderRadius: "12px",
   background: "linear-gradient(0deg, rgba(37, 37, 37, 0.855) 30%, rgba(78, 78, 78, 0.3) 100%)",
 }));
 export default function StaticProjectCard({ project }) {

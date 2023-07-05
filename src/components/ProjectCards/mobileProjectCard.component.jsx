@@ -12,6 +12,7 @@ const StyledProjectContainer = styled(Container)({
   minHeight: "22rem",
   height: "100%",
   border: "2px solid rgba(81, 81, 81, .5)",
+  borderRadius: "12px",
   "&:hover": {
     border: "2px solid rgba(255, 255, 255, 0.209)",
   },
