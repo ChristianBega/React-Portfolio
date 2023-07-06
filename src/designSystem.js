@@ -47,11 +47,11 @@ export const mainTheme = createTheme({
         root: {
           color: "#FAF9F6",
           transition: "all .3s ease-In-Out",
-          border: "2px solid #fff",
+          // border: "2px solid #fff",
           ":hover": {
             // background: "rgba(3, 155, 229, 0.6)",
             cursor: "pointer",
-            transform: "scale(1.1)",
+            // transform: "scale(1.1)",
           },
         },
         // Small buttons
@@ -71,6 +71,18 @@ export const mainTheme = createTheme({
           fontSize: "18px",
           padding: "10px 12px",
           width: "250px",
+          boxShadow:
+            "rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0,0,0, 0.06) 0px 2px 1px, rgba(0,0,0, 0.09) 0px 4px 2px, rgba(0,0,0, 0.09) 0px 8px 4px, rgba(0,0,0, 0.09) 0px 16px 8px, rgba(0,0,0, 0.09) 0px 32px 16px !important",
+          // boxShadow: "0px 0px 16px 6px rgba(86, 79, 224, 0.6)",
+
+          "&:hover": {
+            border: "none",
+            color: "#fff",
+            boxShadow: "rgb(0, 0, 0, 0.3) 3px 3px 6px 0px inset, rgba(0, 0, 0, 0.2) -3px -3px 6px 1px inset !important",
+            transition: ".3s ease-in-out",
+            fontWeight: "600",
+            textShadow: "0 0 .2em rgba(3, 155, 229, 0.6), 0 0 0.4em #cacedd",
+          },
         },
       },
     },
@@ -124,7 +136,7 @@ export const mainTheme = createTheme({
     h2: {
       // fontFamily: "Bowlby One SC, cursive ",
       fontFamily: "Unbounded",
-      fontSize: "56px !important",
+      fontSize: "55px !important",
       letterSpacing: ".2rem",
       fontWeight: "800",
     },

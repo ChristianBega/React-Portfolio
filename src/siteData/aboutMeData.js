@@ -1,5 +1,23 @@
 export const skillsData = [
   {
+    skill: "Git Version Control",
+  },
+  {
+    skill: "Rest APIs",
+  },
+  {
+    skill: "Full stack",
+  },
+  {
+    skill: "Agile SDLC",
+  },
+  {
+    skill: "Problem Solving",
+  },
+];
+
+export const toolsData = [
+  {
     skill: "Html",
     image: "",
   },

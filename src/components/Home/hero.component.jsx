@@ -11,8 +11,7 @@ import ScrollDownArrows from "./scrollDown/scrollDownArrows.component";
 import { useTheme } from "@emotion/react";
 import NonMobileSocials from "../Socials/nonMobileSocials.component";
 import ViewMore from "../buttons/viewMore.component";
-import OrbHeroSecondaryLarge from "../BackgroundOrb/orbHeroSecondaryLarge.component";
-import MobileSocials from "../Socials/mobileSocials.component";
+// import OrbHeroSecondaryLarge from "../BackgroundOrb/orbHeroSecondaryLarge.component";
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
   display: "flex",
@@ -50,7 +49,6 @@ export default function Hero() {
         // exit={childrenVariantsTwo.exit}
         // transition={childrenVariantsTwo.transition}
         xs={isMobile ? 12 : 11}
-        // md={6}
         pl={3}
         mt={{ xs: 4, sm: 0, md: 10 }}
         position="relative"
@@ -67,7 +65,7 @@ export default function Hero() {
           typography="h1"
           sx={{
             fontFamily: "Unbounded",
-            fontSize: { xs: "45px", sm: "55px", md: "65px", lg: "87px" },
+            fontSize: { xs: "50px", sm: "55px", md: "65px", lg: "90px" },
             lineHeight: "140%",
             fontWeight: "300",
             display: "block",
@@ -80,8 +78,8 @@ export default function Hero() {
           sx={{
             fontFamily: "Work Sans",
             mt: 2,
-            mb: 4,
-            fontSize: { xs: "22px", sm: "24px", md: "26px", lg: "28px", lineHeight: "100%" },
+            mb: 6,
+            fontSize: { xs: "24px", md: "26px", lg: "28px", lineHeight: "100%" },
             fontWeight: "200",
           }}
         >
