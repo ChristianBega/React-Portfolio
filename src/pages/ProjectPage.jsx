@@ -2,8 +2,8 @@ import { Container } from "@mui/material";
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Footer from "../components/Footer";
-import { motion } from "framer-motion";
-import { containerVariants } from "../transitions";
+// import { motion } from "framer-motion";
+// import { containerVariants } from "../transitions";
 import BackHome from "../components/buttons/backHome.component";
 import Project from "../components/Project/project.component";
 

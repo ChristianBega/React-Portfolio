@@ -5,17 +5,19 @@ import HangryVideo from "../Assets/videos/HangryDemo.mp4";
 import StudyAppImg from "../Assets/videos/StudyBuddiesDemo.mp4";
 import WeatherDashboardVideo from "../Assets/videos/WeatherDashboardDemo-Mobile.mp4";
 import OverlandBaseball from "../Assets/videos/overlandBaseball.mp4";
+import BlogSite from "../Assets/videos/blogSite.mp4";
 
 export const featuredProjectsData = [
   // Overland baseball
   {
     name: "Overland Baseball",
     description: "A front-end single page application that allows players a coaches a convenient platform to access and browse team information.",
-    longDescription: "long desc",
+    longDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     videoDemo: OverlandBaseball,
     link: "https://overlandbaseball.com/",
     repo: "https://github.com/ChristianBega/Overland-Baseball-Website",
-    technology: ["React", "Material UI"],
+    technology: ["React", "Material UI", "Framer motion", "Firebase"],
   },
   // Blog site
   {
@@ -23,7 +25,7 @@ export const featuredProjectsData = [
     description:
       "A MERN full stack blog site web application which allows users a way to create a blog post, leave comments, and update their profile.",
     longDescription: "Coming soon....",
-    // videoDemo: HangryVideo,
+    videoDemo: BlogSite,
     link: "deployed",
     repo: "https://github.com/ChristianBega/Blog-Site",
     technology: ["React", "MongoDB", "Tailwind"],

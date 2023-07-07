@@ -1,0 +1,82 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.gradient-orb {
+  position: absolute;
+  z-index: -100;
+  top: -67%;
+  left: -30%;
+  height: 335px;
+  width: 335px;
+  filter: blur(calc(170px / 5));
+  background-image: linear-gradient(rgb(150, 81, 234), rgba(10, 201, 188, 0.7));
+  animation: rotate 5s cubic-bezier(0.3, 0.2, 0.2, 0.3) alternate infinite;
+  border-radius: 65% 70% 65% 70% / 65% 70% 65% 70%;
+  opacity: 0.7;
+}
+.gradient-orb-2 {
+  position: fixed;
+  z-index: -100;
+  top: 60%;
+  right: -30%;
+  height: 275px;
+  width: 275px;
+  filter: blur(calc(170px / 5));
+  background-image: linear-gradient(180deg, rgb(225, 211, 123) 30%, rgb(150, 81, 234) 80%);
+  animation: rotate 15s cubic-bezier(1, 1, 0, -0.25) infinite;
+  border-radius: 65% 70% 65% 70% / 65% 70% 65% 70%;
+  opacity: 0.7;
+}
+.gradient-orb-2-large {
+  /* overflow: hidden; */
+  position: fixed;
+  z-index: -100;
+  top: 30%;
+  right: -200px;
+  /* right: 5%; */
+  /* left: 100px; */
+  height: 355px;
+  width: 355px;
+  filter: blur(calc(170px / 5));
+  background-image: linear-gradient(180deg, rgb(225, 211, 123) 30%, rgb(150, 81, 234) 80%);
+  animation: rotate 15s cubic-bezier(1, 1, 0, -0.25) infinite;
+  border-radius: 65% 70% 65% 70% / 65% 70% 65% 70%;
+  opacity: 0.7;
+}
+
+@media (min-width: 1300px) {
+  .gradient-orb {
+    height: 1000px !important;
+    width: 1000px !important;
+    top: -220%;
+    left: -60%;
+  }
+  .gradient-orb-2-large {
+    height: 1000px;
+    width: 1000px;
+    top: 20%;
+    right: -20%;
+  }
+}
+@media (min-width: 720px) {
+  .gradient-orb {
+    height: 500px;
+    width: 500px;
+  }
+}
+@media (max-width: 600px) {
+  .gradient-orb-2-large {
+    height: 300px;
+    width: 300px;
+  }
+}
+/* This is just to transition when you change the viewport size. */
+* {
+  transition: all 0.25s ease-out;
+}

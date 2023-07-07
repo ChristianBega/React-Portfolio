@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link as BrowserLink, useNavigate } from "react-router-dom";
 import { useTheme } from "@emotion/react";
 
 // Mui components
-import { List, ListItem, Typography, useMediaQuery, styled } from "@mui/material";
+import { Link, List, ListItem, Typography, useMediaQuery, styled } from "@mui/material";
 
 // Styled Components
 const StyledList = styled(List)(({ theme }) => ({
@@ -30,21 +30,28 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
 
 // Menu items (nav links)
 const menuItemData = [
-  { linkName: "Home", urlPath: "/", icon: "" },
-  { linkName: "About", urlPath: "/about-me", icon: "" },
-  { linkName: "Projects", urlPath: "/project-cards", icon: "" },
+  { linkName: "Home", urlPath: "#hero-section", icon: "" },
+  { linkName: "About", urlPath: "#about-section", icon: "" },
+  { linkName: "Projects", urlPath: "#featured-projects-section", icon: "" },
   { linkName: "Contact", urlPath: "/contact", icon: "" },
 ];
 
 // Get menu items
-const getMenuItems = (handleClose, theme, isMobile) => (
+const getMenuItems = (handleClose, theme, isMobile, handleClick) => (
   <StyledList>
-    {menuItemData.map((menuItem, index) => (
+    {menuItemData.map(({ urlPath, linkName, index }) => (
       <StyledListItem key={index} onClick={handleClose}>
-        <Link to={menuItem.urlPath} key={menuItem.linkName}>
-          {isMobile && <Typography sx={{ width: "100%", fontSize: "2rem" }}>{menuItem.linkName}</Typography>}
-          {!isMobile && <Typography sx={{ justifyContent: "center", fontSize: "1.3rem" }}>{menuItem.linkName}</Typography>}
-        </Link>
+        {linkName === "Contact" ? (
+          <BrowserLink to={urlPath} key={linkName}>
+            {isMobile && <Typography sx={{ width: "100%", fontSize: "2rem" }}>{linkName}</Typography>}
+            {!isMobile && <Typography sx={{ justifyContent: "center", fontSize: "1.3rem" }}>{linkName}</Typography>}
+          </BrowserLink>
+        ) : (
+          <Link onClick={handleClick} href={urlPath} key={linkName}>
+            {isMobile && <Typography sx={{ width: "100%", fontSize: "2rem" }}>{linkName}</Typography>}
+            {!isMobile && <Typography sx={{ justifyContent: "center", fontSize: "1.3rem" }}>{linkName}</Typography>}
+          </Link>
+        )}
       </StyledListItem>
     ))}
   </StyledList>
@@ -52,6 +59,10 @@ const getMenuItems = (handleClose, theme, isMobile) => (
 
 export default function NavigationListItems({ handleClose }) {
   const theme = useTheme();
+  const navigate = useNavigate();
   let isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  return <>{getMenuItems(handleClose, theme, isMobile)}</>;
+  const handleClick = () => {
+    navigate("/");
+  };
+  return <>{getMenuItems(handleClose, theme, isMobile, handleClick)}</>;
 }

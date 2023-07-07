@@ -11,6 +11,10 @@ const StyledImage = styled(Box)(({ theme }) => ({
   height: "350px",
   objectFit: "fill",
   zIndex: "-100",
+  borderRadius: "12px",
+  boxShadow: "rgba(28, 28, 28, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.2) 0px 15px 12px",
+  // border: "1px solid #fff",
+
   [theme.breakpoints.up("md")]: {
     minWidth: "500px",
     height: "375px",
@@ -38,9 +42,12 @@ const StyledOverlay = styled(Paper)(({ theme }) => ({
   width: "100%",
   opacity: "0",
   transition: ".4s ease-in-out",
+  zIndex: "1",
+  borderRadius: "12px",
   [theme.breakpoints.up("md")]: {
     top: 0,
     bottom: 0,
+    maxHeight: "375px",
   },
   [theme.breakpoints.down("md")]: {
     minHeight: "22rem",
