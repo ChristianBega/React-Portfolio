@@ -4,7 +4,7 @@ import { Box, Stack, styled } from "@mui/material";
 // Icons
 import { IconContext } from "react-icons";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import OrbSecondaryLarge from "../BackgroundOrb/orbHeroSecondaryLarge.component";
+// import OrbSecondaryLarge from "../BackgroundOrb/orbHeroSecondaryLarge.component";
 
 const Item = styled(Box)({
   textAlign: "center",

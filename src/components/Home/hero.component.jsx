@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import OrbMain from "../BackgroundOrb/orbHeroMain.component";
+// import OrbMain from "../BackgroundOrb/orbHeroMain.component";
 // Framer motion
 // import { motion } from "framer-motion";
 // import { childrenVariants, childrenVariantsTwo } from "../../transitions";
