@@ -20,6 +20,16 @@ const StyledGridContainer = styled(Grid)(({ theme }) => ({
   marginInline: "auto",
   maxWidth: "1200px",
   height: "100vh",
+  padding: "2rem",
+  [theme.breakpoints.down("sm")]: {
+    padding: ".2rem",
+  },
+  [theme.breakpoints.only("ipad")]: {
+    height: "80vh",
+  },
+  [theme.breakpoints.only("surface7Pro")]: {
+    height: "70vh",
+  },
   textAlign: "left",
 }));
 
@@ -39,7 +49,7 @@ export default function Hero() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <StyledGridContainer id="hero-container" container>
+    <StyledGridContainer id="hero-section" container>
       {/* Hero grid item */}
       <Grid
         item
@@ -56,7 +66,12 @@ export default function Hero() {
         {/* <OrbMain /> */}
         <Typography
           component="p"
-          sx={{ fontFamily: "Work Sans", fontSize: { xs: "30px", sm: "35px", md: "45px", lg: "55px" }, lineHeight: "100%", fontWeight: "200" }}
+          sx={{
+            fontFamily: "Nunito, sans-serif",
+            fontSize: { xs: "30px", sm: "35px", md: "45px", lg: "55px" },
+            lineHeight: "100%",
+            fontWeight: "200",
+          }}
         >
           Hi there,
         </Typography>
@@ -76,7 +91,7 @@ export default function Hero() {
         <Typography
           component="p"
           sx={{
-            fontFamily: "Work Sans",
+            fontFamily: "Nunito, sans-serif",
             mt: 2,
             mb: 6,
             fontSize: { xs: "24px", md: "26px", lg: "28px", lineHeight: "100%" },

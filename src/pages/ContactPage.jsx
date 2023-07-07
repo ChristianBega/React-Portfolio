@@ -13,16 +13,16 @@ export default function ContactPage() {
   }, []);
   return (
     <>
-      <BackHome buttonType="contact" />
       <Container
         id="contact-form-section"
-        component={motion.div}
-        initial={containerVariants.hidden}
-        animate={containerVariants.visible}
-        exit={containerVariants.exit}
-        transition={containerVariants.transition}
+        // component={motion.div}
+        // initial={containerVariants.hidden}
+        // animate={containerVariants.visible}
+        // exit={containerVariants.exit}
+        // transition={containerVariants.transition}
         sx={{ minHeight: "85vh", my: 5 }}
       >
+        <BackHome buttonType="contact" />
         <Typography component="h2" variant="h2" textAlign="center" mt={4} sx={{ fontWeight: "700" }}>
           Let's Chat!
           <Typography component="p" variant="h4" sx={{ fontSize: "2rem" }}>

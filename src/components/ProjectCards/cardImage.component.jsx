@@ -43,11 +43,11 @@ const StyledOverlay = styled(Paper)(({ theme }) => ({
   opacity: "0",
   transition: ".4s ease-in-out",
   zIndex: "1",
-  // borderRadius: "12px",
-
+  borderRadius: "12px",
   [theme.breakpoints.up("md")]: {
     top: 0,
     bottom: 0,
+    maxHeight: "375px",
   },
   [theme.breakpoints.down("md")]: {
     minHeight: "22rem",

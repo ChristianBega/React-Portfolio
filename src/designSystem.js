@@ -8,7 +8,9 @@ export const mainTheme = createTheme({
     values: {
       xs: 0,
       sm: 600,
+      ipad: 820,
       md: 900,
+      surface7Pro: 912,
       lg: 1200,
     },
   },
@@ -47,23 +49,29 @@ export const mainTheme = createTheme({
         root: {
           color: "#FAF9F6",
           transition: "all .3s ease-In-Out",
-          // border: "2px solid #fff",
+          boxShadow:
+            "rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0,0,0, 0.06) 0px 2px 1px, rgba(0,0,0, 0.09) 0px 4px 2px, rgba(0,0,0, 0.09) 0px 8px 4px, rgba(0,0,0, 0.09) 0px 16px 8px, rgba(0,0,0, 0.09) 0px 32px 16px !important",
           ":hover": {
-            // background: "rgba(3, 155, 229, 0.6)",
             cursor: "pointer",
-            // transform: "scale(1.1)",
+            boxShadow: "rgb(0, 0, 0, 0.3) 3px 3px 6px 0px inset, rgba(0, 0, 0, 0.2) -3px -3px 6px 1px inset !important",
+            textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
+            transition: ".3s ease-in-out",
+            fontWeight: "600",
           },
         },
         // Small buttons
         sizeSmall: {
           // marginLeft: ".5rem",
-          marginBlock: "2rem",
+          // marginBlock: "2rem",
           minWidth: "25px",
           width: "45px",
           height: "45px",
           display: "flex",
           justifyContent: "center",
           borderRadius: "50%",
+          ":hover": {
+            color: "#fff",
+          },
         },
         // Medium buttons
         sizeMedium: {
@@ -71,18 +79,6 @@ export const mainTheme = createTheme({
           fontSize: "18px",
           padding: "10px 12px",
           width: "250px",
-          boxShadow:
-            "rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0,0,0, 0.06) 0px 2px 1px, rgba(0,0,0, 0.09) 0px 4px 2px, rgba(0,0,0, 0.09) 0px 8px 4px, rgba(0,0,0, 0.09) 0px 16px 8px, rgba(0,0,0, 0.09) 0px 32px 16px !important",
-          // boxShadow: "0px 0px 16px 6px rgba(86, 79, 224, 0.6)",
-
-          "&:hover": {
-            border: "none",
-            color: "#fff",
-            boxShadow: "rgb(0, 0, 0, 0.3) 3px 3px 6px 0px inset, rgba(0, 0, 0, 0.2) -3px -3px 6px 1px inset !important",
-            transition: ".3s ease-in-out",
-            fontWeight: "600",
-            textShadow: "0 0 .2em rgba(3, 155, 229, 0.6), 0 0 0.4em #cacedd",
-          },
         },
       },
     },
@@ -106,7 +102,7 @@ export const mainTheme = createTheme({
     MuiLink: {
       styleOverrides: {
         root: {
-          fontFamily: "Work Sans !important",
+          fontFamily: "Nunito !important",
           "&:hover": {
             textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
           },
@@ -123,7 +119,7 @@ export const mainTheme = createTheme({
   },
   // Typography
   typography: {
-    fontFamily: "Work Sans",
+    fontFamily: "Nunito, sans-serif",
     allVariants: {
       color: "#edebeb",
     },
@@ -138,13 +134,13 @@ export const mainTheme = createTheme({
       fontFamily: "Unbounded",
       fontSize: "55px !important",
       letterSpacing: ".2rem",
-      fontWeight: "800",
+      fontWeight: "300",
     },
     h3: {
       // fontFamily: "Work Sans",
       fontFamily: "Unbounded",
       fontSize: "28px",
-      fontWeight: "300",
+      fontWeight: "200",
       marginBottom: "1rem",
     },
     h4: {
@@ -154,12 +150,13 @@ export const mainTheme = createTheme({
       fontWeight: "300",
     },
     cardHeader: {
-      fontFamily: "Work Sans",
-      fontSize: "53px !important",
+      fontFamily: "Nunito",
+      fontSize: "45px !important",
       letterSpacing: ".2rem",
       fontWeight: "500",
     },
     cardHeaderSm: {
+      fontFamily: "Nunito",
       fontSize: "32px !important",
       letterSpacing: ".1rem",
       fontWeight: "500",
