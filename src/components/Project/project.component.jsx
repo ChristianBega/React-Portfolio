@@ -22,7 +22,8 @@ const StyledStackItem = styled(Paper)({
 // });
 
 export default function Project({ currentProject }) {
-  const { name, description, videoDemo, longDescription, technology, link, repo } = currentProject;
+  const { name, videoDemo, longDescription, technology, link, repo } = currentProject;
+  // description,
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
