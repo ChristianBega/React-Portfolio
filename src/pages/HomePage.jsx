@@ -6,7 +6,7 @@ import React from "react";
 import Hero from "../components/Home/hero.component";
 import AboutMe from "../components/AboutMe/aboutMe.component";
 import FeaturedProjectCards from "../components/ProjectCards/featuredProjectCards.component";
-import Navigation from "../components/Navigation/navigation.component";
+// import Navigation from "../components/Navigation/navigation.component";
 // import Orb from "../components/BackgroundOrb/orb.component";
 export default function HomePage() {
   return (
