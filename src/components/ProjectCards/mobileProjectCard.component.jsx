@@ -1,10 +1,7 @@
-import React from "react";
-// Mui components
 import { styled, Container } from "@mui/material";
 import CardImage from "./cardImage.component";
 import CardText from "./cardText.component";
 
-// Custom components
 const StyledProjectContainer = styled(Container)({
   padding: "0 !important",
   display: "flex",

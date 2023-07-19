@@ -1,7 +1,5 @@
-import { Button } from "@mui/material";
-import { Box } from "@mui/system";
-import React from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import { Button, Box } from "@mui/material";
 import { useNavigate } from "react-router";
 
 const BUTTON_TYPES_URL = {

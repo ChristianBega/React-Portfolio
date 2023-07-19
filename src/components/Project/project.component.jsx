@@ -9,21 +9,9 @@ const StyledStackItem = styled(Paper)({
   display: "inline",
   padding: ".5rem 1rem",
 });
-// const StyledLink = styled(Link)({
-//   color: "var(--medium-gray) !important",
-//   "&:hover": {
-//     color: "#fff !important",
-//     backgroundColor: "transparent",
-//     textDecorationLine: "underline",
-//     textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
-//     transform: "scale(1.1)",
-//     transition: ".2s",
-//   },
-// });
 
 export default function Project({ currentProject }) {
   const { name, videoDemo, longDescription, technology, link, repo } = currentProject;
-  // description,
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -35,10 +23,6 @@ export default function Project({ currentProject }) {
         </Typography>
       )}
       <Grid container rowSpacing={24} columnSpacing={4}>
-        {/* Change order at md screen */}
-        {/* <Grid item xs={12} md={7} sx={{ maxHeight: "150px", order: { md: 2 } }}>
-          
-        </Grid> */}
         {/* Project Image */}
         <Grid item xs={12} md={6}>
           <CardMedia
@@ -74,16 +58,6 @@ export default function Project({ currentProject }) {
             <Typography mt={1} mb={4} component="p">
               {longDescription}
             </Typography>
-            {/* <Typography component="h3" variant="h3">
-              Technologies
-            </Typography>
-            <Box sx={{ mt: "1rem", mb: 4, display: "flex", flexWrap: "wrap", flexDirection: "row", gap: "1rem" }} fontSize={{ lg: "18px" }}>
-              {technology.map((currentTech) => (
-                <StyledStackItem component="p" key={currentTech}>
-                  {currentTech}
-                </StyledStackItem>
-              ))}
-            </Box> */}
             <Stack direction={"row"} gap={8}>
               <Typography mt={3} mb={1} component="h3" variant="h6" fontSize={"22px"}>
                 <Link sx={{ display: "flex", alignItems: "center" }} href={link} target="_blank" rel="noopener noreferrer">

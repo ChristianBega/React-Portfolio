@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-// Mui components
 import { Box, Menu, styled } from "@mui/material";
 import { IconContext } from "react-icons";
 import { MdMenu } from "react-icons/md";
-// import { AiOutlineArrowLeft } from "react-icons/ai";
 import NavigationListItems from "./navigationListItems.components";
-// Custom styled components
 const MobileMenu = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",

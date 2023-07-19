@@ -1,17 +1,9 @@
 import React, { useEffect } from "react";
-// import OrbMain from "../BackgroundOrb/orbHeroMain.component";
-// Framer motion
-// import { motion } from "framer-motion";
-// import { childrenVariants, childrenVariantsTwo } from "../../transitions";
-
-// MUI components
-import { Grid, Typography, styled, useMediaQuery } from "@mui/material";
-
-import ScrollDownArrows from "./scrollDown/scrollDownArrows.component";
 import { useTheme } from "@emotion/react";
+import { Grid, Typography, styled, useMediaQuery } from "@mui/material";
 import NonMobileSocials from "../Socials/nonMobileSocials.component";
 import ViewMore from "../buttons/viewMore.component";
-// import OrbHeroSecondaryLarge from "../BackgroundOrb/orbHeroSecondaryLarge.component";
+import ScrollDownArrows from "./scrollDown/scrollDownArrows.component";
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
   display: "flex",
@@ -34,12 +26,7 @@ const StyledGridContainer = styled(Grid)(({ theme }) => ({
 }));
 
 const renderSocials = (isMobile) => {
-  return (
-    <>
-      {/* {isMobile && <MobileSocials />} */}
-      {!isMobile && <NonMobileSocials />}
-    </>
-  );
+  return <>{!isMobile && <NonMobileSocials />}</>;
 };
 
 export default function Hero() {
@@ -51,19 +38,7 @@ export default function Hero() {
   return (
     <StyledGridContainer id="hero-section" container>
       {/* Hero grid item */}
-      <Grid
-        item
-        // component={motion.div}
-        // initial={childrenVariantsTwo.hidden}
-        // animate={childrenVariantsTwo.visible}
-        // exit={childrenVariantsTwo.exit}
-        // transition={childrenVariantsTwo.transition}
-        xs={isMobile ? 12 : 11}
-        pl={3}
-        mt={{ xs: 4, sm: 0, md: 10 }}
-        position="relative"
-      >
-        {/* <OrbMain /> */}
+      <Grid item xs={isMobile ? 12 : 11} pl={3} mt={{ xs: 4, sm: 0, md: 10 }} position="relative">
         <Typography
           component="p"
           sx={{
@@ -104,7 +79,6 @@ export default function Hero() {
       </Grid>
       <Grid sx={{ position: "relative" }} item xs={isMobile ? 12 : 1}>
         {renderSocials(isMobile)}
-        {/* <OrbHeroSecondaryLarge /> */}
       </Grid>
       <ScrollDownArrows />
     </StyledGridContainer>

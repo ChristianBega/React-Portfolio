@@ -1,10 +1,6 @@
-import React from "react";
-// Mui Components
 import { Box, Stack, styled } from "@mui/material";
-// Icons
 import { IconContext } from "react-icons";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-// import OrbSecondary from "../BackgroundOrb/orbHeroSecondarySmall.component";
 
 const Item = styled(Box)({
   textAlign: "center",
@@ -35,7 +31,6 @@ export default function MobileSocials() {
             </a>
           </Item>
         </Stack>
-        {/* <OrbSecondary /> */}
       </IconContext.Provider>
     </div>
   );

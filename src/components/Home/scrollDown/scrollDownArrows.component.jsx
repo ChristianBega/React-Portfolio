@@ -1,6 +1,5 @@
-import React from "react";
-import "./scrollDown.css";
 import { Grid, IconButton } from "@mui/material";
+import "./scrollDown.css";
 
 export default function ScrollDownArrows() {
   return (

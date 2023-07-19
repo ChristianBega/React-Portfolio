@@ -1,15 +1,12 @@
-import styled from "@emotion/styled";
 import { Card, Typography, CardContent, CardMedia, Link } from "@mui/material";
 import { Stack } from "@mui/system";
-import React from "react";
+import styled from "@emotion/styled";
 
 const StyledProjectCard = styled(Card)({
   position: "relative",
   background: "var(--dark-card-bg)",
   border: "2px solid rgba(81, 81, 81, .5)",
 
-  // minWidth: "22rem",
-  // width: "100%",
   minHeight: "22rem",
   height: "100%",
   display: "flex",

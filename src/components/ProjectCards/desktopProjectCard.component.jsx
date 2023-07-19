@@ -4,7 +4,6 @@ import React from "react";
 import CardText from "./cardText.component";
 import CardImage from "./cardImage.component";
 
-// Custom Components
 const StyledProjectContainer = styled(Container)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",

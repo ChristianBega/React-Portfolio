@@ -3,8 +3,6 @@ import { Container } from "@mui/system";
 import React, { useEffect } from "react";
 import Contact from "../components/ContactForm";
 import Footer from "../components/Footer";
-// import { motion } from "framer-motion";
-// import { containerVariants } from "../transitions";
 import BackHome from "../components/buttons/backHome.component";
 
 export default function ContactPage() {
@@ -13,15 +11,7 @@ export default function ContactPage() {
   }, []);
   return (
     <>
-      <Container
-        id="contact-form-section"
-        // component={motion.div}
-        // initial={containerVariants.hidden}
-        // animate={containerVariants.visible}
-        // exit={containerVariants.exit}
-        // transition={containerVariants.transition}
-        sx={{ minHeight: "85vh", my: 5 }}
-      >
+      <Container id="contact-form-section" sx={{ minHeight: "85vh", my: 5 }}>
         <BackHome buttonType="contact" />
         <Typography component="h2" variant="h2" textAlign="center" mt={4} sx={{ fontWeight: "700" }}>
           Let's Chat!

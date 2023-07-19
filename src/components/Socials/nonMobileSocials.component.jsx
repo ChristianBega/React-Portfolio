@@ -1,15 +1,9 @@
-import React from "react";
-// Mui components
 import { Box, Stack, styled } from "@mui/material";
-// Icons
 import { IconContext } from "react-icons";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-// import OrbSecondaryLarge from "../BackgroundOrb/orbHeroSecondaryLarge.component";
 
 const Item = styled(Box)({
   textAlign: "center",
-  // minHeight: "15%",
-  // margin: 0,
   "&:hover": {
     transform: "scale(1.2)",
     transition: ".2s ease-in-out",
@@ -36,7 +30,6 @@ export default function NonMobileSocials() {
               <FaTwitter />
             </a>
           </Item>
-          {/* <OrbSecondaryLarge /> */}
         </Stack>
       </IconContext.Provider>
     </div>

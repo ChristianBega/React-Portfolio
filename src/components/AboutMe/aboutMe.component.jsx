@@ -1,10 +1,5 @@
-import React from "react";
-// Mui Components
 import { Grid, Typography } from "@mui/material";
-// Custom components
 import ViewMore from "../buttons/viewMore.component";
-
-// Site data
 import { aboutTextData } from "../../siteData/aboutMeData";
 
 export default function AboutMe() {

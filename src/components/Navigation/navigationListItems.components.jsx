@@ -1,11 +1,7 @@
-import React from "react";
 import { Link as BrowserLink, useNavigate } from "react-router-dom";
 import { useTheme } from "@emotion/react";
-
-// Mui components
 import { Link, List, ListItem, Typography, useMediaQuery, styled } from "@mui/material";
 
-// Styled Components
 const StyledList = styled(List)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",

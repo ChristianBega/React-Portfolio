@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-// Mui Hooks
 import { useTheme } from "@emotion/react";
-// Mui components
 import { Grid, Typography, useMediaQuery } from "@mui/material";
-// Custom components
 import MobileProjectCard from "./mobileProjectCard.component";
 import NonMobileProjectCard from "./desktopProjectCard.component";
 import ViewMore from "../buttons/viewMore.component";
@@ -16,7 +13,6 @@ export default function ProjectCards() {
   const theme = useTheme();
   let isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  // State
   const [featuredProjects, setFeaturedProjects] = useState([
     { name: "", description: "", longDescription: "", videoDemo: "", link: "", repo: "", technology: "" },
   ]);

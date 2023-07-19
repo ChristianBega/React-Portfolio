@@ -1,20 +1,15 @@
-import React from "react";
-
-// Mui components
 import { AppBar, useScrollTrigger, Slide, Typography } from "@mui/material";
-
-// Components
+import { Link } from "react-router-dom";
+import styled from "@emotion/styled";
 import MobileNavigation from "./mobileNavigation.component";
 import DesktopNavigation from "./desktopNavigation.component";
-import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
 
-// Custom styled nav component
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     padding: "3rem",
   },
 }));
+
 // Hide on scroll function to hide app bar when user scrolls
 function HideOnScroll(props) {
   const { children, window } = props;

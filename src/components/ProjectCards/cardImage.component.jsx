@@ -1,20 +1,15 @@
-import styled from "@emotion/styled";
 import { Box, Paper, Typography } from "@mui/material";
-import React from "react";
-// Icons
 import { BsEyeFill } from "react-icons/bs";
+import styled from "@emotion/styled";
 
 import { Link, useLocation } from "react-router-dom";
 const StyledImage = styled(Box)(({ theme }) => ({
-  // boxShadow: "rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(142, 49, 49, 0.05) 0px 0px 0px 1px inset",
   width: "375px",
   height: "350px",
   objectFit: "fill",
   zIndex: "-100",
   borderRadius: "12px",
   boxShadow: "rgba(28, 28, 28, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.2) 0px 15px 12px",
-  // border: "1px solid #fff",
-
   [theme.breakpoints.up("md")]: {
     minWidth: "500px",
     height: "375px",
