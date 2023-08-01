@@ -1,27 +1,25 @@
-import { Container } from "@mui/material";
-
+import { Container, styled } from "@mui/material";
 import Hero from "../components/Home/hero.component";
 import AboutMe from "../components/AboutMe/aboutMe.component";
 import FeaturedProjectCards from "../components/ProjectCards/featuredProjectCards.component";
+
+const StyledHeroContainer = styled(Container)({
+  minHeight: "75vh",
+  textAlign: "center",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignContent: "center",
+  position: "relative",
+});
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <Container
-        id="main-content-section"
-        sx={{
-          minHeight: "75vh",
-          textAlign: "center",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignContent: "center",
-          position: "relative",
-        }}
-      >
+      <StyledHeroContainer id="main-content-section">
         <AboutMe />
         <FeaturedProjectCards />
-      </Container>
+      </StyledHeroContainer>
     </>
   );
 }

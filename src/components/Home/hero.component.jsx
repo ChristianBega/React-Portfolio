@@ -10,11 +10,15 @@ const StyledGridContainer = styled(Grid)(({ theme }) => ({
   alignContent: "space-evenly",
   alignItems: "center",
   marginInline: "auto",
-  maxWidth: "1200px",
-  height: "100vh",
   padding: "2rem",
+  textAlign: "left",
+  marginTop: "-96px",
+  background:
+    "radial-gradient(circle at 88.05% 85.17%, #1F2475, transparent 17%), radial-gradient(circle at 18.33% 22.35%, #1F2475, transparent 23%), radial-gradient(circle at 50% 50%, #00021fcc, #00021f9e 100%)",
+
   [theme.breakpoints.down("sm")]: {
-    padding: ".2rem",
+    padding: "0 .6rem",
+    height: "105vh",
   },
   [theme.breakpoints.only("ipad")]: {
     height: "80vh",
@@ -22,7 +26,68 @@ const StyledGridContainer = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.only("surface7Pro")]: {
     height: "70vh",
   },
-  textAlign: "left",
+  [theme.breakpoints.up("surface7Pro")]: {
+    height: "100vh",
+  },
+  [theme.breakpoints.only("lg")]: {
+    paddingInline: "200px",
+  },
+}));
+const HeroTextGreeting = styled(Typography)(({ theme }) => ({
+  fontFamily: "Nunito, sans-serif",
+  lineHeight: "100%",
+  fontWeight: "200",
+  [theme.breakpoints.only("xs")]: {
+    fontSize: "30px",
+  },
+  [theme.breakpoints.only("sm")]: {
+    fontSize: "35px",
+  },
+  [theme.breakpoints.only("md")]: {
+    fontSize: "45px",
+  },
+  [theme.breakpoints.only("lg")]: {
+    fontSize: "55px",
+  },
+}));
+const HeroTextIntroduction = styled(Typography)(({ theme }) => ({
+  fontFamily: "Unbounded",
+  lineHeight: "140%",
+  fontWeight: "300",
+  display: "block",
+  [theme.breakpoints.only("xs")]: {
+    fontSize: "48px",
+  },
+  [theme.breakpoints.only("sm")]: {
+    fontSize: "55px",
+  },
+  [theme.breakpoints.only("md")]: {
+    fontSize: "65px",
+  },
+  [theme.breakpoints.only("lg")]: {
+    fontSize: "90px",
+  },
+}));
+const HeroTextTitles = styled(Typography)(({ theme }) => ({
+  display: "block",
+  fontFamily: "Nunito, sans-serif",
+  
+  //! MARGIN
+  margin: theme.spacing(2, 0, 6, 0),
+  fontWeight: "200",
+  [theme.breakpoints.only("xs")]: {
+    fontSize: "24px",
+  },
+  [theme.breakpoints.only("sm")]: {
+    fontSize: "55px",
+  },
+  [theme.breakpoints.only("md")]: {
+    fontSize: "26px",
+  },
+  [theme.breakpoints.only("lg")]: {
+    fontSize: "28px",
+    lineHeight: "100%",
+  },
 }));
 
 const renderSocials = (isMobile) => {
@@ -39,42 +104,11 @@ export default function Hero() {
     <StyledGridContainer id="hero-section" container>
       {/* Hero grid item */}
       <Grid item xs={isMobile ? 12 : 11} pl={3} mt={{ xs: 4, sm: 0, md: 10 }} position="relative">
-        <Typography
-          component="p"
-          sx={{
-            fontFamily: "Nunito, sans-serif",
-            fontSize: { xs: "30px", sm: "35px", md: "45px", lg: "55px" },
-            lineHeight: "100%",
-            fontWeight: "200",
-          }}
-        >
-          Hi there,
-        </Typography>
-        <Typography
-          component="h1"
-          typography="h1"
-          sx={{
-            fontFamily: "Unbounded",
-            fontSize: { xs: "50px", sm: "55px", md: "65px", lg: "90px" },
-            lineHeight: "140%",
-            fontWeight: "300",
-            display: "block",
-          }}
-        >
+        <HeroTextGreeting component="span">Hi there,</HeroTextGreeting>
+        <HeroTextIntroduction component="h1" typography="h1">
           I'm Christian.
-        </Typography>
-        <Typography
-          component="p"
-          sx={{
-            fontFamily: "Nunito, sans-serif",
-            mt: 2,
-            mb: 6,
-            fontSize: { xs: "24px", md: "26px", lg: "28px", lineHeight: "100%" },
-            fontWeight: "200",
-          }}
-        >
-          Full Stack Developer
-        </Typography>
+        </HeroTextIntroduction>
+        <HeroTextTitles component="span">Full Stack Developer</HeroTextTitles>
         <ViewMore buttonType="contact" />
       </Grid>
       <Grid sx={{ position: "relative" }} item xs={isMobile ? 12 : 1}>
