@@ -1,25 +1,27 @@
 import styled from "@emotion/styled";
-import { Paper, Typography } from "@mui/material";
+import { List, ListItem, Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
 const mockData = [
   {
-    topic: "My programming journey",
+    topicName: "My programming journey",
     description: "",
   },
   {
-    topic: "Front end skills",
-    description: "Elaborate on my skills...",
+    topicName: "Front-end",
+    description: ["I creating SPA with react that are full mobile responsive...", "2", "3"],
   },
   {
-    topic: "Back end skills",
-    description: "What do I enjoy doing on my free time?",
+    topicName: "Back end skills",
+    description: ["2", "2", "3"],
   },
   {
-    topic: "Algos",
-    description: "Elaborate on hacker rank",
+    topicName: "Algos",
+    description: ["2", "2", "3"],
   },
 ];
+
+console.log(mockData);
 const StyledCard = styled(Paper)({
   backgroundColor: "rgba(165, 165, 165, .3)",
   minHeight: "160px",
@@ -31,15 +33,17 @@ const StyledContainer = styled(Box)({
   gap: "1rem",
 });
 
-export default function AboutMe() {
+export default function MoreAboutMe() {
   return (
     <StyledContainer>
-      {mockData.map((e) => (
+      {mockData.map((topic) => (
         <StyledCard className="aboutMeCard">
           <Typography component="h2" variant="h5">
-            {e.topic}
+            {topic.topicName}
           </Typography>
-          <p>{e.description}</p>
+          <List>
+            <ListItem>{topic.description}</ListItem>
+          </List>
         </StyledCard>
       ))}
     </StyledContainer>

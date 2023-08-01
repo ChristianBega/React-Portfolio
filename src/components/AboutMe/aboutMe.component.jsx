@@ -1,32 +1,54 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, styled } from "@mui/material";
 import ViewMore from "../buttons/viewMore.component";
 import { aboutTextData } from "../../siteData/aboutMeData";
 
+const StyledGridAboutSection = styled(Grid)(({ theme }) => ({
+  border: "1px solid red",
+  justifyContent: "center",
+  alignItems: "center",
+  // my: { xs: 5, md: 10 },
+}));
+
+const StyledGridItemTitle = styled(Grid)(({ theme }) => ({
+  // my: { xs: 10, md: 15 },
+  textAlign: "left",
+}));
+
+const StyledGridItemBio = styled(Grid)(({ theme }) => ({
+  textAlign: "left",
+  // my: { xs: 10, md: 15 },
+}));
+
+const StyledGridItemImage = styled(Grid)(({ theme }) => ({}));
+
+const StyledGridItemTools = styled(Grid)(({ theme }) => ({}));
+
 export default function AboutMe() {
   return (
-    <Grid id="about-section" container sx={{ border: "1px solid red", justifyContent: "center", alignItems: "center", my: { xs: 5, md: 10 } }}>
+    <StyledGridAboutSection id="about-section" container>
       {/* Grid item - header */}
-      <Grid textAlign="left" item xs={12} sx={{ my: { xs: 10, md: 15 } }}>
+      <StyledGridItemTitle item xs={12}>
         <Typography typography="h2" component="h2" variant="h2">
           About Me
         </Typography>
-      </Grid>
-
+      </StyledGridItemTitle>
       {/* Grid item - bio */}
-      <Grid item xs={12} md={8} textAlign="left">
+      <StyledGridItemBio item xs={12} md={8}>
         {aboutTextData.map((text) => (
           <Typography typography={{ xs: "bodyTextSm", md: "bodyTextLg" }} sx={{ maxWidth: "800px" }} mb={4}>
             {text.text}
           </Typography>
         ))}
         <ViewMore buttonType="about-me" />
-      </Grid>
-      <Grid item xs={12} md={4}>
+      </StyledGridItemBio>
+      {/* Image */}
+      <StyledGridItemImage item xs={12} md={4}>
         <p>Image</p>
-      </Grid>
-      <Grid item xs={12} md={12}>
+      </StyledGridItemImage>
+      {/* Tool Kit */}
+      <StyledGridItemTools item xs={12} md={12}>
         <p>My toolkit `emoji`</p>
-      </Grid>
-    </Grid>
+      </StyledGridItemTools>
+    </StyledGridAboutSection>
   );
 }

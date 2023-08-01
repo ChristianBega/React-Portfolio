@@ -24,13 +24,14 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
   },
 }));
 
-const StyledLinkTextMobile = styled(Typography)(({ theme }) => ({
-  width: "100%",
-  fontSize: "2rem",
-}));
-const StyledLinkTextDesktop = styled(Typography)(({ theme }) => ({
-  justifyContent: "center",
-  fontSize: "1.3rem",
+const StyledLinkText = styled(Typography)(({ theme }) => ({
+  [theme.breakpoints.up("xs")]: {
+    fontSize: "30px",
+    fontSize: "2rem",
+  },
+  [theme.breakpoints.up("sm")]: {
+    fontSize: "1.3rem",
+  },
 }));
 
 // Menu items (nav links)
@@ -48,13 +49,11 @@ const getMenuItems = (handleClose, isMobile, handleClick) => (
       <StyledListItem key={index} onClick={handleClose}>
         {linkName === "Contact" ? (
           <BrowserLink to={urlPath} key={linkName}>
-            {isMobile && <StyledLinkTextMobile>{linkName}</StyledLinkTextMobile>}
-            {!isMobile && <StyledLinkTextDesktop>{linkName}</StyledLinkTextDesktop>}
+            <StyledLinkText>{linkName}</StyledLinkText>
           </BrowserLink>
         ) : (
           <Link onClick={handleClick} href={urlPath} key={linkName}>
-            {isMobile && <StyledLinkTextMobile>{linkName}</StyledLinkTextMobile>}
-            {!isMobile && <StyledLinkTextDesktop>{linkName}</StyledLinkTextDesktop>}
+            <StyledLinkText>{linkName}</StyledLinkText>
           </Link>
         )}
       </StyledListItem>
@@ -66,6 +65,7 @@ export default function NavigationListItems({ handleClose }) {
   const theme = useTheme();
   const navigate = useNavigate();
   let isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   const handleClick = () => {
     navigate("/");
   };
