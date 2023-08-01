@@ -24,6 +24,15 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
   },
 }));
 
+const StyledLinkTextMobile = styled(Typography)(({ theme }) => ({
+  width: "100%",
+  fontSize: "2rem",
+}));
+const StyledLinkTextDesktop = styled(Typography)(({ theme }) => ({
+  justifyContent: "center",
+  fontSize: "1.3rem",
+}));
+
 // Menu items (nav links)
 const menuItemData = [
   { linkName: "Home", urlPath: "#hero-section", icon: "" },
@@ -33,19 +42,19 @@ const menuItemData = [
 ];
 
 // Get menu items
-const getMenuItems = (handleClose, theme, isMobile, handleClick) => (
+const getMenuItems = (handleClose, isMobile, handleClick) => (
   <StyledList>
     {menuItemData.map(({ urlPath, linkName, index }) => (
       <StyledListItem key={index} onClick={handleClose}>
         {linkName === "Contact" ? (
           <BrowserLink to={urlPath} key={linkName}>
-            {isMobile && <Typography sx={{ width: "100%", fontSize: "2rem" }}>{linkName}</Typography>}
-            {!isMobile && <Typography sx={{ justifyContent: "center", fontSize: "1.3rem" }}>{linkName}</Typography>}
+            {isMobile && <StyledLinkTextMobile>{linkName}</StyledLinkTextMobile>}
+            {!isMobile && <StyledLinkTextDesktop>{linkName}</StyledLinkTextDesktop>}
           </BrowserLink>
         ) : (
           <Link onClick={handleClick} href={urlPath} key={linkName}>
-            {isMobile && <Typography sx={{ width: "100%", fontSize: "2rem" }}>{linkName}</Typography>}
-            {!isMobile && <Typography sx={{ justifyContent: "center", fontSize: "1.3rem" }}>{linkName}</Typography>}
+            {isMobile && <StyledLinkTextMobile>{linkName}</StyledLinkTextMobile>}
+            {!isMobile && <StyledLinkTextDesktop>{linkName}</StyledLinkTextDesktop>}
           </Link>
         )}
       </StyledListItem>

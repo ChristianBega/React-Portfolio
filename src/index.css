@@ -28,15 +28,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
-/* li {
-  list-style: none;
-  font-family: var(--text-font);
-  background-color: transparent;
-} */
 
-/* p {
-  color: var(--medium-gray);
-  /* font-family: var(--text-font); */
 a,
 a:-webkit-any-link {
   color: #fff;

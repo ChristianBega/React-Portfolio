@@ -16,28 +16,6 @@ export const mainTheme = createTheme({
   },
   // Color Palette
   palette: {
-    // primary: {
-    //   main: "",
-    //   light: "",
-    //   dark: "",
-    //   contrastText: "",
-    // },
-    // secondary: {
-    //   main: "",
-    //   light: "",
-    //   dark: "",
-    //   contrastText: "",
-    // },
-    // accent: {
-    //   accentOne: "",
-    //   accentTwo: "",
-    // },
-    // text: {
-    //   primary: "#FFFAFA",
-    // },
-    // borders: {
-    //   primary: "",
-    // },
     onHover: {
       primary: "red",
     },
@@ -61,8 +39,6 @@ export const mainTheme = createTheme({
         },
         // Small buttons
         sizeSmall: {
-          // marginLeft: ".5rem",
-          // marginBlock: "2rem",
           minWidth: "25px",
           width: "45px",
           height: "45px",
@@ -92,7 +68,6 @@ export const mainTheme = createTheme({
           maxHeight: "85px",
           padding: "1.5rem",
           background: " rgba( 0, 0, 0, 0 )",
-          // boxShadow: "0 8px 16px 0 rgba( 31, 38, 135, 0.4 )",
           backdropFilter: "blur( 8px )",
           webkitBackdropFilter: "blur( 8px )",
         },
@@ -130,14 +105,12 @@ export const mainTheme = createTheme({
       fontWeight: "700",
     },
     h2: {
-      // fontFamily: "Bowlby One SC, cursive ",
       fontFamily: "Unbounded",
       fontSize: "55px !important",
       letterSpacing: ".2rem",
       fontWeight: "300",
     },
     h3: {
-      // fontFamily: "Work Sans",
       fontFamily: "Unbounded",
       fontSize: "28px",
       fontWeight: "200",
@@ -146,7 +119,6 @@ export const mainTheme = createTheme({
     h4: {
       fontFamily: "Unbounded",
       fontSize: "18px",
-      // lineHeight: "32px",
       fontWeight: "300",
     },
     cardHeader: {
@@ -160,18 +132,6 @@ export const mainTheme = createTheme({
       fontSize: "32px !important",
       letterSpacing: ".1rem",
       fontWeight: "500",
-      // opacity: ".8",
     },
   },
-
-  // bodyTextLg: {
-  //   fontFamily: "Work Sans",
-  //   fontSize: "18px",
-  //   lineHeight: "22px",
-  // },
-  // bodyTextSm: {
-  //   fontFamily: "Work Sans",
-  //   fontSize: "16px",
-  //   lineHeight: "18px",
-  // },
 });
