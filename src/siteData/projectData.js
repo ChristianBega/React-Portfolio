@@ -13,22 +13,34 @@ export const featuredProjectsData = [
     name: "Overland Baseball",
     description: "A front-end single page application that allows players a coaches a convenient platform to access and browse team information.",
     longDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Overland Baseball's website is a single page React application that provides it's users a convenient way to access and browse different team information. The application is built with React and Material UI to provide a polished and functional front end. Additionally the website features working forms using Email Js, image sliders, and timelines.",
     videoDemo: OverlandBaseball,
     link: "https://overlandbaseball.com/",
     repo: "https://github.com/ChristianBega/Overland-Baseball-Website",
-    technology: ["React", "Material UI", "Framer motion", "Firebase"],
+    technology: ["React", "Material UI", "Framer motion", "Email Js"],
+    role: [
+      "Developed application from ground up starting with creating wire frames, designing site layout and, and creating logic and functionality for the website.",
+      "Worked directly with client to determine user criteria, implemented and revised new features for user needs, and delivered a functional user friendly web application.",
+      "coming soon...",
+    ],
+    learnings: [""],
   },
   // Blog site
   {
     name: "Blog Site",
     description:
       "A MERN full stack blog site web application which allows users a way to create a blog post, leave comments, and update their profile.",
-    longDescription: "Coming soon....",
+    longDescription:
+      "Coding Circle is a MERN full-stack blog web application that offers users a way to create an account, leave posts and comments, and share their thoughts and learnings. The application's front end uses React and Daisy UI. And is supported by Firebase auth and a backend built with Express, Node, and MongoDB.",
     videoDemo: BlogSite,
     link: "deployed",
     repo: "https://github.com/ChristianBega/Blog-Site",
-    technology: ["React", "MongoDB", "Tailwind"],
+    technology: ["React", "MongoDB", "Tailwind", "Daisy UI", "Express", "Node", "MongoDb", "Firebase Auth"],
+    role: [
+      "Built project from scratch which included creating wire frames and database schemas which helped provided clarity and direction for the application.",
+      "Handled user authentication with Firebase, and established a working communication with the MongoDB NoSQL database.",
+      "Confirmed the applications features were tested and identify and rectified any bugs and issues, ensuring a smooth user experience.",
+    ],
   },
   // Golden Goose
   {
@@ -40,6 +52,11 @@ export const featuredProjectsData = [
     link: "https://golden-goose-finance.herokuapp.com/",
     repo: "https://github.com/ChristianBega/Golden-Goose-Finance",
     technology: ["React", "Javascript", "MongoDB", "Express", "Node", "Material UI", "Mongoose ODM", "JSON web tokens"],
+    role: [
+      "Provided assistance to back-end development by designing models, resolvers, and typeDefs for REST API.",
+      "Led the integration of the REST API to a React Js front-end. Utilized GraphQL queries and mutations to read and update data.",
+      "coming soon...",
+    ],
   },
 ];
 

@@ -11,7 +11,7 @@ const StyledStackItem = styled(Paper)({
 });
 
 export default function Project({ currentProject }) {
-  const { name, videoDemo, longDescription, technology, link, repo } = currentProject;
+  const { name, videoDemo, longDescription, technology, link, repo, role } = currentProject;
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -77,17 +77,27 @@ export default function Project({ currentProject }) {
           </Box>
         </Grid>
         {/* Role and learnings */}
-        <Grid item sx={12} md={6}>
+        <Grid item xs={12} md={6}>
           <Box sx={{ paddingBlock: { xs: 0, md: 4 } }}>
             <Typography component="h3" variant="h3">
               Role
             </Typography>
             <Typography component="p">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris.
+              {role?.map((role) => {
+                return (
+                  <>
+                    <p>
+                      &#8226;
+                      <Typography component="span" sx={{ marginLeft: 2 }}>
+                        {role}
+                      </Typography>
+                    </p>
+                  </>
+                );
+              })}
             </Typography>
           </Box>
-          <Box sx={{ paddingBlock: { xs: 0, md: 4 }, paddingTop: { xs: 4 } }}>
+          {/* <Box sx={{ paddingBlock: { xs: 0, md: 4 }, paddingTop: { xs: 4 } }}>
             <Typography component="h3" variant="h3">
               Learnings
             </Typography>
@@ -95,7 +105,7 @@ export default function Project({ currentProject }) {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
               minim veniam, quis nostrud exercitation ullamco laboris.
             </Typography>
-          </Box>
+          </Box> */}
         </Grid>
         {/* Technology */}
         <Grid item xs={12} md={6}>
@@ -103,7 +113,10 @@ export default function Project({ currentProject }) {
             <Typography mt={4} component="h3" variant="h3">
               Technologies
             </Typography>
-            <Box sx={{ mt: 4, mb: 4, display: "flex", flexWrap: "wrap", flexDirection: "row", gap: "1rem" }} fontSize={{ lg: "18px" }}>
+            <Box
+              sx={{ mt: 4, mb: 4, display: "flex", flexWrap: "wrap", flexDirection: "row", gap: "1rem", fontFamily: "Nunito" }}
+              fontSize={{ lg: "18px" }}
+            >
               {technology.map((currentTech) => (
                 <StyledStackItem component="p" key={currentTech}>
                   {currentTech}
@@ -113,8 +126,8 @@ export default function Project({ currentProject }) {
           </Box>
         </Grid>
 
-        {/* Wire frames */}
-        <Grid item xs={12}>
+        {/*! Wire frames - WORK IN PROGRESS */}
+        {/* <Grid item xs={12}>
           <Box sx={{ display: "flex", minHeight: "400px" }}>
             <Box sx={{ width: { xs: "100%", md: "50%" }, backgroundColor: "blue" }}>
               <h1>Image</h1>
@@ -123,7 +136,7 @@ export default function Project({ currentProject }) {
               <h1>Text</h1>
             </Box>
           </Box>
-        </Grid>
+        </Grid> */}
       </Grid>
     </>
   );
