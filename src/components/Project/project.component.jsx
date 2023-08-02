@@ -27,8 +27,9 @@ export default function Project({ currentProject }) {
         <Grid item xs={12} md={6}>
           <CardMedia
             component="video"
-            autoPlay
-            loop
+            controls
+            // autoPlay
+            // loop
             muted
             sx={{
               boxShadow: "rgba(28, 28, 28, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.2) 0px 15px 12px",

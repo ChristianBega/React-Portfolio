@@ -1,9 +1,8 @@
 import { Container, Grid } from "@mui/material";
 import React, { useEffect } from "react";
 import { allProjectData } from "../siteData/projectData";
-import StaticProjectCard from "../components/ProjectCards/staticProjectCard.component";
+import ProjectCardStatic from "../components/ProjectCardStatic/projectCardStatic.component";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import BackHome from "../components/buttons/backHome.component";
 
 export default function ProjectCardsPage() {
@@ -39,9 +38,7 @@ export default function ProjectCardsPage() {
             sm={6}
             md={6}
           >
-            <Link id={project.name} to="/project-page" state={{ project: project }}>
-              <StaticProjectCard project={project} key={"project" + i} />
-            </Link>
+            <ProjectCardStatic project={project} key={"project" + i} />
           </Grid>
         ))}
       </Grid>

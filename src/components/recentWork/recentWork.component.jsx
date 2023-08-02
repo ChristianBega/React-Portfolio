@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import { featuredProjectsData } from "../../siteData/projectData";
 import { useTheme } from "@emotion/react";
 import { Grid, Typography, useMediaQuery, styled } from "@mui/material";
-import MobileProjectCard from "../ProjectCards/mobileProjectCard.component";
+import MobileProjectCard from "../ProjectCard/mobileProjectCard.component";
 import ViewMore from "../buttons/viewMore.component";
-import DesktopProjectCard from "../ProjectCards/desktopProjectCard.component";
+import DesktopProjectCard from "../ProjectCard/desktopProjectCard.component";
 
 const StyledGridItemHeader = styled(Grid)({
   textAlign: "left",

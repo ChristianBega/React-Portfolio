@@ -1,4 +1,5 @@
 import { Box, Paper, styled } from "@mui/material";
+import { CardOverlay } from "../CardOverlay/cardOverlay.component";
 
 const StyledImage = styled(Box)(({ theme }) => ({
   width: "375px",
@@ -33,17 +34,6 @@ const StyledVideo = styled(Box)(({ theme }) => ({
   },
 }));
 
-const StyledOverlay = styled(Paper)(({ theme }) => ({
-  position: "absolute",
-  zIndex: "100",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  width: "100%",
-  background: "linear-gradient(0deg, rgba(39, 39, 39, 0.356) 10%, rgba(110, 110, 110, 0.103) 100%)",
-  borderRadius: "12px",
-}));
 export default function CardImage({ project, isMobile }) {
   const { videoDemo } = project;
 
@@ -56,7 +46,7 @@ export default function CardImage({ project, isMobile }) {
       {isMobile ? (
         <>
           <StyledImage component="video" src={videoDemo}></StyledImage>
-          <StyledOverlay></StyledOverlay>
+          <CardOverlay isMobile={isMobile}></CardOverlay>
         </>
       ) : (
         <>

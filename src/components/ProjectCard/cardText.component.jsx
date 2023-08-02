@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
-import { Box, Stack, Typography, Link } from "@mui/material";
 import React from "react";
 import { useLocation } from "react-router";
-import { Link as BrowserLink } from "react-router-dom";
+import { Box, Stack, Typography, styled } from "@mui/material";
+import { CardLinks } from "../CardLinks/cardLinks.component";
+
 const StyledBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     display: "flex",
@@ -18,29 +18,6 @@ const StyledBox = styled(Box)(({ theme }) => ({
     textAlign: "left",
     justifyContent: "flex-end",
     borderRadius: "12px",
-  },
-}));
-
-const StyledLinks = styled(Link)(({ theme }) => ({
-  zIndex: "1000",
-  color: "#fff",
-  textDecorationColor: "#fff",
-  padding: 0,
-  "&:hover": {
-    transform: "scale(1.05)",
-    transition: ".3s ease-in-out",
-    fontWeight: "600",
-  },
-}));
-const StyledRouterLink = styled(BrowserLink)(({ theme }) => ({
-  zIndex: "1000",
-  color: "#fff",
-  textDecorationColor: "#fff",
-  padding: 0,
-  "&:hover": {
-    transform: "scale(1.05)",
-    transition: ".3s ease-in-out",
-    fontWeight: "600",
   },
 }));
 
@@ -62,15 +39,15 @@ export default function CardText({ project }) {
           {description}
         </Typography>
         <Stack fontSize={{ xs: "16px", md: "18px" }} direction="row" spacing={6} mt={2}>
-          <StyledLinks onClick={handleClick} href={link} target="_blank" rel="noopener noreferrer">
+          <CardLinks handleClick={handleClick} href={link} target="_blank" rel="noopener noreferrer">
             Live Demo
-          </StyledLinks>
-          <StyledLinks onClick={handleClick} href={repo} target="_blank" rel="noopener noreferrer">
+          </CardLinks>
+          <CardLinks handleClick={handleClick} href={repo} target="_blank" rel="noopener noreferrer">
             Source Code
-          </StyledLinks>
-          <StyledRouterLink sx={{ borderRadius: "12px" }} id={name} to="/project-page" state={{ project: project, prevPath: location.pathname }}>
+          </CardLinks>
+          <CardLinks linkType={"browserLink"} id={name} to="/project-page" state={{ project: project, prevPath: location.pathname }}>
             View More
-          </StyledRouterLink>
+          </CardLinks>
         </Stack>
       </Box>
     </StyledBox>
