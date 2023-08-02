@@ -29,7 +29,7 @@ body {
   scroll-behavior: smooth;
 }
 
-a,
+/* a,
 a:-webkit-any-link {
   color: #fff;
   font-family: var(--text-font);
@@ -39,7 +39,7 @@ a:-webkit-any-link {
 a:hover,
 a:-webkit-any-link:hover {
   color: "red";
-}
+} */
 /*   
 button {
   cursor: pointer;

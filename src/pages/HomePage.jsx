@@ -1,7 +1,7 @@
 import { Container, styled } from "@mui/material";
 import Hero from "../components/Home/hero.component";
 import AboutMe from "../components/AboutMe/aboutMe.component";
-import FeaturedProjectCards from "../components/ProjectCards/featuredProjectCards.component";
+import RecentWork from "../components/recentWork/recentWork.component";
 
 const StyledHeroContainer = styled(Container)({
   minHeight: "75vh",
@@ -18,7 +18,7 @@ export default function HomePage() {
       <Hero />
       <StyledHeroContainer id="main-content-section">
         <AboutMe />
-        <FeaturedProjectCards />
+        <RecentWork />
       </StyledHeroContainer>
     </>
   );

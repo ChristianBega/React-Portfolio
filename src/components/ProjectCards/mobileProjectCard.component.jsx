@@ -2,7 +2,7 @@ import { styled, Container } from "@mui/material";
 import CardImage from "./cardImage.component";
 import CardText from "./cardText.component";
 
-const StyledProjectContainer = styled(Container)({
+const StyledProjectContainerMobile = styled(Container)({
   padding: "0 !important",
   display: "flex",
   flexDirection: "column",
@@ -10,18 +10,16 @@ const StyledProjectContainer = styled(Container)({
   height: "100%",
   border: "2px solid rgba(81, 81, 81, .5)",
   borderRadius: "12px",
-  "&:hover": {
-    border: "2px solid rgba(255, 255, 255, 0.209)",
-  },
+  maxWidth: "525px",
 });
 
-export default function MobileProjectCard({ project }) {
+export default function MobileProjectCard({ project, isMobile }) {
   return (
     <>
-      <StyledProjectContainer>
-        <CardImage project={project} />
+      <StyledProjectContainerMobile>
+        <CardImage project={project} isMobile={isMobile} />
         <CardText project={project} />
-      </StyledProjectContainer>
+      </StyledProjectContainerMobile>
     </>
   );
 }
