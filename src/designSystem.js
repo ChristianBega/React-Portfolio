@@ -77,8 +77,13 @@ export const mainTheme = createTheme({
     MuiLink: {
       styleOverrides: {
         root: {
+          color: "#fff",
           fontFamily: "Nunito !important",
+          textDecoration: "none",
           "&:hover": {
+            transform: "scale(1.05)",
+            transition: ".3s ease-in-out",
+            fontWeight: "600",
             textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
           },
         },

@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router";
 import { Box, Stack, Typography, styled } from "@mui/material";
 import { CardLinks } from "../CardLinks/cardLinks.component";
+import { HiArrowSmRight } from "react-icons/hi";
 
 const StyledBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
@@ -22,7 +23,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
 }));
 
 export default function CardText({ project }) {
-  const { name, description, link, repo } = project;
+  const { name, description, link } = project;
   const location = useLocation();
 
   const handleClick = (e) => {
@@ -38,22 +39,20 @@ export default function CardText({ project }) {
         <Typography component="p" typography={{ xs: "paragraphSm", md: "paragraphLg" }} my={4}>
           {description}
         </Typography>
-        <Stack sx={{ zIndex: "2000" }} direction="row" spacing={6} mt={2}>
+        <Stack sx={{ zIndex: "2000" }} direction="row" spacing={6}>
           <CardLinks handleClick={handleClick} href={link} target="_blank" rel="noopener noreferrer">
             Live Demo
           </CardLinks>
-          <CardLinks handleClick={handleClick} href={repo} target="_blank" rel="noopener noreferrer">
+          {/* <CardLinks handleClick={handleClick} href={repo} target="_blank" rel="noopener noreferrer">
             Source Code
-          </CardLinks>
+          </CardLinks> */}
           <CardLinks linkType={"browserLink"} id={name} to="/project-page" state={{ project: project, prevPath: location.pathname }}>
             View More
+            <HiArrowSmRight />
           </CardLinks>
         </Stack>
+        <Box sx={{ marginTop: 4 }}></Box>
       </Box>
     </StyledBox>
   );
 }
-
-// boxShadow:
-//   "rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important",
-// boxShadow: "rgb(0, 0, 0, 0.3) 3px 3px 6px 0px inset, rgba(0, 0, 0, 0.2) -3px -3px 6px 1px inset !important",

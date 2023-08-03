@@ -26,7 +26,6 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
 
 const StyledLinkText = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.up("xs")]: {
-    fontSize: "30px",
     fontSize: "2rem",
   },
   [theme.breakpoints.up("sm")]: {
@@ -43,12 +42,12 @@ const menuItemData = [
 ];
 
 // Get menu items
-const getMenuItems = (handleClose, isMobile, handleClick) => (
+const getMenuItems = (handleClose, handleClick) => (
   <StyledList>
     {menuItemData.map(({ urlPath, linkName, index }) => (
       <StyledListItem key={index} onClick={handleClose}>
         {linkName === "Contact" ? (
-          <BrowserLink to={urlPath} key={linkName}>
+          <BrowserLink style={{ textDecoration: "none" }} to={urlPath} key={linkName}>
             <StyledLinkText>{linkName}</StyledLinkText>
           </BrowserLink>
         ) : (

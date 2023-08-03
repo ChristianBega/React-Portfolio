@@ -1,4 +1,4 @@
-import { Box, Stack, styled } from "@mui/material";
+import { Box, Link, Stack, styled } from "@mui/material";
 import { IconContext } from "react-icons";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
@@ -16,19 +16,19 @@ export default function NonMobileSocials() {
       <IconContext.Provider value={{ size: "2rem" }}>
         <Stack direction="column" spacing="2rem" sx={{ position: "relative", justifyContent: "space-around", height: "50%", mt: 5, pr: 4 }}>
           <Item>
-            <a href="https://github.com/ChristianBega" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/ChristianBega" target="_blank" rel="noopener noreferrer">
               <FaGithub />
-            </a>
+            </Link>
           </Item>
           <Item>
-            <a href="https://www.linkedin.com/in/christian-bega-4b63b3216/" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.linkedin.com/in/christian-bega-4b63b3216/" target="_blank" rel="noopener noreferrer">
               <FaLinkedinIn />
-            </a>
+            </Link>
           </Item>
           <Item>
-            <a href="https://twitter.com/ChristianBega4" target="_blank" rel="noopener noreferrer">
+            <Link href="https://twitter.com/ChristianBega4" target="_blank" rel="noopener noreferrer">
               <FaTwitter />
-            </a>
+            </Link>
           </Item>
         </Stack>
       </IconContext.Provider>

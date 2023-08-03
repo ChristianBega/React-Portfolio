@@ -1,5 +1,4 @@
-import { AppBar, useScrollTrigger, Slide, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { AppBar, useScrollTrigger, Slide, Typography, Link } from "@mui/material";
 import styled from "@emotion/styled";
 import MobileNavigation from "./mobileNavigation.component";
 import DesktopNavigation from "./desktopNavigation.component";
@@ -29,7 +28,7 @@ export default function Navigation(props) {
     <HideOnScroll {...props}>
       <StyledAppBar elevation={0} id="navigation" position="sticky" component="nav">
         <Typography variant="h6" component="h1">
-          <Link to="/">Christian Bega</Link>
+          <Link href="#hero-section">Christian Bega</Link>
         </Typography>
         <MobileNavigation />
         <DesktopNavigation />
