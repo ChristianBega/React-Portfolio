@@ -45,7 +45,10 @@ export default function CardImage({ project, isMobile }) {
     >
       {isMobile ? (
         <>
-          <StyledImage component="video" src={videoDemo}></StyledImage>
+          {/* maybe add source image instead of video */}
+          <StyledImage component="video" playsinline>
+            <source src={videoDemo} type="video/mp4"></source>
+          </StyledImage>
           <CardOverlay isMobile={isMobile}></CardOverlay>
         </>
       ) : (
