@@ -21,11 +21,14 @@ const StyledGridItemHeader = styled(Grid)({
   // my: { xs: 10, md: 15 },
 });
 
-const StyledGridItemButtonContainer = styled(Grid)({
-  // mt={{ xs: 4 }}
-});
+const StyledGridItemButtonContainer = styled(Grid)(({ theme }) => ({
+  justifyContent: "center",
+  [theme.breakpoints.between("xs", "md")]: {
+    paddingTop: theme.spacing(8),
+  },
+}));
 
-export default function RecentWork() {
+export default function RecentProjects() {
   const [currentWorks, setCurrentWorks] = useState([
     { name: "", description: "", longDescription: "", videoDemo: "", link: "", repo: "", technology: "" },
   ]);
@@ -57,8 +60,8 @@ export default function RecentWork() {
         </Typography>
       </StyledGridItemHeader>
       {/* Grid item - featured projects */}
-      <Grid item xs={12}>
-        <Grid container rowGap={20}>
+      <Grid item xs={12} mt={4}>
+        <Grid container rowGap={isMobile ? 8 : 20}>
           {renderProjectCards(isMobile)}
         </Grid>
       </Grid>

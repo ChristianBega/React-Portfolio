@@ -1,7 +1,9 @@
 import { Container, styled } from "@mui/material";
 import Hero from "../components/Home/hero.component";
 import AboutMe from "../components/AboutMe/aboutMe.component";
-import RecentWork from "../components/recentWork/recentWork.component";
+import RecentProjects from "../components/recentProjects/recentProjects.component";
+import { HeroSectionOverlay } from "../components/SectionOverlays/heroSectionOverlay.component";
+// import { MainSectionOverlay } from "../components/SectionOverlays/mainSectionOverlay.component";
 
 const StyledHeroContainer = styled(Container)({
   minHeight: "75vh",
@@ -16,10 +18,12 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <HeroSectionOverlay />
       <StyledHeroContainer id="main-content-section">
         <AboutMe />
-        <RecentWork />
+        <RecentProjects />
       </StyledHeroContainer>
+      {/* <MainSectionOverlay /> */}
     </>
   );
 }

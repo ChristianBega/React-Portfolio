@@ -9,13 +9,7 @@ const StyledProjectContainerDesktop = styled(Container)(({ theme }) => ({
   flexDirection: "column",
   justifyContent: "space-between",
   alignItems: "center",
-  // padding: "1.2rem",
   borderRadius: "1.5rem",
-  // gap: "2rem",
-  // marginBlock: theme.spacing(13),
-  // [theme.breakpoints.up("lg")]: {
-  //   marginBlock: theme.spacing(8),
-  // },
 }));
 const StyledBox = styled(Box)(({ theme }) => ({
   display: "flex",
