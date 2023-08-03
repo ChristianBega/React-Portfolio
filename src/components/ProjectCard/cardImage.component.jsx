@@ -1,4 +1,4 @@
-import { Box, Paper, styled } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import { CardOverlay } from "../CardOverlay/cardOverlay.component";
 
 const StyledImage = styled(Box)(({ theme }) => ({

@@ -35,7 +35,7 @@ export default function AboutMe() {
       {/* Grid item - bio */}
       <StyledGridItemBio item xs={12} md={8}>
         {aboutTextData.map((text) => (
-          <Typography typography={{ xs: "bodyTextSm", md: "bodyTextLg" }} sx={{ maxWidth: "800px" }} mb={4}>
+          <Typography typography={{ xs: "paragraphSm", md: "paragraphLg" }} sx={{ maxWidth: "800px" }}>
             {text.text}
           </Typography>
         ))}

@@ -14,7 +14,6 @@ export const CardOverlay = ({ isMobile }) => {
     opacity: "0",
     transition: ".4s ease-in-out",
     minHeight: "22rem",
-    zIndex: "100",
     borderRadius: "12px",
     "&:hover": {
       background: "linear-gradient(0deg, rgba(37, 37, 37, 0.8) 30%, rgba(78, 78, 78, 0.4) 100%)",

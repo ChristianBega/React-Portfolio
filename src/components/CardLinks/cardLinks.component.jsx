@@ -4,10 +4,11 @@ import { Link } from "@mui/material";
 import { Link as BrowserLink } from "react-router-dom";
 
 const StyledLinks = styled(Link)(({ theme }) => ({
-  zIndex: "1000",
+  position: "relative",
   color: "#fff",
   textDecorationColor: "#fff",
   padding: 0,
+  zIndex: "1000",
   "&:hover": {
     transform: "scale(1.05)",
     transition: ".3s ease-in-out",
@@ -15,10 +16,11 @@ const StyledLinks = styled(Link)(({ theme }) => ({
   },
 }));
 const StyledRouterLink = styled(BrowserLink)(({ theme }) => ({
-  zIndex: "1000",
+  position: "relative",
   color: "#fff",
   textDecorationColor: "#fff",
   padding: 0,
+  zIndex: "1000",
   "&:hover": {
     transform: "scale(1.05)",
     transition: ".3s ease-in-out",

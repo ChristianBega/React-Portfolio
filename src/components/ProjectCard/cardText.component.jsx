@@ -35,10 +35,10 @@ export default function CardText({ project }) {
         <Typography component="h3" variant="h3" typography={{ xs: "cardHeaderSm", md: "cardHeader" }}>
           {name}
         </Typography>
-        <Typography fontSize={{ xs: "16px", md: "18px" }} component="p" my={4}>
+        <Typography component="p" typography={{ xs: "paragraphSm", md: "paragraphLg" }} my={4}>
           {description}
         </Typography>
-        <Stack fontSize={{ xs: "16px", md: "18px" }} direction="row" spacing={6} mt={2}>
+        <Stack sx={{ zIndex: "2000" }} direction="row" spacing={6} mt={2}>
           <CardLinks handleClick={handleClick} href={link} target="_blank" rel="noopener noreferrer">
             Live Demo
           </CardLinks>

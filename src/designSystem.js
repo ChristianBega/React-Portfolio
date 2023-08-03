@@ -98,6 +98,26 @@ export const mainTheme = createTheme({
     allVariants: {
       color: "#edebeb",
     },
+    paragraphSm: {
+      fontFamily: "Nunito",
+      marginBottom: "1rem",
+      fontSize: "16px",
+      fontWeight: "600",
+      // color: "#e2e1e1",
+    },
+    paragraphLg: {
+      fontFamily: "Nunito",
+      marginBottom: "1rem",
+      fontSize: "18px",
+      fontWeight: "600",
+      // color: "#e2e1e1",
+    },
+    linkText: {
+      fontFamily: "Nunito",
+      // fontSize: "16px",
+      fontWeight: "600",
+      color: "#e2e1e1",
+    },
     h1: {
       fontFamily: "Unbounded",
       fontSize: "87px",
@@ -106,14 +126,15 @@ export const mainTheme = createTheme({
     },
     h2: {
       fontFamily: "Unbounded",
-      fontSize: "55px !important",
+      fontSize: "37px !important",
       letterSpacing: ".2rem",
-      fontWeight: "300",
+      fontWeight: "500",
+      marginBottom: "1rem",
     },
     h3: {
       fontFamily: "Unbounded",
-      fontSize: "28px",
-      fontWeight: "200",
+      fontSize: "22px",
+      fontWeight: "300",
       marginBottom: "1rem",
     },
     h4: {
@@ -123,15 +144,17 @@ export const mainTheme = createTheme({
     },
     cardHeader: {
       fontFamily: "Nunito",
-      fontSize: "45px !important",
+      fontSize: "30px !important",
       letterSpacing: ".2rem",
-      fontWeight: "500",
+      fontWeight: "800",
+      marginBottom: "1rem",
     },
     cardHeaderSm: {
       fontFamily: "Nunito",
-      fontSize: "32px !important",
-      letterSpacing: ".1rem",
-      fontWeight: "500",
+      fontSize: "24px !important",
+      letterSpacing: ".2rem",
+      fontWeight: "800",
+      marginBottom: "1rem",
     },
   },
 });

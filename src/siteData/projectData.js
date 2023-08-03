@@ -63,7 +63,7 @@ export const featuredProjectsData = [
 export const allProjectData = [
   // Weather dashboard
   {
-    name: "React Weather Dashboard",
+    name: "Weather Dashboard",
     description: "A weather dashboard web application that retrieves and displays daily weather forecast.",
     longDescription:
       "This weather dashboard is a React single-page application that utilizes 3rd Party APIs to fetch and retrieve weather forecast data. The Open Weather API allows users to search for a city and retrieve weather forecast data. The Google Maps API then takes the city's coordinates and displays a map of that city. The overall goal of this project was to create a simple and user-friendly application that allowed users to quickly and easily search for a city and view its current weather conditions.",
