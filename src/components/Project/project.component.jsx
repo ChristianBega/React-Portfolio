@@ -1,8 +1,9 @@
 import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
-import { Box, Grid, Link, Paper, Stack, Typography, useMediaQuery } from "@mui/material";
+import { Box, Grid, Paper, Stack, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
 import { FaGithub, FaGlobeAmericas } from "react-icons/fa";
+import { CardLinks } from "../CardLinks/cardLinks.component";
 
 const StyledStackItem = styled(Paper)({
   margin: 0,
@@ -78,17 +79,18 @@ export default function Project({ currentProject }) {
 
             {/* Technology */}
             <Stack direction={"row"} gap={8}>
-              <Link typography="linkText" sx={{ display: "flex", alignItems: "center" }} href={link} target="_blank" rel="noopener noreferrer">
-                <FaGlobeAmericas style={{ marginRight: ".8rem" }} />
-                Website
-              </Link>
-              <Typography component="h3" variant="h6">
-                <Link typography="linkText" sx={{ display: "flex", alignItems: "center" }} href={repo} target="_blank" rel="noopener noreferrer">
-                  {/* {repo} */}
-                  <FaGithub style={{ marginRight: ".8rem" }} />
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <CardLinks href={link} target="_blank" rel="noopener noreferrer">
+                  Website
+                </CardLinks>
+                <FaGlobeAmericas style={{ marginLeft: ".8rem", color: "#fff" }} />
+              </div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <CardLinks href={repo} target="_blank" rel="noopener noreferrer">
                   Github
-                </Link>
-              </Typography>
+                </CardLinks>
+                <FaGithub style={{ marginLeft: ".8rem", color: "#fff" }} />
+              </div>
             </Stack>
           </Box>
         </Grid>

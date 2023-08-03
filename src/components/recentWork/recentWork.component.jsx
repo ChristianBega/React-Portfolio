@@ -7,6 +7,15 @@ import MobileProjectCard from "../ProjectCard/mobileProjectCard.component";
 import ViewMore from "../buttons/viewMore.component";
 import DesktopProjectCard from "../ProjectCard/desktopProjectCard.component";
 
+const StyledGridCurrentWorkSection = styled(Grid)(({ theme }) => ({
+  justifyContent: "center",
+  [theme.breakpoints.up("xs")]: {
+    paddingTop: theme.spacing(15),
+  },
+  [theme.breakpoints.up("md")]: {
+    paddingTop: theme.spacing(30),
+  },
+}));
 const StyledGridItemHeader = styled(Grid)({
   textAlign: "left",
   // my: { xs: 10, md: 15 },
@@ -40,7 +49,7 @@ export default function RecentWork() {
 
   return (
     // mt: 15,
-    <Grid id="featured-projects-section" container sx={{ justifyContent: "center" }}>
+    <StyledGridCurrentWorkSection id="featured-projects-section" container>
       {/* Grid item - header */}
       <StyledGridItemHeader item xs={12}>
         <Typography typography="h2" component="h2" variant="h2">
@@ -49,12 +58,14 @@ export default function RecentWork() {
       </StyledGridItemHeader>
       {/* Grid item - featured projects */}
       <Grid item xs={12}>
-        <Grid container>{renderProjectCards(isMobile)}</Grid>
+        <Grid container rowGap={20}>
+          {renderProjectCards(isMobile)}
+        </Grid>
       </Grid>
       {/* Grid item - view more button*/}
       <StyledGridItemButtonContainer item sx={12}>
         <ViewMore buttonType="project-cards" />
       </StyledGridItemButtonContainer>
-    </Grid>
+    </StyledGridCurrentWorkSection>
   );
 }

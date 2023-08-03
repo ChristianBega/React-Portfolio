@@ -1,12 +1,17 @@
-import { Grid, Typography, styled } from "@mui/material";
+import { Grid, Typography, styled, useMediaQuery } from "@mui/material";
 import ViewMore from "../buttons/viewMore.component";
 import { aboutTextData } from "../../siteData/aboutMeData";
-
+import AboutMeImage from "../../Assets/images/profileIMG.jpeg";
+import { useTheme } from "@emotion/react";
 const StyledGridAboutSection = styled(Grid)(({ theme }) => ({
-  border: "1px solid red",
   justifyContent: "center",
   alignItems: "center",
-  // my: { xs: 5, md: 10 },
+  [theme.breakpoints.up("xs")]: {
+    paddingBlock: theme.spacing(15),
+  },
+  [theme.breakpoints.up("md")]: {
+    paddingBlock: theme.spacing(30),
+  },
 }));
 
 const StyledGridItemTitle = styled(Grid)(({ theme }) => ({
@@ -19,11 +24,16 @@ const StyledGridItemBio = styled(Grid)(({ theme }) => ({
   // my: { xs: 10, md: 15 },
 }));
 
-const StyledGridItemImage = styled(Grid)(({ theme }) => ({}));
+const StyledGridItemImage = styled(Grid)(({ theme }) => ({
+  marginBlock: "1rem",
+}));
 
-const StyledGridItemTools = styled(Grid)(({ theme }) => ({}));
+// const StyledGridItemTools = styled(Grid)(({ theme }) => ({}));
 
 export default function AboutMe() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <StyledGridAboutSection id="about-section" container>
       {/* Grid item - header */}
@@ -32,6 +42,11 @@ export default function AboutMe() {
           About Me
         </Typography>
       </StyledGridItemTitle>
+      {isMobile && (
+        <StyledGridItemImage item xs={12} md={4}>
+          <img src={AboutMeImage} height="350px" alt="Christian Bega's Portfolio " />
+        </StyledGridItemImage>
+      )}
       {/* Grid item - bio */}
       <StyledGridItemBio item xs={12} md={8}>
         {aboutTextData.map((text) => (
@@ -42,13 +57,16 @@ export default function AboutMe() {
         <ViewMore buttonType="about-me" />
       </StyledGridItemBio>
       {/* Image */}
-      <StyledGridItemImage item xs={12} md={4}>
-        <p>Image</p>
-      </StyledGridItemImage>
+      {!isMobile && (
+        <StyledGridItemImage item xs={12} md={4}>
+          <img src={AboutMeImage} height="350px" alt="Christian Bega's Portfolio " />
+        </StyledGridItemImage>
+      )}
+
       {/* Tool Kit */}
-      <StyledGridItemTools item xs={12} md={12}>
+      {/* <StyledGridItemTools item xs={12} md={12}>
         <p>My toolkit `emoji`</p>
-      </StyledGridItemTools>
+      </StyledGridItemTools> */}
     </StyledGridAboutSection>
   );
 }

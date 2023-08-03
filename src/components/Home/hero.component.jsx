@@ -15,6 +15,9 @@ const StyledGridContainer = styled(Grid)(({ theme }) => ({
   marginTop: "-96px",
   background:
     "radial-gradient(circle at 88.05% 85.17%, #1F2475, transparent 17%), radial-gradient(circle at 18.33% 22.35%, #1F2475, transparent 23%), radial-gradient(circle at 50% 50%, #00021fcc, #00021f9e 100%)",
+  [theme.breakpoints.between("xs", "sm")]: {
+    alignContent: "space-evenly",
+  },
   [theme.breakpoints.between("xs", "ipad")]: {
     padding: "0 .6rem",
     height: "105vh",
@@ -46,10 +49,10 @@ const HeroTextGreeting = styled(Typography)(({ theme }) => ({
     fontSize: "35px",
   },
   [theme.breakpoints.up("md")]: {
-    fontSize: "45px",
+    fontSize: "40px",
   },
   [theme.breakpoints.up("lg")]: {
-    fontSize: "55px",
+    fontSize: "45px",
   },
 }));
 const HeroTextIntroduction = styled(Typography)(({ theme }) => ({
@@ -67,15 +70,15 @@ const HeroTextIntroduction = styled(Typography)(({ theme }) => ({
     fontSize: "65px",
   },
   [theme.breakpoints.up("lg")]: {
-    fontSize: "90px",
+    fontSize: "80px",
   },
 }));
 const HeroTextTitles = styled(Typography)(({ theme }) => ({
   display: "block",
   fontFamily: "Nunito, sans-serif",
-
+  marginBottom: theme.spacing(4),
   //! MARGIN
-  margin: theme.spacing(2, 0, 6, 0),
+  // margin: theme.spacing(2, 0, 6, 0),
   fontWeight: "200",
   [theme.breakpoints.up("xs")]: {
     fontSize: "24px",
@@ -103,13 +106,15 @@ export default function Hero() {
   return (
     <StyledGridContainer id="hero-section" container>
       {/* Hero grid item */}
-      <Grid item xs={isMobile ? 12 : 11} pl={3} mt={{ xs: 4, sm: 0, md: 10 }} position="relative">
+      <Grid item xs={isMobile ? 12 : 11} pl={3} mt={isMobile ? 30 : 0} position="relative">
         <HeroTextGreeting component="span">Hi there,</HeroTextGreeting>
         <HeroTextIntroduction component="h1" typography="h1">
           I'm Christian.
         </HeroTextIntroduction>
         <HeroTextTitles component="span">Full Stack Developer</HeroTextTitles>
-        <ViewMore buttonType="contact" />
+        <div style={{ marginTop: "2.5rem" }}>
+          <ViewMore buttonType="contact" />
+        </div>
       </Grid>
       <Grid sx={{ position: "relative" }} item xs={isMobile ? 12 : 1}>
         {renderSocials(isMobile)}
