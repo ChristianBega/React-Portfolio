@@ -1,32 +1,29 @@
-import { Container } from "@mui/material";
-import React from "react";
-// import HomeAbout from "../components/Home";
-
-// Components
+import { Container, styled } from "@mui/material";
 import Hero from "../components/Home/hero.component";
 import AboutMe from "../components/AboutMe/aboutMe.component";
-import FeaturedProjectCards from "../components/ProjectCards/featuredProjectCards.component";
-// import Navigation from "../components/Navigation/navigation.component";
-// import Orb from "../components/BackgroundOrb/orb.component";
+import RecentProjects from "../components/recentProjects/recentProjects.component";
+import { HeroSectionOverlay } from "../components/SectionOverlays/heroSectionOverlay.component";
+// import { MainSectionOverlay } from "../components/SectionOverlays/mainSectionOverlay.component";
+
+const StyledHeroContainer = styled(Container)({
+  minHeight: "75vh",
+  textAlign: "center",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignContent: "center",
+  position: "relative",
+});
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <Container
-        id="main-content-section"
-        sx={{
-          minHeight: "75vh",
-          textAlign: "center",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignContent: "center",
-          position: "relative",
-        }}
-      >
+      <HeroSectionOverlay />
+      <StyledHeroContainer id="main-content-section">
         <AboutMe />
-        <FeaturedProjectCards />
-      </Container>
+        <RecentProjects />
+      </StyledHeroContainer>
+      {/* <MainSectionOverlay /> */}
     </>
   );
 }

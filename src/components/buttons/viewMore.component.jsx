@@ -4,7 +4,6 @@ import React, { useCallback } from "react";
 import { useNavigate } from "react-router";
 
 export default function ViewMore({ buttonType }) {
-  // console.log(buttonType);
   const navigate = useNavigate();
   const handleOnClick = useCallback(() => navigate(`/${buttonType}`, { replace: true }), [buttonType, navigate]);
 

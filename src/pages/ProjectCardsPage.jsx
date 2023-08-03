@@ -1,18 +1,14 @@
 import { Container, Grid } from "@mui/material";
 import React, { useEffect } from "react";
-
 import { allProjectData } from "../siteData/projectData";
-
-import StaticProjectCard from "../components/ProjectCards/staticProjectCard.component";
+import ProjectCardStatic from "../components/ProjectCardStatic/projectCardStatic.component";
 import { motion } from "framer-motion";
 import BackHome from "../components/buttons/backHome.component";
-import { Link } from "react-router-dom";
 
 export default function ProjectCardsPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  // location.pathname === "project-page"
   return (
     <Container sx={{ minHeight: "100vh", my: 5 }}>
       <BackHome buttonType="projectCards" />
@@ -42,9 +38,7 @@ export default function ProjectCardsPage() {
             sm={6}
             md={6}
           >
-            <Link id={project.name} to="/project-page" state={{ project: project }}>
-              <StaticProjectCard project={project} key={"project" + i} />
-            </Link>
+            <ProjectCardStatic project={project} key={"project" + i} />
           </Grid>
         ))}
       </Grid>

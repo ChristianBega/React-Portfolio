@@ -1,24 +1,3 @@
-:root {
-  /* Hero Background */
-  --radial-gradient: radial-gradient(circle at 88.05% 85.17%, rgba(3, 155, 229, 0.6), transparent 17%),
-    radial-gradient(circle at 18.33% 22.35%, rgba(3, 155, 229, 0.4), transparent 23%), radial-gradient(circle at 50% 50%, #00021f, #00021f 100%);
-
-  --drop-down-menu-bg: linear-gradient(
-    180deg,
-    rgba(56, 40, 69, 0.655) 4%,
-    rgba(37, 26, 54, 0.555) 20%,
-    rgba(25, 28, 56, 0.555) 56%,
-    rgba(8, 21, 43, 0.655) 100%
-  );
-
-  /* Card Background */
-  --dark-card-bg: linear-gradient(0deg, rgba(37, 37, 37, 0.855) 30%, rgba(78, 78, 78, 0.3) 100%);
-  --light-card-bg: linear-gradient(0deg, rgba(37, 37, 37, 0.4) 30%, rgba(78, 78, 78, 0.2) 100%);
-
-  /* Form Colors */
-  --light-form-bg: rgba(100, 100, 100, 0.7);
-}
-
 body::-webkit-scrollbar {
   display: none;
 }
@@ -28,28 +7,3 @@ body {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
-/* li {
-  list-style: none;
-  font-family: var(--text-font);
-  background-color: transparent;
-} */
-
-/* p {
-  color: var(--medium-gray);
-  /* font-family: var(--text-font); */
-a,
-a:-webkit-any-link {
-  color: #fff;
-  font-family: var(--text-font);
-  text-decoration: none;
-  background-color: transparent;
-}
-a:hover,
-a:-webkit-any-link:hover {
-  color: "red";
-}
-/*   
-button {
-  cursor: pointer;
-  font-family: var(--text-font) !important;
-} */

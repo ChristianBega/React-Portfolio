@@ -1,31 +1,72 @@
-import React from "react";
-// Mui Components
-import { Grid, Typography } from "@mui/material";
-// Custom components
+import { Grid, Typography, styled, useMediaQuery } from "@mui/material";
 import ViewMore from "../buttons/viewMore.component";
-
-// Site data
 import { aboutTextData } from "../../siteData/aboutMeData";
+import AboutMeImage from "../../Assets/images/profileIMG.jpeg";
+import { useTheme } from "@emotion/react";
+const StyledGridAboutSection = styled(Grid)(({ theme }) => ({
+  justifyContent: "center",
+  alignItems: "center",
+  [theme.breakpoints.up("xs")]: {
+    paddingBlock: theme.spacing(15),
+  },
+  [theme.breakpoints.up("md")]: {
+    paddingBlock: theme.spacing(30),
+  },
+}));
+
+const StyledGridItemTitle = styled(Grid)(({ theme }) => ({
+  // my: { xs: 10, md: 15 },
+  textAlign: "left",
+}));
+
+const StyledGridItemBio = styled(Grid)(({ theme }) => ({
+  textAlign: "left",
+  // my: { xs: 10, md: 15 },
+}));
+
+const StyledGridItemImage = styled(Grid)(({ theme }) => ({
+  marginBlock: "1rem",
+}));
+
+// const StyledGridItemTools = styled(Grid)(({ theme }) => ({}));
 
 export default function AboutMe() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
-    <Grid id="about-section" container sx={{ justifyContent: "center", alignItems: "center", my: { xs: 5, md: 10 } }}>
+    <StyledGridAboutSection id="about-section" container>
       {/* Grid item - header */}
-      <Grid textAlign="left" item xs={12} sx={{ my: { xs: 10, md: 15 } }}>
+      <StyledGridItemTitle item xs={12}>
         <Typography typography="h2" component="h2" variant="h2">
           About Me
         </Typography>
-      </Grid>
-
+      </StyledGridItemTitle>
+      {isMobile && (
+        <StyledGridItemImage item xs={12} md={4}>
+          <img src={AboutMeImage} height="350px" alt="Christian Bega's Portfolio " />
+        </StyledGridItemImage>
+      )}
       {/* Grid item - bio */}
-      <Grid item xs={12} md={12} textAlign="left">
+      <StyledGridItemBio item xs={12} md={8}>
         {aboutTextData.map((text) => (
-          <Typography typography={{ xs: "bodyTextSm", md: "bodyTextLg" }} sx={{ maxWidth: "800px" }} mb={4}>
+          <Typography typography={{ xs: "paragraphSm", md: "paragraphLg" }} sx={{ maxWidth: "800px" }}>
             {text.text}
           </Typography>
         ))}
         <ViewMore buttonType="about-me" />
-      </Grid>
-    </Grid>
+      </StyledGridItemBio>
+      {/* Image */}
+      {!isMobile && (
+        <StyledGridItemImage item xs={12} md={4}>
+          <img src={AboutMeImage} height="350px" alt="Christian Bega's Portfolio " />
+        </StyledGridItemImage>
+      )}
+
+      {/* Tool Kit */}
+      {/* <StyledGridItemTools item xs={12} md={12}>
+        <p>My toolkit `emoji`</p>
+      </StyledGridItemTools> */}
+    </StyledGridAboutSection>
   );
 }

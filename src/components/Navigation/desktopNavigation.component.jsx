@@ -1,7 +1,5 @@
 import React from "react";
-// Mui components
 import { Box, styled } from "@mui/material";
-// Custom components
 import NavigationListItems from "./navigationListItems.components";
 
 export default function DesktopNavigation() {

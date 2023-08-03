@@ -1,14 +1,3 @@
 body {
-  /* background-color: rgba(31, 41, 147, 0.9); */
-  /* background-image: var(--linear-bg); */
-  /* background: #093028; /* fallback for old browsers */
-  /* background: -webkit-linear-gradient(to top, #043672, #010d51d6); Chrome 10-25, Safari 5.1-6 */
-  /* background: linear-gradient(to top, #043672, #010627); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* background: rgba(47, 58, 171, 0.1); */
-  background: radial-gradient(circle, rgba(47, 58, 171, 1) 5%, rgba(20, 21, 80, 1) 70%, rgba(0, 1, 31, 0.923406862745098) 100%);
-}
-
-/*! Fix later - changes text color in form drop down */
-#Reason {
-  color: #fff;
+  background: radial-gradient(circle, rgb(68, 75, 151) 5%, rgba(20, 21, 80, 1) 70%, rgba(1, 4, 82, 0.923) 100%);
 }

@@ -1,11 +1,7 @@
-import React from "react";
 import { Link as BrowserLink, useNavigate } from "react-router-dom";
 import { useTheme } from "@emotion/react";
-
-// Mui components
 import { Link, List, ListItem, Typography, useMediaQuery, styled } from "@mui/material";
 
-// Styled Components
 const StyledList = styled(List)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
@@ -28,6 +24,15 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
   },
 }));
 
+const StyledLinkText = styled(Typography)(({ theme }) => ({
+  [theme.breakpoints.up("xs")]: {
+    fontSize: "2rem",
+  },
+  [theme.breakpoints.up("sm")]: {
+    fontSize: "1.3rem",
+  },
+}));
+
 // Menu items (nav links)
 const menuItemData = [
   { linkName: "Home", urlPath: "#hero-section", icon: "" },
@@ -37,19 +42,17 @@ const menuItemData = [
 ];
 
 // Get menu items
-const getMenuItems = (handleClose, theme, isMobile, handleClick) => (
+const getMenuItems = (handleClose, handleClick) => (
   <StyledList>
     {menuItemData.map(({ urlPath, linkName, index }) => (
       <StyledListItem key={index} onClick={handleClose}>
         {linkName === "Contact" ? (
-          <BrowserLink to={urlPath} key={linkName}>
-            {isMobile && <Typography sx={{ width: "100%", fontSize: "2rem" }}>{linkName}</Typography>}
-            {!isMobile && <Typography sx={{ justifyContent: "center", fontSize: "1.3rem" }}>{linkName}</Typography>}
+          <BrowserLink style={{ textDecoration: "none" }} to={urlPath} key={linkName}>
+            <StyledLinkText>{linkName}</StyledLinkText>
           </BrowserLink>
         ) : (
           <Link onClick={handleClick} href={urlPath} key={linkName}>
-            {isMobile && <Typography sx={{ width: "100%", fontSize: "2rem" }}>{linkName}</Typography>}
-            {!isMobile && <Typography sx={{ justifyContent: "center", fontSize: "1.3rem" }}>{linkName}</Typography>}
+            <StyledLinkText>{linkName}</StyledLinkText>
           </Link>
         )}
       </StyledListItem>
@@ -61,6 +64,7 @@ export default function NavigationListItems({ handleClose }) {
   const theme = useTheme();
   const navigate = useNavigate();
   let isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   const handleClick = () => {
     navigate("/");
   };

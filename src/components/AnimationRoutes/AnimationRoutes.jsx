@@ -1,16 +1,14 @@
-import React from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import HomePage from "../../pages/HomePage";
 import ProjectCardsPage from "../../pages/ProjectCardsPage";
 import ProjectPage from "../../pages/ProjectPage";
 import ResumePage from "../../pages/ResumePage";
 import ContactPage from "../../pages/ContactPage";
-import { Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
 import AboutMePage from "../../pages/AboutMePage";
 
 export default function AnimationRoutes() {
   const location = useLocation();
-  // console.log(location);
   return (
     <AnimatePresence initial={true} mode="wait">
       <Routes key={location.pathname} location={location}>

@@ -9,35 +9,13 @@ export const mainTheme = createTheme({
       xs: 0,
       sm: 600,
       ipad: 820,
-      md: 900,
       surface7Pro: 912,
+      md: 913,
       lg: 1200,
     },
   },
   // Color Palette
   palette: {
-    // primary: {
-    //   main: "",
-    //   light: "",
-    //   dark: "",
-    //   contrastText: "",
-    // },
-    // secondary: {
-    //   main: "",
-    //   light: "",
-    //   dark: "",
-    //   contrastText: "",
-    // },
-    // accent: {
-    //   accentOne: "",
-    //   accentTwo: "",
-    // },
-    // text: {
-    //   primary: "#FFFAFA",
-    // },
-    // borders: {
-    //   primary: "",
-    // },
     onHover: {
       primary: "red",
     },
@@ -61,8 +39,6 @@ export const mainTheme = createTheme({
         },
         // Small buttons
         sizeSmall: {
-          // marginLeft: ".5rem",
-          // marginBlock: "2rem",
           minWidth: "25px",
           width: "45px",
           height: "45px",
@@ -92,7 +68,6 @@ export const mainTheme = createTheme({
           maxHeight: "85px",
           padding: "1.5rem",
           background: " rgba( 0, 0, 0, 0 )",
-          // boxShadow: "0 8px 16px 0 rgba( 31, 38, 135, 0.4 )",
           backdropFilter: "blur( 8px )",
           webkitBackdropFilter: "blur( 8px )",
         },
@@ -102,8 +77,13 @@ export const mainTheme = createTheme({
     MuiLink: {
       styleOverrides: {
         root: {
+          color: "#fff",
           fontFamily: "Nunito !important",
+          textDecoration: "none",
           "&:hover": {
+            transform: "scale(1.05)",
+            transition: ".3s ease-in-out",
+            fontWeight: "600",
             textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
           },
         },
@@ -123,55 +103,64 @@ export const mainTheme = createTheme({
     allVariants: {
       color: "#edebeb",
     },
-    h1: {
-      fontFamily: "Unbounded",
-      fontSize: "87px",
-      lineHeight: "62px",
-      fontWeight: "700",
+    paragraphSm: {
+      fontFamily: "Nunito",
+      marginBottom: "1rem",
+      fontSize: "16px",
+      fontWeight: "200",
+      // color: "#e2e1e1",
     },
+    paragraphLg: {
+      fontFamily: "Nunito",
+      marginBottom: "1rem",
+      fontSize: "18px",
+      fontWeight: "200",
+      // color: "#e2e1e1",
+    },
+    linkText: {
+      fontFamily: "Nunito",
+      // fontSize: "16px",
+      fontWeight: "600",
+      color: "#e2e1e1",
+    },
+    // h1: {
+    //   fontFamily: "Unbounded",
+    //   fontSize: "77px",
+    //   lineHeight: "62px",
+    //   fontWeight: "700",
+    // },
     h2: {
-      // fontFamily: "Bowlby One SC, cursive ",
-      fontFamily: "Unbounded",
-      fontSize: "55px !important",
+      fontFamily: "Nunito",
+      // fontFamily: "Unbounded",
+      fontSize: "42px !important",
       letterSpacing: ".2rem",
-      fontWeight: "300",
+      fontWeight: "500",
+      marginBottom: "1rem",
     },
     h3: {
-      // fontFamily: "Work Sans",
       fontFamily: "Unbounded",
-      fontSize: "28px",
-      fontWeight: "200",
+      fontSize: "22px",
+      fontWeight: "300",
       marginBottom: "1rem",
     },
     h4: {
       fontFamily: "Unbounded",
       fontSize: "18px",
-      // lineHeight: "32px",
       fontWeight: "300",
     },
     cardHeader: {
       fontFamily: "Nunito",
-      fontSize: "45px !important",
+      fontSize: "33px !important",
       letterSpacing: ".2rem",
-      fontWeight: "500",
+      fontWeight: "800",
+      marginBottom: "1rem",
     },
     cardHeaderSm: {
       fontFamily: "Nunito",
-      fontSize: "32px !important",
-      letterSpacing: ".1rem",
-      fontWeight: "500",
-      // opacity: ".8",
+      fontSize: "24px !important",
+      letterSpacing: ".2rem",
+      fontWeight: "800",
+      marginBottom: "1rem",
     },
   },
-
-  // bodyTextLg: {
-  //   fontFamily: "Work Sans",
-  //   fontSize: "18px",
-  //   lineHeight: "22px",
-  // },
-  // bodyTextSm: {
-  //   fontFamily: "Work Sans",
-  //   fontSize: "16px",
-  //   lineHeight: "18px",
-  // },
 });
