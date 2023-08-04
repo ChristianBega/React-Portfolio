@@ -24,12 +24,11 @@ export default function HomePage() {
         <AboutMe />
         <RecentProjects />
       </StyledHeroContainer>
-
-      <div style={{ width: "100px", height: "100px", backgroundColor: "#0f52ba" }}></div>
+      {/* <div style={{ width: "100px", height: "100px", backgroundColor: "#0f52ba" }}></div>
       <div style={{ width: "100px", height: "100px", backgroundColor: "#0437f2" }}></div>
       <div style={{ width: "100px", height: "100px", backgroundColor: "#4160e1" }}></div>
       <div style={{ width: "100px", height: "100px", backgroundColor: "#0818a8" }}></div>
-      <div style={{ width: "100px", height: "100px", backgroundColor: "#1f51ff" }}></div>
+      <div style={{ width: "100px", height: "100px", backgroundColor: "#1f51ff" }}></div> */}
       {/* <MainSectionOverlay /> */}
     </>
   );
