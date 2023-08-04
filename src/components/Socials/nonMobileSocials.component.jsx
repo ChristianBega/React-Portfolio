@@ -4,6 +4,7 @@ import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 const Item = styled(Box)({
   textAlign: "center",
+  zIndex: "2000",
   "&:hover": {
     transform: "scale(1.2)",
     transition: ".2s ease-in-out",

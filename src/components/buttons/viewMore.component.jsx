@@ -12,9 +12,8 @@ export default function ViewMore({ buttonType }) {
       sx={{
         boxShadow: "0px 0px 16px 6px rgba(86, 79, 224, 0.6)",
         display: "inline-block",
+        zIndex: "2000",
         "&:hover": {
-          fontWeight: "600",
-          transform: "scale(1.1)",
           transition: ".3s ease-in",
           boxShadow: "rgb(0, 0, 0, 0.3) 3px 3px 6px 0px inset, rgba(0, 0, 0, 0.2) -3px -3px 6px 1px inset !important",
         },

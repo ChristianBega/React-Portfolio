@@ -14,7 +14,8 @@ const StyledGridContainer = styled(Grid)(({ theme }) => ({
   textAlign: "left",
   marginTop: "-96px",
   background:
-    "radial-gradient(circle at 88.05% 85.17%, #1F2475, transparent 17%), radial-gradient(circle at 18.33% 22.35%, #1F2475, transparent 23%), radial-gradient(circle at 50% 50%, #030747cc, #1d2951 100%)",
+    "radial-gradient(circle at 95.05% 50.17%,#0d6cb4, transparent 30%), radial-gradient(circle at 10.33% 20.35%,#0d6cb4, transparent 35%), radial-gradient(circle at 50% 50%, #330d7b, #330d7b 100%)",
+
   [theme.breakpoints.between("xs", "sm")]: {
     alignContent: "space-evenly",
   },

@@ -7,7 +7,9 @@ const StyledImage = styled(Box)(({ theme }) => ({
   objectFit: "fill",
   borderRadius: "12px",
   zIndex: "-100",
-  boxShadow: "rgba(28, 28, 28, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.2) 0px 15px 12px",
+  // boxShadow: "rgba(28, 28, 28, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.2) 0px 15px 12px",
+  boxShadow: "0 29px 52px rgba(56, 56, 56, 0.4), 0 25px 16px rgba(66, 66, 66, 0.2)",
+
   [theme.breakpoints.up("md")]: {
     minWidth: "450px",
     minHeight: "400px",
