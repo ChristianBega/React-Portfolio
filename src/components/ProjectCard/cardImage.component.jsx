@@ -35,7 +35,7 @@ const StyledVideo = styled(Box)(({ theme }) => ({
 }));
 
 export default function CardImage({ project, isMobile }) {
-  const { videoDemo } = project;
+  const { videoDemo, imageDemo } = project;
 
   return (
     <Box
@@ -46,20 +46,17 @@ export default function CardImage({ project, isMobile }) {
       {isMobile ? (
         <>
           {/* maybe add source image instead of video */}
-          <StyledImage component="video" playsinline>
-            <source src={videoDemo} type="video/mp4"></source>
-          </StyledImage>
+          <StyledImage component="img" src={imageDemo}></StyledImage>
           <CardOverlay isMobile={isMobile}></CardOverlay>
         </>
       ) : (
         <>
+          {/* When in view play video else stop video */}
           <StyledVideo component="video" muted controls>
             <source src={videoDemo} type="video/mp4"></source>
           </StyledVideo>
         </>
       )}
-      {/* When in view play video else stop video */}
-      {/* add video control buttons to play and pause   */}
     </Box>
   );
 }
