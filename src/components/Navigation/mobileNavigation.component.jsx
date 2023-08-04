@@ -30,6 +30,7 @@ export default function MobileNavigation() {
         </IconContext.Provider>
       </MobileMenu>
       <Menu
+        sx={{ zIndex: "3000" }}
         id="mobile-menu-button"
         aria-labelledby="mobile-menu-button"
         open={openMenu}
@@ -57,7 +58,7 @@ export default function MobileNavigation() {
         <div style={{ color: "#fff" }} onClick={handleClose}>
           X
         </div>
-        <NavigationListItems />
+        <NavigationListItems handleClose={handleClose} />
       </Menu>
     </>
   );
