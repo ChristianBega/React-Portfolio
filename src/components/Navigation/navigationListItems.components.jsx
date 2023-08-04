@@ -45,13 +45,13 @@ const menuItemData = [
 const getMenuItems = (handleClose, handleClick) => (
   <StyledList>
     {menuItemData.map(({ urlPath, linkName, index }) => (
-      <StyledListItem key={index} onClick={handleClose}>
+      <StyledListItem key={index}>
         {linkName === "Contact" ? (
-          <BrowserLink style={{ textDecoration: "none" }} to={urlPath} key={linkName}>
+          <BrowserLink onClick={() => handleClose()} style={{ textDecoration: "none" }} to={urlPath} key={linkName}>
             <StyledLinkText>{linkName}</StyledLinkText>
           </BrowserLink>
         ) : (
-          <Link onClick={handleClick} href={urlPath} key={linkName}>
+          <Link onClick={() => handleClick()} href={urlPath} key={linkName}>
             <StyledLinkText>{linkName}</StyledLinkText>
           </Link>
         )}
@@ -67,6 +67,7 @@ export default function NavigationListItems({ handleClose }) {
 
   const handleClick = () => {
     navigate("/");
+    handleClose();
   };
-  return <>{getMenuItems(handleClose, theme, isMobile, handleClick)}</>;
+  return <>{getMenuItems(handleClose, handleClick, theme, isMobile)}</>;
 }

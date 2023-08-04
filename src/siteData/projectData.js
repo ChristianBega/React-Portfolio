@@ -14,6 +14,7 @@ import WeatherDashboardImage from "../Assets/images/WeatherDashboard.PNG";
 
 import OverlandBaseball from "../Assets/videos/overlandBaseball.mp4";
 import OverlandBaseballImage from "../Assets/images/overlandBaseball.png";
+
 import BlogSiteVideo from "../Assets/videos/blogSite.mp4";
 import BlogSiteImage from "../Assets/images/blogSite.png";
 
@@ -28,13 +29,13 @@ export const featuredProjectsData = [
     imageDemo: OverlandBaseballImage,
     link: "https://overlandbaseball.com/",
     repo: "https://github.com/ChristianBega/Overland-Baseball-Website",
-    technology: ["React", "Material UI", "Framer motion", "Email Js"],
+    technology: ["React", "Material UI", "Framer motion", "Email Js", "React Form Hook"],
     role: [
       "Developed application from ground up starting with creating wire frames, designing site layout and, and creating logic and functionality for the website.",
       "Worked directly with client to determine user criteria, implemented and revised new features for user needs, and delivered a functional user friendly web application.",
-      "coming soon...",
+      "Need to add role coming soon...",
     ],
-    learnings: [""],
+    // learnings: [""],
   },
   // Blog site
   {
@@ -68,7 +69,7 @@ export const featuredProjectsData = [
     role: [
       "Provided assistance to back-end development by designing models, resolvers, and typeDefs for REST API.",
       "Led the integration of the REST API to a React Js front-end. Utilized GraphQL queries and mutations to read and update data.",
-      "coming soon...",
+      "Need to add role coming soon...",
     ],
   },
 ];

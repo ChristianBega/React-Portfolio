@@ -2,6 +2,7 @@ import { Container, styled } from "@mui/material";
 import Hero from "../components/Home/hero.component";
 import AboutMe from "../components/AboutMe/aboutMe.component";
 import RecentProjects from "../components/recentProjects/recentProjects.component";
+
 // import { HeroSectionOverlay } from "../components/SectionOverlays/heroSectionOverlay.component";
 // import { MainSectionOverlay } from "../components/SectionOverlays/mainSectionOverlay.component";
 
@@ -23,6 +24,12 @@ export default function HomePage() {
         <AboutMe />
         <RecentProjects />
       </StyledHeroContainer>
+
+      <div style={{ width: "100px", height: "100px", backgroundColor: "#0f52ba" }}></div>
+      <div style={{ width: "100px", height: "100px", backgroundColor: "#0437f2" }}></div>
+      <div style={{ width: "100px", height: "100px", backgroundColor: "#4160e1" }}></div>
+      <div style={{ width: "100px", height: "100px", backgroundColor: "#0818a8" }}></div>
+      <div style={{ width: "100px", height: "100px", backgroundColor: "#1f51ff" }}></div>
       {/* <MainSectionOverlay /> */}
     </>
   );
