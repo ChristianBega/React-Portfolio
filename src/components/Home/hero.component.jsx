@@ -13,18 +13,20 @@ const StyledGridContainer = styled(Grid)(({ theme }) => ({
   padding: "2rem",
   textAlign: "left",
   marginTop: "-96px",
-  background:
-    "radial-gradient(circle at 95.05% 50.17%,#0d6cb4, transparent 30%), radial-gradient(circle at 10.33% 20.35%,#0d6cb4, transparent 35%), radial-gradient(circle at 50% 50%, #330d7b, #330d7b 100%)",
 
-  [theme.breakpoints.between("xs", "sm")]: {
-    alignContent: "space-evenly",
-  },
   [theme.breakpoints.between("xs", "ipad")]: {
+    alignContent: "space-evenly",
     padding: "0 .6rem",
+    height: "105vh",
+    background:
+      "radial-gradient(circle at 95.05% 70.17%,#0d6cb4, transparent 30%), radial-gradient(circle at 10.33% 20.35%,#0d6cb4, transparent 35%), radial-gradient(circle at 50% 50%, #330d7b, #330d7b 100%)",
+  },
+  [theme.breakpoints.between("ipad", "surface7Pro")]: {
     height: "105vh",
   },
   [theme.breakpoints.up("ipad")]: {
-    height: "80vh",
+    background:
+      "radial-gradient(circle at 95.05% 58.17%,#0d6cb4, transparent 40%), radial-gradient(circle at 10.33% 20.35%,#0d6cb4, transparent 35%), radial-gradient(circle at 50% 50%, #330d7b, #330d7b 100%)",
   },
   [theme.breakpoints.only("surface7Pro")]: {
     height: "70vh",
@@ -37,6 +39,8 @@ const StyledGridContainer = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.up("lg")]: {
     paddingInline: "200px",
     height: "105vh",
+    background:
+      "radial-gradient(circle at 95.05% 50.17%,#0d6cb4, transparent 30%), radial-gradient(circle at 10.33% 20.35%,#0d6cb4, transparent 35%), radial-gradient(circle at 50% 50%, #330d7b, #330d7b 100%)",
   },
 }));
 const HeroTextGreeting = styled(Typography)(({ theme }) => ({

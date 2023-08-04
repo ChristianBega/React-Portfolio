@@ -44,7 +44,16 @@ export default function AboutMe() {
       </StyledGridItemTitle>
       {isMobile && (
         <StyledGridItemImage item xs={12} md={4}>
-          <img src={AboutMeImage} height="350px" alt="Christian Bega's Portfolio " />
+          <img
+            src={AboutMeImage}
+            style={{
+              borderRadius: "12px",
+              height: "350px",
+              boxShadow:
+                " rgba(0, 0, 0, 0.09) 0px 2px 1px 0px, rgba(0, 0, 0, 0.09) 0px 4px 2px 0px, rgba(0, 0, 0, 0.09) 0px 8px 4px 0px, rgba(0, 0, 0, 0.09) 0px 16px 8px 0px, rgba(0, 0, 0, 0.09) 0px 32px 16px 0px",
+            }}
+            alt="Christian Bega's Portfolio "
+          />
         </StyledGridItemImage>
       )}
       {/* Grid item - bio */}
@@ -59,7 +68,16 @@ export default function AboutMe() {
       {/* Image */}
       {!isMobile && (
         <StyledGridItemImage item xs={12} md={4}>
-          <img src={AboutMeImage} height="350px" alt="Christian Bega's Portfolio " />
+          <img
+            style={{
+              borderRadius: "12px",
+              height: "350px",
+              boxShadow:
+                " rgba(0, 0, 0, 0.09) 0px 2px 1px 0px, rgba(0, 0, 0, 0.09) 0px 4px 2px 0px, rgba(0, 0, 0, 0.09) 0px 8px 4px 0px, rgba(0, 0, 0, 0.09) 0px 16px 8px 0px, rgba(0, 0, 0, 0.09) 0px 32px 16px 0px",
+            }}
+            src={AboutMeImage}
+            alt="Christian Bega's Portfolio "
+          />
         </StyledGridItemImage>
       )}
 
