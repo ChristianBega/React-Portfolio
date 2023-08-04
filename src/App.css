@@ -1,3 +1,7 @@
 body {
-  background: radial-gradient(circle, rgb(68, 75, 151) 5%, rgba(20, 21, 80, 1) 70%, rgba(1, 4, 82, 0.923) 100%);
+  /* background: radial-gradient(circle, #330d7b 5%, rgba(20, 21, 80, 1) 70%, rgba(1, 4, 82, 0.923) 100%); */
+
+  background: #5d38b3;
+  background: radial-gradient(circle at 88.05% 85.17%, #0d6cb4, transparent 25%), radial-gradient(circle at 0% 50%, #0d6cb4, transparent 30%),
+    radial-gradient(circle at 50% 50%, #330d7b, #330d7b 100%);
 }

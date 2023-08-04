@@ -36,13 +36,13 @@ const StyledBox = styled(Box)({
 });
 
 export default function ProjectCardStatic({ project }) {
-  const { name, description, videoDemo } = project;
+  const { name, description, imageDemo } = project;
   const location = useLocation();
 
   return (
     <StyledProjectContainer>
       <Box sx={{ position: "relative" }}>
-        <StyledImage component="video" muted src={videoDemo}></StyledImage>
+        <StyledImage component="img" muted src={imageDemo}></StyledImage>
         <BrowserLink id={name} to="/project-page" state={{ project: project, prevPath: location.pathname }}>
           <CardOverlay></CardOverlay>
         </BrowserLink>

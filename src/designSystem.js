@@ -25,12 +25,14 @@ export const mainTheme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
+          zIndex: "2000",
           color: "#FAF9F6",
           transition: "all .3s ease-In-Out",
           boxShadow:
             "rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0,0,0, 0.06) 0px 2px 1px, rgba(0,0,0, 0.09) 0px 4px 2px, rgba(0,0,0, 0.09) 0px 8px 4px, rgba(0,0,0, 0.09) 0px 16px 8px, rgba(0,0,0, 0.09) 0px 32px 16px !important",
           ":hover": {
             cursor: "pointer",
+            // transform: "scale(1.1)",
             boxShadow: "rgb(0, 0, 0, 0.3) 3px 3px 6px 0px inset, rgba(0, 0, 0, 0.2) -3px -3px 6px 1px inset !important",
             textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
             transition: ".3s ease-in-out",
@@ -80,6 +82,7 @@ export const mainTheme = createTheme({
           color: "#fff",
           fontFamily: "Nunito !important",
           textDecoration: "none",
+          zIndex: "2000",
           "&:hover": {
             transform: "scale(1.05)",
             transition: ".3s ease-in-out",

@@ -12,7 +12,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
     textAlign: "left",
   },
   [theme.breakpoints.down("md")]: {
-    background: "linear-gradient(0deg, rgba(37, 37, 37, 0.855) 30%, rgba(78, 78, 78, 0.3) 100%)",
+    background: "linear-gradient(0deg, rgba(37, 37, 37, 0.75) 30%, rgba(78, 78, 78, 0.3) 100%)",
     height: "22rem",
     display: "flex",
     flexDirection: "column",
@@ -46,10 +46,12 @@ export default function CardText({ project }) {
           {/* <CardLinks handleClick={handleClick} href={repo} target="_blank" rel="noopener noreferrer">
             Source Code
           </CardLinks> */}
-          <CardLinks linkType={"browserLink"} id={name} to="/project-page" state={{ project: project, prevPath: location.pathname }}>
-            View More
+          <div style={{ display: "flex", alignItems: "center", gap: ".5rem", color: "#fff" }}>
+            <CardLinks linkType={"browserLink"} id={name} to="/project-page" state={{ project: project, prevPath: location.pathname }}>
+              View More
+            </CardLinks>
             <HiArrowSmRight />
-          </CardLinks>
+          </div>
         </Stack>
         <Box sx={{ marginTop: 4 }}></Box>
       </Box>

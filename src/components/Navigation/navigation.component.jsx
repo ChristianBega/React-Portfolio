@@ -4,6 +4,7 @@ import MobileNavigation from "./mobileNavigation.component";
 import DesktopNavigation from "./desktopNavigation.component";
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
+  zIndex: "3000",
   [theme.breakpoints.up("md")]: {
     padding: "3rem",
   },

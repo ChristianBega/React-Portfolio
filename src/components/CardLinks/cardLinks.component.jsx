@@ -7,7 +7,6 @@ const StyledLinks = styled(Link)(({ theme }) => ({
   position: "relative",
   color: "#fff",
   borderBottom: "1px solid rgb(186, 187, 216) ",
-  zIndex: "1000",
 }));
 const StyledRouterLink = styled(BrowserLink)(({ theme }) => ({
   display: "flex",
@@ -16,7 +15,7 @@ const StyledRouterLink = styled(BrowserLink)(({ theme }) => ({
   position: "relative",
   color: "#fff",
   textDecoration: "none",
-  zIndex: "1000",
+  zIndex: "2000",
   borderBottom: "1px solid rgb(186, 187, 216) ",
   alignItems: "center",
   gap: theme.spacing(2),
@@ -25,6 +24,7 @@ const StyledRouterLink = styled(BrowserLink)(({ theme }) => ({
     transform: "scale(1.05)",
     transition: ".3s ease-in-out",
     fontWeight: "600",
+    textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
   },
 }));
 export const CardLinks = ({ ...otherProps }) => {
