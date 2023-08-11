@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { allProjectData } from "../siteData/projectData";
 import ProjectCardStatic from "../components/ProjectCardStatic/projectCardStatic.component";
 import { motion } from "framer-motion";
-import BackHome from "../components/buttons/backHome.component";
+import BackHome from "../components/Buttons/backHome.component";
 
 export default function ProjectCardsPage() {
   useEffect(() => {

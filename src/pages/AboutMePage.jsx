@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Container } from "@mui/material";
 
-import BackHome from "../components/buttons/backHome.component";
+import BackHome from "../components/Buttons/backHome.component";
 import MoreAboutMe from "../components/MoreAboutMe/moreAboutMe.component";
 export default function AboutMePage() {
   useEffect(() => {
