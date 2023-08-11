@@ -53,8 +53,8 @@ export const mainTheme = createTheme({
         },
         // Medium buttons
         sizeMedium: {
+          fontSize: "16px",
           lineHeight: "22px",
-          fontSize: "18px",
           padding: "10px 12px",
           width: "250px",
         },
