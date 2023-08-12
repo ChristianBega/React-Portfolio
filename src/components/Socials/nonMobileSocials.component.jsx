@@ -41,7 +41,7 @@ export default function NonMobileSocials() {
                 variants={socialIconVariants}
                 whileInView={socialIconVariants.visible}
                 viewport={{
-                  once: true,
+                  once: false,
                 }}
                 custom={index}
               >
