@@ -32,36 +32,7 @@ const StyledGridItemImage = styled(Grid)(({ theme }) => ({
   marginBlock: "1rem",
 }));
 
-// const StyledGridItemTools = styled(Grid)(({ theme }) => ({}));
-
 const AboutMeItems = [
-  // {
-  //   name: "title",
-  //   component: (
-  //     <StyledGridItemTitle item xs={12}>
-  //       <Typography typography="h2" component="h2" variant="h2">
-  //         About Me
-  //       </Typography>
-  //     </StyledGridItemTitle>
-  //   ),
-  // },
-  // {
-  //   name: "profile-image",
-  //   component: (
-  //     <StyledGridItemImage item xs={12} md={4}>
-  //       <img
-  //         src={AboutMeImage}
-  //         style={{
-  //           borderRadius: "12px",
-  //           height: "350px",
-  //           boxShadow:
-  //             " rgba(0, 0, 0, 0.09) 0px 2px 1px 0px, rgba(0, 0, 0, 0.09) 0px 4px 2px 0px, rgba(0, 0, 0, 0.09) 0px 8px 4px 0px, rgba(0, 0, 0, 0.09) 0px 16px 8px 0px, rgba(0, 0, 0, 0.09) 0px 32px 16px 0px",
-  //         }}
-  //         alt="Christian Bega's Portfolio "
-  //       />
-  //     </StyledGridItemImage>
-  //   ),
-  // },
   {
     name: "bio one",
     component: (
@@ -82,23 +53,6 @@ const AboutMeItems = [
     name: "button",
     component: <ViewMore buttonType="about-me" />,
   },
-  // {
-  //   name: "profile-image",
-  //   component: (
-  //     <StyledGridItemImage item xs={12} md={4}>
-  //       <img
-  //         src={AboutMeImage}
-  //         style={{
-  //           borderRadius: "12px",
-  //           height: "350px",
-  //           boxShadow:
-  //             " rgba(0, 0, 0, 0.09) 0px 2px 1px 0px, rgba(0, 0, 0, 0.09) 0px 4px 2px 0px, rgba(0, 0, 0, 0.09) 0px 8px 4px 0px, rgba(0, 0, 0, 0.09) 0px 16px 8px 0px, rgba(0, 0, 0, 0.09) 0px 32px 16px 0px",
-  //         }}
-  //         alt="Christian Bega's Portfolio "
-  //       />
-  //     </StyledGridItemImage>
-  //   ),
-  // },
 ];
 
 const ProfileImage = () => {
@@ -148,6 +102,7 @@ export default function AboutMe() {
         {AboutMeItems.map(({ name, component }, index) => {
           return (
             <Box
+              key={name + (index + 1)}
               component={motion.div}
               initial={aboutMeTextVariants.hidden}
               variants={aboutMeTextVariants}

@@ -1,5 +1,5 @@
 import { Container, styled } from "@mui/material";
-import Hero from "../components/Home/hero.component";
+import Hero from "../components/Hero/hero.component";
 import AboutMe from "../components/AboutMe/aboutMe.component";
 import RecentProjects from "../components/RecentProjects/recentProjects.component";
 

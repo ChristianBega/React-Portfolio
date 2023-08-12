@@ -96,6 +96,9 @@ export const mainTheme = createTheme({
       styleOverrides: {
         root: {
           padding: "1rem",
+          "@media (min-width: 820px)": {
+            padding: "2rem",
+          },
         },
       },
     },
