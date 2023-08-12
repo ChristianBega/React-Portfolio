@@ -4,6 +4,8 @@ import { Grid, Typography, styled, useMediaQuery } from "@mui/material";
 import NonMobileSocials from "../Socials/nonMobileSocials.component";
 import ViewMore from "../Buttons/viewMore.component";
 import ScrollDownArrows from "./scrollDown/scrollDownArrows.component";
+import { motion } from "framer-motion";
+import { containerVariants } from "../../FramerMotion/animation";
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
   display: "flex",

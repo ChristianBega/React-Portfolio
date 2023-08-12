@@ -31,3 +31,14 @@ export const projectCardVariants = {
     transition: { duration: 0.5, easeIn: [0.43, 0.13, 0.23, 0.96], scale: 0, mass: 1.2, damping: 15, type: "spring", stiffness: 100 },
   },
 };
+
+export const socialIconVariants = {
+  hidden: { scale: 0, opacity: 0 },
+  visible: (index) => ({
+    scale: 1,
+    opacity: 1,
+    transition: {
+      delay: 0.5 * index,
+    },
+  }),
+};
