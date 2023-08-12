@@ -10,10 +10,13 @@ const FILTER_TYPES = [
   { filterType: "front-end" },
   { filterType: "back-end" },
 ];
-const StyledButton = styled(Button)(({ theme }) => ({
+const StyledButton = styled(Button)(({ isActive }) => ({
   minHeight: "35px",
-  maxWidth: "120px",
+  maxWidth: "125px",
+  border: isActive === "true" ? "1px solid #fff" : "",
 }));
+
+// const renderButton
 
 export const FilterButton = ({ handleFilterEvent, currentFilterType }) => {
   console.log(currentFilterType);
@@ -33,11 +36,29 @@ export const FilterButton = ({ handleFilterEvent, currentFilterType }) => {
       {FILTER_TYPES.map(({ filterType, index }) => {
         return (
           <>
-            {currentFilterType !== filterType ? (
-              <StyledButton size="medium" onClick={handleFilterEvent} key={filterType} id={filterType}>
+            {currentFilterType === filterType ? (
+              <StyledButton
+                isActive={"true"}
+                currentFilterType={currentFilterType}
+                size="medium"
+                onClick={handleFilterEvent}
+                key={filterType}
+                id={filterType}
+              >
                 {filterType}
               </StyledButton>
-            ) : null}
+            ) : (
+              <StyledButton
+                isActive={"false"}
+                currentFilterType={currentFilterType}
+                size="medium"
+                onClick={handleFilterEvent}
+                key={filterType}
+                id={filterType}
+              >
+                {filterType}
+              </StyledButton>
+            )}
           </>
         );
       })}
