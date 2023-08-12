@@ -18,7 +18,7 @@ export default function ProjectCardsPage() {
   }, []);
 
   const handleFilterEvent = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     setCurrentFilterType(event.currentTarget.id);
   };
 
@@ -48,30 +48,8 @@ export default function ProjectCardsPage() {
       <Grid container maxWidth="lg" spacing={4} marginX={{ lg: "auto" }}>
         {/* <Projects /> */}
         {filteredProjects.map((project, i) => (
-          <Grid
-            component={motion.div}
-            initial={{
-              opacity: 0,
-              scale: 0.5,
-              translateX: i % 2 === 0 ? -50 : 50,
-              translateY: -50,
-            }}
-            animate={{ opacity: 1, scale: 1, translateX: 0, translateY: 0 }}
-            transition={{
-              easeIn: [0.43, 0.13, 0.23, 0.96],
-              scale: 0,
-              delay: i * 0.4,
-              mass: 1.2,
-              damping: 15,
-              type: "spring",
-              stiffness: 100,
-            }}
-            item
-            xs={12}
-            sm={6}
-            md={6}
-          >
-            <ProjectCardStatic project={project[1]} key={"project" + i} />
+          <Grid item xs={12} sm={6} md={6}>
+            <ProjectCardStatic project={project[1]} filteredProjects={filteredProjects} key={"project" + i} />
           </Grid>
         ))}
       </Grid>
