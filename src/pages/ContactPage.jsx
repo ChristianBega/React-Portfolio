@@ -4,14 +4,22 @@ import React, { useEffect } from "react";
 import Contact from "../components/ContactForm";
 import Footer from "../components/Footer";
 import BackHome from "../components/Buttons/backHome.component";
-
+import { motion } from "framer-motion";
+import { containerVariants } from "../FramerMotion/animation";
 export default function ContactPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
-      <Container id="contact-form-section" sx={{ minHeight: "85vh", my: 5 }}>
+      <Container
+        component={motion.container}
+        initial={containerVariants.hidden}
+        animate={containerVariants.visible}
+        transition={containerVariants.transition}
+        id="contact-form-section"
+        sx={{ minHeight: "85vh", my: 5 }}
+      >
         <BackHome buttonType="contact" />
         <Typography component="h2" variant="h2" textAlign="center" mt={4} sx={{ fontWeight: "700" }}>
           Let's Chat!

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { allProjectData } from "../siteData/projectData";
 import ProjectCardStatic from "../components/ProjectCardStatic/projectCardStatic.component";
 import { motion } from "framer-motion";
+import { containerVariants } from "../FramerMotion/animation";
 import BackHome from "../components/Buttons/backHome.component";
 import { FilterButton } from "../components/Buttons/filterProjects.component";
 
@@ -35,7 +36,13 @@ export default function ProjectCardsPage() {
   }, [currentFilterType]);
 
   return (
-    <Container sx={{ minHeight: "100vh", my: 5 }}>
+    <Container
+      component={motion.container}
+      initial={containerVariants.hidden}
+      animate={containerVariants.visible}
+      transition={containerVariants.transition}
+      sx={{ minHeight: "100vh", my: 5 }}
+    >
       <BackHome buttonType="projectCards" />
       <FilterButton currentFilterType={currentFilterType} handleFilterEvent={handleFilterEvent} />
       <Grid container maxWidth="lg" spacing={4} marginX={{ lg: "auto" }}>
