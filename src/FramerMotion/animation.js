@@ -62,3 +62,16 @@ export const socialIconVariants = {
     },
   }),
 };
+
+export const aboutMeTextVariants = {
+  hidden: { x: "50px", opacity: 0 },
+  visible: (index) => ({
+    x: 0,
+    opacity: 1,
+    transition: {
+      delay: 0.5 * index,
+      easeIn: [0.43, 0.13, 0.23, 0.96],
+      type: "spring",
+    },
+  }),
+};

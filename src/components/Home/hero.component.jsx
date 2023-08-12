@@ -152,7 +152,7 @@ export default function Hero() {
         })}
       </Grid>
       <Grid sx={{ position: "relative" }} item xs={isMobile ? 12 : 1}>
-        <NonMobileSocials />
+        {!isMobile && <NonMobileSocials />}
       </Grid>
       <ScrollDownArrows />
     </StyledGridContainer>
