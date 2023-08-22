@@ -29,7 +29,6 @@ const StyledVideo = styled(Box)(({ theme }) => ({
 }));
 
 export default function Project({ currentProject }) {
-  console.log(currentProject);
   const { name, videoDemo, longDescription, technology, link, repo, role } = currentProject;
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -46,7 +45,7 @@ export default function Project({ currentProject }) {
         {/* Project Image */}
         <Grid sx={{ display: "flex", justifyContent: "center" }} item xs={12} md={6}>
           <StyledVideo
-            component="video"
+            component={"video"}
             controls
             // autoPlay
             // loop
@@ -79,12 +78,19 @@ export default function Project({ currentProject }) {
             </Typography>
 
             {/* Technology */}
-            <Stack direction={"row"} gap={8}>
+            <Stack direction={"row"} gap={link !== "" && 8}>
               <div style={{ display: "flex", alignItems: "center" }}>
-                <CardLinks href={link} target="_blank" rel="noopener noreferrer">
+                {link && (
+                  <>
+                    <CardLinks href={link} target="_blank" rel="noopener noreferrer">
+                      Website
+                    </CardLinks>
+                    <FaGlobeAmericas style={{ marginLeft: ".8rem", color: "#fff" }} />
+                  </>
+                )}
+                {/* <CardLinks href={link} target="_blank" rel="noopener noreferrer">
                   Website
-                </CardLinks>
-                <FaGlobeAmericas style={{ marginLeft: ".8rem", color: "#fff" }} />
+                </CardLinks> */}
               </div>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <CardLinks href={repo} target="_blank" rel="noopener noreferrer">

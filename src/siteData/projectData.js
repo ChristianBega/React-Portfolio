@@ -49,8 +49,9 @@ export const featuredProjectsData = [
     ["React", "Material UI", "Framer motion", "Email Js", "React Form Hook"],
     [
       "Developed application from ground up starting with creating wire frames, designing site layout and, and creating logic and functionality for the website.",
-      "Worked directly with client to determine user criteria, implemented and revised new features for user needs, and delivered a functional user friendly web application.",
-      "Need to add role coming soon...",
+      "Designed website wireframe to clarify UI/UX layout and interconnect crucial website information.",
+      "Collaborated with client to determine and establish clear user criteria, user stories, and additional user requirements for the website.",
+      "Integrated 3rd Party APIs and dependencies to handle form validation and emailing services.",
     ],
     ""
   ),
@@ -59,15 +60,18 @@ export const featuredProjectsData = [
     "Blog Site",
     "full-stack",
     "A MERN full stack blog site web application which allows users a way to create a blog post, leave comments, and update their profile.",
-    "Coding Circle is a MERN full-stack blog web application that offers users a way to create an account, leave posts and comments, and share their thoughts and learnings. The application's front end uses React and Daisy UI. And is supported by Firebase auth and a backend built with Express, Node, and MongoDB.",
+    "Coding Circle is a MERN full-stack blog web application that offers users a way to create an account, leave posts and comments, and share their thoughts and learnings. The application's front end uses React and Daisy UI, and is supported by a backend built with Express, Node, and MongoDB.",
+    //! And is supported by Firebase auth and a backend built with Express, Node, and MongoDB. "Firebase Auth"
     BlogSiteVideo,
     BlogSiteImage,
     "https://deployed.com/",
     "https://github.com/ChristianBega/Blog-Site",
-    ["React", "MongoDB", "Tailwind", "Daisy UI", "Express", "Node", "MongoDb", "Firebase Auth"],
+    ["React", "MongoDB", "Tailwind", "Daisy UI", "Express", "Node", "MongoDb", "JWT", "Bcrypt"],
     [
+      //! "Handled user authentication with Firebase, and established a working communication with the MongoDB NoSQL database.",
       "Built project from scratch which included creating wire frames and database schemas which helped provided clarity and direction for the application.",
-      "Handled user authentication with Firebase, and established a working communication with the MongoDB NoSQL database.",
+      "Successfully setup express server connection and established a working communication with the MongoDB NoSQL database.",
+      "Constructed the backend GraphQL typeDefs & Resolvers and integrated them to the front end.",
       "Confirmed the applications features were tested and identify and rectified any bugs and issues, ensuring a smooth user experience.",
     ],
     ""
@@ -83,11 +87,11 @@ export const featuredProjectsData = [
     FinancialTrackerImage,
     "https://golden-goose-finance.herokuapp.com/",
     "https://github.com/ChristianBega/Golden-Goose-Finance",
-    ["React", "Javascript", "MongoDB", "Express", "Node", "Material UI", "Mongoose ODM", "JSON web tokens"],
+    ["React", "Javascript", "MongoDB", "Express", "Node", "Material UI", "Mongoose ODM", "Bcrypt", "JSON web tokens", "GraphQL", "GraphQL Apollo"],
     [
-      "Provided assistance to back-end development by designing models, resolvers, and typeDefs for REST API.",
-      "Led the integration of the REST API to a React Js front-end. Utilized GraphQL queries and mutations to read and update data.",
-      "Need to add role coming soon...",
+      "Assisted back-end development team by designing models, resolvers, and typeDefs for REST API.",
+      "Led the integration of the REST API to a React Js front-end utilizing GraphQL queries and mutations to preform CRUD operations.",
+      "Utilized GraphQL Apollo server & client to test and verify Rest API routes and appropriate end points are working as expected.",
     ],
     ""
   ),
@@ -98,27 +102,31 @@ export const allProjectData = [
   createProject(
     "Rock Paper Scissors",
     "front-end",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "4",
+    "This application is a Front End Mentor challenge which was to recreate the game rock, paper, scissors.",
+    "This application allows users to play the classic game rock, paper, scissors against a computer bot. The game includes a rules modal for new users, options for the user to select their move, and game result notifications.",
     RockPaperScissorsVideo,
     RockPaperScissorsImage,
-    "https://www.youtube.com/",
-    "TBD...",
-    ["Context", "React-Router-Dom", "Styled Components", "SCSS"],
-    ["1.", "2.", "3."]
+    "", //!
+    "https://github.com/ChristianBega/30DaysOfReact/tree/main/rock-paper-scissors",
+    ["React Js", "Context", "React-Router-Dom", "Styled Components", "SCSS"],
+    [
+      "Worked with Figma design file and translated design into a functional React application.",
+      "Built application fully from scratch with custom styled components and scss and leveraged the styled components to pass props to dynamically update UI.",
+      "Integrated react context and local storage to persist and store the user data.",
+    ]
   ),
-  // Professional readme generator
+  // Readme generator
   createProject(
-    "Professional README Generator",
+    "README Generator",
     "back-end",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "4",
+    "This project is command line application that will generate a README file.",
+    "This README Generator is a command line application designed to streamline the process of creating README files. The prompt powered by the Inquirer node library prompts users with questions that covers the various aspects such as title, description, installations, licenses, features, and more. ",
     "5",
     ReadMeGeneratorImage,
-    "https://www.youtube.com/",
+    "",
     "https://github.com/ChristianBega/Professional-README-Generator",
     ["Node Js", "Inquirer", "Node Fs"],
-    ["1.", "2.", "3."]
+    ["Coming soon...", "Coming soon...", "Coming soon..."]
   ),
   // Study Buddies
   createProject(
@@ -144,7 +152,7 @@ export const allProjectData = [
     "https://reactweatherdashboard.netlify.app/",
     "https://github.com/ChristianBega/Weather-Dashboard",
     ["React", "Javascript", "3rd Party API", "Tailwind", "Local Storage"],
-    ["1.", "2.", "3."]
+    ["Coming soon...", "Coming soon...", "Coming soon..."]
   ),
   // Hangry
   createProject(
@@ -157,34 +165,33 @@ export const allProjectData = [
     "https://mandiebot.github.io/Hangry/",
     "https://github.com/ChristianBega/Hangry",
     ["Javascript", "3rd Party API", "Boot Strap"],
-    ["1.", "2.", "3."]
+    ["Coming soon...", "Coming soon...", "Coming soon..."]
   ),
   // Social Network
   createProject(
     "Social Network",
     "back-end",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "4",
-    "5",
+    "A social network API where users can share their thoughts, react to friend's thoughts, and create a friend list.",
+    "This social network API offers users a way to share their thoughts, engage with their friend's content, and establish meaningful connections through friend lists. It's powered by Express routing to a MongoDb database.",
+    "",
     SocialNetworkImage,
-    "https://www.youtube.com/",
+    "",
     "https://github.com/ChristianBega/Social-Network-Api",
     ["MongoDB", "Mongoose ODM", "Express Js"],
-    ["1.", "2.", "3."]
+    ["Coming soon...", "Coming soon...", "Coming soon..."]
   ),
   // Team Profile Generator
   createProject(
     "Team Profile Generator",
     "back-end",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "4",
+    "This project is command line application that will generate a team profile page.",
+    "The Team profile generator application allows users to input information about employees, including their names, roles, IDs, contact information, and more. And then will generate a team profile page based of the user inputs received.",
     "5",
     TeamProfileGeneratorImage,
-    "https://www.youtube.com/",
+    "",
     "https://github.com/ChristianBega/Team-Profile-Generator",
     ["Node Js", "Inquirer", "Javascript"],
-    ["1.", "2.", "3."]
+    ["Coming soon...", "Coming soon...", "Coming soon..."]
   ),
-
   ...featuredProjectsData,
 ];
