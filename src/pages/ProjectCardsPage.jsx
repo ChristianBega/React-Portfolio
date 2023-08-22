@@ -24,14 +24,15 @@ export default function ProjectCardsPage() {
   useEffect(() => {
     const newArray = Object.entries(allProjectData);
     const filteredArray = newArray.filter(([_, value]) => {
+      let activeFilter = "";
       if (value.projectTag === currentFilterType) {
-        return value;
+        activeFilter = value;
       } else if (currentFilterType === "all") {
-        return value;
+        activeFilter = value;
       }
+      return activeFilter;
     });
     setFilteredProjects(filteredArray);
-    return;
   }, [currentFilterType]);
 
   return (
