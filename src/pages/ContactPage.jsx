@@ -3,7 +3,7 @@ import { Container } from "@mui/system";
 import React, { useEffect } from "react";
 import Contact from "../components/ContactForm";
 import Footer from "../components/Footer";
-import BackHome from "../components/Buttons/backHome.component";
+import BackHome from "../components/buttons/backHome.component";
 import { motion } from "framer-motion";
 import { containerVariants } from "../FramerMotion/animation";
 export default function ContactPage() {

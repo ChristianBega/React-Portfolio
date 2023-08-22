@@ -1,7 +1,7 @@
 import { Container, styled } from "@mui/material";
 import Hero from "../components/Hero/hero.component";
 import AboutMe from "../components/AboutMe/aboutMe.component";
-import  RecentProjects from "../components/RecentProjects/recentProjects.component.jsx";
+import RecentProjects from "../components/recentProjects/recentProjects.component";
 
 const StyledHeroContainer = styled(Container)({
   minHeight: "75vh",
