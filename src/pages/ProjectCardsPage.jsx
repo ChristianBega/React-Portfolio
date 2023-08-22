@@ -18,7 +18,6 @@ export default function ProjectCardsPage() {
   }, []);
 
   const handleFilterEvent = (event) => {
-    // event.preventDefault();
     setCurrentFilterType(event.currentTarget.id);
   };
 

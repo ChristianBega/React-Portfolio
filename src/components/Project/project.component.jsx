@@ -29,6 +29,7 @@ const StyledVideo = styled(Box)(({ theme }) => ({
 }));
 
 export default function Project({ currentProject }) {
+  console.log(currentProject);
   const { name, videoDemo, longDescription, technology, link, repo, role } = currentProject;
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));

@@ -102,7 +102,7 @@ export const allProjectData = [
     "4",
     RockPaperScissorsVideo,
     RockPaperScissorsImage,
-    "TBD...",
+    "https://www.youtube.com/",
     "TBD...",
     ["Context", "React-Router-Dom", "Styled Components", "SCSS"],
     ["1.", "2.", "3."]
@@ -115,7 +115,7 @@ export const allProjectData = [
     "4",
     "5",
     ReadMeGeneratorImage,
-    "N/A",
+    "https://www.youtube.com/",
     "https://github.com/ChristianBega/Professional-README-Generator",
     ["Node Js", "Inquirer", "Node Fs"],
     ["1.", "2.", "3."]
@@ -167,10 +167,9 @@ export const allProjectData = [
     "4",
     "5",
     SocialNetworkImage,
-    "N/A",
+    "https://www.youtube.com/",
     "https://github.com/ChristianBega/Social-Network-Api",
-    "9",
-    "10",
+    ["MongoDB", "Mongoose ODM", "Express Js"],
     ["1.", "2.", "3."]
   ),
   // Team Profile Generator
@@ -181,10 +180,9 @@ export const allProjectData = [
     "4",
     "5",
     TeamProfileGeneratorImage,
-    "N/A",
+    "https://www.youtube.com/",
     "https://github.com/ChristianBega/Team-Profile-Generator",
-    "9",
-    "10",
+    ["Node Js", "Inquirer", "Javascript"],
     ["1.", "2.", "3."]
   ),
 

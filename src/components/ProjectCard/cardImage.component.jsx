@@ -1,5 +1,4 @@
 import { Box, styled } from "@mui/material";
-import { CardOverlay } from "../CardOverlay/cardOverlay.component";
 
 const StyledImage = styled(Box)(({ theme }) => ({
   width: "375px",
@@ -46,18 +45,11 @@ export default function CardImage({ project, isMobile }) {
       }}
     >
       {isMobile ? (
-        <>
-          {/* maybe add source image instead of video */}
-          <StyledImage component="img" src={imageDemo}></StyledImage>
-          <CardOverlay isMobile={isMobile}></CardOverlay>
-        </>
+        <StyledImage component="img" src={imageDemo}></StyledImage>
       ) : (
-        <>
-          {/* When in view play video else stop video */}
-          <StyledVideo component="video" muted controls>
-            <source src={videoDemo} type="video/mp4"></source>
-          </StyledVideo>
-        </>
+        <StyledVideo component="video" muted controls>
+          <source src={videoDemo} type="video/mp4"></source>
+        </StyledVideo>
       )}
     </Box>
   );

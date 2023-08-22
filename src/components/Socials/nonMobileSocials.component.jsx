@@ -7,6 +7,10 @@ import { socialIconVariants } from "../../FramerMotion/animation";
 const Item = styled(Box)({
   textAlign: "center",
   zIndex: "2000",
+  "&:hover": {
+    transform: "scale(1.1) !important",
+    transition: ".2s ease-in-out !important",
+  },
 });
 
 const LinkItems = [

@@ -16,8 +16,6 @@ const StyledButton = styled(Button)(({ isActive }) => ({
   border: isActive === "true" ? "1px solid #fff" : "",
 }));
 
-// const renderButton
-
 export const FilterButton = ({ handleFilterEvent, currentFilterType }) => {
   console.log(currentFilterType);
   return (

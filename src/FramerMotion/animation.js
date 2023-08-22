@@ -17,6 +17,7 @@ export const containerVariants = {
     duration: 1.2,
   },
 };
+
 export const projectCardVariants = {
   visible: {
     opacity: 1,

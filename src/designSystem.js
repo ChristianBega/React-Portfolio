@@ -75,7 +75,6 @@ export const mainTheme = createTheme({
         },
       },
     },
-
     MuiLink: {
       styleOverrides: {
         root: {
@@ -84,7 +83,7 @@ export const mainTheme = createTheme({
           textDecoration: "none",
           zIndex: "2000",
           "&:hover": {
-            transform: "scale(1.05)",
+            transform: "scale(1.1)",
             transition: ".3s ease-in-out",
             fontWeight: "600",
             textShadow: "0 0 .2em #cacedd, 0 0 0.4em #cacedd",
