@@ -3,7 +3,6 @@ import { AnimatePresence } from "framer-motion";
 import HomePage from "../../pages/HomePage";
 import ProjectCardsPage from "../../pages/ProjectCardsPage";
 import ProjectPage from "../../pages/ProjectPage";
-import ResumePage from "../../pages/ResumePage";
 import ContactPage from "../../pages/ContactPage";
 import AboutMePage from "../../pages/AboutMePage";
 
@@ -16,7 +15,6 @@ export default function AnimationRoutes() {
         <Route path="/about-me" element={<AboutMePage />}></Route>
         <Route path="/project-cards" element={<ProjectCardsPage />}></Route>
         <Route path="/project-page" element={<ProjectPage />}></Route>
-        <Route path="/resume" element={<ResumePage />}></Route>
         <Route path="/contact" element={<ContactPage />}></Route>
       </Routes>
     </AnimatePresence>

@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import { useTheme } from "@emotion/react";
-import { Grid, Typography, styled, useMediaQuery } from "@mui/material";
+import { Box, Grid, Typography, styled, useMediaQuery } from "@mui/material";
 import NonMobileSocials from "../Socials/nonMobileSocials.component";
-import ViewMore from "../buttons/viewMore.component";
+import ViewMore from "../Buttons/viewMore.component";
 import ScrollDownArrows from "./scrollDown/scrollDownArrows.component";
+import { motion } from "framer-motion";
+import { heroTextVariants } from "../../FramerMotion/animation";
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
   display: "flex",
@@ -98,9 +100,28 @@ const HeroTextTitles = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const renderSocials = (isMobile) => {
-  return <>{!isMobile && <NonMobileSocials />}</>;
-};
+const HeroTextItems = [
+  {
+    name: "hero-text-greeting",
+    component: <HeroTextGreeting component="span">Hi there,</HeroTextGreeting>,
+  },
+  {
+    name: "hero-text-introduction",
+    component: (
+      <HeroTextIntroduction component="h1" typography="h1">
+        I'm Christian.
+      </HeroTextIntroduction>
+    ),
+  },
+  {
+    name: "hero-text-titles",
+    component: <HeroTextTitles component="span">Full Stack Developer</HeroTextTitles>,
+  },
+  {
+    name: "button",
+    component: <ViewMore buttonType="contact" />,
+  },
+];
 
 export default function Hero() {
   const theme = useTheme();
@@ -112,17 +133,26 @@ export default function Hero() {
     <StyledGridContainer id="hero-section" container>
       {/* Hero grid item */}
       <Grid item xs={isMobile ? 12 : 11} pl={3} mt={isMobile ? 30 : 0} position="relative">
-        <HeroTextGreeting component="span">Hi there,</HeroTextGreeting>
-        <HeroTextIntroduction component="h1" typography="h1">
-          I'm Christian.
-        </HeroTextIntroduction>
-        <HeroTextTitles component="span">Full Stack Developer</HeroTextTitles>
-        <div style={{ marginTop: "2.5rem" }}>
-          <ViewMore buttonType="contact" />
-        </div>
+        {HeroTextItems.map(({ name, component }, index) => {
+          return (
+            <Box
+              key={name + (index + 1)}
+              component={motion.div}
+              initial={heroTextVariants.hidden}
+              variants={heroTextVariants}
+              whileInView={heroTextVariants.visible}
+              viewport={{
+                once: false,
+              }}
+              custom={index}
+            >
+              {component}
+            </Box>
+          );
+        })}
       </Grid>
       <Grid sx={{ position: "relative" }} item xs={isMobile ? 12 : 1}>
-        {renderSocials(isMobile)}
+        {!isMobile && <NonMobileSocials />}
       </Grid>
       <ScrollDownArrows />
     </StyledGridContainer>

@@ -1,8 +1,11 @@
 import styled from "@emotion/styled";
 import { Box, Container, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link as BrowserLink, useLocation } from "react-router-dom";
 import { CardOverlay } from "../CardOverlay/cardOverlay.component";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { projectCardVariants } from "../../FramerMotion/animation";
 
 const StyledProjectContainer = styled(Container)({
   padding: "0 !important",
@@ -35,12 +38,23 @@ const StyledBox = styled(Box)({
   background: "linear-gradient(0deg, rgba(37, 37, 37, .71) 30%, rgba(255, 255, 255, 0.1) 100%)",
 });
 
-export default function ProjectCardStatic({ project }) {
+export default function ProjectCardStatic({ project, filteredProjects }) {
   const { name, description, imageDemo } = project;
   const location = useLocation();
 
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView, filteredProjects]);
+
   return (
-    <StyledProjectContainer>
+    <StyledProjectContainer component={motion.container} key={name} ref={ref} animate={controls} initial="hidden" variants={projectCardVariants}>
       <Box sx={{ position: "relative" }}>
         <StyledImage component="img" muted src={imageDemo}></StyledImage>
         <BrowserLink id={name} to="/project-page" state={{ project: project, prevPath: location.pathname }}>

@@ -4,9 +4,10 @@ import { featuredProjectsData } from "../../siteData/projectData";
 import { useTheme } from "@emotion/react";
 import { Grid, Typography, useMediaQuery, styled } from "@mui/material";
 import MobileProjectCard from "../ProjectCard/mobileProjectCard.component";
-import ViewMore from "../buttons/viewMore.component";
+import ViewMore from "../Buttons/viewMore.component";
 import DesktopProjectCard from "../ProjectCard/desktopProjectCard.component";
-
+import { motion } from "framer-motion";
+import { recentProjectVariants } from "../../FramerMotion/animation";
 const StyledGridCurrentWorkSection = styled(Grid)(({ theme }) => ({
   justifyContent: "center",
   [theme.breakpoints.up("xs")]: {
@@ -43,7 +44,16 @@ export default function RecentProjects() {
   // Render mobile or nonMobile project cards
   const renderProjectCards = (isMobile) => {
     return currentWorks.map((project, index) => (
-      <Grid item xs={12} sm={isMobile && 12} md={12}>
+      <Grid
+        component={motion.grid}
+        initial={recentProjectVariants.hidden}
+        variants={recentProjectVariants}
+        whileInView={recentProjectVariants.visible}
+        item
+        xs={12}
+        sm={isMobile && 12}
+        md={12}
+      >
         {isMobile && <MobileProjectCard isMobile={isMobile} project={project} index={index} key={"project" + index} />}
         {!isMobile && <DesktopProjectCard project={project} index={index} key={"project" + index} />}
       </Grid>
@@ -54,7 +64,14 @@ export default function RecentProjects() {
     // mt: 15,
     <StyledGridCurrentWorkSection id="featured-projects-section" container>
       {/* Grid item - header */}
-      <StyledGridItemHeader item xs={12}>
+      <StyledGridItemHeader
+        component={motion.grid}
+        initial={recentProjectVariants.hidden}
+        variants={recentProjectVariants}
+        whileInView={recentProjectVariants.visible}
+        item
+        xs={12}
+      >
         <Typography typography="h2" component="h2" variant="h2">
           Projects
         </Typography>
@@ -66,7 +83,14 @@ export default function RecentProjects() {
         </Grid>
       </Grid>
       {/* Grid item - view more button*/}
-      <StyledGridItemButtonContainer item sx={12}>
+      <StyledGridItemButtonContainer
+        component={motion.grid}
+        initial={recentProjectVariants.hidden}
+        variants={recentProjectVariants}
+        whileInView={recentProjectVariants.visible}
+        item
+        sx={12}
+      >
         <ViewMore buttonType="project-cards" />
       </StyledGridItemButtonContainer>
     </StyledGridCurrentWorkSection>
