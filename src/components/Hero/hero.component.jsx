@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useTheme } from "@emotion/react";
 import { Box, Grid, Typography, styled, useMediaQuery } from "@mui/material";
 import NonMobileSocials from "../Socials/nonMobileSocials.component";
-import ViewMore from "../Buttons/viewMore.component";
+import ViewMore from "../buttons/viewMore.component";
 import ScrollDownArrows from "./scrollDown/scrollDownArrows.component";
 import { motion } from "framer-motion";
 import { heroTextVariants } from "../../FramerMotion/animation";
