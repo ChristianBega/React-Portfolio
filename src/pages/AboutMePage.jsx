@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Container } from "@mui/material";
 import { motion } from "framer-motion";
 import { containerVariants } from "../FramerMotion/animation";
-import BackHome from "../components/Buttons/backHome.component";
+import BackHome from "../components/buttons/backHome.component";
 import MoreAboutMe from "../components/MoreAboutMe/moreAboutMe.component";
 export default function AboutMePage() {
   useEffect(() => {

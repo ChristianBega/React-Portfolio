@@ -4,8 +4,8 @@ import { allProjectData } from "../siteData/projectData";
 import ProjectCardStatic from "../components/ProjectCardStatic/projectCardStatic.component";
 import { motion } from "framer-motion";
 import { containerVariants } from "../FramerMotion/animation";
-import BackHome from "../components/Buttons/backHome.component";
-import { FilterButton } from "../components/Buttons/filterProjects.component";
+import BackHome from "../components/buttons/backHome.component";
+import { FilterButton } from "../components/buttons/filterProjects.component";
 
 export default function ProjectCardsPage() {
   const [currentFilterType, setCurrentFilterType] = useState();

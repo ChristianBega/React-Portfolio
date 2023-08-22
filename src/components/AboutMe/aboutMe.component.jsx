@@ -1,5 +1,5 @@
 import { Box, Grid, Typography, styled, useMediaQuery } from "@mui/material";
-import ViewMore from "../Buttons/viewMore.component";
+import ViewMore from "../buttons/viewMore.component";
 import { aboutTextData } from "../../siteData/aboutMeData";
 import AboutMeImage from "../../Assets/images/profileIMG.jpeg";
 import { useTheme } from "@emotion/react";
