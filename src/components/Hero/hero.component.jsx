@@ -142,7 +142,7 @@ export default function Hero() {
               variants={heroTextVariants}
               whileInView={heroTextVariants.visible}
               viewport={{
-                once: false,
+                once: true,
               }}
               custom={index}
             >

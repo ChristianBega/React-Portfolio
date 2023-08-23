@@ -63,7 +63,7 @@ const ProfileImage = () => {
         variants={aboutMeTextVariants}
         whileInView={aboutMeTextVariants.visible}
         viewport={{
-          once: false,
+          once: true,
         }}
         src={AboutMeImage}
         style={{
@@ -90,6 +90,9 @@ export default function AboutMe() {
           initial={aboutMeTextVariants.hidden}
           variants={aboutMeTextVariants}
           whileInView={aboutMeTextVariants.visible}
+          viewport={{
+            once: true,
+          }}
           typography="h2"
           variant="h2"
         >
@@ -107,6 +110,9 @@ export default function AboutMe() {
               initial={aboutMeTextVariants.hidden}
               variants={aboutMeTextVariants}
               whileInView={aboutMeTextVariants.visible}
+              viewport={{
+                once: true,
+              }}
               custom={index}
             >
               {component}

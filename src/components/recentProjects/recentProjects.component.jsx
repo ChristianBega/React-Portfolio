@@ -49,6 +49,9 @@ export default function RecentProjects() {
         initial={recentProjectVariants.hidden}
         variants={recentProjectVariants}
         whileInView={recentProjectVariants.visible}
+        viewport={{
+          once: true,
+        }}
         item
         xs={12}
         sm={isMobile && 12}
@@ -69,6 +72,9 @@ export default function RecentProjects() {
         initial={recentProjectVariants.hidden}
         variants={recentProjectVariants}
         whileInView={recentProjectVariants.visible}
+        viewport={{
+          once: true,
+        }}
         item
         xs={12}
       >
@@ -88,6 +94,9 @@ export default function RecentProjects() {
         initial={recentProjectVariants.hidden}
         variants={recentProjectVariants}
         whileInView={recentProjectVariants.visible}
+        viewport={{
+          once: true,
+        }}
         item
         sx={12}
       >
