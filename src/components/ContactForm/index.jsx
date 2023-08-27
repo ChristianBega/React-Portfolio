@@ -15,6 +15,7 @@ const StyledFormControl = styled(FormControl)({
 });
 
 const StyledButton = styled(Button)({
+  zIndex: 1,
   backgroundColor: "var(--light-blue) !important",
   "&:hover": {
     color: "#fff !important",
@@ -49,6 +50,7 @@ export default function ContactForm() {
     reset,
     formState: { errors },
   } = useForm();
+  
   const onSubmit = (data) => {
     EmailService.sendEmail(data);
     reset();
@@ -81,7 +83,7 @@ export default function ContactForm() {
         <InputLabel id="selectMenu">Reason for message</InputLabel>
         <Select id="selectMenu" {...register("reason", { required: "Reason is required" })}>
           {choices.map((option, index) => (
-            <MenuItem key={index} value={option}>
+            <MenuItem sx={{ color: "#000 !important" }} key={index} value={option}>
               {option.label}
             </MenuItem>
           ))}

@@ -43,16 +43,16 @@ export default function MobileNavigation() {
           vertical: "top",
           horizontal: "bottom",
         }}
-        PaperProps={{
-          style: {
-            background:
-              "linear-gradient(180deg,rgba(56, 40, 69, 0.655) 4%,rgba(37, 26, 54, 0.555) 20%, rgba(25, 28, 56, 0.555) 56%, rgba(8, 21, 43, 0.655) 100%",
-            backdropFilter: "blur(12px)",
-            height: "100vh",
-            width: "100%",
-            border: "1px solid red",
-          },
-        }}
+        // PaperProps={{
+        //   style: {
+        //     background:
+        //       "linear-gradient(180deg,rgba(56, 40, 69, 0.655) 4%,rgba(37, 26, 54, 0.555) 20%, rgba(25, 28, 56, 0.555) 56%, rgba(8, 21, 43, 0.655) 100%",
+        //     backdropFilter: "blur(12px)",
+        //     height: "100vh",
+        //     width: "100%",
+        //     border: "1px solid red",
+        //   },
+        // }}
       >
         {/* !Update later */}
         <div style={{ color: "#fff" }} onClick={handleClose}>
