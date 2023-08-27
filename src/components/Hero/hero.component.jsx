@@ -42,7 +42,7 @@ const StyledGridContainer = styled(Grid)(({ theme }) => ({
     paddingInline: "200px",
     height: "105vh",
     background:
-      "radial-gradient(circle at 95.05% 50.17%,#0d6cb4, transparent 30%), radial-gradient(circle at 10.33% 20.35%,#0d6cb4, transparent 35%), radial-gradient(circle at 50% 50%, #1434a4, #1434a4 100%)",
+      "radial-gradient(circle at 95.05% 40.17%,#0d6cb4, transparent 30%), radial-gradient(circle at 10.33% 15.35%,#0d6cb4, transparent 35%), radial-gradient(circle at 50% 50%, #1434a4, #1434a4 100%)",
   },
 }));
 const HeroTextGreeting = styled(Typography)(({ theme }) => ({

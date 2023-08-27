@@ -42,12 +42,12 @@ const menuItemData = [
 ];
 
 // Get menu items
-const getMenuItems = (handleClose, handleClick) => (
+const getMenuItems = (handleClick) => (
   <StyledList>
     {menuItemData.map(({ urlPath, linkName, index }) => (
       <StyledListItem key={index}>
         {linkName === "Contact" ? (
-          <BrowserLink onClick={() => handleClose()} style={{ textDecoration: "none" }} to={urlPath} key={linkName}>
+          <BrowserLink onClick={() => handleClick()} style={{ textDecoration: "none" }} to={urlPath} key={linkName}>
             <StyledLinkText>{linkName}</StyledLinkText>
           </BrowserLink>
         ) : (
@@ -61,13 +61,11 @@ const getMenuItems = (handleClose, handleClick) => (
 );
 
 export default function NavigationListItems({ handleClose }) {
-  const theme = useTheme();
   const navigate = useNavigate();
-  let isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const handleClick = () => {
     navigate("/");
-    handleClose();
+    handleClose && handleClose();
   };
-  return <>{getMenuItems(handleClose, handleClick, theme, isMobile)}</>;
+  return <>{getMenuItems(handleClick)}</>;
 }

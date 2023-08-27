@@ -101,6 +101,11 @@ export const mainTheme = createTheme({
         },
       },
     },
+    MuiMenuItem: {
+      root: {
+        color: "#fff",
+      },
+    },
   },
   // Typography
   typography: {

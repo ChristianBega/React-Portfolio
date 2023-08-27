@@ -68,7 +68,7 @@ export const aboutMeTextVariants = {
     x: 0,
     opacity: 1,
     transition: {
-      delay: 0.5 * index,
+      delay: 0.3 * index,
       easeIn: [0.43, 0.13, 0.23, 0.96],
       type: "spring",
     },
